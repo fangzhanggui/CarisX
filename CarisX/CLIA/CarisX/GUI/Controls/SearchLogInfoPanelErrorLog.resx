@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;chkUserID.Name" xml:space="preserve">
+    <value>chkUserID</value>
+  </data>
+  <data name="&gt;&gt;chkUserID.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkUserID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkUserID.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Name" xml:space="preserve">
+    <value>txtUserID</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraTextEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtUserID.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnWriteTimeTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 267</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeTo.Name" xml:space="preserve">
+    <value>btnWriteTimeTo</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeTo.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.NoBorderButton, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeTo.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnWriteTimeFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 267</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeFrom.Name" xml:space="preserve">
+    <value>btnWriteTimeFrom</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeFrom.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.NoBorderButton, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnWriteTimeFrom.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblHyphen1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>860, 276</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.Name" xml:space="preserve">
+    <value>lblHyphen1</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkWriteTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 274</value>
+  </data>
+  <data name="&gt;&gt;chkWriteTime.Name" xml:space="preserve">
+    <value>chkWriteTime</value>
+  </data>
+  <data name="&gt;&gt;chkWriteTime.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkWriteTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkWriteTime.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="resource.Name" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="resource.SizeInPoints" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkErrorCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 160</value>
+  </data>
+  <data name="chkErrorCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="chkErrorCode.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="chkErrorCode.Text" xml:space="preserve">
+    <value>Error Code</value>
+  </data>
+  <data name="&gt;&gt;chkErrorCode.Name" xml:space="preserve">
+    <value>chkErrorCode</value>
+  </data>
+  <data name="&gt;&gt;chkErrorCode.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkErrorCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkErrorCode.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="resource.Name1" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints1" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkErrorArg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 217</value>
+  </data>
+  <data name="chkErrorArg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="chkErrorArg.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="chkErrorArg.Text" xml:space="preserve">
+    <value>Error Arg</value>
+  </data>
+  <data name="&gt;&gt;chkErrorArg.Name" xml:space="preserve">
+    <value>chkErrorArg</value>
+  </data>
+  <data name="&gt;&gt;chkErrorArg.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkErrorArg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkErrorArg.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="appearance5.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="numErrorCode.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numErrorCode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="numErrorCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 154</value>
+  </data>
+  <data name="numErrorCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="numErrorCode.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;numErrorCode.Name" xml:space="preserve">
+    <value>numErrorCode</value>
+  </data>
+  <data name="&gt;&gt;numErrorCode.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numErrorCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numErrorCode.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="appearance6.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="numErrorArg.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numErrorArg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="numErrorArg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 211</value>
+  </data>
+  <data name="numErrorArg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="numErrorArg.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;numErrorArg.Name" xml:space="preserve">
+    <value>numErrorArg</value>
+  </data>
+  <data name="&gt;&gt;numErrorArg.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numErrorArg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numErrorArg.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="resource.Name2" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints2" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkErrorLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 160</value>
+  </data>
+  <data name="chkErrorLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="chkErrorLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="chkErrorLevel.Text" xml:space="preserve">
+    <value>Error Level</value>
+  </data>
+  <data name="&gt;&gt;chkErrorLevel.Name" xml:space="preserve">
+    <value>chkErrorLevel</value>
+  </data>
+  <data name="&gt;&gt;chkErrorLevel.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkErrorLevel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkErrorLevel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="resource.BoldAsString" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="resource.Name3" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints3" type="System.Single, mscorlib">
+    <value>16.94</value>
+  </data>
+  <data name="appearance10.TextHAlignAsString" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="appearance10.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="valueListItem4.DisplayText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="valueListItem1.DisplayText" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="valueListItem2.DisplayText" xml:space="preserve">
+    <value>Hint</value>
+  </data>
+  <data name="optErrorLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 11</value>
+  </data>
+  <data name="optErrorLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 29</value>
+  </data>
+  <data name="optErrorLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;optErrorLevel.Name" xml:space="preserve">
+    <value>optErrorLevel</value>
+  </data>
+  <data name="&gt;&gt;optErrorLevel.Type" xml:space="preserve">
+    <value>Oelco.Common.GUI.CustomUOptionSet, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;optErrorLevel.Parent" xml:space="preserve">
+    <value>gbxErrorLevel</value>
+  </data>
+  <data name="&gt;&gt;optErrorLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbxErrorLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 152</value>
+  </data>
+  <data name="gbxErrorLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 49</value>
+  </data>
+  <data name="gbxErrorLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;gbxErrorLevel.Name" xml:space="preserve">
+    <value>gbxErrorLevel</value>
+  </data>
+  <data name="&gt;&gt;gbxErrorLevel.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraGroupBox, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;gbxErrorLevel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxErrorLevel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="resource.Name4" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints4" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkErrorTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 106</value>
+  </data>
+  <data name="chkErrorTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="chkErrorTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="chkErrorTitle.Text" xml:space="preserve">
+    <value>Error Title</value>
+  </data>
+  <data name="&gt;&gt;chkErrorTitle.Name" xml:space="preserve">
+    <value>chkErrorTitle</value>
+  </data>
+  <data name="&gt;&gt;chkErrorTitle.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkErrorTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkErrorTitle.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtErrorComment.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtErrorComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="txtErrorComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 100</value>
+  </data>
+  <data name="txtErrorComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>772, 40</value>
+  </data>
+  <data name="txtErrorComment.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;txtErrorComment.Name" xml:space="preserve">
+    <value>txtErrorComment</value>
+  </data>
+  <data name="&gt;&gt;txtErrorComment.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraTextEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;txtErrorComment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtErrorComment.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="resource.Name5" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints5" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkDPR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>675, 15</value>
+  </data>
+  <data name="chkDPR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="chkDPR.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="chkDPR.Text" xml:space="preserve">
+    <value>DPR</value>
+  </data>
+  <data name="&gt;&gt;chkDPR.Name" xml:space="preserve">
+    <value>chkDPR</value>
+  </data>
+  <data name="&gt;&gt;chkDPR.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkDPR.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkDPR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Name6" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints6" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkRackTransfer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 15</value>
+  </data>
+  <data name="chkRackTransfer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 24</value>
+  </data>
+  <data name="chkRackTransfer.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chkRackTransfer.Text" xml:space="preserve">
+    <value>RackTransfer</value>
+  </data>
+  <data name="&gt;&gt;chkRackTransfer.Name" xml:space="preserve">
+    <value>chkRackTransfer</value>
+  </data>
+  <data name="&gt;&gt;chkRackTransfer.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRackTransfer.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkRackTransfer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resource.Name7" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints7" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkModule4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 15</value>
+  </data>
+  <data name="chkModule4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="chkModule4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chkModule4.Text" xml:space="preserve">
+    <value>module4</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Name" xml:space="preserve">
+    <value>chkModule4</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="resource.Name8" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints8" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkModule3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 15</value>
+  </data>
+  <data name="chkModule3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="chkModule3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkModule3.Text" xml:space="preserve">
+    <value>module3</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Name" xml:space="preserve">
+    <value>chkModule3</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="resource.Name9" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints9" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkModule2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 15</value>
+  </data>
+  <data name="chkModule2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="chkModule2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkModule2.Text" xml:space="preserve">
+    <value>module2</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Name" xml:space="preserve">
+    <value>chkModule2</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="resource.Name10" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints10" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkModule1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 15</value>
+  </data>
+  <data name="chkModule1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="chkModule1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkModule1.Text" xml:space="preserve">
+    <value>module1</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Name" xml:space="preserve">
+    <value>chkModule1</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gbxModule.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 12pt</value>
+  </data>
+  <data name="gbxModule.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 30</value>
+  </data>
+  <data name="gbxModule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 58</value>
+  </data>
+  <data name="gbxModule.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Name" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraGroupBox, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="resource.Name11" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints11" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkSum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 217</value>
+  </data>
+  <data name="chkSum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="chkSum.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="chkSum.Text" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="&gt;&gt;chkSum.Name" xml:space="preserve">
+    <value>chkSum</value>
+  </data>
+  <data name="&gt;&gt;chkSum.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkSum.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkSum.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="appearance40.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblHyphen2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHyphen2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>860, 219</value>
+  </data>
+  <data name="lblHyphen2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 23</value>
+  </data>
+  <data name="lblHyphen2.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="lblHyphen2.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Name" xml:space="preserve">
+    <value>lblHyphen2</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="appearance41.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="numSumFrom.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numSumFrom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="numSumFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 211</value>
+  </data>
+  <data name="numSumFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 40</value>
+  </data>
+  <data name="numSumFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;numSumFrom.Name" xml:space="preserve">
+    <value>numSumFrom</value>
+  </data>
+  <data name="&gt;&gt;numSumFrom.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numSumFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numSumFrom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="appearance42.TextHAlignAsString" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="numSumTo.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numSumTo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="numSumTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 211</value>
+  </data>
+  <data name="numSumTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 40</value>
+  </data>
+  <data name="numSumTo.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;numSumTo.Name" xml:space="preserve">
+    <value>numSumTo</value>
+  </data>
+  <data name="&gt;&gt;numSumTo.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numSumTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numSumTo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1415, 340</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SearchLogInfoPanelErrorLog</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.SearchLogInfoPanelBase, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

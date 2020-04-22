@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64446009-F176-4F58-B8AC-915166CB3341}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prototype</RootNamespace>
+    <AssemblyName>Prototype</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Prototype.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Prototype.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Documents.Core.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Excel.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Shared.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.SupportDialogs.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraChart.v15.1.Design, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraGauge.v15.1.Design, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.1.FormulaBuilder, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDock.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGanttView.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGauge.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AreaTest.Designer.cs">
+      <DependentUpon>AreaTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Black.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Black.Designer.cs">
+      <DependentUpon>Black.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blinker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blinker.Designer.cs">
+      <DependentUpon>Blinker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalcTest.Designer.cs">
+      <DependentUpon>CalcTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonMessageDialog.Designer.cs">
+      <DependentUpon>CommonMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomChatTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomChatTest.Designer.cs">
+      <DependentUpon>CustomChatTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBer.Designer.cs">
+      <DependentUpon>DBer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorCodeDialog.Designer.cs">
+      <DependentUpon>ErrorCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSoftKeyBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSoftKeyBord.Designer.cs">
+      <DependentUpon>FormSoftKeyBord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNumericEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNumericEditor.designer.cs">
+      <DependentUpon>FormNumericEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEtc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEtc.Designer.cs">
+      <DependentUpon>FormEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUTBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUTBase.Designer.cs">
+      <DependentUpon>FormUTBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphTest.Designer.cs">
+      <DependentUpon>GraphTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayerTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerTester.Designer.cs">
+      <DependentUpon>LayerTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Para.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Para.Designer.cs">
+      <DependentUpon>Para.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgresBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgresBar.Designer.cs">
+      <DependentUpon>ProgresBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeSelectTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RangeSelectTest.Designer.cs">
+      <DependentUpon>RangeSelectTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReagentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReagentDialog.Designer.cs">
+      <DependentUpon>ReagentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyoKomoku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyoKomoku.Designer.cs">
+      <DependentUpon>SyoKomoku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextInputPanelControl.cs" />
+    <Compile Include="TimeInterrupter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeInterrupter.Designer.cs">
+      <DependentUpon>TimeInterrupter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeLabeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeLabeler.Designer.cs">
+      <DependentUpon>TimeLabeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryTest.Designer.cs">
+      <DependentUpon>HistoryTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AreaTest.resx">
+      <DependentUpon>AreaTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Black.resx">
+      <DependentUpon>Black.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blinker.resx">
+      <DependentUpon>Blinker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcTest.resx">
+      <DependentUpon>CalcTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonMessageDialog.resx">
+      <DependentUpon>CommonMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomChatTest.resx">
+      <DependentUpon>CustomChatTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBer.resx">
+      <DependentUpon>DBer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorCodeDialog.resx">
+      <DependentUpon>ErrorCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSoftKeyBord.resx">
+      <DependentUpon>FormSoftKeyBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNumericEditor.resx">
+      <DependentUpon>FormNumericEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEtc.az.resx">
+      <DependentUpon>FormEtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEtc.is.resx">
+      <DependentUpon>FormEtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEtc.resx">
+      <DependentUpon>FormEtc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUTBase.resx">
+      <DependentUpon>FormUTBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphTest.resx">
+      <DependentUpon>GraphTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryTest.resx">
+      <DependentUpon>HistoryTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerTester.resx">
+      <DependentUpon>LayerTester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Para.resx">
+      <DependentUpon>Para.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgresBar.resx">
+      <DependentUpon>ProgresBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RangeSelectTest.resx">
+      <DependentUpon>RangeSelectTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReagentDialog.resx">
+      <DependentUpon>ReagentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyoKomoku.resx">
+      <DependentUpon>SyoKomoku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeInterrupter.resx">
+      <DependentUpon>TimeInterrupter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeLabeler.resx">
+      <DependentUpon>TimeLabeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{FEBB568B-C9A8-46AE-85CC-3F74030DE53E}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarisX\CarisX.csproj">
+      <Project>{1FD3D900-2747-4DB0-9858-9A4C46DA4D5E}</Project>
+      <Name>CarisX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

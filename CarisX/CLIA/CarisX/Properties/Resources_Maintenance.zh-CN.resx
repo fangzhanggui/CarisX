@@ -1,0 +1,5402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BLANK" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DlgChkMsg" xml:space="preserve">
+    <value>没有保存。由于部分数据没有输入</value>
+  </data>
+  <data name="DlgClearReagentHistory" xml:space="preserve">
+    <value>是否清除试剂历史记录？</value>
+    <comment>試薬履歴のクリアメッセージ</comment>
+  </data>
+  <data name="DlgMotorInitialize" xml:space="preserve">
+    <value>是否重置盖电机？</value>
+  </data>
+  <data name="DlgSaveMsg" xml:space="preserve">
+    <value>是否保存？</value>
+  </data>
+  <data name="DlgSeqChkMsg" xml:space="preserve">
+    <value>输入数据无效。</value>
+  </data>
+  <data name="nozzle3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nozzle4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nozzle5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OFF" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ON" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_LOGIN_000" xml:space="preserve">
+    <value>维护模式登录</value>
+    <comment>メンテナンスログイン画面ラベル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_LOGIN_001" xml:space="preserve">
+    <value>密码</value>
+    <comment>メンテナンスログイン画面ラベル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_LOGIN_002" xml:space="preserve">
+    <value>理由</value>
+    <comment>メンテナンスログイン画面ラベル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_LOGIN_004" xml:space="preserve">
+    <value>维护模式登录日志</value>
+    <comment>メンテナンスログイン画面</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_MAINTENANCESTART_000" xml:space="preserve">
+    <value>维护模式开始</value>
+    <comment>待機ダイアログ　タイトル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_MAINTENANCESTART_001" xml:space="preserve">
+    <value>请稍等...</value>
+    <comment>待機ダイアログ　メッセージ</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_MODULECHANGE_000" xml:space="preserve">
+    <value>更换单元</value>
+    <comment>待機ダイアログ　タイトル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_MODULECHANGE_001" xml:space="preserve">
+    <value>请稍等...</value>
+    <comment>待機ダイアログ　メッセージ</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_000" xml:space="preserve">
+    <value>设置PID</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_001" xml:space="preserve">
+    <value>反应盘温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_002" xml:space="preserve">
+    <value>B/F盘温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_003" xml:space="preserve">
+    <value>B/F1预加热器温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_004" xml:space="preserve">
+    <value>B/F2预加热器温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_005" xml:space="preserve">
+    <value>R1预加热器温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_006" xml:space="preserve">
+    <value>R2预加热器温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_007" xml:space="preserve">
+    <value>化学发光测试模块温度</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_008" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_009" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_010" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_011" xml:space="preserve">
+    <value>PID常数为前6位数传输   ex. 9999.9 999.99 99.999</value>
+    <comment>PID定数は上6桁送信　　例 9999.9   999.99   99.999</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_012" xml:space="preserve">
+    <value>PID开启</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_013" xml:space="preserve">
+    <value>PID关闭</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_014" xml:space="preserve">
+    <value>PID保存</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_TEMPPID_015" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_000" xml:space="preserve">
+    <value>所有电机初始化</value>
+    <comment>モーター初期化ダイアログ　タイトル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_001" xml:space="preserve">
+    <value>样本架传输</value>
+    <comment>モーター初期化ダイアログ　ラック搬送　初期化</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_002" xml:space="preserve">
+    <value>单元1</value>
+    <comment>モーター初期化ダイアログ　モジュール１　初期化</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_003" xml:space="preserve">
+    <value>单元2</value>
+    <comment>モーター初期化ダイアログ　モジュール２　初期化</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_004" xml:space="preserve">
+    <value>单元3</value>
+    <comment>モーター初期化ダイアログ　モジュール３　初期化</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_005" xml:space="preserve">
+    <value>单元4</value>
+    <comment>モーター初期化ダイアログ　モジュール４　初期化</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_006" xml:space="preserve">
+    <value>---</value>
+    <comment>モーター初期化ダイアログ　タイトル</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_007" xml:space="preserve">
+    <value>完成</value>
+    <comment>モーター初期化ダイアログ　完了</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_008" xml:space="preserve">
+    <value>未完成</value>
+    <comment>モーター初期化ダイアログ　未完了</comment>
+  </data>
+  <data name="STRING_DLG_MAINTENANCE_WAITMOTORINIT_009" xml:space="preserve">
+    <value>超时</value>
+    <comment>モーター初期化ダイアログ　タイムアウト</comment>
+  </data>
+  <data name="STRING_DLG_TITLE_000" xml:space="preserve">
+    <value>警告</value>
+    <comment>警告</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_000" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_002" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_003" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_004" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_005" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_006" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_007" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_008" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_009" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_010" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_011" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_012" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_013" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_014" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_015" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_016" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_017" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_018" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_019" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_020" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_021" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_022" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_023" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_024" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_025" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_026" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_ADJUST_027" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_002" xml:space="preserve">
+    <value>2：B/F1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_003" xml:space="preserve">
+    <value>3：吸液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_004" xml:space="preserve">
+    <value>4：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_005" xml:space="preserve">
+    <value>5：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_006" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_007" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_008" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_009" xml:space="preserve">
+    <value>全部针</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_010" xml:space="preserve">
+    <value>针1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_011" xml:space="preserve">
+    <value>针2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_012" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_013" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_014" xml:space="preserve">
+    <value>吸取洗涤液后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_015" xml:space="preserve">
+    <value>分注洗涤液后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_016" xml:space="preserve">
+    <value>洗涤间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_017" xml:space="preserve">
+    <value>洗涤次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_018" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_019" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_020" xml:space="preserve">
+    <value>灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_021" xml:space="preserve">
+    <value>洗涤体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_022" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_023" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_024" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_025" xml:space="preserve">
+    <value>BF 1Z轴</value>
+    <comment>BF1部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_026" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_027" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_028" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_029" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_030" xml:space="preserve">
+    <value>反应杯位置</value>
+    <comment>反応テーブル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_031" xml:space="preserve">
+    <value>BF1废液针Z轴</value>
+    <comment>BF1廃液部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_032" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_033" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_034" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_035" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_036" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_037" xml:space="preserve">
+    <value>洗涤下降（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：洗浄降下(ｿﾌﾄ固定)のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_038" xml:space="preserve">
+    <value>洗涤上升（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：洗浄上昇(ｿﾌﾄ固定)のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_039" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_040" xml:space="preserve">
+    <value>吸取</value>
+    <comment>モーターパラメータのモーター速度：吸引のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_041" xml:space="preserve">
+    <value>分注</value>
+    <comment>モーターパラメータのモーター速度：吐出のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_042" xml:space="preserve">
+    <value>灌注/冲洗时分注（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：プライム・リンス時吐出(ｿﾌﾄ固定)のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_043" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_045" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_046" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_047" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_048" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_049" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_050" xml:space="preserve">
+    <value>6: 移动到B/F1洗涤调整位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_051" xml:space="preserve">
+    <value>7: B/F1 分注</value>
+    <comment>7: B/F1 吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_052" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_053" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_054" xml:space="preserve">
+    <value>针</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_055" xml:space="preserve">
+    <value>BF1废液针Z轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_056" xml:space="preserve">
+    <value>BF洗涤注射器电机</value>
+    <comment>洗浄液ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_057" xml:space="preserve">
+    <value>废液后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_058" xml:space="preserve">
+    <value>1：洗涤1/灌注位置（BF1针）</value>
+    <comment>洗浄1吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_059" xml:space="preserve">
+    <value>2：洗涤1/灌注位置（BF废液针）</value>
+    <comment>洗浄1吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_060" xml:space="preserve">
+    <value>粗/微调节</value>
+    <comment>粗調整・微調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_061" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_062" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_002" xml:space="preserve">
+    <value>2：B/F2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_003" xml:space="preserve">
+    <value>3：吸液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_004" xml:space="preserve">
+    <value>4：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_005" xml:space="preserve">
+    <value>5：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_006" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_007" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_008" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_009" xml:space="preserve">
+    <value>全部针</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_010" xml:space="preserve">
+    <value>针 1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_011" xml:space="preserve">
+    <value>针 2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_012" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_013" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_014" xml:space="preserve">
+    <value>从循环开始到第一次抽吸的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_015" xml:space="preserve">
+    <value>从第一次分配到第二次抽吸的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_016" xml:space="preserve">
+    <value>从第二次分配到第三次抽吸的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_017" xml:space="preserve">
+    <value>洗涤次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_018" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_019" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_020" xml:space="preserve">
+    <value>灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_021" xml:space="preserve">
+    <value>第三志向后的数量</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_022" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_023" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_024" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_025" xml:space="preserve">
+    <value>BF 2Z轴电机</value>
+    <comment>BF2部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_026" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_027" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_028" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_029" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_030" xml:space="preserve">
+    <value>反应杯位置</value>
+    <comment>反応テーブル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_031" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_032" xml:space="preserve">
+    <value>洗涤注射器2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_033" xml:space="preserve">
+    <value>洗涤下降</value>
+    <comment>モーターパラメータのモーター速度：洗浄降下のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_034" xml:space="preserve">
+    <value>洗涤上升</value>
+    <comment>モーターパラメータのモーター速度：洗浄上昇のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_035" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_036" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_045" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_046" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_047" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_048" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_049" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_050" xml:space="preserve">
+    <value>针3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_051" xml:space="preserve">
+    <value>针4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_052" xml:space="preserve">
+    <value>6: 移动到B/F2洗涤调整位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_053" xml:space="preserve">
+    <value>7: B/F2 分注</value>
+    <comment>7: B/F2 吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_054" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_055" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_056" xml:space="preserve">
+    <value>针</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_057" xml:space="preserve">
+    <value>针3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_058" xml:space="preserve">
+    <value>1：洗涤1/灌注位置</value>
+    <comment>洗浄2吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_059" xml:space="preserve">
+    <value>粗/微调节</value>
+    <comment>粗調整・微調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_060" xml:space="preserve">
+    <value>粗调节</value>
+    <comment>粗調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_061" xml:space="preserve">
+    <value>微调节</value>
+    <comment>微調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_062" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BF2_063" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_000" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_001" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_002" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_003" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_004" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_005" xml:space="preserve">
+    <value>2：1步</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_006" xml:space="preserve">
+    <value>3：混匀（R2)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_007" xml:space="preserve">
+    <value>4：混匀（BF1)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_008" xml:space="preserve">
+    <value>5：混匀（PTr）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_009" xml:space="preserve">
+    <value>6：混匀（BF2)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_010" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_011" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_012" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_013" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_014" xml:space="preserve">
+    <value>BF盘θ轴电机</value>
+    <comment>BFテーブル部θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_015" xml:space="preserve">
+    <value>BF盘R2混匀Zθ轴电机</value>
+    <comment>撹拌部　R2撹拌Zθ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_016" xml:space="preserve">
+    <value>BF盘BF1混匀Zθ轴电机</value>
+    <comment>撹拌部　BF1撹拌Zθ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_017" xml:space="preserve">
+    <value>BF盘BF2混匀Zθ轴电机</value>
+    <comment>撹拌部　BF2撹拌Zθ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_018" xml:space="preserve">
+    <value>BF盘预激发液混匀Zθ轴电机</value>
+    <comment>撹拌部　Pre-Trigger撹拌Zθ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_019" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_020" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_021" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_022" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_023" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_024" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_025" xml:space="preserve">
+    <value>混匀时间（R2)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_026" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_027" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_028" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_029" xml:space="preserve">
+    <value>原点</value>
+    <comment>原点</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_030" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_031" xml:space="preserve">
+    <value>1：BF盘原点位置</value>
+    <comment>BFテーブル原点位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_032" xml:space="preserve">
+    <value>移动步数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_033" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_034" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_035" xml:space="preserve">
+    <value>A（第一阶段 上）</value>
+    <comment>1段階目</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_036" xml:space="preserve">
+    <value>B1（第二阶段 上）</value>
+    <comment>2段階目</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_037" xml:space="preserve">
+    <value>B2（下）</value>
+    <comment>停止</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_038" xml:space="preserve">
+    <value>反转</value>
+    <comment>逆回転</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_039" xml:space="preserve">
+    <value>A 位置</value>
+    <comment>A Pos</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_040" xml:space="preserve">
+    <value>编码器允许量</value>
+    <comment>エンコード許容量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_041" xml:space="preserve">
+    <value>混匀时间（BF1)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_042" xml:space="preserve">
+    <value>混匀时间（BF2)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_BFTABLE_043" xml:space="preserve">
+    <value>混匀时间（预激发液）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_002" xml:space="preserve">
+    <value>2：确认所有耗材盒</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_003" xml:space="preserve">
+    <value>3：装载耗材盒</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_004" xml:space="preserve">
+    <value>4：卸载耗材盒</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_005" xml:space="preserve">
+    <value>5：耗材盒仓门锁住</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_006" xml:space="preserve">
+    <value>6：移动吸样头至插取位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_007" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_008" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_009" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_010" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_011" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_012" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_013" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_014" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_015" xml:space="preserve">
+    <value>耗材盒运送Y轴电机</value>
+    <comment>ケース搬送部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_016" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_017" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_018" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_019" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_020" xml:space="preserve">
+    <value>耗材盒抓取/退回</value>
+    <comment>ケースキャッチ/返却</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_021" xml:space="preserve">
+    <value>反应杯插取位置</value>
+    <comment>反応容器キャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_022" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_023" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_024" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_025" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_026" xml:space="preserve">
+    <value>耗材盒运送Z轴电机</value>
+    <comment>ケース搬送部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_027" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_028" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_029" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_030" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_031" xml:space="preserve">
+    <value>吸样头插取位置</value>
+    <comment>チップキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_032" xml:space="preserve">
+    <value>反应杯/吸样头插取位置</value>
+    <comment>反応容器/チップキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_033" xml:space="preserve">
+    <value>锁住</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_034" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_035" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_036" xml:space="preserve">
+    <value>插取位置（吸样头/反应杯）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_037" xml:space="preserve">
+    <value>确认端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_038" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_039" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_040" xml:space="preserve">
+    <value>1：耗材盒插取位置</value>
+    <comment>ケースキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_041" xml:space="preserve">
+    <value>7：移动反应杯至插取位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_042" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_CASETRANSFER_043" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_002" xml:space="preserve">
+    <value>2：稀释液分注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_003" xml:space="preserve">
+    <value>3：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_004" xml:space="preserve">
+    <value>4：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_005" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_006" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_007" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_008" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_009" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_010" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_011" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_012" xml:space="preserve">
+    <value>吸取稀释液后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_013" xml:space="preserve">
+    <value>稀释液分注后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_014" xml:space="preserve">
+    <value>稀释液分注注射器的待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_015" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_016" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_017" xml:space="preserve">
+    <value>稀释液灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_018" xml:space="preserve">
+    <value>稀释液分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_019" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_020" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_021" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_022" xml:space="preserve">
+    <value>稀释液分注机械臂Z轴电机</value>
+    <comment>希釈液分注部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_023" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_024" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_025" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_026" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_027" xml:space="preserve">
+    <value>反应杯位置</value>
+    <comment>反応テーブル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_028" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_029" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_030" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_031" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_032" xml:space="preserve">
+    <value>稀释液分注注射器</value>
+    <comment>希釈液ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_033" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_034" xml:space="preserve">
+    <value>吸取</value>
+    <comment>モーターパラメータのモーター速度：吸引のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_035" xml:space="preserve">
+    <value>分注</value>
+    <comment>モーターパラメータのモーター速度：吐出のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_036" xml:space="preserve">
+    <value>空气</value>
+    <comment>モーターパラメータのモーター速度：ｴｱのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_037" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_038" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_039" xml:space="preserve">
+    <value>5：移动至稀释液分注调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_040" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_041" xml:space="preserve">
+    <value>1：稀释液分注/灌注位置</value>
+    <comment>希釈液吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_042" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_DILUTIONDISPENSE_043" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_001" xml:space="preserve">
+    <value>1：废液处理泵开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_002" xml:space="preserve">
+    <value>2：废液处理泵关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_003" xml:space="preserve">
+    <value>3：废液缓冲强制排放</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_004" xml:space="preserve">
+    <value>4：反应槽的废液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_005" xml:space="preserve">
+    <value>5：洗涤液桶泵开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_006" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_007" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_008" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_009" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_010" xml:space="preserve">
+    <value>6：洗涤液桶泵关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_011" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_012" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_013" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_014" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_FLUIDPIPING_015" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_000" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_002" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_003" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_005" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_006" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_007" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_008" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_009" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_010" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_011" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_012" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_013" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_014" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_015" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_016" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_017" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_018" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_019" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_020" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_021" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_022" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_023" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_024" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_025" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_026" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_027" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_028" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_030" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_031" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_032" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_033" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_IMMUNOREACTION_034" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_000" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_001" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_002" xml:space="preserve">
+    <value>重启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_003" xml:space="preserve">
+    <value>中止</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_004" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_005" xml:space="preserve">
+    <value>所有样本架</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_006" xml:space="preserve">
+    <value>吸样头/反应杯盒转移</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_007" xml:space="preserve">
+    <value>试剂储存</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_008" xml:space="preserve">
+    <value>STAT</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_009" xml:space="preserve">
+    <value>样本分注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_010" xml:space="preserve">
+    <value>反应杯转移</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_011" xml:space="preserve">
+    <value>反应盘</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_012" xml:space="preserve">
+    <value>BF盘</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_013" xml:space="preserve">
+    <value>转移·丢弃</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_014" xml:space="preserve">
+    <value>试剂分注1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_015" xml:space="preserve">
+    <value>试剂分注2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_016" xml:space="preserve">
+    <value>BF1/BF1废液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_017" xml:space="preserve">
+    <value>BF2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_018" xml:space="preserve">
+    <value>稀释液分注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_019" xml:space="preserve">
+    <value>预激发液分注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_020" xml:space="preserve">
+    <value>激发液分注/测光</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_021" xml:space="preserve">
+    <value>流体·管路</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_022" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_023" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_024" xml:space="preserve">
+    <value>样本架传输</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_025" xml:space="preserve">
+    <value>单元1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_026" xml:space="preserve">
+    <value>单元2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_027" xml:space="preserve">
+    <value>单元3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_028" xml:space="preserve">
+    <value>单元4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_029" xml:space="preserve">
+    <value>维护模式主要日志</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_030" xml:space="preserve">
+    <value>样本架传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_031" xml:space="preserve">
+    <value>单元传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_032" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MESSAGE_000" xml:space="preserve">
+    <value>指令无应答。参数无法保存。</value>
+    <comment>コマンドに対するレスポンスがありません。
+パラメータは保存しません。</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_CELL_DISPOSAL" xml:space="preserve">
+    <value />
+    <comment>反应杯丢弃位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_DIL_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>希釈検体吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_FRONT_BF1" xml:space="preserve">
+    <value />
+    <comment>B/F前面</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_ASP_INSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬（内）吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_ASP_OUTSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬（外）吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_ID_INSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬（内）ID読み取り位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_ID_OUTSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬（外）ID読み取り位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_R1_ASP_POSI_INSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬ボトル（内）吸引位置オフセット（R1Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_R1_ASP_POSI_OUTSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬ボトル（外）吸引位置オフセット（R1Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_R2_ASP_POSI_INSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬ボトル（内）吸引位置オフセット（R2Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_R2_ASP_POSI_OUTSIDE" xml:space="preserve">
+    <value />
+    <comment>M試薬ボトル（外）吸引位置オフセット（R2Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_REASCTIONCELL_TRANSFER" xml:space="preserve">
+    <value />
+    <comment>反应杯丢弃位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_M_TABLE_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>M試薬ボトル架設テーブル吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_PRE_ASSAY_POSI" xml:space="preserve">
+    <value />
+    <comment>前処理検体吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_PROBE_REPLACE" xml:space="preserve">
+    <value />
+    <comment>プローブ交換時調整確認位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R1_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>R1ボトル吸引位置オフセット（R1Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R2BOTTLE_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>R2ボトル吸引位置オフセット（R1Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R2_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>R2試薬吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R2_ASP_POSI_R2UNIT" xml:space="preserve">
+    <value />
+    <comment>R2ボトル吸引位置オフセット（R2Unit）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R2_DISPENSE" xml:space="preserve">
+    <value />
+    <comment>R2分注位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_ADDMOTOR_R_TABLE_ASP_POSI" xml:space="preserve">
+    <value />
+    <comment>R試薬ボトル架設テーブル吸引位置オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_BACK" xml:space="preserve">
+    <value>↑Back</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_BCREAD" xml:space="preserve">
+    <value>M试剂瓶读取条形码</value>
+    <comment>读取条形码</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_BCR_SENSOR" xml:space="preserve">
+    <value>条形码读码器/感应器 读取次数</value>
+    <comment>条形码读码器/感应器 读取次数</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_BCR_SENSOR_READ" xml:space="preserve">
+    <value>条形码读码器/感应器</value>
+    <comment>条形码读码器/感应器</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_BOTTLE_CHECK" xml:space="preserve">
+    <value>M试剂瓶有无传感器</value>
+    <comment>试剂瓶有无传感器</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_CCW" xml:space="preserve">
+    <value>←CCW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_CCW_R" xml:space="preserve">
+    <value>→CCW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_COARSE" xml:space="preserve">
+    <value>粗调节</value>
+    <comment>粗調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_COARSEFINE" xml:space="preserve">
+    <value>粗调节·微调节</value>
+    <comment>粗調整・微調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_CW" xml:space="preserve">
+    <value>→CW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_CW_L" xml:space="preserve">
+    <value>←CW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_DILDISPENCE001" xml:space="preserve">
+    <value />
+    <comment>希釈液吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_DOWN" xml:space="preserve">
+    <value>↓Down</value>
+    <comment>下</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_FINE" xml:space="preserve">
+    <value>微调节</value>
+    <comment>微調整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_FORWARD" xml:space="preserve">
+    <value>↓Forward</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_IN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_LEFT" xml:space="preserve">
+    <value>←Left</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_MOTORADJUSTMENT" xml:space="preserve">
+    <value>电机位置调节</value>
+    <comment>电机位置调整</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_M_REAGENT_DISP_AND_PROBE" xml:space="preserve">
+    <value />
+    <comment>分注M试剂，清洗探针</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_OUT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_PITCH" xml:space="preserve">
+    <value>移动量</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_PORTNO_INSIDE" xml:space="preserve">
+    <value />
+    <comment>端口号(内)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_PORTNO_OUTSIDE" xml:space="preserve">
+    <value />
+    <comment>端口号(外)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_REACTINCELLCASE001" xml:space="preserve">
+    <value />
+    <comment>反応容器ケースキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_RIGHT" xml:space="preserve">
+    <value>→Right</value>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_R_BCREAD" xml:space="preserve">
+    <value>R试剂瓶读取条形码</value>
+    <comment>读取条形码</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_R_BOTTLE_CHECK" xml:space="preserve">
+    <value>R试剂瓶有无传感器</value>
+    <comment>试剂瓶有无传感器</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_SAVEMASSAGE" xml:space="preserve">
+    <value>确定结束电机位置调节？
+如退出不保存参数，电机参数将恢复到调节前的值。</value>
+    <comment>モーター位置調整を終了しますか？
+保存せずに終了するとモーターパラメータは調整前の値に戻ります。</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_TRAY" xml:space="preserve">
+    <value />
+    <comment>トレイ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_TRRIGER001" xml:space="preserve">
+    <value />
+    <comment>トリガ・プレトリガ液吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MOTOR_ADJUST_UP" xml:space="preserve">
+    <value>↑Up</value>
+    <comment>上</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_000" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_001" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_002" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_003" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_004" xml:space="preserve">
+    <value>1：警告音</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_005" xml:space="preserve">
+    <value>2：测试所有LED</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_006" xml:space="preserve">
+    <value>98：CPLD 为WRITE操作</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_007" xml:space="preserve">
+    <value>99：CPLD 为READ操作</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_008" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_009" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_010" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_011" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_012" xml:space="preserve">
+    <value>警告音</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_013" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_014" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_015" xml:space="preserve">
+    <value>间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_016" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_017" xml:space="preserve">
+    <value>读取长度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_018" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_019" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_020" xml:space="preserve">
+    <value>旋律</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_021" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_022" xml:space="preserve">
+    <value>数据1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_023" xml:space="preserve">
+    <value>数据2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_024" xml:space="preserve">
+    <value>数据3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_025" xml:space="preserve">
+    <value>96：软件 测试1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_026" xml:space="preserve">
+    <value>97：软件 测试2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_027" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_028" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_029" xml:space="preserve">
+    <value>0x</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_030" xml:space="preserve">
+    <value>清除试剂历史记录</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_002" xml:space="preserve">
+    <value>2：分注预激发液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_003" xml:space="preserve">
+    <value>3：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_004" xml:space="preserve">
+    <value>4：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_005" xml:space="preserve">
+    <value>5：灌注交换瓶</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_006" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_007" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_008" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_009" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_010" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_011" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_012" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_013" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_014" xml:space="preserve">
+    <value>预激发液吸取后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_015" xml:space="preserve">
+    <value>预激发液分注后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_016" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_017" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_018" xml:space="preserve">
+    <value>灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_019" xml:space="preserve">
+    <value>预激发液分注注射器的待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_020" xml:space="preserve">
+    <value>预激发液分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_021" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_022" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_023" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_024" xml:space="preserve">
+    <value>预激发液分注注射器</value>
+    <comment>プレトリガ液ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_025" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_026" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_027" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_028" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_029" xml:space="preserve">
+    <value>吸取</value>
+    <comment>吸引</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_030" xml:space="preserve">
+    <value>吐出</value>
+    <comment>吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_031" xml:space="preserve">
+    <value>空气</value>
+    <comment>ｴｱ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_032" xml:space="preserve">
+    <value>灌注/冲洗时分注（固定：S/W)</value>
+    <comment>プライム・リンス時吐出(ｿﾌﾄ固定)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_041" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_042" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_043" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_044" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_045" xml:space="preserve">
+    <value>6：移动至预激发液分注调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_046" xml:space="preserve">
+    <value>瓶</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_047" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_048" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_049" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_PRETRIGGER_050" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_002" xml:space="preserve">
+    <value>2：R1分注和探针洗涤</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_003" xml:space="preserve">
+    <value>3：R2分注和探针洗涤</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_004" xml:space="preserve">
+    <value>4：M试剂分注和探针洗涤</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_005" xml:space="preserve">
+    <value>5：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_006" xml:space="preserve">
+    <value>6：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_008" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_009" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_010" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_011" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_012" xml:space="preserve">
+    <value>加热器控制</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_013" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_014" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_015" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_016" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_017" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_018" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_019" xml:space="preserve">
+    <value>R1吸取后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_020" xml:space="preserve">
+    <value>R1分注后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_021" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_022" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_023" xml:space="preserve">
+    <value>灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_024" xml:space="preserve">
+    <value>R1分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_025" xml:space="preserve">
+    <value>R1分注注射器待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_026" xml:space="preserve">
+    <value>喷针洗涤体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_027" xml:space="preserve">
+    <value>空气体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_028" xml:space="preserve">
+    <value>电容传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_029" xml:space="preserve">
+    <value>吸取试剂后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_030" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_031" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_032" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_033" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_034" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_035" xml:space="preserve">
+    <value>R1分注机械臂θ轴电机</value>
+    <comment>試薬分注1部θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_036" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_037" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_038" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_039" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_040" xml:space="preserve">
+    <value>反应杯吐出</value>
+    <comment>反応容器(吐出)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_041" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_042" xml:space="preserve">
+    <value>R1吸取位置</value>
+    <comment>R1試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_043" xml:space="preserve">
+    <value>R2吸取位置</value>
+    <comment>R2試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_044" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_045" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_046" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_047" xml:space="preserve">
+    <value>R1分注机械臂Z轴电机</value>
+    <comment>試薬分注1部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_048" xml:space="preserve">
+    <value>M试剂吸取位置</value>
+    <comment>M試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_053" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_054" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_055" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_056" xml:space="preserve">
+    <value>R1分注注射器电机</value>
+    <comment>試薬分注1ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_057" xml:space="preserve">
+    <value>液面检测（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：液面検知(ｿﾌﾄ固定）のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_058" xml:space="preserve">
+    <value>气泡检测（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：泡検知動作(ｿﾌﾄ固定）のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_059" xml:space="preserve">
+    <value>吸取</value>
+    <comment>モーターパラメータのモーター速度：吸引のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_060" xml:space="preserve">
+    <value>分注</value>
+    <comment>モーターパラメータのモーター速度：吐出のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_061" xml:space="preserve">
+    <value>空气</value>
+    <comment>モーターパラメータのモーター速度：ｴｱのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_062" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_063" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_064" xml:space="preserve">
+    <value>R1针洗涤注射器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_065" xml:space="preserve">
+    <value>7：移动至R1洗涤调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_066" xml:space="preserve">
+    <value>8：移动至R1吸取调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_067" xml:space="preserve">
+    <value>9：移动至R1分注调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_068" xml:space="preserve">
+    <value>分注剩余量</value>
+    <comment>試薬吐き残し量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_069" xml:space="preserve">
+    <value>空气分注量</value>
+    <comment>試薬追い出しエアー量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_070" xml:space="preserve">
+    <value>针内空气间隔量</value>
+    <comment>試薬プローブ分離エアー量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_071" xml:space="preserve">
+    <value>试剂吸取后抽取空气量</value>
+    <comment>試薬吸引後エアー引き上げ量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_072" xml:space="preserve">
+    <value>试剂液面补偿</value>
+    <comment>試薬液面オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_073" xml:space="preserve">
+    <value>试剂针洗涤时间</value>
+    <comment>ノズル洗浄時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_074" xml:space="preserve">
+    <value>气泡混入电磁阀开启时间</value>
+    <comment>気泡混入バルブON時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_075" xml:space="preserve">
+    <value>气泡混入电磁阀关闭时间</value>
+    <comment>気泡混入バルブOFF時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_076" xml:space="preserve">
+    <value>气泡混入电磁阀动作次数</value>
+    <comment>気泡混入バルブ動作回数</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_077" xml:space="preserve">
+    <value>洗涤后洗涤液吐出量1</value>
+    <comment>洗浄後洗浄液吐出量1</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_078" xml:space="preserve">
+    <value>洗涤后洗涤液吐出量2</value>
+    <comment>洗浄後洗浄液吐出量2</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_079" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_080" xml:space="preserve">
+    <value>R1/R2试剂吸取位置</value>
+    <comment>R1/R2試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_081" xml:space="preserve">
+    <value>10：R1液面检测传感器下降高度</value>
+    <comment>液面検知</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_082" xml:space="preserve">
+    <value>1：R1试剂吸取位置</value>
+    <comment>R1ボトル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_083" xml:space="preserve">
+    <value>2：R2试剂吸取位置</value>
+    <comment>R2ボトル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_084" xml:space="preserve">
+    <value>3：M试剂吸取位置</value>
+    <comment>M試薬ボトル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_085" xml:space="preserve">
+    <value>4：分注位置</value>
+    <comment>吐出位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_086" xml:space="preserve">
+    <value>5：洗涤槽位置</value>
+    <comment>洗浄槽位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_087" xml:space="preserve">
+    <value>洗涤有/无</value>
+    <comment>洗浄有無</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_088" xml:space="preserve">
+    <value>洗涤开启</value>
+    <comment>洗浄あり</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_089" xml:space="preserve">
+    <value>洗涤关闭</value>
+    <comment>洗浄なし(液面検知動作のみ)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_090" xml:space="preserve">
+    <value>11：针洗涤</value>
+    <comment>ノズル洗浄</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_091" xml:space="preserve">
+    <value>灌注时间</value>
+    <comment>プライム時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_092" xml:space="preserve">
+    <value>分注模式</value>
+    <comment>吐出方法</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_093" xml:space="preserve">
+    <value>废液时间</value>
+    <comment>廃液時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_094" xml:space="preserve">
+    <value>排出</value>
+    <comment>追い出し</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_095" xml:space="preserve">
+    <value>分注残留</value>
+    <comment>吐き残し</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_096" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_097" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_098" xml:space="preserve">
+    <value>编码器允许量</value>
+    <comment>エンコード許容量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_099" xml:space="preserve">
+    <value>12：移动至针交换位置</value>
+    <comment>プローブ交換位置へ移動</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_002" xml:space="preserve">
+    <value>2：R2分注和探针洗涤</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_005" xml:space="preserve">
+    <value>4：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_006" xml:space="preserve">
+    <value>5：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_008" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_009" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_010" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_011" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_012" xml:space="preserve">
+    <value>加热器控制</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_013" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_014" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_015" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_016" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_017" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_018" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_019" xml:space="preserve">
+    <value>R2吸取后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_020" xml:space="preserve">
+    <value>R2分注后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_021" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_022" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_023" xml:space="preserve">
+    <value>灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_024" xml:space="preserve">
+    <value>R2分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_025" xml:space="preserve">
+    <value>R2分注注射器的待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_026" xml:space="preserve">
+    <value>喷针洗涤体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_027" xml:space="preserve">
+    <value>空气体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_028" xml:space="preserve">
+    <value>电容传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_029" xml:space="preserve">
+    <value>吸取排放后空气量区域</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_030" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_031" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_032" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_033" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_034" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_035" xml:space="preserve">
+    <value>R2分注机械臂θ轴电机</value>
+    <comment>試薬分注2部θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_036" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_037" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_038" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_039" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_040" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_041" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_042" xml:space="preserve">
+    <value>液面检测（固定：S/W)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_043" xml:space="preserve">
+    <value>气泡检测（固定：S/W)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_044" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_045" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_046" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_047" xml:space="preserve">
+    <value>R2分注机械臂Z轴电机</value>
+    <comment>試薬分注2Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_048" xml:space="preserve">
+    <value>吸取</value>
+    <comment>吸引</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_049" xml:space="preserve">
+    <value>分注</value>
+    <comment>吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_050" xml:space="preserve">
+    <value>空气</value>
+    <comment>ｴｱ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_055" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_056" xml:space="preserve">
+    <value>试剂分注2注射器</value>
+    <comment>試薬分注2ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_069" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_070" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_071" xml:space="preserve">
+    <value>6：移动至R2针洗涤调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_072" xml:space="preserve">
+    <value>7：移动至R2针吸取调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_073" xml:space="preserve">
+    <value>8：移动至R1分注调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_074" xml:space="preserve">
+    <value>3：分注M试剂，清洗探针</value>
+    <comment>分注M试剂，清洗探针</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_075" xml:space="preserve">
+    <value>试剂吐出残余量</value>
+    <comment>試薬吐き残し量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_076" xml:space="preserve">
+    <value>试剂排出空气量</value>
+    <comment>試薬追い出しエアー量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_077" xml:space="preserve">
+    <value>针内空气间隔量</value>
+    <comment>試薬プローブ分離エアー量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_078" xml:space="preserve">
+    <value>试剂吸取后抽取空气量</value>
+    <comment>試薬吸引後エアー引き上げ量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_079" xml:space="preserve">
+    <value>试剂液面补偿</value>
+    <comment>試薬液面オフセット</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_080" xml:space="preserve">
+    <value>针洗涤时间</value>
+    <comment>ノズル洗浄時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_081" xml:space="preserve">
+    <value>气泡混入电磁阀开启时间</value>
+    <comment>気泡混入バルブON時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_082" xml:space="preserve">
+    <value>气泡混入电磁阀关闭时间</value>
+    <comment>気泡混入バルブOFF時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_083" xml:space="preserve">
+    <value>气泡混入电磁阀动作次数</value>
+    <comment>気泡混入バルブ動作回数</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_084" xml:space="preserve">
+    <value>洗涤后洗涤液吐出量1</value>
+    <comment>洗浄後洗浄液吐出量1</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_085" xml:space="preserve">
+    <value>洗涤后洗涤液吐出量2</value>
+    <comment>洗浄後洗浄液吐出量2</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_086" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_091" xml:space="preserve">
+    <value>分注位置</value>
+    <comment>反応テーブル吐出位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_092" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_093" xml:space="preserve">
+    <value>R2试剂吸取位置</value>
+    <comment>R2試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_094" xml:space="preserve">
+    <value>M试剂吸取位置</value>
+    <comment>M試薬吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_095" xml:space="preserve">
+    <value>9：R2液面检测传感器下降高度</value>
+    <comment>液面検知</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_096" xml:space="preserve">
+    <value>1：R2试剂吸取位置</value>
+    <comment>R2ボトル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_097" xml:space="preserve">
+    <value>2：M试剂吸取位置</value>
+    <comment>M試薬ボトル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_098" xml:space="preserve">
+    <value>3：分注位置</value>
+    <comment>吐出位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_099" xml:space="preserve">
+    <value>4：洗涤槽位置</value>
+    <comment>洗浄槽位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_100" xml:space="preserve">
+    <value>洗涤有无</value>
+    <comment>洗浄有無</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_101" xml:space="preserve">
+    <value>洗涤开启</value>
+    <comment>洗浄あり</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_102" xml:space="preserve">
+    <value>洗涤关闭</value>
+    <comment>洗浄なし(液面検知動作のみ)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_103" xml:space="preserve">
+    <value>10：针清洗</value>
+    <comment>ノズル洗浄</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_104" xml:space="preserve">
+    <value>灌注时间</value>
+    <comment>プライム時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_105" xml:space="preserve">
+    <value>分注方式</value>
+    <comment>吐出方法</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_106" xml:space="preserve">
+    <value>废液时间</value>
+    <comment>廃液時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_107" xml:space="preserve">
+    <value>排出</value>
+    <comment>追い出し</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_108" xml:space="preserve">
+    <value>试剂吐出残余量</value>
+    <comment>吐き残し</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_109" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_110" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_111" xml:space="preserve">
+    <value>编码器允许量</value>
+    <comment>エンコード許容量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_112" xml:space="preserve">
+    <value>11：移动至针交换位置</value>
+    <comment>プローブ交換位置へ移動</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_000" xml:space="preserve">
+    <value>传感器状态</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_001" xml:space="preserve">
+    <value>使用/不使用传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_002" xml:space="preserve">
+    <value>样本架送出待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_003" xml:space="preserve">
+    <value>样本架退回待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_004" xml:space="preserve">
+    <value>样本架送入叉子插取1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_005" xml:space="preserve">
+    <value>样本架送入叉子插取2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_006" xml:space="preserve">
+    <value>样本容器类型识别1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_007" xml:space="preserve">
+    <value>样本容器类型识别2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_008" xml:space="preserve">
+    <value>样本容器类型识别3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_009" xml:space="preserve">
+    <value>样本架回收轨道前</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_010" xml:space="preserve">
+    <value>样本架回收轨道后</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_011" xml:space="preserve">
+    <value>样本架放置轨道前</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_012" xml:space="preserve">
+    <value>样本架放置轨道后</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_013" xml:space="preserve">
+    <value>样本架待机轨道前</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_014" xml:space="preserve">
+    <value>样本架待机轨道后</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_015" xml:space="preserve">
+    <value>样本架拨块接收</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_016" xml:space="preserve">
+    <value>退回样本架拨块接收</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_017" xml:space="preserve">
+    <value>样本架放置检测发射光</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_018" xml:space="preserve">
+    <value>样本架放置检测光接收</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_019" xml:space="preserve">
+    <value>回收与重测样本架盖</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_020" xml:space="preserve">
+    <value>废液桶满杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_021" xml:space="preserve">
+    <value>废液桶有效</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_022" xml:space="preserve">
+    <value>样本架送出待机位置传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_023" xml:space="preserve">
+    <value>样本架退回待机位置传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_024" xml:space="preserve">
+    <value>样本架送入叉子插取1传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_025" xml:space="preserve">
+    <value>样本架送入叉子插取2传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_026" xml:space="preserve">
+    <value>样本容器类型识别1传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_027" xml:space="preserve">
+    <value>样本容器类型识别2传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_028" xml:space="preserve">
+    <value>样本容器类型识别3传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_029" xml:space="preserve">
+    <value>样本架回收轨道前传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_030" xml:space="preserve">
+    <value>样本架回收轨道后传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_031" xml:space="preserve">
+    <value>样本架放置轨道前传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_032" xml:space="preserve">
+    <value>样本架放置轨道后传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_033" xml:space="preserve">
+    <value>样本架待机轨道前传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_034" xml:space="preserve">
+    <value>样本架待机轨道后传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_035" xml:space="preserve">
+    <value>样本架拨块接收传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_036" xml:space="preserve">
+    <value>退回样本架拨块接收传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_037" xml:space="preserve">
+    <value>样本架放置检测发射光传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_038" xml:space="preserve">
+    <value>样本架放置检测光接收传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_039" xml:space="preserve">
+    <value>回收与重测样本架盖传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_040" xml:space="preserve">
+    <value>废液桶满杯传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_041" xml:space="preserve">
+    <value>废液桶有效传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_042" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_043" xml:space="preserve">
+    <value>不使用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_044" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_045" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_046" xml:space="preserve">
+    <value>进样单元样本架运送模块</value>
+    <comment>ラック搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_047" xml:space="preserve">
+    <value>进样单元样本架接收模块</value>
+    <comment>ラック引込部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_048" xml:space="preserve">
+    <value>样本架架设模块</value>
+    <comment>ラック架設部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_049" xml:space="preserve">
+    <value>瓶子放置模块</value>
+    <comment>ボトル設置部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_050" xml:space="preserve">
+    <value>分析单元2样本架运送模块</value>
+    <comment>装置２　ラック搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_051" xml:space="preserve">
+    <value>分析单元2样本架接收模块</value>
+    <comment>装置２　ラック引込部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_052" xml:space="preserve">
+    <value>分析单元3样本架运送模块</value>
+    <comment>装置３　ラック搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_053" xml:space="preserve">
+    <value>分析单元3样本架接收模块</value>
+    <comment>装置３　ラック引込部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_054" xml:space="preserve">
+    <value>分析单元4样本架运送模块</value>
+    <comment>装置４　ラック搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_RACKSENSOR_055" xml:space="preserve">
+    <value>分析单元4样本架接收模块</value>
+    <comment>装置４　ラック引込部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_000" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_002" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_003" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_004" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_005" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_006" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_007" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_008" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_009" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_010" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_011" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_012" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_013" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_014" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_015" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_016" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_017" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_018" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_019" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_020" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_021" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_022" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_023" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_024" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_025" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_026" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_027" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_028" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_030" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_031" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_032" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_033" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_034" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLCASE_035" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_002" xml:space="preserve">
+    <value>2：从耗材盒插取反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_003" xml:space="preserve">
+    <value>3：释放反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_004" xml:space="preserve">
+    <value>4：从耗材盒插取反应杯后释放反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_005" xml:space="preserve">
+    <value>5：反应杯在洗涤位置从内圈转移至外圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_006" xml:space="preserve">
+    <value>6：反应杯在R2位置从内圈转移至外圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_007" xml:space="preserve">
+    <value>7：分注到反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_008" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_009" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_010" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_011" xml:space="preserve">
+    <value>反应杯编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_012" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_013" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_014" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_015" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_018" xml:space="preserve">
+    <value>反应杯搬运1X轴电机</value>
+    <comment>反応容器搬送部X軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_019" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_020" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_021" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_022" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_023" xml:space="preserve">
+    <value>反应杯插取位置</value>
+    <comment>反応容器キャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_024" xml:space="preserve">
+    <value>反应杯释放位置</value>
+    <comment>反応容器リリース位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_025" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_026" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_027" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_028" xml:space="preserve">
+    <value>反应杯搬运1Z轴电机</value>
+    <comment>反応容器搬送部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_029" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_030" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_031" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_032" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_033" xml:space="preserve">
+    <value>反应杯盒补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_034" xml:space="preserve">
+    <value>反应杯盒放置补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_035" xml:space="preserve">
+    <value>反应杯搬运2X轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_036" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_037" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_038" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_039" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_040" xml:space="preserve">
+    <value>反应杯盒补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_041" xml:space="preserve">
+    <value>反应杯搬运2θ轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_042" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_043" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_044" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_045" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_046" xml:space="preserve">
+    <value>反应杯盒补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_047" xml:space="preserve">
+    <value>反应杯搬运2Z轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_048" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_049" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_050" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_051" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_052" xml:space="preserve">
+    <value>反应杯盒补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_053" xml:space="preserve">
+    <value>8：从内圈丢弃反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_054" xml:space="preserve">
+    <value>1：反应杯插取位置</value>
+    <comment>容器イナート-容器キャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_055" xml:space="preserve">
+    <value>2：反应杯释放位置</value>
+    <comment>容器リムーブ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_056" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONCELLTRANSFER_057" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_000" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_001" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_002" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_003" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_004" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_005" xml:space="preserve">
+    <value>2:1步</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_006" xml:space="preserve">
+    <value>3：混匀</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_007" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_008" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_009" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_010" xml:space="preserve">
+    <value>替换</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_011" xml:space="preserve">
+    <value>移动步数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_012" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_013" xml:space="preserve">
+    <value>反应盘θ轴电机</value>
+    <comment>反応テーブル部θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_014" xml:space="preserve">
+    <value>反应盘R1混匀Zθ轴电机</value>
+    <comment>撹拌部　R1撹拌Zθ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_015" xml:space="preserve">
+    <value>R1混匀Z轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_016" xml:space="preserve">
+    <value>混匀时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_017" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_018" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_019" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_020" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_021" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_022" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_023" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_024" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_025" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_026" xml:space="preserve">
+    <value>原点</value>
+    <comment>原点</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_027" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_028" xml:space="preserve">
+    <value>1.反应盘原点位置</value>
+    <comment>反応テーブル原点位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_029" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_030" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_031" xml:space="preserve">
+    <value>A（第一阶段 上）</value>
+    <comment>1段階目</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_032" xml:space="preserve">
+    <value>B1（第二阶段 上）</value>
+    <comment>2段階目</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_033" xml:space="preserve">
+    <value>B2（下）</value>
+    <comment>停止</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_034" xml:space="preserve">
+    <value>反转</value>
+    <comment>逆回転</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_035" xml:space="preserve">
+    <value>A 位置</value>
+    <comment>A Pos</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REACTIONTABLE_036" xml:space="preserve">
+    <value>编码器允许量</value>
+    <comment>エンコード許容量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_002" xml:space="preserve">
+    <value>2：试剂盘转至试剂瓶设置位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_003" xml:space="preserve">
+    <value>3：试剂盘转至R1吸取位置（R1分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_004" xml:space="preserve">
+    <value>4：试剂盘转至R2吸取位置（R1分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_005" xml:space="preserve">
+    <value>5：试剂盘转至M吸取位置（R1分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_006" xml:space="preserve">
+    <value>6：试剂盘转至R1吸取位置（R2分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_007" xml:space="preserve">
+    <value>7：试剂盘转至R2吸取位置（R2分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_008" xml:space="preserve">
+    <value>8：试剂盘转至M吸取位置（R2分注模块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_009" xml:space="preserve">
+    <value>9：R瓶确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_010" xml:space="preserve">
+    <value>10：M瓶确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_011" xml:space="preserve">
+    <value>11：R瓶条形码ID读取</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_012" xml:space="preserve">
+    <value>12：M瓶条形码ID读取</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_013" xml:space="preserve">
+    <value>13：试剂瓶混匀</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_014" xml:space="preserve">
+    <value>14：上锁/解锁盖</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_015" xml:space="preserve">
+    <value>15：转动试剂盘</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_016" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_017" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_018" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_019" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_020" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_021" xml:space="preserve">
+    <value>上锁/解锁盖</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_022" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_023" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_024" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_025" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_026" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_027" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_028" xml:space="preserve">
+    <value>试剂仓θ轴电机</value>
+    <comment>試薬保冷庫部テーブルθ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_029" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_030" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_031" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_032" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_033" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_034" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_035" xml:space="preserve">
+    <value>R试剂ID读取位置补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_036" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_037" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_038" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_039" xml:space="preserve">
+    <value>试剂储存混匀θ轴电机</value>
+    <comment>試薬保冷庫部撹拌θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_040" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_041" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_042" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_043" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_044" xml:space="preserve">
+    <value>试剂储存盖控制电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_045" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_046" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_047" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_048" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_049" xml:space="preserve">
+    <value>16：试剂储存盖</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_050" xml:space="preserve">
+    <value>启动/关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_051" xml:space="preserve">
+    <value>试剂储存盖</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_052" xml:space="preserve">
+    <value>17：确认R试剂瓶（当前位置）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_053" xml:space="preserve">
+    <value>18：确认M试剂瓶（当前位置）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_054" xml:space="preserve">
+    <value>19：读取R试剂瓶条码ID（当前位置）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_055" xml:space="preserve">
+    <value>20：读取M试剂瓶条码ID（当前位置）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_056" xml:space="preserve">
+    <value>位置编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_057" xml:space="preserve">
+    <value>开启→关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_058" xml:space="preserve">
+    <value>CW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_059" xml:space="preserve">
+    <value>CCW</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_060" xml:space="preserve">
+    <value>M试剂瓶BC读取位置</value>
+    <comment>M試薬ボトルBCR読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_061" xml:space="preserve">
+    <value>R试剂瓶BC读取位置</value>
+    <comment>R試薬ボトルBCR読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_062" xml:space="preserve">
+    <value>R1吸取位置（R1模块）</value>
+    <comment>R1ユニット R1吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_063" xml:space="preserve">
+    <value>R2吸取位置（R1模块）</value>
+    <comment>R1ユニット R2吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_064" xml:space="preserve">
+    <value>M试剂吸取位置（R1模块）</value>
+    <comment>R1ユニット M吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_065" xml:space="preserve">
+    <value>确认M/R试剂瓶</value>
+    <comment>M/R Bottle Check位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_066" xml:space="preserve">
+    <value>M试剂吸取位置（R2模块）</value>
+    <comment>R2ユニット M吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_067" xml:space="preserve">
+    <value>R2吸取位置（R2模块）</value>
+    <comment>R2ユニット R2吸引位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_068" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_069" xml:space="preserve">
+    <value>1：M试剂瓶BCR读取位置</value>
+    <comment>M試薬ボトルBCR読み取り位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_070" xml:space="preserve">
+    <value>2：R试剂瓶BCR读取位置</value>
+    <comment>R試薬ボトルBCR読み取り位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_071" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_072" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_073" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_REAGENTSTORAGE_074" xml:space="preserve">
+    <value>编码器允许量</value>
+    <comment>エンコード許容量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_002" xml:space="preserve">
+    <value>2：从样本架分注样本</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_003" xml:space="preserve">
+    <value>3：从STAT/外部传送分注样本</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_004" xml:space="preserve">
+    <value>4：从反应盘分注样本</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_005" xml:space="preserve">
+    <value>5：插取/移除吸样头</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_006" xml:space="preserve">
+    <value>6：吸取传感器增益调节</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_007" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_008" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_009" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_010" xml:space="preserve">
+    <value>吸样头编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_011" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_012" xml:space="preserve">
+    <value>样本分注注射器待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_013" xml:space="preserve">
+    <value>样本剩余体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_014" xml:space="preserve">
+    <value>样本分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_015" xml:space="preserve">
+    <value>样本吸取后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_016" xml:space="preserve">
+    <value>样本管种类</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_017" xml:space="preserve">
+    <value>杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_018" xml:space="preserve">
+    <value>管</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_019" xml:space="preserve">
+    <value>样本杯置于样本管</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_020" xml:space="preserve">
+    <value>样本种类</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_021" xml:space="preserve">
+    <value>血清</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_022" xml:space="preserve">
+    <value>尿液</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_023" xml:space="preserve">
+    <value>使用液面检测传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_024" xml:space="preserve">
+    <value>在样本上使用气泡检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_025" xml:space="preserve">
+    <value>上限压力阀1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_026" xml:space="preserve">
+    <value>上限压力阀2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_027" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_028" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_029" xml:space="preserve">
+    <value>吸取错误上限1（血清）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_030" xml:space="preserve">
+    <value>吸取错误下限1（血清）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_031" xml:space="preserve">
+    <value>吸取错误上限1（尿液）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_032" xml:space="preserve">
+    <value>吸取错误下限1（尿液）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_033" xml:space="preserve">
+    <value>低于限度体积导致液体泄漏报错</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_034" xml:space="preserve">
+    <value>低于限度压力导致液体泄漏报错</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_035" xml:space="preserve">
+    <value>分注错误阀值</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_036" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_037" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_038" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_039" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_040" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_041" xml:space="preserve">
+    <value>样本分注机械臂 X轴电机</value>
+    <comment>サンプル分注移送部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_042" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_043" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_044" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_045" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_046" xml:space="preserve">
+    <value>吸样头插取位置</value>
+    <comment>チップキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_047" xml:space="preserve">
+    <value>样本架样本吸取位置</value>
+    <comment>ラックサンプル分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_048" xml:space="preserve">
+    <value>STAT样本吸取位置</value>
+    <comment>STAT分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_049" xml:space="preserve">
+    <value>稀释样本吸取位置</value>
+    <comment>希釈検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_050" xml:space="preserve">
+    <value>前处理样本吸取位置</value>
+    <comment>前処理検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_051" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_052" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_053" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_054" xml:space="preserve">
+    <value>样本分注机械臂 θ轴电机</value>
+    <comment>サンプル分注移送部θ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_059" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_060" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_062" xml:space="preserve">
+    <value>样本分注机械臂Z轴电机</value>
+    <comment>サンプル分注移送部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_071" xml:space="preserve">
+    <value>样本分注注射器</value>
+    <comment>サンプル分注移送部ｻﾝﾌﾟﾙｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_072" xml:space="preserve">
+    <value>样本吸取</value>
+    <comment>ｻﾝﾌﾟﾙ吸引</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_076" xml:space="preserve">
+    <value>样本分注</value>
+    <comment>ｻﾝﾌﾟﾙ吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_080" xml:space="preserve">
+    <value>空气（反流分注同样）</value>
+    <comment>ｴｱ(ﾊﾞｯｸﾗｯｼ吐出も同)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_084" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_085" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_086" xml:space="preserve">
+    <value>7: 移动到样本吸取调整位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_087" xml:space="preserve">
+    <value>8: 移动到样本分注调整位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_088" xml:space="preserve">
+    <value>分杯位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_089" xml:space="preserve">
+    <value>STAT</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_090" xml:space="preserve">
+    <value>外部传输</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_091" xml:space="preserve">
+    <value>稀释位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_092" xml:space="preserve">
+    <value>前处理位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_093" xml:space="preserve">
+    <value>前</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_094" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_095" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_096" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_097" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_098" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_099" xml:space="preserve">
+    <value>后</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_100" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_101" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_102" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_103" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_104" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_105" xml:space="preserve">
+    <value>反应杯容量（预设）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_106" xml:space="preserve">
+    <value>uL</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_107" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_108" xml:space="preserve">
+    <value>前处理样本分注量</value>
+    <comment>前処理検体分注量</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_109" xml:space="preserve">
+    <value>外部传送样本分取位置</value>
+    <comment>外部検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_110" xml:space="preserve">
+    <value>样本分注位置</value>
+    <comment>検体吐出位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_111" xml:space="preserve">
+    <value>吸样头移除位置</value>
+    <comment>チップリムーブ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_112" xml:space="preserve">
+    <value>液面检测（固定：S/W)</value>
+    <comment>液面検知(ｿﾌﾄ固定）</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_113" xml:space="preserve">
+    <value>样本吸取（50uL以上）</value>
+    <comment>ｻﾝﾌﾟﾙ吸引(50μL以上)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_114" xml:space="preserve">
+    <value>样本分注（50uL以上）</value>
+    <comment>ｻﾝﾌﾟﾙ吐出(50μL以上)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_115" xml:space="preserve">
+    <value>(deg.)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_116" xml:space="preserve">
+    <value>6：液面检测</value>
+    <comment>液面検知</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_117" xml:space="preserve">
+    <value>样本架样本1吸取位置</value>
+    <comment>ラックサンプル1分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_118" xml:space="preserve">
+    <value>样本架样本5吸取位置</value>
+    <comment>ラックサンプル5分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_119" xml:space="preserve">
+    <value>吸样头1插取位置</value>
+    <comment>チップキャッチ1位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_120" xml:space="preserve">
+    <value>吸样头6插取位置</value>
+    <comment>チップキャッチ6位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_121" xml:space="preserve">
+    <value>样本分注/稀释吸取/前处理吸取</value>
+    <comment>検体吐出位置/希釈吸引開始/前処理吸引開始</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_122" xml:space="preserve">
+    <value>1：吸样头插取位置</value>
+    <comment>チップイナート-チップキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_123" xml:space="preserve">
+    <value>2：样本架吸取位置</value>
+    <comment>ラック分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_124" xml:space="preserve">
+    <value>3：STAT吸取位置</value>
+    <comment>STAT検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_125" xml:space="preserve">
+    <value>4：稀释样本吸取位置</value>
+    <comment>希釈検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_126" xml:space="preserve">
+    <value>5：前处理样本吸取位置</value>
+    <comment>前処理検体分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_127" xml:space="preserve">
+    <value>6：样本分注位置</value>
+    <comment>検体吐出位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_128" xml:space="preserve">
+    <value>7：吸样头丢弃位置</value>
+    <comment>チップリムーブ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_129" xml:space="preserve">
+    <value>8：外部传输样本吸取位置</value>
+    <comment>外部検体搬送位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_131" xml:space="preserve">
+    <value>样本架1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_132" xml:space="preserve">
+    <value>样本架2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_133" xml:space="preserve">
+    <value>样本位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_134" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_135" xml:space="preserve">
+    <value>测试号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_136" xml:space="preserve">
+    <value>1</value>
+    <comment>モーター調整：チップ番号</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_137" xml:space="preserve">
+    <value>6</value>
+    <comment>モーター調整：チップ番号</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_138" xml:space="preserve">
+    <value>91</value>
+    <comment>モーター調整：チップ番号</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_139" xml:space="preserve">
+    <value>96</value>
+    <comment>モーター調整：チップ番号</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_140" xml:space="preserve">
+    <value>1</value>
+    <comment>モーター調整：サンプルポジション</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_141" xml:space="preserve">
+    <value>5</value>
+    <comment>モーター調整：サンプルポジション</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_142" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_143" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_144" xml:space="preserve">
+    <value>上限压力阀1（&gt;100uL）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_145" xml:space="preserve">
+    <value>上限压力阀2（&gt;100uL）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_146" xml:space="preserve">
+    <value>吸取错误上限1（血清）(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_147" xml:space="preserve">
+    <value>吸取错误下限1（血清）(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_148" xml:space="preserve">
+    <value>吸取错误上限1（尿液）(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_149" xml:space="preserve">
+    <value>吸取错误下限1（尿液）(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_150" xml:space="preserve">
+    <value>低于限度体积导致液体泄漏报错(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_151" xml:space="preserve">
+    <value>低于限度压力导致液体泄漏报错(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_152" xml:space="preserve">
+    <value>分注错误阀值(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_153" xml:space="preserve">
+    <value>增益(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLEDISPENSE_154" xml:space="preserve">
+    <value>补偿(&gt;100uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_002" xml:space="preserve">
+    <value>2：拨块动作</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_003" xml:space="preserve">
+    <value>3：装载动作</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_004" xml:space="preserve">
+    <value>4：叉子动作</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_005" xml:space="preserve">
+    <value>5：样本架放置（装载 Y→装载拨块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_006" xml:space="preserve">
+    <value>6：样本架ID读取（BCR）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_007" xml:space="preserve">
+    <value>7：样本条码ID读取（BCR）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_008" xml:space="preserve">
+    <value>8：样本杯/管确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_009" xml:space="preserve">
+    <value>9：（送出X)移动至待机位置（A→B)</value>
+    <comment>（送り）装置待機位置へ移動(BCR・待機位置→待機位置)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_010" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_011" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_012" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_013" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_014" xml:space="preserve">
+    <value>样本位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_015" xml:space="preserve">
+    <value>单元</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_016" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_017" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_018" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_019" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_020" xml:space="preserve">
+    <value>单元1样本架送出装载X轴电机</value>
+    <comment>ラック搬送部送りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_021" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_022" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_023" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_024" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_025" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_026" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_027" xml:space="preserve">
+    <value>样本架储存补偿（托盘1）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_028" xml:space="preserve">
+    <value>样本架储存补偿（托盘2）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_029" xml:space="preserve">
+    <value>样本架储存补偿（托盘3）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_030" xml:space="preserve">
+    <value>样本架储存补偿（托盘4）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_031" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_032" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_033" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_034" xml:space="preserve">
+    <value>单元1样本架退回装载X轴电机</value>
+    <comment>ラック搬送部戻りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_035" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_036" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_037" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_038" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_039" xml:space="preserve">
+    <value>样本架储存补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_040" xml:space="preserve">
+    <value>单元1样本架叉子接收Y轴电机</value>
+    <comment>ラック引込部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_041" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_042" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_043" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_044" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_045" xml:space="preserve">
+    <value>原点</value>
+    <comment>原点</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_046" xml:space="preserve">
+    <value>取样台补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_047" xml:space="preserve">
+    <value>单元N样本架送出电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_048" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_049" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_050" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_051" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_052" xml:space="preserve">
+    <value>待机位置补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_053" xml:space="preserve">
+    <value>样本架回收</value>
+    <comment>ラック回収フィーダ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_058" xml:space="preserve">
+    <value>样本架ID读取位置</value>
+    <comment>ラックID読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_059" xml:space="preserve">
+    <value>样本条码ID读取位置</value>
+    <comment>検体BC-ID読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_060" xml:space="preserve">
+    <value>容器有无确认传感器位置</value>
+    <comment>容器有無確認位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_061" xml:space="preserve">
+    <value>11：（送出X)样本架接收</value>
+    <comment>（送り）装置取り込み位置へ移動(装置待機→装置)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_062" xml:space="preserve">
+    <value>13：（送出X)样本架释放</value>
+    <comment>（送り）装置取り込み位置へ移動(装置→装置待機)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_063" xml:space="preserve">
+    <value>14：（退回X)样本架释放</value>
+    <comment>（戻り）装置取り込み位置へ移動(装置→装置待機)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_064" xml:space="preserve">
+    <value>10：（退回X)移至待机位置（B→A)</value>
+    <comment>（戻り）装置待機位置へ移動(待機位置→BCR・待機位置)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_065" xml:space="preserve">
+    <value>12：（退回X)样本架接收</value>
+    <comment>（戻り）装置取り込み位置へ移動(装置待機→装置)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_066" xml:space="preserve">
+    <value>15：样本架卸载（卸载Y→卸载拨块）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_067" xml:space="preserve">
+    <value>16：样本架重设（卸载拨块→装载Y)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_068" xml:space="preserve">
+    <value>17：样本架回收（卸载拨块→回收Y)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_069" xml:space="preserve">
+    <value>拨块种类</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_070" xml:space="preserve">
+    <value>位置</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_071" xml:space="preserve">
+    <value>装载种类</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_072" xml:space="preserve">
+    <value>替换</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_073" xml:space="preserve">
+    <value>停止</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_074" xml:space="preserve">
+    <value>后·右</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_075" xml:space="preserve">
+    <value>前·左</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_076" xml:space="preserve">
+    <value>单元</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_077" xml:space="preserve">
+    <value>叉子动作位置</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_078" xml:space="preserve">
+    <value>样本位置</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_079" xml:space="preserve">
+    <value>位置A</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_080" xml:space="preserve">
+    <value>位置B</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_081" xml:space="preserve">
+    <value>叉子位置</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_082" xml:space="preserve">
+    <value>后</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_083" xml:space="preserve">
+    <value>前</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_084" xml:space="preserve">
+    <value>装载</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フィーダータイプドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_085" xml:space="preserve">
+    <value>卸载</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フィーダータイプドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_086" xml:space="preserve">
+    <value>滑块</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フィーダータイプドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_087" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_088" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_089" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_090" xml:space="preserve">
+    <value>样本架放置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_091" xml:space="preserve">
+    <value>重测样本架等待</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_092" xml:space="preserve">
+    <value>样本架回收</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_093" xml:space="preserve">
+    <value>样本架送出1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_094" xml:space="preserve">
+    <value>样本架退回1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_095" xml:space="preserve">
+    <value>样本架送出2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_096" xml:space="preserve">
+    <value>样本架退回2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_097" xml:space="preserve">
+    <value>样本架送出3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_098" xml:space="preserve">
+    <value>样本架退回3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_099" xml:space="preserve">
+    <value>样本架送出4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_100" xml:space="preserve">
+    <value>样本架退回4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_101" xml:space="preserve">
+    <value>分析单元1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_102" xml:space="preserve">
+    <value>分析单元2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_103" xml:space="preserve">
+    <value>分析单元3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_104" xml:space="preserve">
+    <value>分析单元4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_105" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_106" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_107" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_108" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_109" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_110" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_111" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_112" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_113" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_114" xml:space="preserve">
+    <value>BCR</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_115" xml:space="preserve">
+    <value>分析单元1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_116" xml:space="preserve">
+    <value>分析单元2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_117" xml:space="preserve">
+    <value>分析单元3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_118" xml:space="preserve">
+    <value>分析单元1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_119" xml:space="preserve">
+    <value>分析单元2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_120" xml:space="preserve">
+    <value>分析单元3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_121" xml:space="preserve">
+    <value>分析单元4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_122" xml:space="preserve">
+    <value>单元N样本架退回电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_123" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_124" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_125" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_126" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_127" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_128" xml:space="preserve">
+    <value>样本架放置装载时间</value>
+    <comment>ラック設置ローダー時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_129" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_130" xml:space="preserve">
+    <value>重测样本待机装载时间</value>
+    <comment>再検ラック待機ローダー時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_131" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_132" xml:space="preserve">
+    <value>样本架回收装载时间</value>
+    <comment>ラック回収ローダー時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_133" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_134" xml:space="preserve">
+    <value>样本架送出装载时间</value>
+    <comment>ラック送りローダー時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_135" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_136" xml:space="preserve">
+    <value>样本架退回装载时间</value>
+    <comment>ラック戻りローダー時間</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_137" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_138" xml:space="preserve">
+    <value>样本架卸载</value>
+    <comment>ラック待機フィーダ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_139" xml:space="preserve">
+    <value>样本架放置装载Y轴电机</value>
+    <comment>ラック架設部　ラック設置Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_140" xml:space="preserve">
+    <value>重测样本架待机Y轴电机</value>
+    <comment>ラック架設部　再検ラック待機Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_141" xml:space="preserve">
+    <value>样本架回收Y轴电机</value>
+    <comment>ラック架設部　ラック回収Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_142" xml:space="preserve">
+    <value>样本架拨块X轴电机</value>
+    <comment>ラック架設部　ラックフィーダX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_143" xml:space="preserve">
+    <value>重测样本架拨块X轴电机</value>
+    <comment>ラック架設部　再検ラックフィーダX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_144" xml:space="preserve">
+    <value>样本架滑块X轴电机</value>
+    <comment>ラック架設部　ラックスライダーX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_145" xml:space="preserve">
+    <value>样本架放置拨块位置</value>
+    <comment>ラック設置フィーダー位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_146" xml:space="preserve">
+    <value>1：叉子位置</value>
+    <comment>モーター調整シーケンス　ラックキャッチ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_147" xml:space="preserve">
+    <value>2：样本架装载位置（装载拨块X)</value>
+    <comment>モーター調整シーケンス　ラックフィーダ　ラック受取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_148" xml:space="preserve">
+    <value>3：样本架回收位置（装载拨块X)</value>
+    <comment>モーター調整シーケンス　ラックフィーダ　ラック回収位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_149" xml:space="preserve">
+    <value>4：样本架ID读取位置（装载拨块X)</value>
+    <comment>モーター調整シーケンス　ラックID読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_150" xml:space="preserve">
+    <value>5：样本条码ID读取位置（装载拨块X)</value>
+    <comment>モーター調整シーケンス　検体BC-ID読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_151" xml:space="preserve">
+    <value>6：容器有无确认位置（装载拨块X)</value>
+    <comment>モーター調整シーケンス　容器有無確認位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_152" xml:space="preserve">
+    <value>7：样本架装载位置（滑块X)</value>
+    <comment>モーター調整シーケンス　スライダー　ラックロード位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_153" xml:space="preserve">
+    <value>8：样本架回收位置（滑块X)</value>
+    <comment>モーター調整シーケンス　スライダー　ラック回収位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_154" xml:space="preserve">
+    <value>9：重测样本架拨块接收位置（卸载拨块X)</value>
+    <comment>モーター調整シーケンス　再検ラックフィーダ ラック受取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_155" xml:space="preserve">
+    <value>10：样本架重测位置（卸载拨块X）</value>
+    <comment>モーター調整シーケンス　再検ラックフィーダ ラック再検位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_156" xml:space="preserve">
+    <value>11：样本架回收位置（卸载拨块X)</value>
+    <comment>モーター調整シーケンス　再検ラックフィーダ ラック回収位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_157" xml:space="preserve">
+    <value>分析单元2样本架送出X轴电机</value>
+    <comment>ラック搬送部送りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_158" xml:space="preserve">
+    <value>分析单元2样本架退回X轴电机</value>
+    <comment>ラック搬送部戻りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_159" xml:space="preserve">
+    <value>分析单元2样本架叉子Y轴电机</value>
+    <comment>ラック引込部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_160" xml:space="preserve">
+    <value>分析单元3样本架送出X轴电机</value>
+    <comment>ラック搬送部送りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_161" xml:space="preserve">
+    <value>分析单元3样本架退回X轴电机</value>
+    <comment>ラック搬送部戻りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_162" xml:space="preserve">
+    <value>分析单元3样本架叉子Y轴电机</value>
+    <comment>ラック引込部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_163" xml:space="preserve">
+    <value>分析单元4样本架送出X轴电机</value>
+    <comment>ラック搬送部送りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_164" xml:space="preserve">
+    <value>分析单元4样本架退回X轴电机</value>
+    <comment>ラック搬送部戻りX軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_165" xml:space="preserve">
+    <value>分析单元4样本架叉子Y轴电机</value>
+    <comment>ラック引込部Y軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_166" xml:space="preserve">
+    <value>样本架重测拨块位置</value>
+    <comment>ラック再検フィーダ位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_167" xml:space="preserve">
+    <value>样本架接收</value>
+    <comment>ラック受け渡しスライダー位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_168" xml:space="preserve">
+    <value>样本架ID读取</value>
+    <comment>ラックID読取ボタン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_169" xml:space="preserve">
+    <value>样本条码ID读取</value>
+    <comment>検体BC-ID読取ボタン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_170" xml:space="preserve">
+    <value>容器有无确认</value>
+    <comment>容器有無確認ボタン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_171" xml:space="preserve">
+    <value>重复间隔</value>
+    <comment>Repeat Intervalラベル</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_172" xml:space="preserve">
+    <value>ms</value>
+    <comment>Repeat Intervalの単位</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_173" xml:space="preserve">
+    <value>样本架滑块位置</value>
+    <comment>ラックロードスライダー位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_174" xml:space="preserve">
+    <value>18：样本架退回（拨块→回收Y)</value>
+    <comment>ラックアンロード(ラック搬送フィーダー)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_175" xml:space="preserve">
+    <value>19：样本架仓盖LED测试</value>
+    <comment>ラックカバー LEDテスト</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_176" xml:space="preserve">
+    <value>间隔</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_177" xml:space="preserve">
+    <value>左</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　ポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_178" xml:space="preserve">
+    <value>中间</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　ポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_179" xml:space="preserve">
+    <value>右</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　ポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_180" xml:space="preserve">
+    <value>后</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フォークオペレーションポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_181" xml:space="preserve">
+    <value>从后面第二个</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フォークオペレーションポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_182" xml:space="preserve">
+    <value>从前面第二个</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フォークオペレーションポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_183" xml:space="preserve">
+    <value>前</value>
+    <comment>ラック搬送　ユニットテスト　パラメータ　フォークオペレーションポジションドロップダウン</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_184" xml:space="preserve">
+    <value>样本架条码ID读取位置</value>
+    <comment>ラックBC-ID読取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SAMPLERACKTRANS_185" xml:space="preserve">
+    <value>20：样本架综合动作（放置2个样本架于样本架放置轨道）</value>
+    <comment>ラック搬送　ユニットテスト　ラック総合テスト</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_000" xml:space="preserve">
+    <value>传感器状态</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_001" xml:space="preserve">
+    <value>传感器使用/不使用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_002" xml:space="preserve">
+    <value>耗材盒仓门检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_003" xml:space="preserve">
+    <value>废弃箱满杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_004" xml:space="preserve">
+    <value>废弃箱有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_005" xml:space="preserve">
+    <value>吸样头/反应杯盒传输有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_006" xml:space="preserve">
+    <value>吸样头/反应杯有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_007" xml:space="preserve">
+    <value>试剂仓盖检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_008" xml:space="preserve">
+    <value>R试剂瓶有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_009" xml:space="preserve">
+    <value>M试剂瓶有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_010" xml:space="preserve">
+    <value>吸样头插取有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_011" xml:space="preserve">
+    <value>反应杯插取有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_012" xml:space="preserve">
+    <value>反应杯有无确认外圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_013" xml:space="preserve">
+    <value>反应杯有无确认内圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_014" xml:space="preserve">
+    <value>反应杯有无确认放置位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_015" xml:space="preserve">
+    <value>反应杯有无确认BF1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_016" xml:space="preserve">
+    <value>反应杯有无确认BF2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_017" xml:space="preserve">
+    <value>R1混匀Zθ确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_018" xml:space="preserve">
+    <value>R2混匀Zθ确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_019" xml:space="preserve">
+    <value>BF1混匀Zθ确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_020" xml:space="preserve">
+    <value>BF2混匀Zθ确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_021" xml:space="preserve">
+    <value>预激发液混匀Zθ确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_022" xml:space="preserve">
+    <value>测光快门电磁锁确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_023" xml:space="preserve">
+    <value>试剂分注1针冲突检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_024" xml:space="preserve">
+    <value>试剂分注2针冲突检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_025" xml:space="preserve">
+    <value>洗涤液缓冲有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_026" xml:space="preserve">
+    <value>洗涤液缓冲满杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_027" xml:space="preserve">
+    <value>废液缓冲满杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_028" xml:space="preserve">
+    <value>预激发液1有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_029" xml:space="preserve">
+    <value>预激发液2有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_030" xml:space="preserve">
+    <value>激发液1有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_031" xml:space="preserve">
+    <value>激发液2有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_032" xml:space="preserve">
+    <value>稀释液有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_033" xml:space="preserve">
+    <value>去离子水有无确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_034" xml:space="preserve">
+    <value>洗涤液泵</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_035" xml:space="preserve">
+    <value>压力泵 1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_036" xml:space="preserve">
+    <value>压力泵 2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_037" xml:space="preserve">
+    <value>压力泵 3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_038" xml:space="preserve">
+    <value>压力泵 4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_039" xml:space="preserve">
+    <value>废液泵</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_040" xml:space="preserve">
+    <value>耗材盒仓门检测传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_041" xml:space="preserve">
+    <value>废弃箱满杯传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_042" xml:space="preserve">
+    <value>废弃箱有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_043" xml:space="preserve">
+    <value>吸样头/反应杯盒传输有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_044" xml:space="preserve">
+    <value>吸样头/反应杯有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_045" xml:space="preserve">
+    <value>试剂冷藏仓盖检测传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_046" xml:space="preserve">
+    <value>R试剂瓶有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_047" xml:space="preserve">
+    <value>M试剂瓶有无传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_048" xml:space="preserve">
+    <value>吸样头插取有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_049" xml:space="preserve">
+    <value>反应杯插取有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_050" xml:space="preserve">
+    <value>反应杯有无确认外圈传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_051" xml:space="preserve">
+    <value>反应杯有无确认内圈传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_052" xml:space="preserve">
+    <value>反应杯有无确认放置位置传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_053" xml:space="preserve">
+    <value>反应杯有无确认BF1传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_054" xml:space="preserve">
+    <value>反应杯有无确认BF2传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_055" xml:space="preserve">
+    <value>R1混匀Zθ确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_056" xml:space="preserve">
+    <value>R2混匀Zθ确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_057" xml:space="preserve">
+    <value>BF1混匀Zθ确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_058" xml:space="preserve">
+    <value>BF2混匀Zθ确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_059" xml:space="preserve">
+    <value>预激发液混匀Zθ确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_060" xml:space="preserve">
+    <value>测光快门电磁锁确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_061" xml:space="preserve">
+    <value>试剂分注1针冲突检测传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_062" xml:space="preserve">
+    <value>试剂分注2针冲突检测传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_063" xml:space="preserve">
+    <value>洗涤液缓冲有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_064" xml:space="preserve">
+    <value>洗涤液缓冲满杯传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_065" xml:space="preserve">
+    <value>废液缓冲满杯传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_066" xml:space="preserve">
+    <value>预激发液1有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_067" xml:space="preserve">
+    <value>预激发液2有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_068" xml:space="preserve">
+    <value>激发液1有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_069" xml:space="preserve">
+    <value>激发液2有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_070" xml:space="preserve">
+    <value>稀释液有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_071" xml:space="preserve">
+    <value>去离子水有无确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_072" xml:space="preserve">
+    <value>洗涤液泵传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_073" xml:space="preserve">
+    <value>泵压力传感器 1</value>
+    <comment>変更</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_074" xml:space="preserve">
+    <value>泵压力传感器 2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_075" xml:space="preserve">
+    <value>泵压力传感器 3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_076" xml:space="preserve">
+    <value>泵压力传感器 4</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_077" xml:space="preserve">
+    <value>废液泵传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_078" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_079" xml:space="preserve">
+    <value>不使用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_080" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_081" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_082" xml:space="preserve">
+    <value>耗材盒运送模块</value>
+    <comment>ケース搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_083" xml:space="preserve">
+    <value>试剂冷藏仓模块</value>
+    <comment>試薬保冷庫</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_084" xml:space="preserve">
+    <value>样本分注移送模块</value>
+    <comment>サンプル分注移送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_085" xml:space="preserve">
+    <value>反应杯运送模块</value>
+    <comment>反応容器搬送部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_086" xml:space="preserve">
+    <value>反应盘模块</value>
+    <comment>反応テーブル部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_087" xml:space="preserve">
+    <value>BF盘模块</value>
+    <comment>BFテーブル部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_088" xml:space="preserve">
+    <value>激发液分注模块</value>
+    <comment>トリガ分注、化学発光測定部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_089" xml:space="preserve">
+    <value>试剂分注1模块</value>
+    <comment>試薬分注1部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_090" xml:space="preserve">
+    <value>试剂分注2模块</value>
+    <comment>試薬分注2部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_091" xml:space="preserve">
+    <value>流体管路模块</value>
+    <comment>流体配管部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_092" xml:space="preserve">
+    <value>主机架</value>
+    <comment>本体フレーム部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_093" xml:space="preserve">
+    <value>BF1/BF1废液模块</value>
+    <comment>BF1部、BF1廃液部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_094" xml:space="preserve">
+    <value>BF2模块</value>
+    <comment>BF2部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_095" xml:space="preserve">
+    <value>BF1针 1 排水确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_096" xml:space="preserve">
+    <value>BF1针 2 排水确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_097" xml:space="preserve">
+    <value>BF2针 1 排水确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_098" xml:space="preserve">
+    <value>BF2针 2 排水确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_099" xml:space="preserve">
+    <value>BF2针 3 排水确认</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_100" xml:space="preserve">
+    <value>BF1针 1 排水确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_101" xml:space="preserve">
+    <value>BF1针 2 排水确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_102" xml:space="preserve">
+    <value>BF2针 1 排水确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_103" xml:space="preserve">
+    <value>BF2针 2 排水确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_104" xml:space="preserve">
+    <value>BF2针 3 排水确认传感器</value>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_105" xml:space="preserve">
+    <value>STAT容器有无确认</value>
+    <comment>スタット容器有無センサ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_106" xml:space="preserve">
+    <value>试剂盖开闭传感器1</value>
+    <comment>試薬蓋開閉センサ1</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_107" xml:space="preserve">
+    <value>试剂盖开闭传感器2</value>
+    <comment>試薬蓋開閉センサ2</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_108" xml:space="preserve">
+    <value>反应杯丢弃确认</value>
+    <comment>反応容器廃棄確認センサ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_109" xml:space="preserve">
+    <value>STAT开关</value>
+    <comment>STAT設置スイッチ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_110" xml:space="preserve">
+    <value>试剂冷藏仓转动开关</value>
+    <comment>試薬保冷庫回転スイッチ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_111" xml:space="preserve">
+    <value>样本液面检测传感器基板</value>
+    <comment>検体液面検知センサ基板</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_112" xml:space="preserve">
+    <value>STAT模块</value>
+    <comment>STAT部</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_113" xml:space="preserve">
+    <value>STAT容器有无确认传感器</value>
+    <comment>スタット容器有無センサ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_114" xml:space="preserve">
+    <value>试剂盖开闭传感器1</value>
+    <comment>試薬蓋開閉センサ1</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_115" xml:space="preserve">
+    <value>试剂盖开闭传感器2</value>
+    <comment>試薬蓋開閉センサ2</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_116" xml:space="preserve">
+    <value>反应杯丢弃确认</value>
+    <comment>反応容器廃棄確認センサ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_117" xml:space="preserve">
+    <value>STAT开关</value>
+    <comment>STAT設置スイッチ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_SENSOR_118" xml:space="preserve">
+    <value>试剂冷藏仓转动开关</value>
+    <comment>試薬保冷庫回転スイッチ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_002" xml:space="preserve">
+    <value>2：移动至STAT排队位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_003" xml:space="preserve">
+    <value>3：移动至STAT待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_004" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_005" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_006" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_007" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_008" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_009" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_010" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_011" xml:space="preserve">
+    <value>STAT Y轴电机</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_012" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_013" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_014" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_015" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_016" xml:space="preserve">
+    <value>共用</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_017" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_018" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_019" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_020" xml:space="preserve">
+    <value>STAT样本吸取位置</value>
+    <comment>STATサンプル分取位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_021" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_022" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_STAT_023" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_000" xml:space="preserve">
+    <value>反应盘温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_001" xml:space="preserve">
+    <value>当前温度(°C)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_002" xml:space="preserve">
+    <value>预设温度(°C)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_003" xml:space="preserve">
+    <value>温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_004" xml:space="preserve">
+    <value>Sec</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_005" xml:space="preserve">
+    <value>R1预加热器温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_006" xml:space="preserve">
+    <value>R2预加热器温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_007" xml:space="preserve">
+    <value>B/F1预加热器温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_008" xml:space="preserve">
+    <value>温度1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_009" xml:space="preserve">
+    <value>温度2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_010" xml:space="preserve">
+    <value>温度3</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_011" xml:space="preserve">
+    <value>B/F2预加热器温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_012" xml:space="preserve">
+    <value>B/F盘温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_013" xml:space="preserve">
+    <value>仪器内部温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_015" xml:space="preserve">
+    <value>化学发光测试模块温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_016" xml:space="preserve">
+    <value>试剂仓温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_017" xml:space="preserve">
+    <value>室内温度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TEMPUNIT_018" xml:space="preserve">
+    <value>PID</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_000" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_002" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_003" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_004" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_005" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_006" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_007" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_008" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_009" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_010" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_011" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_012" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_013" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_014" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_015" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_016" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_017" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_018" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_019" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_020" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_021" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_022" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_023" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_024" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_025" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_026" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_027" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_028" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_029" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_030" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_031" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_032" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TIPCASETRANSFER_033" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_000" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_001" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_002" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_003" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_004" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_005" xml:space="preserve">
+    <value>2：丢弃反应杯</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_006" xml:space="preserve">
+    <value>3：从反应盘移动至BF盘</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_007" xml:space="preserve">
+    <value>4：从BF盘（内圈）移动至反应盘（内圈）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_008" xml:space="preserve">
+    <value>5：从BF盘（外圈）移动至反应盘（外圈）</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_009" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_010" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_011" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_012" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_013" xml:space="preserve">
+    <value>转移·丢弃X轴电机</value>
+    <comment>トラベラー・廃棄部X軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_014" xml:space="preserve">
+    <value>转移·丢弃Z轴电机</value>
+    <comment>トラベラー・廃棄部Z軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_015" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_016" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_017" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_018" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_019" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_020" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_021" xml:space="preserve">
+    <value>反应盘（内圈）放置位置</value>
+    <comment>反応テーブル（内周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_022" xml:space="preserve">
+    <value>反应盘（外圈）放置位置</value>
+    <comment>反応テーブル（外周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_023" xml:space="preserve">
+    <value>BF盘（内圈）放置位置</value>
+    <comment>BFテーブル（内周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_024" xml:space="preserve">
+    <value>BF盘（外圈）放置位置</value>
+    <comment>BFテーブル（外周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_025" xml:space="preserve">
+    <value>反应杯丢弃位置</value>
+    <comment>容器廃棄位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_026" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_027" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_028" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_029" xml:space="preserve">
+    <value>1：反应盘（内圈）放置位置</value>
+    <comment>反応テーブル（内周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_030" xml:space="preserve">
+    <value>2：反应盘（外圈）放置位置</value>
+    <comment>反応テーブル（外周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_031" xml:space="preserve">
+    <value>3：反应杯丢弃位置</value>
+    <comment>容器廃棄位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_032" xml:space="preserve">
+    <value>4：BF盘（外圈）放置位置</value>
+    <comment>BFテーブル（外周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_033" xml:space="preserve">
+    <value>5：BF盘（内圈）放置位置</value>
+    <comment>BFテーブル（内周）設置位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_034" xml:space="preserve">
+    <value>释放反应杯后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_035" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_036" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_037" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_000" xml:space="preserve">
+    <value>时序</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_001" xml:space="preserve">
+    <value>1：模块初始化</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_002" xml:space="preserve">
+    <value>2：激发液分注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_003" xml:space="preserve">
+    <value>3：灌注</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_004" xml:space="preserve">
+    <value>4：冲洗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_005" xml:space="preserve">
+    <value>5：灌注到替换瓶</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_006" xml:space="preserve">
+    <value>6：检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_007" xml:space="preserve">
+    <value>7：探测器输出</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_008" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_009" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_010" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_011" xml:space="preserve">
+    <value>端口号</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_012" xml:space="preserve">
+    <value>检测</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_013" xml:space="preserve">
+    <value>暗</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_014" xml:space="preserve">
+    <value>样本</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_015" xml:space="preserve">
+    <value>LED</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_016" xml:space="preserve">
+    <value>探测器输出</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_017" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_018" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_019" xml:space="preserve">
+    <value>仪器参数设置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_020" xml:space="preserve">
+    <value>仪器系数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_021" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_022" xml:space="preserve">
+    <value>响应</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_023" xml:space="preserve">
+    <value>激发液吸取后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_024" xml:space="preserve">
+    <value>激发液分注后的延迟时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_025" xml:space="preserve">
+    <value>灌注次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_026" xml:space="preserve">
+    <value>冲洗次数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_027" xml:space="preserve">
+    <value>激发液灌注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_028" xml:space="preserve">
+    <value>激发液分注注射器待机位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_029" xml:space="preserve">
+    <value>激发液分注体积</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_030" xml:space="preserve">
+    <value>检测模式</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_031" xml:space="preserve">
+    <value>面积法</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_032" xml:space="preserve">
+    <value>峰值法</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_033" xml:space="preserve">
+    <value>快门时间</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_034" xml:space="preserve">
+    <value>(sec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_035" xml:space="preserve">
+    <value>(times)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_036" xml:space="preserve">
+    <value>(uL)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_037" xml:space="preserve">
+    <value>(msec)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_038" xml:space="preserve">
+    <value>激发液分注机械臂Z轴电机</value>
+    <comment>プレトリガ・トリガノズルZ軸</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_039" xml:space="preserve">
+    <value>初始速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_040" xml:space="preserve">
+    <value>最大速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_041" xml:space="preserve">
+    <value>加速度</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_042" xml:space="preserve">
+    <value>匀速</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_043" xml:space="preserve">
+    <value>反应杯位置</value>
+    <comment>反応テーブル位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_044" xml:space="preserve">
+    <value>共用</value>
+    <comment>モーターパラメータのモーター速度：通常のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_045" xml:space="preserve">
+    <value>(pps)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_046" xml:space="preserve">
+    <value>(pulse)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_047" xml:space="preserve">
+    <value>(mm)</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_048" xml:space="preserve">
+    <value>激发液分注注射器</value>
+    <comment>トリガ液ｼﾘﾝｼﾞ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_049" xml:space="preserve">
+    <value>补偿</value>
+    <comment>モーターパラメータのオフセットのグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_050" xml:space="preserve">
+    <value>吸取</value>
+    <comment>吸引</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_051" xml:space="preserve">
+    <value>分注</value>
+    <comment>吐出</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_052" xml:space="preserve">
+    <value>空气</value>
+    <comment>ｴｱ</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_053" xml:space="preserve">
+    <value>灌注/冲洗时分注（固定：S/W)</value>
+    <comment>プライム・リンス時吐出(ｿﾌﾄ固定)</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_054" xml:space="preserve">
+    <value>洗涤槽</value>
+    <comment>洗浄層位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_061" xml:space="preserve">
+    <value>增益</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_062" xml:space="preserve">
+    <value>补偿</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_063" xml:space="preserve">
+    <value>8：移动至激发液分注调节位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_064" xml:space="preserve">
+    <value>背景值</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_065" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_066" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_067" xml:space="preserve">
+    <value>电机参数</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_068" xml:space="preserve">
+    <value>瓶</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_069" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_070" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_071" xml:space="preserve">
+    <value>1.激发液/预激发液分注/灌注位置</value>
+    <comment>トリガ・プレトリガ液吐出・プライム位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_072" xml:space="preserve">
+    <value>重复间隔</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRIGGERDISP_073" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_038" xml:space="preserve">
+    <value>反应杯位置</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_039" xml:space="preserve">
+    <value>盘</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_040" xml:space="preserve">
+    <value>内圈→外圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_TRAVELERDISPOSAL_041" xml:space="preserve">
+    <value>外圈→内圈</value>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_031" xml:space="preserve">
+    <value>単元设置标志</value>
+    <comment>Module-Other-Configuration</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_032" xml:space="preserve">
+    <value>值:</value>
+    <comment>Module-Other-Configuration</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_033" xml:space="preserve">
+    <value>重启</value>
+    <comment>Module-Other-Configuration</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_034" xml:space="preserve">
+    <value>校验</value>
+    <comment>Module-Other-Configuration</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_OTHER_035" xml:space="preserve">
+    <value>发送</value>
+    <comment>Module-Other-Configuration</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_063" xml:space="preserve">
+    <value>洗涤下降</value>
+    <comment>モーターパラメータのモーター速度：洗浄降下のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_064" xml:space="preserve">
+    <value>洗涤上升</value>
+    <comment>モーターパラメータのモーター速度：洗浄上昇のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_BF1_065" xml:space="preserve">
+    <value>共用（固定：S/W)</value>
+    <comment>モーターパラメータのモーター速度：通常(ｿﾌﾄ固定)のグループボックス</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_100" xml:space="preserve">
+    <value>针交换调整位置</value>
+    <comment>プローブ交換調整位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R1_101" xml:space="preserve">
+    <value>6：针交换调整位置</value>
+    <comment>プローブ交換調整位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_113" xml:space="preserve">
+    <value>针交换调整位置</value>
+    <comment>プローブ交換調整位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_R2_114" xml:space="preserve">
+    <value>5：针交换调整位置</value>
+    <comment>プローブ交換調整位置</comment>
+  </data>
+  <data name="STRING_MAINTENANCE_MAIN_033" xml:space="preserve">
+    <value>维护日志已</value>
+    <comment>メンテナンス画面-メンテナンス日誌</comment>
+  </data>
+</root>

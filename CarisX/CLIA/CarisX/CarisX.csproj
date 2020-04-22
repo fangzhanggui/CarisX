@@ -1,0 +1,2297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FD3D900-2747-4DB0-9858-9A4C46DA4D5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oelco.CarisX</RootNamespace>
+    <AssemblyName>CarisX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEVELOP, NOT_USE_IOT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_caris|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_CARIS_OLD_SOCKET, DEVELOP, NOT_USE_IOT</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\CarisX.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\CarisX.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_caris|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_CARIS_OLD_SOCKET</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\CarisX.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetty.Buffers, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Buffers.0.6.0\lib\net45\DotNetty.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Codecs, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Codecs.0.6.0\lib\net45\DotNetty.Codecs.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Codecs.Mqtt, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Codecs.Mqtt.0.6.0\lib\net45\DotNetty.Codecs.Mqtt.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Common, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Common.0.6.0\lib\net45\DotNetty.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Handlers, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Handlers.0.6.0\lib\net45\DotNetty.Handlers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Transport, Version=0.6.0.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Transport.0.6.0\lib\net45\DotNetty.Transport.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGauge.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Azure.Amqp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Amqp.2.4.3\lib\net45\Microsoft.Azure.Amqp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devices, Version=1.19.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Devices.1.19.0\lib\net451\Microsoft.Azure.Devices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devices.Client, Version=1.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Devices.Client.1.23.1\lib\net451\Microsoft.Azure.Devices.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Devices.Shared, Version=1.18.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Devices.Shared.1.18.0\lib\net451\Microsoft.Azure.Devices.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.1.1\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.2\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Sock">
+      <HintPath>..\..\Lib\SOCKDLL\Sock.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.4.0.0\lib\net46\System.Net.WebSockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client, Version=4.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.Client.4.0.2\lib\net46\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.1.1\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator\CarisXCalculator.cs" />
+    <Compile Include="Calculator\IGRAMethod.cs" />
+    <Compile Include="Calculator\PgMethod.cs" />
+    <Compile Include="Calculator\PsaMethod.cs" />
+    <Compile Include="Calculator\RomaMethod.cs" />
+    <Compile Include="Common\InProcessSampleInfoManager.cs" />
+    <Compile Include="Common\MaintenanceJournalInfoManager.cs" />
+    <Compile Include="Common\RackMoveManager.cs" />
+    <Compile Include="Common\ReagentRemainStatusInfo.cs" />
+    <Compile Include="Common\PublicMemory.cs" />
+    <Compile Include="Common\RealtimeDataAgent.cs" />
+    <Compile Include="Common\SampleRackInfoManager.cs" />
+    <Compile Include="Common\CalibratorInfoManager.cs" />
+    <Compile Include="Common\Temperature.cs" />
+    <Compile Include="Comm\CarisXCommandAnalyserHost.cs" />
+    <Compile Include="Comm\CarisXCommandAnalyserRackTransfer.cs" />
+    <Compile Include="Comm\CarisXCommandAnalyserSlave.cs" />
+    <Compile Include="Comm\CarisXCommandAnalyserSlaveRack.cs" />
+    <Compile Include="Comm\CarisXCommCommand.cs" />
+    <Compile Include="Comm\CarisXCommIoTManager.cs" />
+    <Compile Include="Comm\CarisXCommManager.cs" />
+    <Compile Include="Comm\CarisXCommMessageManager.cs" />
+    <Compile Include="Comm\CarisXCommProtocolManager.cs" />
+    <Compile Include="Comm\CarisXCommSocket.cs" />
+    <Compile Include="Comm\CarisXDataReceiveThread.cs" />
+    <Compile Include="Comm\CarisXDataSendThread.cs" />
+    <Compile Include="Const\CarisXConst.cs" />
+    <Compile Include="DB\AnalyzeLogDB.cs" />
+    <Compile Include="DB\CalibratorAssayDB.cs" />
+    <Compile Include="DB\CalibrationCurveDB.cs" />
+    <Compile Include="DB\CalibratorResultDB.cs" />
+    <Compile Include="DB\CalibratorRegistDB.cs" />
+    <Compile Include="DB\ControlAssayDB.cs" />
+    <Compile Include="DB\ControlRegistDB.cs" />
+    <Compile Include="DB\ControlResultDB.cs" />
+    <Compile Include="DB\ErrorLogDB.cs" />
+    <Compile Include="DB\MasterErrorLogDB.cs" />
+    <Compile Include="DB\OperationLogDB.cs" />
+    <Compile Include="DB\ParameterChangeLogDB.cs" />
+    <Compile Include="DB\ReagentDB.cs" />
+    <Compile Include="DB\ReagentHistoryDB.cs" />
+    <Compile Include="DB\SpecimenAssayDB.cs" />
+    <Compile Include="DB\SpecimenGeneralDB.cs" />
+    <Compile Include="DB\SpecimenReMeasureDB.cs" />
+    <Compile Include="DB\SpecimenResultDB.cs" />
+    <Compile Include="DB\SpecimenStatDB.cs" />
+    <Compile Include="DB\SpecimenStatReMeasureDB.cs" />
+    <Compile Include="DB\UserInfoDB.cs" />
+    <Compile Include="GUI\Controls\AnalysisSettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\AnalysisSettingPanel.Designer.cs">
+      <DependentUpon>AnalysisSettingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\NoBorderButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\NoBorderButton.Designer.cs">
+      <DependentUpon>NoBorderButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\GroupSelectAnalysisSettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\GroupSelectAnalysisSettingPanel.designer.cs">
+      <DependentUpon>GroupSelectAnalysisSettingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\BottleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\BottleView.Designer.cs">
+      <DependentUpon>BottleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\IRecalcInfo.cs" />
+    <Compile Include="GUI\Controls\ISearchInfo.cs" />
+    <Compile Include="GUI\Controls\RackCalibRegistStatusView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RackCalibRegistStatusView.Designer.cs">
+      <DependentUpon>RackCalibRegistStatusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelBase.Designer.cs">
+      <DependentUpon>RecalcInfoPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelControlResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelControlResult.Designer.cs">
+      <DependentUpon>RecalcInfoPanelControlResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelSpecimenResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RecalcInfoPanelSpecimenResult.Designer.cs">
+      <DependentUpon>RecalcInfoPanelSpecimenResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\BufferStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\BufferStatus.Designer.cs">
+      <DependentUpon>BufferStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RemainBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RemainBar.Designer.cs">
+      <DependentUpon>RemainBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelBase.Designer.cs">
+      <DependentUpon>SearchInfoPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelCalibratorResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelCalibratorResult.Designer.cs">
+      <DependentUpon>SearchInfoPanelCalibratorResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelControlResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelControlResult.Designer.cs">
+      <DependentUpon>SearchInfoPanelControlResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelSpecimenResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchInfoPanelSpecimenResult.Designer.cs">
+      <DependentUpon>SearchInfoPanelSpecimenResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchLogInfoPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchLogInfoPanelBase.Designer.cs">
+      <DependentUpon>SearchLogInfoPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchLogInfoPanelErrorLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\SearchLogInfoPanelErrorLog.Designer.cs">
+      <DependentUpon>SearchLogInfoPanelErrorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\TipCellView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\TipCellView.Designer.cs">
+      <DependentUpon>TipCellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ZoomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\ZoomPanel.Designer.cs">
+      <DependentUpon>ZoomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DebugForm_SpecifyCountValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DebugForm_SpecifyCountValue.designer.cs">
+      <DependentUpon>DebugForm_SpecifyCountValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgAskRackMoveSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgAskRackMoveSelection.designer.cs">
+      <DependentUpon>DlgAskRackMoveSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgAskWorkSheatSTAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgAskWorkSheatSTAT.Designer.cs">
+      <DependentUpon>DlgAskWorkSheatSTAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgAutoSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgAutoSetup.Designer.cs">
+      <DependentUpon>DlgAutoSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCarisXBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCarisXBase.Designer.cs">
+      <DependentUpon>DlgCarisXBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCarisXBaseSys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCheckCalibrationMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCheckCalibrationMode.Designer.cs">
+      <DependentUpon>DlgCheckCalibrationMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCheckCompanyLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCheckCompanyLogo.Designer.cs">
+      <DependentUpon>DlgCheckCompanyLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgConsumableDetailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgConsumableDetailed.Designer.cs">
+      <DependentUpon>DlgConsumableDetailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgDateSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgDateSelect.Designer.cs">
+      <DependentUpon>DlgDateSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgEditReagent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgEditReagent.designer.cs">
+      <DependentUpon>DlgEditReagent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgEditRegistInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgEditRegistInfo.Designer.cs">
+      <DependentUpon>DlgEditRegistInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgErrorCodeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgErrorCodeMessage.Designer.cs">
+      <DependentUpon>DlgErrorCodeMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgImportMeasProto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgImportMeasProto.Designer.cs">
+      <DependentUpon>DlgImportMeasProto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgInitialize.Designer.cs">
+      <DependentUpon>DlgInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgInterDayReferenceValueInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgInterDayReferenceValueInput.Designer.cs">
+      <DependentUpon>DlgInterDayReferenceValueInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgLogin.Designer.cs">
+      <DependentUpon>DlgLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgMaintenanceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgMaintenanceDetail.Designer.cs">
+      <DependentUpon>DlgMaintenanceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgMaintenanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgMaintenanceList.Designer.cs">
+      <DependentUpon>DlgMaintenanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgMessage.Designer.cs">
+      <DependentUpon>DlgMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionAnalyzerTemperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionAnalyzerTemperature.designer.cs">
+      <DependentUpon>DlgOptionAnalyzerTemperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionCheckConsumables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionCheckConsumables.designer.cs">
+      <DependentUpon>DlgOptionCheckConsumables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionChangeReadReagentBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionChangeReadReagentBC.designer.cs">
+      <DependentUpon>DlgOptionChangeReadReagentBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionInputReagentBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionInputReagentBC.designer.cs">
+      <DependentUpon>DlgOptionInputReagentBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionEOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionEOP.designer.cs">
+      <DependentUpon>DlgOptionEOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionSyringeAging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionSyringeAging.designer.cs">
+      <DependentUpon>DlgOptionSyringeAging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionSystemInitializing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionSystemInitializing.designer.cs">
+      <DependentUpon>DlgOptionSystemInitializing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCheckStatMeasurableModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCheckStatMeasurableModule.designer.cs">
+      <DependentUpon>DlgCheckStatMeasurableModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionTroubleCountermeaure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionTroubleCountermeaure.Designer.cs">
+      <DependentUpon>DlgOptionTroubleCountermeaure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionVersionUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionVersionUp.designer.cs">
+      <DependentUpon>DlgOptionVersionUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgPasteCountInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgPasteCountInput.Designer.cs">
+      <DependentUpon>DlgPasteCountInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgProtocolSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgProtocolSelect.Designer.cs">
+      <DependentUpon>DlgProtocolSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgRControlReferenceValueInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgRControlReferenceValueInput.Designer.cs">
+      <DependentUpon>DlgRControlReferenceValueInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgReadBCBottle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgReadBCBottle.Designer.cs">
+      <DependentUpon>DlgReadBCBottle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgReagentLotSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgReagentLotSelect.Designer.cs">
+      <DependentUpon>DlgReagentLotSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgReferenceValueInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgReferenceValueInput.Designer.cs">
+      <DependentUpon>DlgReferenceValueInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSamplingPauseReasonDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSamplingPauseReasonDetail.Designer.cs">
+      <DependentUpon>DlgSamplingPauseReasonDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgRemarkDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgRemarkDetail.Designer.cs">
+      <DependentUpon>DlgRemarkDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgReplaceTank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgReplaceTank.Designer.cs">
+      <DependentUpon>DlgReplaceTank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgAssayStartConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgAssayStartConfirm.designer.cs">
+      <DependentUpon>DlgAssayStartConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgShutdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgShutdown.Designer.cs">
+      <DependentUpon>DlgShutdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSplash.Designer.cs">
+      <DependentUpon>DlgSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSupplieComfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSupplieComfirm.Designer.cs">
+      <DependentUpon>DlgSupplieComfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAnalysisMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAnalysisMethod.designer.cs">
+      <DependentUpon>DlgSysAnalysisMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAnaPrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAnaPrime.Designer.cs">
+      <DependentUpon>DlgSysAnaPrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgOptionReconfirmMaintenanceJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgOptionReconfirmMaintenanceJournal.designer.cs">
+      <DependentUpon>DlgOptionReconfirmMaintenanceJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysIoT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysIoT.designer.cs">
+      <DependentUpon>DlgSysIoT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackMovementMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackMovementMethod.Designer.cs">
+      <DependentUpon>DlgSysRackMovementMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoPrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoPrime.designer.cs">
+      <DependentUpon>DlgSysAutoPrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoSetUpTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoSetUpTimer.designer.cs">
+      <DependentUpon>DlgSysAutoSetUpTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoShutDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAutoShutDown.designer.cs">
+      <DependentUpon>DlgSysAutoShutDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysAssayModuleConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysAssayModuleConnect.Designer.cs">
+      <DependentUpon>DlgSysAssayModuleConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysTransferSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysTransferSystem.designer.cs">
+      <DependentUpon>DlgSysTransferSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysBubble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysBubble.designer.cs">
+      <DependentUpon>DlgSysBubble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysCheckRemainAtStartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysCheckRemainAtStartUp.Designer.cs">
+      <DependentUpon>DlgSysCheckRemainAtStartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysCycleTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysCycleTime.Designer.cs">
+      <DependentUpon>DlgSysCycleTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysDeviceNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysDeviceNo.Designer.cs">
+      <DependentUpon>DlgSysDeviceNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysDilutedLiquidShortSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysDilutedLiquidShortSupply.Designer.cs">
+      <DependentUpon>DlgSysDilutedLiquidShortSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysDispensingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysDispensingOrder.designer.cs">
+      <DependentUpon>DlgSysDispensingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysEnableTBIGRA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysEnableTBIGRA.designer.cs">
+      <DependentUpon>DlgSysEnableTBIGRA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysEnableUrgentDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysEnableUrgentDiagnosis.designer.cs">
+      <DependentUpon>DlgSysEnableUrgentDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysFlashPrime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysFlashPrime.designer.cs">
+      <DependentUpon>DlgSysFlashPrime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysHost.designer.cs">
+      <DependentUpon>DlgSysHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysKeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysKeyBoard.designer.cs">
+      <DependentUpon>DlgSysKeyBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysMeasurementResultFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysMeasurementResultFile.designer.cs">
+      <DependentUpon>DlgSysMeasurementResultFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysPhotometry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysPhotometry.designer.cs">
+      <DependentUpon>DlgSysPhotometry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysPrinter.designer.cs">
+      <DependentUpon>DlgSysPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackAssign.Designer.cs">
+      <DependentUpon>DlgSysRackAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackCoverNotificationTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysRackCoverNotificationTime.Designer.cs">
+      <DependentUpon>DlgSysRackCoverNotificationTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysReagentLotChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysReagentLotChange.Designer.cs">
+      <DependentUpon>DlgSysReagentLotChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysReagentShortSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysReagentShortSupply.Designer.cs">
+      <DependentUpon>DlgSysReagentShortSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysSampleBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysSampleBC.designer.cs">
+      <DependentUpon>DlgSysSampleBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysSequenceNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysSequenceNo.Designer.cs">
+      <DependentUpon>DlgSysSequenceNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysSmplSuckingUpErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysSmplSuckingUpErr.Designer.cs">
+      <DependentUpon>DlgSysSmplSuckingUpErr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysTemp.Designer.cs">
+      <DependentUpon>DlgSysTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysTypeOfCalculated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysTypeOfCalculated.designer.cs">
+      <DependentUpon>DlgSysTypeOfCalculated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysTypeOfDiluent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysTypeOfDiluent.designer.cs">
+      <DependentUpon>DlgSysTypeOfDiluent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysWarninglight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysWarninglight.designer.cs">
+      <DependentUpon>DlgSysWarninglight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysWarningSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysWarningSound.Designer.cs">
+      <DependentUpon>DlgSysWarningSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysWashDispense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysWashDispense.Designer.cs">
+      <DependentUpon>DlgSysWashDispense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgTargetSelectRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgTargetSelectRange.Designer.cs">
+      <DependentUpon>DlgTargetSelectRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgTurnTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgTurnTable.Designer.cs">
+      <DependentUpon>DlgTurnTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgWaitAnalyzerTemperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgWaitAnalyzerTemperature.designer.cs">
+      <DependentUpon>DlgWaitAnalyzerTemperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgYAxisEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgYAxisEdit.Designer.cs">
+      <DependentUpon>DlgYAxisEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAssay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAssay.Designer.cs">
+      <DependentUpon>FormAssay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormCalibAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCalibAnalysis.Designer.cs">
+      <DependentUpon>FormCalibAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormCalibRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCalibRegistration.Designer.cs">
+      <DependentUpon>FormCalibRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormCalibResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCalibResult.Designer.cs">
+      <DependentUpon>FormCalibResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormCalibStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCalibStatus.Designer.cs">
+      <DependentUpon>FormCalibStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormControlQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormControlQC.Designer.cs">
+      <DependentUpon>FormControlQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormControlRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormControlRegistration.Designer.cs">
+      <DependentUpon>FormControlRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormControlResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormControlResult.Designer.cs">
+      <DependentUpon>FormControlResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMainFrame.Designer.cs">
+      <DependentUpon>FormMainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTotal.Designer.cs">
+      <DependentUpon>FormTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormMainFrameSmallMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormMainFrameSmallMenu.Designer.cs">
+      <DependentUpon>FormMainFrameSmallMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormProtocolSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormProtocolSetting.Designer.cs">
+      <DependentUpon>FormProtocolSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSetReagent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSetReagent.Designer.cs">
+      <DependentUpon>FormSetReagent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenRegistration.Designer.cs">
+      <DependentUpon>FormSpecimenRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenResult.Designer.cs">
+      <DependentUpon>FormSpecimenResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenRetest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenRetest.Designer.cs">
+      <DependentUpon>FormSpecimenRetest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenStatRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSpecimenStatRegistration.Designer.cs">
+      <DependentUpon>FormSpecimenStatRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemAnalytes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemAnalytes.Designer.cs">
+      <DependentUpon>FormSystemAnalytes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemConfiguration.Designer.cs">
+      <DependentUpon>FormSystemConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemLog.Designer.cs">
+      <DependentUpon>FormSystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemModuleOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemModuleOption.Designer.cs">
+      <DependentUpon>FormSystemModuleOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemOption.Designer.cs">
+      <DependentUpon>FormSystemOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSystemUserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSystemUserControl.Designer.cs">
+      <DependentUpon>FormSystemUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCalibrationConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCalibrationConfirm.Designer.cs">
+      <DependentUpon>DlgCalibrationConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgConvertErrLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgConvertErrLog.Designer.cs">
+      <DependentUpon>DlgConvertErrLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgAskReceiptNumberInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgAskReceiptNumberInput.Designer.cs">
+      <DependentUpon>DlgAskReceiptNumberInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgWaitAskWorkSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgWaitAskWorkSheet.Designer.cs">
+      <DependentUpon>DlgWaitAskWorkSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgCalibCurveComfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgCalibCurveComfirm.Designer.cs">
+      <DependentUpon>DlgCalibCurveComfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgShortReagentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgShortReagentView.Designer.cs">
+      <DependentUpon>DlgShortReagentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DlgSysWashSolutionFromExterior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DlgSysWashSolutionFromExterior.designer.cs">
+      <DependentUpon>DlgSysWashSolutionFromExterior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer.Designer.cs">
+      <DependentUpon>Installer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\CarisXLogInfo.cs" />
+    <Compile Include="Log\CarisXLogManager.cs" />
+    <Compile Include="Log\CarisXLogThread.cs" />
+    <Compile Include="Log\CarisXLogWriter.cs" />
+    <Compile Include="Log\ProtocolConverterLogInfo.cs" />
+    <Compile Include="Maintenance\CommonFunction.cs" />
+    <Compile Include="Maintenance\DlgMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DlgMaintenance.Designer.cs">
+      <DependentUpon>DlgMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\DlgMaintenanceLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DlgMaintenanceLogin.Designer.cs">
+      <DependentUpon>DlgMaintenanceLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\DlgMaintenanceStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DlgMaintenanceStart.designer.cs">
+      <DependentUpon>DlgMaintenanceStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\DlgWaitModuleChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DlgWaitModuleChange.designer.cs">
+      <DependentUpon>DlgWaitModuleChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\DlgWaitMotorInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\DlgWaitMotorInitialize.designer.cs">
+      <DependentUpon>DlgWaitMotorInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormBF1Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormBF1Unit.Designer.cs">
+      <DependentUpon>FormBF1Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormBF2Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormBF2Unit.Designer.cs">
+      <DependentUpon>FormBF2Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormBFTableUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormBFTableUnit.Designer.cs">
+      <DependentUpon>FormBFTableUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormCaseTransferUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormCaseTransferUnit.Designer.cs">
+      <DependentUpon>FormCaseTransferUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormDiluentDispenseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormDiluentDispenseUnit.Designer.cs">
+      <DependentUpon>FormDiluentDispenseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormMaintenanceMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormMaintenanceMain.Designer.cs">
+      <DependentUpon>FormMaintenanceMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormOther.Designer.cs">
+      <DependentUpon>FormOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormPretriggerUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormPretriggerUnit.Designer.cs">
+      <DependentUpon>FormPretriggerUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormR1DispenseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormR1DispenseUnit.Designer.cs">
+      <DependentUpon>FormR1DispenseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormR2DispenseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormR2DispenseUnit.Designer.cs">
+      <DependentUpon>FormR2DispenseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormRackSensorUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormRackSensorUnit.Designer.cs">
+      <DependentUpon>FormRackSensorUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormReactionCellTransferUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormReactionCellTransferUnit.Designer.cs">
+      <DependentUpon>FormReactionCellTransferUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormReactionTableUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormReactionTableUnit.Designer.cs">
+      <DependentUpon>FormReactionTableUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormReagentStorageUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormReagentStorageUnit.Designer.cs">
+      <DependentUpon>FormReagentStorageUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormSampleDispenseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormSampleDispenseUnit.Designer.cs">
+      <DependentUpon>FormSampleDispenseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormSampleRackTransferUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormSampleRackTransferUnit.Designer.cs">
+      <DependentUpon>FormSampleRackTransferUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormSensorUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormSensorUnit.Designer.cs">
+      <DependentUpon>FormSensorUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormSTATUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormSTATUnit.Designer.cs">
+      <DependentUpon>FormSTATUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormTempPID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormTempPID.Designer.cs">
+      <DependentUpon>FormTempPID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormTempUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormTempUnit.Designer.cs">
+      <DependentUpon>FormTempUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormTravelerDisposalUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormTravelerDisposalUnit.Designer.cs">
+      <DependentUpon>FormTravelerDisposalUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormTriggerDispenseUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormTriggerDispenseUnit.Designer.cs">
+      <DependentUpon>FormTriggerDispenseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormUnitBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormUnitBase.Designer.cs">
+      <DependentUpon>FormUnitBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FormFluidPipingUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FormFluidPipingUnit.Designer.cs">
+      <DependentUpon>FormFluidPipingUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\MaintenanceUnit.cs" />
+    <Compile Include="Maintenance\MotorParameterSetUp.cs" />
+    <Compile Include="Maintenance\ResponseLog.cs" />
+    <Compile Include="Maintenance\UserNumEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\UserNumEdit.designer.cs">
+      <DependentUpon>UserNumEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\AnalyteGroup\AnalyteGroupInfo.cs" />
+    <Compile Include="Parameter\AnalyteGroup\AnalyteGroupInfoManager.cs" />
+    <Compile Include="Parameter\AnalyteGroup\AnalyteGroupManager.cs" />
+    <Compile Include="Parameter\AppSettings.cs" />
+    <Compile Include="Parameter\CarisXMaintenanceServicemanParameter.cs" />
+    <Compile Include="Parameter\CarisXMaintenanceUserParameter.cs" />
+    <Compile Include="Parameter\MaintenanceJournalCodeDataManager.cs" />
+    <Compile Include="Parameter\SystemParameter\AssayModuleConnectParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\IoTParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\RackMovementMethodParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\TransferSystemParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\RinseExecutionBeforeAssay.cs" />
+    <Compile Include="Parameter\TempPIDParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\CalibrationModeParameter.cs" />
+    <Compile Include="Parameter\CarisXConfiguParameter.cs" />
+    <Compile Include="Parameter\CarisXMotorParameter.cs" />
+    <Compile Include="Parameter\CarisXSensorParameter.cs" />
+    <Compile Include="Parameter\ControlQC.cs" />
+    <Compile Include="Parameter\ErrorCodeData\ErrorCodeDataManager.cs" />
+    <Compile Include="Parameter\MeasureProtocol\MeasureProtocolInfo.cs" />
+    <Compile Include="Parameter\SampleRequireAmount.cs" />
+    <Compile Include="Parameter\SupplieParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\AssayModeParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\AttachmentParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\AutoPrimeParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\AutoShutdownParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\AutoStartupTimerParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\CarisXSystemParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\CompanyLogoParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\CycleTimeParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\DeviceNoParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ErrWarningBeepParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\FlushParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\HostParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\HowToCreateSequenceNoParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\KeyBoardParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\MeasurementResultFileParameter.cs" />
+    <Compile Include="Parameter\MeasureProtocol\MeasureProtocol.cs" />
+    <Compile Include="Parameter\MeasureProtocol\MeasureProtocolManager.cs" />
+    <Compile Include="Parameter\SystemParameter\PhotometryParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\PrimeParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\PrinterParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ProcessAfterSampleAspiratingErrorParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ProcessAtDiluentShortageParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ProcessAtReagentLotChange.cs" />
+    <Compile Include="Parameter\SystemParameter\ProcessAtReagentShortageParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ProtocolVersionParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\RackIDDefinitionParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\ReagentCheckAtStartUpParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\SampleBCRParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\SampleLoaderCoverOpenErrorNotificationTimeParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\SampleSequenceNumberHistory.cs" />
+    <Compile Include="Parameter\SystemParameter\TemperatureParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\WarningLightParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\WashDispVolParameter.cs" />
+    <Compile Include="Parameter\SystemParameter\WashSolutionFromExterior.cs" />
+    <Compile Include="Parameter\SystemParameter\BuubleCheckParameter.cs" />
+    <Compile Include="Parameter\UISettings\CarisXUISettingManager.cs" />
+    <Compile Include="Print\CalibratorAnalyPrint.cs" />
+    <Compile Include="Print\CalibratorAnalyReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalibratorAnalyReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\CalibRegistrationPrint.cs" />
+    <Compile Include="Print\CalibRegistrationReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalibRegistrationReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\CalibResultPrint.cs" />
+    <Compile Include="Print\CalibResultReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalibResultReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\CalibStatusPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Print\ControlQCDetailPrint.cs" />
+    <Compile Include="Print\ControlQCPrint.cs" />
+    <Compile Include="Print\ControlQCReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlQCReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\ControlRegistrationPrint.cs" />
+    <Compile Include="Print\ControlResultPrint.cs" />
+    <Compile Include="Print\ProtocolPrint.cs" />
+    <Compile Include="Print\ProtocolReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProtocolReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\ReportEX.cs" />
+    <Compile Include="Print\SpecimenRegistrationPrint.cs" />
+    <Compile Include="Print\SpecimenRegistrationReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecimenRegistrationReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\SpecimenResultPrint.cs" />
+    <Compile Include="Print\SpecimenResultReport_US.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecimenResultReport_US.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\CalibStatusReport_US.cs">
+      <DependentUpon>CalibStatusReport_US.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlQCDetailReport_US.cs">
+      <DependentUpon>ControlQCDetailReport_US.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlRegistrationReport_US.cs">
+      <DependentUpon>ControlRegistrationReport_US.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlResultReport_US.cs">
+      <DependentUpon>ControlResultReport_US.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\CalibratorAnalyReport_CN.cs">
+      <DependentUpon>CalibratorAnalyReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\CalibRegistrationReport_CN.cs">
+      <DependentUpon>CalibRegistrationReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\CalibResultReport_CN.cs">
+      <DependentUpon>CalibResultReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\CalibStatusReport_CN.cs">
+      <DependentUpon>CalibStatusReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlQCDetailReport_CN.cs">
+      <DependentUpon>ControlQCDetailReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlQCReport_CN.cs">
+      <DependentUpon>ControlQCReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlRegistrationReport_CN.cs">
+      <DependentUpon>ControlRegistrationReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ControlResultReport_CN.cs">
+      <DependentUpon>ControlResultReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\ProtocolReport_CN.cs">
+      <DependentUpon>ProtocolReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\SpecimenRegistrationReport_CN.cs">
+      <DependentUpon>SpecimenRegistrationReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Print\SpecimenResultReport_CN.cs">
+      <DependentUpon>SpecimenResultReport_CN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources_Maintenance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources_Maintenance.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Status\SystemStatus.cs" />
+    <Compile Include="Utility\CarisXHistoryKind.cs" />
+    <Compile Include="Utility\CarisXIDString.cs" />
+    <Compile Include="Utility\CarisXNumberingBase.cs" />
+    <Compile Include="Utility\CarisXReceiveCommandThread.cs" />
+    <Compile Include="Utility\CarisXSequenceHelper.cs" />
+    <Compile Include="Utility\CarisXSubFunction.cs" />
+    <Compile Include="Utility\CarisXUserLevelManager.cs" />
+    <Compile Include="Utility\AnalysisErrorInfo.cs" />
+    <Compile Include="Utility\CommandDataMediator.cs" />
+    <Compile Include="Utility\CycleCounter.cs" />
+    <Compile Include="Utility\FontManager.cs" />
+    <Compile Include="Utility\HybridDataMediator.cs" />
+    <Compile Include="Utility\SamplingPauseReason.cs" />
+    <Compile Include="Utility\SequencialNumber\IndividuallyNo.cs" />
+    <Compile Include="Utility\SequencialNumber\SequencialCalibNo.cs" />
+    <Compile Include="Utility\SequencialNumber\SequencialControlNo.cs" />
+    <Compile Include="Utility\SequencialNumber\ReceiptNo.cs" />
+    <Compile Include="Utility\Remark.cs" />
+    <Compile Include="Utility\SequencialNumber\SequencialSampleNo.cs" />
+    <Compile Include="Utility\SequencialNumber\UniqueNo.cs" />
+    <Compile Include="Utility\SequencialNumber\SequencialPrioritySampleNo.cs" />
+    <Compile Include="Utility\ValueChecker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Controls\AnalysisSettingPanel.resx">
+      <DependentUpon>AnalysisSettingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\NoBorderButton.resx">
+      <DependentUpon>NoBorderButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\GroupSelectAnalysisSettingPanel.resx">
+      <DependentUpon>GroupSelectAnalysisSettingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\BottleView.resx">
+      <DependentUpon>BottleView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RackCalibRegistStatusView.resx">
+      <DependentUpon>RackCalibRegistStatusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RackCalibRegistStatusView.zh-CN.resx">
+      <DependentUpon>RackCalibRegistStatusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelBase.resx">
+      <DependentUpon>RecalcInfoPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelBase.zh-CN.resx">
+      <DependentUpon>RecalcInfoPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelControlResult.resx">
+      <DependentUpon>RecalcInfoPanelControlResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelControlResult.zh-CN.resx">
+      <DependentUpon>RecalcInfoPanelControlResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelSpecimenResult.resx">
+      <DependentUpon>RecalcInfoPanelSpecimenResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RecalcInfoPanelSpecimenResult.zh-CN.resx">
+      <DependentUpon>RecalcInfoPanelSpecimenResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\BufferStatus.resx">
+      <DependentUpon>BufferStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RemainBar.resx">
+      <DependentUpon>RemainBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelBase.resx">
+      <DependentUpon>SearchInfoPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelBase.zh-CN.resx">
+      <DependentUpon>SearchInfoPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelCalibratorResult.resx">
+      <DependentUpon>SearchInfoPanelCalibratorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelCalibratorResult.zh-CN.resx">
+      <DependentUpon>SearchInfoPanelCalibratorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelControlResult.resx">
+      <DependentUpon>SearchInfoPanelControlResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelControlResult.zh-CN.resx">
+      <DependentUpon>SearchInfoPanelControlResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelSpecimenResult.resx">
+      <DependentUpon>SearchInfoPanelSpecimenResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchInfoPanelSpecimenResult.zh-CN.resx">
+      <DependentUpon>SearchInfoPanelSpecimenResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchLogInfoPanelBase.resx">
+      <DependentUpon>SearchLogInfoPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\SearchLogInfoPanelErrorLog.resx">
+      <DependentUpon>SearchLogInfoPanelErrorLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\TipCellView.resx">
+      <DependentUpon>TipCellView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\ZoomPanel.resx">
+      <DependentUpon>ZoomPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DebugForm_SpecifyCountValue.resx">
+      <DependentUpon>DebugForm_SpecifyCountValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgAskRackMoveSelection.resx">
+      <DependentUpon>DlgAskRackMoveSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgAskWorkSheatSTAT.resx">
+      <DependentUpon>DlgAskWorkSheatSTAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgAutoSetup.resx">
+      <DependentUpon>DlgAutoSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCarisXBase.resx">
+      <DependentUpon>DlgCarisXBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCheckCalibrationMode.resx">
+      <DependentUpon>DlgCheckCalibrationMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCheckCompanyLogo.resx">
+      <DependentUpon>DlgCheckCompanyLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgConsumableDetailed.resx">
+      <DependentUpon>DlgConsumableDetailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgDateSelect.resx">
+      <DependentUpon>DlgDateSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgEditReagent.resx">
+      <DependentUpon>DlgEditReagent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgEditRegistInfo.resx">
+      <DependentUpon>DlgEditRegistInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgErrorCodeMessage.resx">
+      <DependentUpon>DlgErrorCodeMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgImportMeasProto.resx">
+      <DependentUpon>DlgImportMeasProto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgInitialize.resx">
+      <DependentUpon>DlgInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgInterDayReferenceValueInput.resx">
+      <DependentUpon>DlgInterDayReferenceValueInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgLogin.resx">
+      <DependentUpon>DlgLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgMaintenanceDetail.resx">
+      <DependentUpon>DlgMaintenanceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgMaintenanceList.resx">
+      <DependentUpon>DlgMaintenanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgMessage.resx">
+      <DependentUpon>DlgMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionAnalyzerTemperature.resx">
+      <DependentUpon>DlgOptionAnalyzerTemperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionCheckConsumables.resx">
+      <DependentUpon>DlgOptionCheckConsumables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionChangeReadReagentBC.resx">
+      <DependentUpon>DlgOptionChangeReadReagentBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionInputReagentBC.resx">
+      <DependentUpon>DlgOptionInputReagentBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionEOP.resx">
+      <DependentUpon>DlgOptionEOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionSyringeAging.resx">
+      <DependentUpon>DlgOptionSyringeAging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionSystemInitializing.resx">
+      <DependentUpon>DlgOptionSystemInitializing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCheckStatMeasurableModule.resx">
+      <DependentUpon>DlgCheckStatMeasurableModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionTroubleCountermeaure.resx">
+      <DependentUpon>DlgOptionTroubleCountermeaure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionVersionUp.resx">
+      <DependentUpon>DlgOptionVersionUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgPasteCountInput.resx">
+      <DependentUpon>DlgPasteCountInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgProtocolSelect.resx">
+      <DependentUpon>DlgProtocolSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgRControlReferenceValueInput.resx">
+      <DependentUpon>DlgRControlReferenceValueInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgReadBCBottle.resx">
+      <DependentUpon>DlgReadBCBottle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgReagentLotSelect.resx">
+      <DependentUpon>DlgReagentLotSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgReferenceValueInput.resx">
+      <DependentUpon>DlgReferenceValueInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSamplingPauseReasonDetail.resx">
+      <DependentUpon>DlgSamplingPauseReasonDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgRemarkDetail.resx">
+      <DependentUpon>DlgRemarkDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgReplaceTank.resx">
+      <DependentUpon>DlgReplaceTank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgAssayStartConfirm.resx">
+      <DependentUpon>DlgAssayStartConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgShutdown.resx">
+      <DependentUpon>DlgShutdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSplash.resx">
+      <DependentUpon>DlgSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSupplieComfirm.resx">
+      <DependentUpon>DlgSupplieComfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAnalysisMethod.resx">
+      <DependentUpon>DlgSysAnalysisMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAnaPrime.resx">
+      <DependentUpon>DlgSysAnaPrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgOptionReconfirmMaintenanceJournal.resx">
+      <DependentUpon>DlgOptionReconfirmMaintenanceJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysIoT.resx">
+      <DependentUpon>DlgSysIoT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysRackMovementMethod.resx">
+      <DependentUpon>DlgSysRackMovementMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAutoPrime.resx">
+      <DependentUpon>DlgSysAutoPrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAutoSetUpTimer.resx">
+      <DependentUpon>DlgSysAutoSetUpTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAutoShutDown.resx">
+      <DependentUpon>DlgSysAutoShutDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysAssayModuleConnect.resx">
+      <DependentUpon>DlgSysAssayModuleConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysTransferSystem.resx">
+      <DependentUpon>DlgSysTransferSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysBubble.resx">
+      <DependentUpon>DlgSysBubble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysCheckRemainAtStartUp.resx">
+      <DependentUpon>DlgSysCheckRemainAtStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysCycleTime.resx">
+      <DependentUpon>DlgSysCycleTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysDeviceNo.resx">
+      <DependentUpon>DlgSysDeviceNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysDilutedLiquidShortSupply.resx">
+      <DependentUpon>DlgSysDilutedLiquidShortSupply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysDispensingOrder.resx">
+      <DependentUpon>DlgSysDispensingOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysEnableTBIGRA.resx">
+      <DependentUpon>DlgSysEnableTBIGRA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysEnableUrgentDiagnosis.resx">
+      <DependentUpon>DlgSysEnableUrgentDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysFlashPrime.resx">
+      <DependentUpon>DlgSysFlashPrime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysHost.resx">
+      <DependentUpon>DlgSysHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysKeyBoard.resx">
+      <DependentUpon>DlgSysKeyBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysMeasurementResultFile.resx">
+      <DependentUpon>DlgSysMeasurementResultFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysPhotometry.resx">
+      <DependentUpon>DlgSysPhotometry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysPrinter.resx">
+      <DependentUpon>DlgSysPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysRackAssign.resx">
+      <DependentUpon>DlgSysRackAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysRackCoverNotificationTime.resx">
+      <DependentUpon>DlgSysRackCoverNotificationTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysReagentLotChange.resx">
+      <DependentUpon>DlgSysReagentLotChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysReagentShortSupply.resx">
+      <DependentUpon>DlgSysReagentShortSupply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysSampleBC.resx">
+      <DependentUpon>DlgSysSampleBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysSequenceNo.resx">
+      <DependentUpon>DlgSysSequenceNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysSmplSuckingUpErr.resx">
+      <DependentUpon>DlgSysSmplSuckingUpErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysTemp.resx">
+      <DependentUpon>DlgSysTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysTypeOfCalculated.resx">
+      <DependentUpon>DlgSysTypeOfCalculated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysTypeOfDiluent.resx">
+      <DependentUpon>DlgSysTypeOfDiluent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysWarninglight.resx">
+      <DependentUpon>DlgSysWarninglight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysWarningSound.resx">
+      <DependentUpon>DlgSysWarningSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysWashDispense.resx">
+      <DependentUpon>DlgSysWashDispense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgTargetSelectRange.resx">
+      <DependentUpon>DlgTargetSelectRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgTurnTable.resx">
+      <DependentUpon>DlgTurnTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgWaitAnalyzerTemperature.resx">
+      <DependentUpon>DlgWaitAnalyzerTemperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgYAxisEdit.resx">
+      <DependentUpon>DlgYAxisEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAssay.resx">
+      <DependentUpon>FormAssay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCalibAnalysis.resx">
+      <DependentUpon>FormCalibAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCalibRegistration.resx">
+      <DependentUpon>FormCalibRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCalibResult.resx">
+      <DependentUpon>FormCalibResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCalibStatus.resx">
+      <DependentUpon>FormCalibStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormControlQC.resx">
+      <DependentUpon>FormControlQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormControlRegistration.resx">
+      <DependentUpon>FormControlRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormControlResult.resx">
+      <DependentUpon>FormControlResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMainFrame.resx">
+      <DependentUpon>FormMainFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTotal.resx">
+      <DependentUpon>FormTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormMainFrameSmallMenu.resx">
+      <DependentUpon>FormMainFrameSmallMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormProtocolSetting.resx">
+      <DependentUpon>FormProtocolSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormProtocolSetting.zh-CN.resx">
+      <DependentUpon>FormProtocolSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSetReagent.resx">
+      <DependentUpon>FormSetReagent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSpecimenRegistration.resx">
+      <DependentUpon>FormSpecimenRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSpecimenResult.resx">
+      <DependentUpon>FormSpecimenResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSpecimenRetest.resx">
+      <DependentUpon>FormSpecimenRetest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSpecimenStatRegistration.resx">
+      <DependentUpon>FormSpecimenStatRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemAnalytes.resx">
+      <DependentUpon>FormSystemAnalytes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemConfiguration.resx">
+      <DependentUpon>FormSystemConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemLog.resx">
+      <DependentUpon>FormSystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemModuleOption.resx">
+      <DependentUpon>FormSystemModuleOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemOption.resx">
+      <DependentUpon>FormSystemOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSystemUserControl.resx">
+      <DependentUpon>FormSystemUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCalibrationConfirm.resx">
+      <DependentUpon>DlgCalibrationConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgConvertErrLog.resx">
+      <DependentUpon>DlgConvertErrLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgAskReceiptNumberInput.resx">
+      <DependentUpon>DlgAskReceiptNumberInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgWaitAskWorkSheet.resx">
+      <DependentUpon>DlgWaitAskWorkSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgCalibCurveComfirm.resx">
+      <DependentUpon>DlgCalibCurveComfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgShortReagentView.resx">
+      <DependentUpon>DlgShortReagentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DlgSysWashSolutionFromExterior.resx">
+      <DependentUpon>DlgSysWashSolutionFromExterior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DlgMaintenance.resx">
+      <DependentUpon>DlgMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DlgMaintenanceLogin.resx">
+      <DependentUpon>DlgMaintenanceLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DlgMaintenanceStart.resx">
+      <DependentUpon>DlgMaintenanceStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DlgWaitModuleChange.resx">
+      <DependentUpon>DlgWaitModuleChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\DlgWaitMotorInitialize.resx">
+      <DependentUpon>DlgWaitMotorInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormBF1Unit.resx">
+      <DependentUpon>FormBF1Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormBF2Unit.resx">
+      <DependentUpon>FormBF2Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormBFTableUnit.resx">
+      <DependentUpon>FormBFTableUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormCaseTransferUnit.resx">
+      <DependentUpon>FormCaseTransferUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormDiluentDispenseUnit.resx">
+      <DependentUpon>FormDiluentDispenseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormMaintenanceMain.resx">
+      <DependentUpon>FormMaintenanceMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormOther.resx">
+      <DependentUpon>FormOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormPretriggerUnit.resx">
+      <DependentUpon>FormPretriggerUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormR1DispenseUnit.resx">
+      <DependentUpon>FormR1DispenseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormR2DispenseUnit.resx">
+      <DependentUpon>FormR2DispenseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormRackSensorUnit.resx">
+      <DependentUpon>FormRackSensorUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormReactionCellTransferUnit.resx">
+      <DependentUpon>FormReactionCellTransferUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormReactionTableUnit.resx">
+      <DependentUpon>FormReactionTableUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormReagentStorageUnit.resx">
+      <DependentUpon>FormReagentStorageUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormSampleDispenseUnit.resx">
+      <DependentUpon>FormSampleDispenseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormSampleRackTransferUnit.resx">
+      <DependentUpon>FormSampleRackTransferUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormSensorUnit.resx">
+      <DependentUpon>FormSensorUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormSTATUnit.resx">
+      <DependentUpon>FormSTATUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormTempPID.resx">
+      <DependentUpon>FormTempPID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormTempUnit.resx">
+      <DependentUpon>FormTempUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormTravelerDisposalUnit.resx">
+      <DependentUpon>FormTravelerDisposalUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormTriggerDispenseUnit.resx">
+      <DependentUpon>FormTriggerDispenseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormUnitBase.resx">
+      <DependentUpon>FormUnitBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FormFluidPipingUnit.resx">
+      <DependentUpon>FormFluidPipingUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\UserNumEdit.resx">
+      <DependentUpon>UserNumEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibratorAnalyReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibratorAnalyReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibRegistrationReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibRegistrationReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibResultReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibResultReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlQCReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlQCReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ProtocolReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProtocolReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\SpecimenRegistrationReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecimenRegistrationReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\SpecimenResultReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecimenResultReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibStatusReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibStatusReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlQCDetailReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlQCDetailReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlRegistrationReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlRegistrationReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlResultReport_US.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlResultReport_US.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibratorAnalyReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibratorAnalyReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibRegistrationReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibRegistrationReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibResultReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibResultReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\CalibStatusReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalibStatusReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlQCDetailReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlQCDetailReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlQCReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlQCReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlRegistrationReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlRegistrationReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ControlResultReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlResultReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\ProtocolReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProtocolReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\SpecimenRegistrationReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecimenRegistrationReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\SpecimenResultReport_CN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecimenResultReport_CN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources_Maintenance.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources_Maintenance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources_Maintenance.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{FEBB568B-C9A8-46AE-85CC-3F74030DE53E}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

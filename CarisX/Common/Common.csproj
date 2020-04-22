@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEBB568B-C9A8-46AE-85CC-3F74030DE53E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oelco.Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_caris|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_CARIS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_aft|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_AFT</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Common.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Common.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_caris|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug_caris\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_CARIS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug_caris\Common.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_aft|x64'">
+    <OutputPath>bin\x64\Debug_aft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUG_AFT</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Common.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Shared.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Sock, Version=1.0.6264.26811, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\SOCKDLL\Sock.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator\CalculatorBase.cs" />
+    <Compile Include="Calculator\CalibTbl.cs" />
+    <Compile Include="Calculator\ConcentrationCaliculator.cs" />
+    <Compile Include="Calculator\CutOffMethod.cs" />
+    <Compile Include="Calculator\DoubleLogarithmicMethod.cs" />
+    <Compile Include="Calculator\FourPrameterMethod.cs" />
+    <Compile Include="Calculator\InhMethod.cs" />
+    <Compile Include="Calculator\LogitLogMethod.cs" />
+    <Compile Include="Calculator\SplineMethod.cs" />
+    <Compile Include="Comm\CommCommand.cs" />
+    <Compile Include="Comm\CommManager.cs" />
+    <Compile Include="Comm\CommMessageManager.cs" />
+    <Compile Include="Comm\CommProtocolManager.cs" />
+    <Compile Include="Comm\CommSocket.cs" />
+    <Compile Include="Comm\DataReceiveThread.cs" />
+    <Compile Include="Comm\DataSendThread.cs" />
+    <Compile Include="Comm\HostProtocolManager.cs" />
+    <Compile Include="Comm\IComm.cs" />
+    <Compile Include="Comm\ICommCommandAnalyser.cs" />
+    <Compile Include="Comm\RackTransferProtocolManager.cs" />
+    <Compile Include="Comm\RS232C\CommSerial.cs" />
+    <Compile Include="Comm\RS232C\SerialParameter.cs" />
+    <Compile Include="Comm\RS232C\URS232C.cs" />
+    <Compile Include="Comm\RS232C\URsCom.cs" />
+    <Compile Include="Comm\SlaveProtocolManager.cs" />
+    <Compile Include="Comm\SocketParameter.cs" />
+    <Compile Include="Const\GlobalConst.cs" />
+    <Compile Include="DB\DataRowWrapperBase.cs" />
+    <Compile Include="DB\DBAccessControl.cs" />
+    <Compile Include="DB\SqlInfo.cs" />
+    <Compile Include="DB\SQLServerDBAccess.cs" />
+    <Compile Include="GUI\CustomNumericEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomNumericEditor.Designer.cs">
+      <DependentUpon>CustomNumericEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomStatePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomTextEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomTextEditor.designer.cs">
+      <DependentUpon>CustomTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormChildBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormChildBase.designer.cs">
+      <DependentUpon>FormChildBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BlinkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomChart.Designer.cs">
+      <DependentUpon>CustomChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomOption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomUButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomUStateButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormBlackOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormBlackOut.designer.cs">
+      <DependentUpon>FormBlackOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLayerManagedBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPictLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPictLayer.designer.cs">
+      <DependentUpon>FormPictLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GesturePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\NumericEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\NumericEditor.designer.cs">
+      <DependentUpon>NumericEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ScrollProxy.cs" />
+    <Compile Include="GUI\FormTransitionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTransparentLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTransparentLayer.Designer.cs">
+      <DependentUpon>FormTransparentLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOG\LogInfo.cs" />
+    <Compile Include="LOG\LogManager.cs" />
+    <Compile Include="LOG\LogThread.cs" />
+    <Compile Include="LOG\LogWriter.cs" />
+    <Compile Include="Parameter\AttachmentParameter.cs" />
+    <Compile Include="Parameter\GlobalParameter.cs" />
+    <Compile Include="Parameter\IPreserveParameter.cs" />
+    <Compile Include="Parameter\ParameterFilePreserve.cs" />
+    <Compile Include="Print\PrintBase.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DataHelper.cs" />
+    <Compile Include="Utility\HistoryManager.cs" />
+    <Compile Include="Utility\IDString.cs" />
+    <Compile Include="Utility\LockObject.cs" />
+    <Compile Include="Utility\NotifyManager.cs" />
+    <Compile Include="Utility\NumberingBase.cs" />
+    <Compile Include="Utility\ParameterizedThreadBase.cs" />
+    <Compile Include="Utility\SequenceHelper.cs" />
+    <Compile Include="Utility\SerializableIpAddress.cs" />
+    <Compile Include="Utility\SerializableTimeSpan.cs" />
+    <Compile Include="Utility\Singleton.cs" />
+    <Compile Include="Utility\SubFunction.cs" />
+    <Compile Include="Utility\TextData.cs" />
+    <Compile Include="Utility\ThreadBase.cs" />
+    <Compile Include="Utility\Transparency.cs" />
+    <Compile Include="Utility\UserLevelManager.cs" />
+    <Compile Include="Utility\Win32API.cs" />
+    <Compile Include="Utility\XmlCipher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\FormChildBase.resx">
+      <DependentUpon>FormChildBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomLabel.resx">
+      <DependentUpon>CustomLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormBlackOut.resx">
+      <DependentUpon>FormBlackOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPictLayer.resx">
+      <DependentUpon>FormPictLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTransparentLayer.resx">
+      <DependentUpon>FormTransparentLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NumericEditor.resx">
+      <DependentUpon>NumericEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

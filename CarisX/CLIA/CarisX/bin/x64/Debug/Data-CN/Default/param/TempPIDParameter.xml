@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TempPIDParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SlaveList>
+    <ModuleConfig>
+      <reactionTableTempPIDParam>
+        <CommandText>1     2   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>ReactionTableTemp</TempArea>
+        <ProportionalConstValue>2</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </reactionTableTempPIDParam>
+      <bFTableTempPIDParam>
+        <CommandText>2     1   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BFTableTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </bFTableTempPIDParam>
+      <bF1TempPIDParam>
+        <CommandText>3    35  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF1PreheatTemp</TempArea>
+        <ProportionalConstValue>35</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF1TempPIDParam>
+      <bF2TempPIDParam>
+        <CommandText>4    45  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF2PreheatTemp</TempArea>
+        <ProportionalConstValue>45</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF2TempPIDParam>
+      <r1TempPIDParam>
+        <CommandText>5     3   500 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R1PreheatTemp</TempArea>
+        <ProportionalConstValue>3</ProportionalConstValue>
+        <IntegralConstvalue>500</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </r1TempPIDParam>
+      <r2TempPIDParam>
+        <CommandText>6     4  1500   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R2PreheatTemp</TempArea>
+        <ProportionalConstValue>4</ProportionalConstValue>
+        <IntegralConstvalue>1500</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </r2TempPIDParam>
+      <ptotometryTempPIDParam>
+        <CommandText>7     1  1000 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>PtotometryTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </ptotometryTempPIDParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempPIDParam>
+        <CommandText>1     2   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>ReactionTableTemp</TempArea>
+        <ProportionalConstValue>2</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </reactionTableTempPIDParam>
+      <bFTableTempPIDParam>
+        <CommandText>2     1   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BFTableTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </bFTableTempPIDParam>
+      <bF1TempPIDParam>
+        <CommandText>3    35  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF1PreheatTemp</TempArea>
+        <ProportionalConstValue>35</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF1TempPIDParam>
+      <bF2TempPIDParam>
+        <CommandText>4    45  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF2PreheatTemp</TempArea>
+        <ProportionalConstValue>45</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF2TempPIDParam>
+      <r1TempPIDParam>
+        <CommandText>5     3   500 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R1PreheatTemp</TempArea>
+        <ProportionalConstValue>3</ProportionalConstValue>
+        <IntegralConstvalue>500</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </r1TempPIDParam>
+      <r2TempPIDParam>
+        <CommandText>6     4  1500   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R2PreheatTemp</TempArea>
+        <ProportionalConstValue>4</ProportionalConstValue>
+        <IntegralConstvalue>1500</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </r2TempPIDParam>
+      <ptotometryTempPIDParam>
+        <CommandText>7     1  1000 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>PtotometryTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </ptotometryTempPIDParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempPIDParam>
+        <CommandText>1     2   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>ReactionTableTemp</TempArea>
+        <ProportionalConstValue>2</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </reactionTableTempPIDParam>
+      <bFTableTempPIDParam>
+        <CommandText>2     1   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BFTableTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </bFTableTempPIDParam>
+      <bF1TempPIDParam>
+        <CommandText>3    35  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF1PreheatTemp</TempArea>
+        <ProportionalConstValue>35</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF1TempPIDParam>
+      <bF2TempPIDParam>
+        <CommandText>4    45  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF2PreheatTemp</TempArea>
+        <ProportionalConstValue>45</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF2TempPIDParam>
+      <r1TempPIDParam>
+        <CommandText>5     3   500 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R1PreheatTemp</TempArea>
+        <ProportionalConstValue>3</ProportionalConstValue>
+        <IntegralConstvalue>500</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </r1TempPIDParam>
+      <r2TempPIDParam>
+        <CommandText>6     4  1500   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R2PreheatTemp</TempArea>
+        <ProportionalConstValue>4</ProportionalConstValue>
+        <IntegralConstvalue>1500</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </r2TempPIDParam>
+      <ptotometryTempPIDParam>
+        <CommandText>7     1  1000 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>PtotometryTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </ptotometryTempPIDParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempPIDParam>
+        <CommandText>1     2   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>ReactionTableTemp</TempArea>
+        <ProportionalConstValue>2</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </reactionTableTempPIDParam>
+      <bFTableTempPIDParam>
+        <CommandText>2     1   700 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BFTableTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>700</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </bFTableTempPIDParam>
+      <bF1TempPIDParam>
+        <CommandText>3    35  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF1PreheatTemp</TempArea>
+        <ProportionalConstValue>35</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF1TempPIDParam>
+      <bF2TempPIDParam>
+        <CommandText>4    45  1000   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>BF2PreheatTemp</TempArea>
+        <ProportionalConstValue>45</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </bF2TempPIDParam>
+      <r1TempPIDParam>
+        <CommandText>5     3   500 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R1PreheatTemp</TempArea>
+        <ProportionalConstValue>3</ProportionalConstValue>
+        <IntegralConstvalue>500</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </r1TempPIDParam>
+      <r2TempPIDParam>
+        <CommandText>6     4  1500   0.1</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>R2PreheatTemp</TempArea>
+        <ProportionalConstValue>4</ProportionalConstValue>
+        <IntegralConstvalue>1500</IntegralConstvalue>
+        <DifferentialConstValue>0.1</DifferentialConstValue>
+      </r2TempPIDParam>
+      <ptotometryTempPIDParam>
+        <CommandText>7     1  1000 0.001</CommandText>
+        <CommandId>474</CommandId>
+        <CommNo>0</CommNo>
+        <CommKind>Command0474</CommKind>
+        <TempArea>PtotometryTemp</TempArea>
+        <ProportionalConstValue>1</ProportionalConstValue>
+        <IntegralConstvalue>1000</IntegralConstvalue>
+        <DifferentialConstValue>0.001</DifferentialConstValue>
+      </ptotometryTempPIDParam>
+    </ModuleConfig>
+  </SlaveList>
+</TempPIDParameter>

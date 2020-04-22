@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SupplieParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SlaveList>
+    <ModuleConfig>
+      <SampleDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>60000</RemainCount>
+      </SampleDispensingSyringePackin>
+      <R1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R1DispensingSyringePackin>
+      <R2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R2DispensingSyringePackin>
+      <ReagentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </ReagentDispensingSyringePackin>
+      <DiluentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </DiluentDispensingSyringePackin>
+      <Wash1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash1DispensingSyringePackin>
+      <Wash2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash2DispensingSyringePackin>
+      <PreTriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </PreTriggerDispensingSyringePackin>
+      <TriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </TriggerDispensingSyringePackin>
+      <OutDrainPump>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>36000000</Value>
+        </RemainTime>
+      </OutDrainPump>
+      <OutDrainPumpTube>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>7200000</Value>
+        </RemainTime>
+      </OutDrainPumpTube>
+      <SerialNo />
+      <ModuleId>0</ModuleId>
+      <TotalAssay>0</TotalAssay>
+      <SupplieList>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>60000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>36000000</Value>
+          </RemainTime>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>7200000</Value>
+          </RemainTime>
+        </RemainingLife>
+      </SupplieList>
+      <OverList />
+    </ModuleConfig>
+    <ModuleConfig>
+      <SampleDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>10000</RemainCount>
+      </SampleDispensingSyringePackin>
+      <R1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R1DispensingSyringePackin>
+      <R2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R2DispensingSyringePackin>
+      <ReagentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </ReagentDispensingSyringePackin>
+      <DiluentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </DiluentDispensingSyringePackin>
+      <Wash1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash1DispensingSyringePackin>
+      <Wash2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash2DispensingSyringePackin>
+      <PreTriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </PreTriggerDispensingSyringePackin>
+      <TriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </TriggerDispensingSyringePackin>
+      <OutDrainPump>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>36000000</Value>
+        </RemainTime>
+      </OutDrainPump>
+      <OutDrainPumpTube>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>7200000</Value>
+        </RemainTime>
+      </OutDrainPumpTube>
+      <SerialNo />
+      <ModuleId>1</ModuleId>
+      <TotalAssay>0</TotalAssay>
+      <SupplieList>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>10000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>36000000</Value>
+          </RemainTime>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>7200000</Value>
+          </RemainTime>
+        </RemainingLife>
+      </SupplieList>
+      <OverList />
+    </ModuleConfig>
+    <ModuleConfig>
+      <SampleDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>20000</RemainCount>
+      </SampleDispensingSyringePackin>
+      <R1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R1DispensingSyringePackin>
+      <R2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R2DispensingSyringePackin>
+      <ReagentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </ReagentDispensingSyringePackin>
+      <DiluentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </DiluentDispensingSyringePackin>
+      <Wash1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash1DispensingSyringePackin>
+      <Wash2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash2DispensingSyringePackin>
+      <PreTriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </PreTriggerDispensingSyringePackin>
+      <TriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </TriggerDispensingSyringePackin>
+      <OutDrainPump>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>36000000</Value>
+        </RemainTime>
+      </OutDrainPump>
+      <OutDrainPumpTube>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>7200000</Value>
+        </RemainTime>
+      </OutDrainPumpTube>
+      <SerialNo />
+      <ModuleId>2</ModuleId>
+      <TotalAssay>0</TotalAssay>
+      <SupplieList>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>20000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>36000000</Value>
+          </RemainTime>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>7200000</Value>
+          </RemainTime>
+        </RemainingLife>
+      </SupplieList>
+      <OverList />
+    </ModuleConfig>
+    <ModuleConfig>
+      <SampleDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>30000</RemainCount>
+      </SampleDispensingSyringePackin>
+      <R1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R1DispensingSyringePackin>
+      <R2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </R2DispensingSyringePackin>
+      <ReagentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </ReagentDispensingSyringePackin>
+      <DiluentDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </DiluentDispensingSyringePackin>
+      <Wash1DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash1DispensingSyringePackin>
+      <Wash2DispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </Wash2DispensingSyringePackin>
+      <PreTriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </PreTriggerDispensingSyringePackin>
+      <TriggerDispensingSyringePackin>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseCount>0</UseCount>
+        <RemainCount>100000</RemainCount>
+      </TriggerDispensingSyringePackin>
+      <OutDrainPump>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>36000000</Value>
+        </RemainTime>
+      </OutDrainPump>
+      <OutDrainPumpTube>
+        <StartTime>0001-01-01T00:00:00</StartTime>
+        <UseTime>
+          <Value>0</Value>
+        </UseTime>
+        <RemainTime>
+          <Value>7200000</Value>
+        </RemainTime>
+      </OutDrainPumpTube>
+      <SerialNo />
+      <ModuleId>3</ModuleId>
+      <TotalAssay>0</TotalAssay>
+      <SupplieList>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>30000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="CountTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseCount>0</UseCount>
+          <RemainCount>100000</RemainCount>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>36000000</Value>
+          </RemainTime>
+        </RemainingLife>
+        <RemainingLife xsi:type="TimeTypeLife">
+          <StartTime>0001-01-01T00:00:00</StartTime>
+          <UseTime>
+            <Value>0</Value>
+          </UseTime>
+          <RemainTime>
+            <Value>7200000</Value>
+          </RemainTime>
+        </RemainingLife>
+      </SupplieList>
+      <OverList />
+    </ModuleConfig>
+  </SlaveList>
+</SupplieParameter>

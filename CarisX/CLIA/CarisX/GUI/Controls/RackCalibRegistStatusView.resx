@@ -1,0 +1,969 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appearance2.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblRack1Pos1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblRack1Pos1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack1Pos1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 12</value>
+  </data>
+  <data name="lblRack1Pos1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblRack1Pos1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblRack1Pos1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1.Name" xml:space="preserve">
+    <value>lblRack1Pos1</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="appearance3.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack1Pos2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack1Pos2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 12</value>
+  </data>
+  <data name="lblRack1Pos2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack1Pos2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblRack1Pos2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2.Name" xml:space="preserve">
+    <value>lblRack1Pos2</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="appearance4.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack1Pos3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack1Pos3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 12</value>
+  </data>
+  <data name="lblRack1Pos3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack1Pos3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblRack1Pos3.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3.Name" xml:space="preserve">
+    <value>lblRack1Pos3</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="appearance5.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="ultraLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="ultraLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ultraLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 12</value>
+  </data>
+  <data name="ultraLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="ultraLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="ultraLabel2.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ultraLabel2.Name" xml:space="preserve">
+    <value>ultraLabel2</value>
+  </data>
+  <data name="&gt;&gt;ultraLabel2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;ultraLabel2.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;ultraLabel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="appearance6.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack1Pos5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack1Pos5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 12</value>
+  </data>
+  <data name="lblRack1Pos5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack1Pos5.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblRack1Pos5.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5.Name" xml:space="preserve">
+    <value>lblRack1Pos5</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="appearance7.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance7.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack1Pos5Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos5Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 47</value>
+  </data>
+  <data name="lblRack1Pos5Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack1Pos5Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblRack1Pos5Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5Dsp.Name" xml:space="preserve">
+    <value>lblRack1Pos5Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5Dsp.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos5Dsp.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="appearance8.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance8.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack1Pos4Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos4Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 47</value>
+  </data>
+  <data name="lblRack1Pos4Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack1Pos4Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRack1Pos4Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos4Dsp.Name" xml:space="preserve">
+    <value>lblRack1Pos4Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos4Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos4Dsp.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos4Dsp.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="appearance9.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance9.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack1Pos3Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos3Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 47</value>
+  </data>
+  <data name="lblRack1Pos3Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack1Pos3Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblRack1Pos3Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3Dsp.Name" xml:space="preserve">
+    <value>lblRack1Pos3Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3Dsp.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos3Dsp.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="appearance10.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance10.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack1Pos2Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos2Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 47</value>
+  </data>
+  <data name="lblRack1Pos2Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack1Pos2Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblRack1Pos2Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2Dsp.Name" xml:space="preserve">
+    <value>lblRack1Pos2Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2Dsp.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos2Dsp.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="appearance11.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance11.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack1Pos1Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Pos1Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 47</value>
+  </data>
+  <data name="lblRack1Pos1Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack1Pos1Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblRack1Pos1Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1Dsp.Name" xml:space="preserve">
+    <value>lblRack1Pos1Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1Dsp.Parent" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Pos1Dsp.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.ClientArea.Name" xml:space="preserve">
+    <value>pnlRack1.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.ClientArea.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraPanelClientAreaUnsafe, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.ClientArea.Parent" xml:space="preserve">
+    <value>pnlRack1</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlRack1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 22</value>
+  </data>
+  <data name="pnlRack1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>518, 128</value>
+  </data>
+  <data name="pnlRack1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.Name" xml:space="preserve">
+    <value>pnlRack1</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraPanel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlRack1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="appearance13.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack2Pos6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack2Pos6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 12</value>
+  </data>
+  <data name="lblRack2Pos6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack2Pos6.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblRack2Pos6.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6.Name" xml:space="preserve">
+    <value>lblRack2Pos6</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="appearance14.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance14.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack2Pos10Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos10Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 47</value>
+  </data>
+  <data name="lblRack2Pos10Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack2Pos10Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblRack2Pos10Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10Dsp.Name" xml:space="preserve">
+    <value>lblRack2Pos10Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10Dsp.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10Dsp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="appearance15.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack2Pos7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack2Pos7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 12</value>
+  </data>
+  <data name="lblRack2Pos7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack2Pos7.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblRack2Pos7.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7.Name" xml:space="preserve">
+    <value>lblRack2Pos7</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="appearance16.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance16.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack2Pos9Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos9Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 47</value>
+  </data>
+  <data name="lblRack2Pos9Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack2Pos9Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRack2Pos9Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9Dsp.Name" xml:space="preserve">
+    <value>lblRack2Pos9Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9Dsp.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9Dsp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="appearance17.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack2Pos8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack2Pos8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 12</value>
+  </data>
+  <data name="lblRack2Pos8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack2Pos8.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblRack2Pos8.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8.Name" xml:space="preserve">
+    <value>lblRack2Pos8</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="appearance18.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack2Pos9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack2Pos9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 12</value>
+  </data>
+  <data name="lblRack2Pos9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack2Pos9.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblRack2Pos9.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9.Name" xml:space="preserve">
+    <value>lblRack2Pos9</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="appearance19.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance19.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack2Pos8Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos8Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 47</value>
+  </data>
+  <data name="lblRack2Pos8Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack2Pos8Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblRack2Pos8Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8Dsp.Name" xml:space="preserve">
+    <value>lblRack2Pos8Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8Dsp.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos8Dsp.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="appearance20.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblRack2Pos10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRack2Pos10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 12</value>
+  </data>
+  <data name="lblRack2Pos10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblRack2Pos10.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblRack2Pos10.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10.Name" xml:space="preserve">
+    <value>lblRack2Pos10</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos10.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="appearance21.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance21.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack2Pos7Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos7Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 47</value>
+  </data>
+  <data name="lblRack2Pos7Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack2Pos7Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblRack2Pos7Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7Dsp.Name" xml:space="preserve">
+    <value>lblRack2Pos7Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7Dsp.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos7Dsp.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="appearance22.TextHAlignAsString" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="appearance22.TextVAlignAsString" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblRack2Pos6Dsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Pos6Dsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 47</value>
+  </data>
+  <data name="lblRack2Pos6Dsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 63</value>
+  </data>
+  <data name="lblRack2Pos6Dsp.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblRack2Pos6Dsp.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6Dsp.Name" xml:space="preserve">
+    <value>lblRack2Pos6Dsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6Dsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6Dsp.Parent" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Pos6Dsp.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.ClientArea.Name" xml:space="preserve">
+    <value>pnlRack2.ClientArea</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.ClientArea.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraPanelClientAreaUnsafe, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.ClientArea.Parent" xml:space="preserve">
+    <value>pnlRack2</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.ClientArea.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlRack2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 182</value>
+  </data>
+  <data name="pnlRack2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>518, 128</value>
+  </data>
+  <data name="pnlRack2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.Name" xml:space="preserve">
+    <value>pnlRack2</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraPanel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlRack2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRack1IdDsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1IdDsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 0</value>
+  </data>
+  <data name="lblRack1IdDsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 25</value>
+  </data>
+  <data name="lblRack1IdDsp.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblRack1IdDsp.Text" xml:space="preserve">
+    <value>S001</value>
+  </data>
+  <data name="&gt;&gt;lblRack1IdDsp.Name" xml:space="preserve">
+    <value>lblRack1IdDsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack1IdDsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1IdDsp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRack1IdDsp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblRack2IdDsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2IdDsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 158</value>
+  </data>
+  <data name="lblRack2IdDsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 23</value>
+  </data>
+  <data name="lblRack2IdDsp.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblRack2IdDsp.Text" xml:space="preserve">
+    <value>S002</value>
+  </data>
+  <data name="&gt;&gt;lblRack2IdDsp.Name" xml:space="preserve">
+    <value>lblRack2IdDsp</value>
+  </data>
+  <data name="&gt;&gt;lblRack2IdDsp.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2IdDsp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRack2IdDsp.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblRack1Id.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack1Id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 0</value>
+  </data>
+  <data name="lblRack1Id.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 25</value>
+  </data>
+  <data name="lblRack1Id.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblRack1Id.Text" xml:space="preserve">
+    <value>Rack ID</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Id.Name" xml:space="preserve">
+    <value>lblRack1Id</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Id.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Id.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRack1Id.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRack2Id.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.12pt</value>
+  </data>
+  <data name="lblRack2Id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 158</value>
+  </data>
+  <data name="lblRack2Id.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 25</value>
+  </data>
+  <data name="lblRack2Id.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblRack2Id.Text" xml:space="preserve">
+    <value>Rack ID</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Id.Name" xml:space="preserve">
+    <value>lblRack2Id</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Id.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Id.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRack2Id.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>518, 309</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RackCalibRegistStatusView</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

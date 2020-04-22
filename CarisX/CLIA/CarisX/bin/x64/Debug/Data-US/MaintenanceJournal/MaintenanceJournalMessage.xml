@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MaintenanceJournalCodeDataManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CodeDataList>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>1</Code>
+			<Argument>1</Argument>
+			<Title>Nozzle inspection, clean maintenance</Title>
+			<SubTitle>Nozzle inspection, clean maintenance</SubTitle>
+			<Message>Check the nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>2</Code>
+			<Argument>1</Argument>
+			<Title>Check and replenish consumables</Title>
+			<SubTitle>Check and replenish consumables</SubTitle>
+			<Message>Check and replenish consumables</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>3</Code>
+			<Argument>1</Argument>
+			<Title>Check and replenish reagent, Tr solution, PTr solution, washing solution, diluent</Title>
+			<SubTitle>Check and replenish reagent, Tr solution, PTr solution, washing solution, diluent</SubTitle>
+			<Message>Check and replenish reagents, Tr solution, PTr solution, washing solution and diluent</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>4</Code>
+			<Argument>1</Argument>
+			<Title>Checking and cleaning the recycle bin</Title>
+			<SubTitle>Checking and cleaning the recycle bin</SubTitle>
+			<Message>Check and clean the recycle bin</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>5</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning inside / outside of cool box cover and sliding door surface</Title>
+			<SubTitle>Cleaning inside / outside of cool box cover and sliding door surface</SubTitle>
+			<Message>Clean the inside / outside of the cool box cover and the surface of the sliding door</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>6</Code>
+			<Argument>1</Argument>
+			<Title>Ensure that no syringes (8) have leaks or crystals</Title>
+			<SubTitle>Ensure that no syringes (8) have leaks or crystals</SubTitle>
+			<Message>Ensure that no syringes (8) have leaks or crystals</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Daily</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>101</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the rack</Title>
+			<SubTitle>Cleaning the rack</SubTitle>
+			<Message>Cleaning the rack</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Weekly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>102</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the rack transfer lane</Title>
+			<SubTitle>Cleaning the rack transfer lane</SubTitle>
+			<Message>Cleaning the rack transfer lane</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Weekly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>201</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning liquid tank, filter</Title>
+			<SubTitle>Cleaning liquid tank, filter</SubTitle>
+			<Message>Cleaning liquid tank, filter</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>202</Code>
+			<Argument>1</Argument>
+			<Title>Purified water tank, filter</Title>
+			<SubTitle>Purified water tank, filter</SubTitle>
+			<Message>Purified water tank, filter</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>203</Code>
+			<Argument>1</Argument>
+			<Title>Fan sponge</Title>
+			<SubTitle>Fan sponge</SubTitle>
+			<Message>Fan sponge</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>204</Code>
+			<Argument>1</Argument>
+			<Title>Check and clean diluent nozzle</Title>
+			<SubTitle>Check and clean diluent nozzle</SubTitle>
+			<Message>Check and clean diluent nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>205</Code>
+			<Argument>1</Argument>
+			<Title>Inspection and cleaning of BF nozzle</Title>
+			<SubTitle>Inspection and cleaning of BF nozzle</SubTitle>
+			<Message>Inspection and cleaning of BF nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>206</Code>
+			<Argument>1</Argument>
+			<Title>Inspection and cleaning of pTr / Tr nozzle</Title>
+			<SubTitle>Inspection and cleaning of pTr / Tr nozzle</SubTitle>
+			<Message>Cleaning liquid tank, filter</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>1</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Syringe replacement</SubTitle>
+			<Message>Syringe replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>2</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Syringe replacement Packing replacement</SubTitle>
+			<Message>Syringe replacement Packing replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>3</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Replacing reagent probes</SubTitle>
+			<Message>Replacing reagent probes</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>4</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Roller pump tube replacement</SubTitle>
+			<Message>Roller pump tube replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>5</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Power fuse replacement</SubTitle>
+			<Message>Power fuse replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>207</Code>
+			<Argument>6</Argument>
+			<Title>Check the number of times consumables have been used (replacement request if necessary)</Title>
+			<SubTitle>Data backup</SubTitle>
+			<Message>Data backup</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>208</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the waste liquid tank</Title>
+			<SubTitle>Cleaning the waste liquid tank</SubTitle>
+			<Message>Cleaning the waste liquid tank</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>209</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the cleaning liquid tank</Title>
+			<SubTitle>Cleaning the cleaning liquid tank</SubTitle>
+			<Message>Cleaning the cleaning liquid tank</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>210</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the waste tank buffer</Title>
+			<SubTitle>Cleaning the waste tank buffer</SubTitle>
+			<Message>Cleaning the waste tank buffer</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>0</Unit>
+			<Code>211</Code>
+			<Argument>1</Argument>
+			<Title>Cleaning the cleaning solution tank buffer</Title>
+			<SubTitle>Cleaning the cleaning solution tank buffer</SubTitle>
+			<Message>Cleaning the cleaning solution tank buffer</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>1</Code>
+			<Argument>1</Argument>
+			<Title>Rack unit: position adjustment</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>2</Code>
+			<Argument>1</Argument>
+			<Title>Rack unit: Cleaning, grease application</Title>
+			<SubTitle>Rack feeder rail</SubTitle>
+			<Message>Rack feeder rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>2</Code>
+			<Argument>2</Argument>
+			<Title>Rack unit: Cleaning, grease application</Title>
+			<SubTitle>Retest rack feeder rail</SubTitle>
+			<Message>Retest rack feeder rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>2</Code>
+			<Argument>3</Argument>
+			<Title>Rack unit: Cleaning, grease application</Title>
+			<SubTitle>Rack slider rail</SubTitle>
+			<Message>Rack slider rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>2</Code>
+			<Argument>4</Argument>
+			<Title>Rack unit: Cleaning, grease application</Title>
+			<SubTitle>Fork retracting rail</SubTitle>
+			<Message>Fork retracting rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>3</Code>
+			<Argument>1</Argument>
+			<Title>Rack unit: cleaning</Title>
+			<SubTitle>BCR window cleaning</SubTitle>
+			<Message>BCR window cleaning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>3</Code>
+			<Argument>2</Argument>
+			<Title>Rack unit: cleaning</Title>
+			<SubTitle>Rack installation / collection / retest rack standby lane</SubTitle>
+			<Message>Rack installation / collection / retest rack standby lane</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>3</Code>
+			<Argument>3</Argument>
+			<Title>Rack unit: cleaning</Title>
+			<SubTitle>Rack feed / return lane</SubTitle>
+			<Message>Rack feed / return lane</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>3</Code>
+			<Argument>4</Argument>
+			<Title>Rack unit: cleaning</Title>
+			<SubTitle>Rack Sample rack</SubTitle>
+			<Message>Sample rack</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>3</Code>
+			<Argument>5</Argument>
+			<Title>Rack unit: cleaning</Title>
+			<SubTitle>Cleaning the surface of reflective sensors</SubTitle>
+			<Message>Cleaning the surface of reflective sensors</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>31</Unit>
+			<Code>4</Code>
+			<Argument>1</Argument>
+			<Title>Rack unit: Check</Title>
+			<SubTitle>Cleaning of sample BCR body glass and reflection glass</SubTitle>
+			<Message>Cleaning of sample BCR body glass and reflection glass</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>15</Unit>
+			<Code>101</Code>
+			<Argument>1</Argument>
+			<Title>R1 dispensing unit: position adjustment</Title>
+			<SubTitle>R1 dispensing unit: position adjustment</SubTitle>
+			<Message>R1 dispensing unit: position adjustment</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>15</Unit>
+			<Code>102</Code>
+			<Argument>1</Argument>
+			<Title>R1 dispensing unit: cleaning, grease application</Title>
+			<SubTitle>R nozzle, feed screw</SubTitle>
+			<Message>R nozzle, feed screw</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>15</Unit>
+			<Code>102</Code>
+			<Argument>2</Argument>
+			<Title>R1 dispensing unit: cleaning, grease application</Title>
+			<SubTitle>R1 syringe</SubTitle>
+			<Message>R1 syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>15</Unit>
+			<Code>103</Code>
+			<Argument>1</Argument>
+			<Title>R1 dispensing unit: confirmation</Title>
+			<SubTitle>Check for R heater leak</SubTitle>
+			<Message>Check for R heater leak</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>16</Unit>
+			<Code>201</Code>
+			<Argument>1</Argument>
+			<Title>R2 dispensing unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>16</Unit>
+			<Code>202</Code>
+			<Argument>1</Argument>
+			<Title>R2 dispensing unit: Cleaning, grease application</Title>
+			<SubTitle>R nozzle, feed screw</SubTitle>
+			<Message>R nozzle, feed screw</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>16</Unit>
+			<Code>202</Code>
+			<Argument>2</Argument>
+			<Title>R2 dispensing unit: Cleaning, grease application</Title>
+			<SubTitle>R1 syringe</SubTitle>
+			<Message>R1 syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>16</Unit>
+			<Code>203</Code>
+			<Argument>1</Argument>
+			<Title>R2 dispensing unit: Verification</Title>
+			<SubTitle>Check for R heater leak</SubTitle>
+			<Message>Check for R heater leak</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>9</Unit>
+			<Code>301</Code>
+			<Argument>1</Argument>
+			<Title>Reaction vessel transport unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>9</Unit>
+			<Code>302</Code>
+			<Argument>1</Argument>
+			<Title>Reaction vessel transport unit: Cleaning, grease application</Title>
+			<SubTitle>Container inert</SubTitle>
+			<Message>Container inert</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>9</Unit>
+			<Code>302</Code>
+			<Argument>2</Argument>
+			<Title>Reaction vessel transport unit: Cleaning, grease application</Title>
+			<SubTitle>Reaction vessel transport rail, Z axis</SubTitle>
+			<Message>Reaction vessel transport rail, Z axis</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>9</Unit>
+			<Code>303</Code>
+			<Argument>1</Argument>
+			<Title>Reaction vessel transport unit: Verification</Title>
+			<SubTitle>Check if the remover for container setting table moves smoothly</SubTitle>
+			<Message>Check if the remover for container setting table moves smoothly</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>13</Unit>
+			<Code>401</Code>
+			<Argument>1</Argument>
+			<Title>Traveler and disposal unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>13</Unit>
+			<Code>402</Code>
+			<Argument>1</Argument>
+			<Title>Traveler and disposal unit: Cleaning, grease application</Title>
+			<SubTitle>Traveler / waste unit rail</SubTitle>
+			<Message>Traveler / waste unit rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>501</Code>
+			<Argument>1</Argument>
+			<Title>Sample dispensing unit: Positioning</Title>
+			<SubTitle>Check for R heater leak</SubTitle>
+			<Message>Check for R heater leak</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>502</Code>
+			<Argument>1</Argument>
+			<Title>Sample dispensing unit: Cleaning, grease application</Title>
+			<SubTitle>Sample dispensing transport rail, Z-axis</SubTitle>
+			<Message>Sample dispensing transport rail, Z-axis</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>502</Code>
+			<Argument>2</Argument>
+			<Title>Sample dispensing unit: Cleaning, grease application</Title>
+			<SubTitle>Sample dispensing syringe</SubTitle>
+			<Message>Sample dispensing syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>502</Code>
+			<Argument>3</Argument>
+			<Title>Sample dispensing unit: Cleaning, grease application</Title>
+			<SubTitle>Chip inert</SubTitle>
+			<Message>Chip inert</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>503</Code>
+			<Argument>1</Argument>
+			<Title>Sample dispensing unit: Verification</Title>
+			<SubTitle>Cleaning the tip inert tip</SubTitle>
+			<Message>Cleaning the tip inert tip</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>8</Unit>
+			<Code>503</Code>
+			<Argument>2</Argument>
+			<Title>Sample dispensing unit: Verification</Title>
+			<SubTitle>Confirmation of loosening screw of sample dispensing unit spring</SubTitle>
+			<Message>Confirmation of loosening screw of sample dispensing unit spring</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>5</Unit>
+			<Code>601</Code>
+			<Argument>1</Argument>
+			<Title>Case transport unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>5</Unit>
+			<Code>602</Code>
+			<Argument>1</Argument>
+			<Title>Case transport unit: Cleaning, grease application</Title>
+			<SubTitle>Case transport / shelf cleaning</SubTitle>
+			<Message>Case transport / shelf cleaning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>5</Unit>
+			<Code>602</Code>
+			<Argument>2</Argument>
+			<Title>Case transport unit: Cleaning, grease application</Title>
+			<SubTitle>Case transport rail, Z axis</SubTitle>
+			<Message>Case transport rail, Z axis</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>701</Code>
+			<Argument>1</Argument>
+			<Title>BF1 unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>702</Code>
+			<Argument>1</Argument>
+			<Title>BF1 unit: Cleaning, grease application</Title>
+			<SubTitle>BF1 feed screw rail</SubTitle>
+			<Message>BF1 feed screw rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>s
+			<Code>702</Code>
+			<Argument>2</Argument>
+			<Title>BF1 unit: Cleaning, grease application</Title>
+			<SubTitle>BF1 waste liquid feed screw rail</SubTitle>
+			<Message>BF1 waste liquid feed screw rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>702</Code>
+			<Argument>3</Argument>
+			<Title>BF1 unit: Cleaning, grease application</Title>
+			<SubTitle>BF syringe</SubTitle>
+			<Message>BF syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>703</Code>
+			<Argument>1</Argument>
+			<Title>BF1 unit: Washing</Title>
+			<SubTitle>BF1 nozzle</SubTitle>
+			<Message>BF1 nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>704</Code>
+			<Argument>1</Argument>
+			<Title>BF1 unit: Verification</Title>
+			<SubTitle>BF1, BF2 Check if the bent part of the nozzle connection piping is damaged (prevents damage due to long-term use)</SubTitle>
+			<Message>BF1, BF2 Check if the bent part of the nozzle connection piping is damaged (prevents damage due to long-term use)</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>17</Unit>
+			<Code>704</Code>
+			<Argument>2</Argument>
+			<Title>BF1 unit: Verification</Title>
+			<SubTitle>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</SubTitle>
+			<Message>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>801</Code>
+			<Argument>1</Argument>
+			<Title>BF2 unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>802</Code>
+			<Argument>1</Argument>
+			<Title>BF2 unit: Cleaning, grease application</Title>
+			<SubTitle>BF2 feed screw rail</SubTitle>
+			<Message>BF2 feed screw rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>802</Code>
+			<Argument>2</Argument>
+			<Title>BF2 unit: Cleaning, grease application</Title>
+			<SubTitle>BF2 waste liquid feed screw / rail</SubTitle>
+			<Message>BF2 waste liquid feed screw / rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>802</Code>
+			<Argument>3</Argument>
+			<Title>BF2 unit: Cleaning, grease application</Title>
+			<SubTitle>BF syringe</SubTitle>
+			<Message>BF syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>803</Code>
+			<Argument>1</Argument>
+			<Title>BF2 unit: Washing</Title>
+			<SubTitle>BF1 nozzle</SubTitle>
+			<Message>BF1 nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>804</Code>
+			<Argument>1</Argument>
+			<Title>BF2 unit: Verification</Title>
+			<SubTitle>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</SubTitle>
+			<Message>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>804</Code>
+			<Argument>2</Argument>
+			<Title>BF2 unit: Verification</Title>
+			<SubTitle>BF1, BF2 Check if the bent part of the nozzle connection piping is damaged (prevents damage due to long-term use)</SubTitle>
+			<Message>BF1, BF2 Check if the bent part of the nozzle connection piping is damaged (prevents damage due to long-term use)</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>19</Unit>
+			<Code>805</Code>
+			<Argument>1</Argument>
+			<Title>BF2 unit: Exchange</Title>
+			<SubTitle>BF2 magnet replacement</SubTitle>
+			<Message>BF2 magnet replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>21</Unit>
+			<Code>901</Code>
+			<Argument>1</Argument>
+			<Title>PTr liquid unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>21</Unit>
+			<Code>902</Code>
+			<Argument>1</Argument>
+			<Title>PTr liquid unit: Cleaning, grease application</Title>
+			<SubTitle>Pretrigger syringe</SubTitle>
+			<Message>Pretrigger syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>21</Unit>
+			<Code>903</Code>
+			<Argument>1</Argument>
+			<Title>PTr liquid unit: Washing</Title>
+			<SubTitle>PTr liquid nozzle</SubTitle>
+			<Message>PTr liquid nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>21</Unit>
+			<Code>904</Code>
+			<Argument>1</Argument>
+			<Title>PTr liquid unit: Verification</Title>
+			<SubTitle>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</SubTitle>
+			<Message>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1001</Code>
+			<Argument>1</Argument>
+			<Title>Tr / pTr rail: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1002</Code>
+			<Argument>1</Argument>
+			<Title>Tr / pTr rail: Cleaning, grease application</Title>
+			<SubTitle>Tr / pTr rail</SubTitle>
+			<Message>Tr / pTr rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1002</Code>
+			<Argument>2</Argument>
+			<Title>Tr / pTr rail: Cleaning, grease application</Title>
+			<SubTitle>Trigger syringe</SubTitle>
+			<Message>Trigger syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1003</Code>
+			<Argument>1</Argument>
+			<Title>Tr / pTr rail: Washing</Title>
+			<SubTitle>Tr liquid nozzle</SubTitle>
+			<Message>Tr liquid nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1003</Code>
+			<Argument>2</Argument>
+			<Title>Tr / pTr rail: Washing</Title>
+			<SubTitle>Waste liquid nozzle</SubTitle>
+			<Message>Waste liquid nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1004</Code>
+			<Argument>1</Argument>
+			<Title>Tr / pTr rail: Verification</Title>
+			<SubTitle>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</SubTitle>
+			<Message>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1004</Code>
+			<Argument>2</Argument>
+			<Title>Tr / pTr rail: Verification</Title>
+			<SubTitle>Check if there is crystal of Tr liquid in the connection part of the cleaning tank</SubTitle>
+			<Message>Check if there is crystal of Tr liquid in the connection part of the cleaning tank</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1004</Code>
+			<Argument>3</Argument>
+			<Title>Tr / pTr rail: Verification</Title>
+			<SubTitle>Optical unit (DK value, BG value confirmation)</SubTitle>
+			<Message>Optical unit (DK value, BG value confirmation)</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1004</Code>
+			<Argument>4</Argument>
+			<Title>Tr / pTr rail: Verification</Title>
+			<SubTitle>Check if the PMT unit shutter has friction or the lens is dirty</SubTitle>
+			<Message>Check if the PMT unit shutter has friction or the lens is dirty</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1004</Code>
+			<Argument>5</Argument>
+			<Title>Tr / pTr rail: Verification</Title>
+			<SubTitle>Smooth up and down of the shading tube</SubTitle>
+			<Message>Smooth up and down of the shading tube</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>14</Unit>
+			<Code>1005</Code>
+			<Argument>1</Argument>
+			<Title>Tr / pTr rail: Exchange</Title>
+			<SubTitle>Shade tube sponge replacement</SubTitle>
+			<Message>Shade tube sponge replacement</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>7</Unit>
+			<Code>1101</Code>
+			<Argument>1</Argument>
+			<Title>STAT unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>7</Unit>
+			<Code>1102</Code>
+			<Argument>1</Argument>
+			<Title>STAT unit: Cleaning, grease application</Title>
+			<SubTitle>STAT Y axis</SubTitle>
+			<Message>STAT Y axis</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>20</Unit>
+			<Code>1201</Code>
+			<Argument>1</Argument>
+			<Title>Dilution unit: Positioning</Title>
+			<SubTitle>Positioning</SubTitle>
+			<Message>Positioning</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>20</Unit>
+			<Code>1202</Code>
+			<Argument>1</Argument>
+			<Title>Dilution unit: Cleaning, grease application</Title>
+			<SubTitle>Dilution feed screw / rail</SubTitle>
+			<Message>Dilution feed screw / rail</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>20</Unit>
+			<Code>1202</Code>
+			<Argument>2</Argument>
+			<Title>Dilution unit: Cleaning, grease application</Title>
+			<SubTitle>Dilution syringe</SubTitle>
+			<Message>Dilution syringe</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>20</Unit>
+			<Code>1203</Code>
+			<Argument>1</Argument>
+			<Title>Dilution unit: Washing</Title>
+			<SubTitle>Diluent nozzle</SubTitle>
+			<Message>Diluent nozzle</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>20</Unit>
+			<Code>1204</Code>
+			<Argument>1</Argument>
+			<Title>Dilution unit: Verification</Title>
+			<SubTitle>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</SubTitle>
+			<Message>Inspection of liquid leakage at the bottom of the reaction table, check for clogging, dropout, and liquid leakage of the washing tank and piping</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>12</Unit>
+			<Code>1301</Code>
+			<Argument>1</Argument>
+			<Title>Stirring unit: Cleaning, grease application</Title>
+			<SubTitle>Stirring section feed screw</SubTitle>
+			<Message>Stirring section feed screw</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>12</Unit>
+			<Code>1302</Code>
+			<Argument>1</Argument>
+			<Title>Stirring unit: Washing</Title>
+			<SubTitle>Cleaning the reagent table and stirrer</SubTitle>
+			<Message>Cleaning the reagent table and stirrer</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>12</Unit>
+			<Code>1303</Code>
+			<Argument>1</Argument>
+			<Title>Stirring unit: Verification</Title>
+			<SubTitle>Check the up and down movement of the stirring cover and make sure that the exercise is smooth.</SubTitle>
+			<Message>Check the up and down movement of the stirring cover and make sure that the exercise is smooth.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>12</Unit>
+			<Code>1303</Code>
+			<Argument>2</Argument>
+			<Title>Stirring unit: Verification</Title>
+			<SubTitle>Check the smoothness of the vertical movement of the stirrer</SubTitle>
+			<Message>Check the smoothness of the vertical movement of the stirrer</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>10</Unit>
+			<Code>1401</Code>
+			<Argument>1</Argument>
+			<Title>Reaction table BF table: Washing</Title>
+			<SubTitle>table</SubTitle>
+			<Message>table</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>6</Unit>
+			<Code>1501</Code>
+			<Argument>1</Argument>
+			<Title>Cooler unit: Washing</Title>
+			<SubTitle>Inside the cool box</SubTitle>
+			<Message>Inside the cool box</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>6</Unit>
+			<Code>1502</Code>
+			<Argument>1</Argument>
+			<Title>Cooler unit: Verification</Title>
+			<SubTitle>Wheel loosened due to friction, damage confirmed</SubTitle>
+			<Message>Wheel loosened due to friction, damage confirmed</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>1</Unit>
+			<Code>1601</Code>
+			<Argument>1</Argument>
+			<Title>Overall: Washing</Title>
+			<SubTitle>Fan filter</SubTitle>
+			<Message>Fan filter</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Monthly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>1</Unit>
+			<Code>1601</Code>
+			<Argument>2</Argument>
+			<Title>Overall: Washing</Title>
+			<SubTitle>Cleaning of P ●, P ● pump pressure sensor filter</SubTitle>
+			<Message>Cleaning of P ●, P ● pump pressure sensor filter</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>1</Unit>
+			<Code>1602</Code>
+			<Argument>1</Argument>
+			<Title>Overall: Exchange</Title>
+			<SubTitle>O-ring replacement for all syringes (excluding sample syringes)</SubTitle>
+			<Message>O-ring replacement for all syringes (excluding sample syringes)</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+		<MaintenanceJournalCodeData>
+			<Unit>1</Unit>
+			<Code>1603</Code>
+			<Argument>1</Argument>
+			<Title>Overall: Verification</Title>
+			<SubTitle>Check the equipment GND line connector</SubTitle>
+			<Message>Check the equipment GND line connector</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+			<Kind>Yearly</Kind>
+		</MaintenanceJournalCodeData>
+	</CodeDataList>
+</MaintenanceJournalCodeDataManager>

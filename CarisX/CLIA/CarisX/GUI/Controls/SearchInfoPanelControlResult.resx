@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;lblHyphen1.Name" xml:space="preserve">
+    <value>lblHyphen1</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationTo.Name" xml:space="preserve">
+    <value>numConcentrationTo</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationTo.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationTo.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationFrom.Name" xml:space="preserve">
+    <value>numConcentrationFrom</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationFrom.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numConcentrationFrom.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblHyphen4.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen4.Name" xml:space="preserve">
+    <value>lblHyphen4</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen4.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen4.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeTo.Name" xml:space="preserve">
+    <value>btnMeasuringTimeTo</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeTo.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.NoBorderButton, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeTo.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeFrom.Name" xml:space="preserve">
+    <value>btnMeasuringTimeFrom</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeFrom.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.NoBorderButton, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnMeasuringTimeFrom.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;chkMeasuringTime.Name" xml:space="preserve">
+    <value>chkMeasuringTime</value>
+  </data>
+  <data name="&gt;&gt;chkMeasuringTime.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkMeasuringTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkMeasuringTime.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;gbxRemark.Name" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;gbxRemark.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraGroupBox, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;gbxRemark.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxRemark.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkConcentration.Name" xml:space="preserve">
+    <value>chkConcentration</value>
+  </data>
+  <data name="&gt;&gt;chkConcentration.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkConcentration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkConcentration.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblHyphen3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 154</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen3.Name" xml:space="preserve">
+    <value>lblHyphen3</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen3.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="numSequenceNoTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>552, 154</value>
+  </data>
+  <data name="numSequenceNoTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 40</value>
+  </data>
+  <data name="numSequenceNoTo.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoTo.Name" xml:space="preserve">
+    <value>numSequenceNoTo</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoTo.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoTo.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="numSequenceNoFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 154</value>
+  </data>
+  <data name="numSequenceNoFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 40</value>
+  </data>
+  <data name="numSequenceNoFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoFrom.Name" xml:space="preserve">
+    <value>numSequenceNoFrom</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoFrom.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numSequenceNoFrom.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chkSequenceNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 160</value>
+  </data>
+  <data name="chkSequenceNo.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;chkSequenceNo.Name" xml:space="preserve">
+    <value>chkSequenceNo</value>
+  </data>
+  <data name="&gt;&gt;chkSequenceNo.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkSequenceNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkSequenceNo.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lblHyphen2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>904, 111</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Name" xml:space="preserve">
+    <value>lblHyphen2</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHyphen2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="numRackIdTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 100</value>
+  </data>
+  <data name="numRackIdTo.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;numRackIdTo.Name" xml:space="preserve">
+    <value>numRackIdTo</value>
+  </data>
+  <data name="&gt;&gt;numRackIdTo.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numRackIdTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numRackIdTo.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="numRackIdFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 100</value>
+  </data>
+  <data name="numRackIdFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;numRackIdFrom.Name" xml:space="preserve">
+    <value>numRackIdFrom</value>
+  </data>
+  <data name="&gt;&gt;numRackIdFrom.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraNumericEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;numRackIdFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numRackIdFrom.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;chkRackId.Name" xml:space="preserve">
+    <value>chkRackId</value>
+  </data>
+  <data name="&gt;&gt;chkRackId.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRackId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkRackId.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAnalyte.Name" xml:space="preserve">
+    <value>btnSelectAnalyte</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAnalyte.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.NoBorderButton, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAnalyte.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAnalyte.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lvwSelectedAnalytes.Name" xml:space="preserve">
+    <value>lvwSelectedAnalytes</value>
+  </data>
+  <data name="&gt;&gt;lvwSelectedAnalytes.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinListView.UltraListView, Infragistics4.Win.UltraWinListView.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lvwSelectedAnalytes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lvwSelectedAnalytes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkCalibrationError.Name" xml:space="preserve">
+    <value>chkRemarkCalibrationError</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkCalibrationError.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkCalibrationError.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkCalibrationError.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataWarning.Name" xml:space="preserve">
+    <value>chkRemarkDataWarning</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataWarning.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataWarning.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataWarning.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkOnLine.Name" xml:space="preserve">
+    <value>chkRemarkOnLine</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkOnLine.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkOnLine.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkOnLine.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataEdited.Name" xml:space="preserve">
+    <value>chkRemarkDataEdited</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataEdited.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataEdited.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkDataEdited.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkExpirationDataError.Name" xml:space="preserve">
+    <value>chkRemarkExpirationDataError</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkExpirationDataError.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkExpirationDataError.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkExpirationDataError.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkTemperatureError.Name" xml:space="preserve">
+    <value>chkRemarkTemperatureError</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkTemperatureError.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkTemperatureError.Parent" xml:space="preserve">
+    <value>gbxRemark</value>
+  </data>
+  <data name="&gt;&gt;chkRemarkTemperatureError.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="resource.Name" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="resource.SizeInPoints" type="System.Single, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblRackIdPrefix1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="lblRackIdPrefix1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 110</value>
+  </data>
+  <data name="lblRackIdPrefix1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="lblRackIdPrefix1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblRackIdPrefix1.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix1.Name" xml:space="preserve">
+    <value>lblRackIdPrefix1</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix1.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="resource.Name1" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="resource.SizeInPoints1" type="System.Single, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblRackIdPrefix2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="lblRackIdPrefix2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>928, 110</value>
+  </data>
+  <data name="lblRackIdPrefix2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="lblRackIdPrefix2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRackIdPrefix2.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix2.Name" xml:space="preserve">
+    <value>lblRackIdPrefix2</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix2.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRackIdPrefix2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Name" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Type" xml:space="preserve">
+    <value>Infragistics.Win.Misc.UltraGroupBox, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxModule.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Name" xml:space="preserve">
+    <value>chkModule4</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Name" xml:space="preserve">
+    <value>chkModule3</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Name" xml:space="preserve">
+    <value>chkModule2</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Name" xml:space="preserve">
+    <value>chkModule1</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.Parent" xml:space="preserve">
+    <value>gbxModule</value>
+  </data>
+  <data name="&gt;&gt;chkModule1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtControlLot.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtControlLot.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="txtControlLot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 211</value>
+  </data>
+  <data name="txtControlLot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="txtControlLot.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;txtControlLot.Name" xml:space="preserve">
+    <value>txtControlLot</value>
+  </data>
+  <data name="&gt;&gt;txtControlLot.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraTextEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;txtControlLot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtControlLot.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="resource.Name2" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints2" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkControlLot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 217</value>
+  </data>
+  <data name="chkControlLot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 28</value>
+  </data>
+  <data name="chkControlLot.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="chkControlLot.Text" xml:space="preserve">
+    <value>Control Lot</value>
+  </data>
+  <data name="&gt;&gt;chkControlLot.Name" xml:space="preserve">
+    <value>chkControlLot</value>
+  </data>
+  <data name="&gt;&gt;chkControlLot.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkControlLot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkControlLot.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="resource.Name3" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints3" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkControlName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 217</value>
+  </data>
+  <data name="chkControlName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 28</value>
+  </data>
+  <data name="chkControlName.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="chkControlName.Text" xml:space="preserve">
+    <value>Control Name</value>
+  </data>
+  <data name="&gt;&gt;chkControlName.Name" xml:space="preserve">
+    <value>chkControlName</value>
+  </data>
+  <data name="&gt;&gt;chkControlName.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkControlName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkControlName.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="txtControlName.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtControlName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="txtControlName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>867, 211</value>
+  </data>
+  <data name="txtControlName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 40</value>
+  </data>
+  <data name="txtControlName.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;txtControlName.Name" xml:space="preserve">
+    <value>txtControlName</value>
+  </data>
+  <data name="&gt;&gt;txtControlName.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraTextEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;txtControlName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtControlName.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="txtComment.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12.71pt</value>
+  </data>
+  <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 267</value>
+  </data>
+  <data name="txtComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>928, 40</value>
+  </data>
+  <data name="txtComment.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Name" xml:space="preserve">
+    <value>txtComment</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraTextEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtComment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Name4" xml:space="preserve">
+    <value>Arial</value>
+  </data>
+  <data name="resource.SizeInPoints4" type="System.Single, mscorlib">
+    <value>12.71</value>
+  </data>
+  <data name="chkComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 273</value>
+  </data>
+  <data name="chkComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 28</value>
+  </data>
+  <data name="chkComment.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="chkComment.Text" xml:space="preserve">
+    <value>Coment</value>
+  </data>
+  <data name="&gt;&gt;chkComment.Name" xml:space="preserve">
+    <value>chkComment</value>
+  </data>
+  <data name="&gt;&gt;chkComment.Type" xml:space="preserve">
+    <value>Infragistics.Win.UltraWinEditors.UltraCheckEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb</value>
+  </data>
+  <data name="&gt;&gt;chkComment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkComment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SearchInfoPanelControlResult</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Oelco.CarisX.GUI.Controls.SearchInfoPanelBase, CarisX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

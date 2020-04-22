@@ -1,0 +1,1695 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ErrorCodeDataManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CodeDataList>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>1</Argment>
+			<Title>Sample Rack Transfer Unit X-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>1</Argment>
+			<Title>PPMC error on Sample Rack Transfer Unit X-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Rack Transfer Unit X-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>1</Argment>
+			<Title>Sample Rack Transfer Unit X-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>2</Argment>
+			<Title>Sample Rack Transfer Unit Y-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>2</Argment>
+			<Title>PPMC error on Sample Rack Transfer Unit Y-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Rack Transfer Unit Y-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>2</Argment>
+			<Title>Sample Rack Transfer Unit Y-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>3</Argment>
+			<Title>Sample Rack Transfer Unit Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>3</Argment>
+			<Title>PPMC error on Sample Rack Transfer Unit Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Rack Transfer Unit Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>3</Argment>
+			<Title>Sample Rack Transfer Unit Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>4</Argment>
+			<Title>Sample Rack Stage Unit Y-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>4</Argment>
+			<Title>PPMC error on Sample Rack Stage Unit Y-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the  Sample Rack Stage Unit Y-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>4</Argment>
+			<Title>Sample Rack Stage Unit Y-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>5</Argment>
+			<Title>Sample Tip Case Transfer Unit Y-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>5</Argment>
+			<Title>PPMC error on Sample Tip Case Transfer Unit Y-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Tip Case Transfer Unit Y-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>5</Argment>
+			<Title>Sample Tip Case Transfer Unit Y-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>6</Argment>
+			<Title>Sample Tip Case Transfer Unit Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>6</Argment>
+			<Title>PPMC error on Sample Tip Case Transfer Unit Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Tip Case Transfer Unit Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>6</Argment>
+			<Title>Sample Tip Case Transfer Unit Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>7</Argment>
+			<Title>Reaction Cell Case Transfer Unit Y-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>7</Argment>
+			<Title>PPMC error on Reaction Cell Case Transfer Unit Y-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the  Reaction Cell Case Transfer Unit Y-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>7</Argment>
+			<Title>Reaction Cell Case Transfer Unit Y-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>8</Argment>
+			<Title>Reaction Cell Case Transfer Unit Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>8</Argment>
+			<Title>PPMC error on Sample Tip Case Transfer Unit Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls theSample Tip Case Transfer Unit Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>8</Argment>
+			<Title>Reaction Cell Case Transfer Unit Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>9</Argment>
+			<Title>Reagent Storage Table Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>9</Argment>
+			<Title>PPMC error on Reagent Storage Table Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reagent Storage Table Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>9</Argment>
+			<Title>Reagent Storage Table Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>10</Argment>
+			<Title>Reagent Storage Mixing Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>10</Argment>
+			<Title>PPMC error on Reagent Storage Mixing Table Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reagent Storage Mixing Table Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>10</Argment>
+			<Title>Reagent Storage Mixing Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>11</Argment>
+			<Title>Reagent Storage Cover Control Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>11</Argment>
+			<Title>PPMC error on Reagent Storage Cover Control Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reagent Storage Cover Control Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>11</Argment>
+			<Title>Reagent Storage Cover Control Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>12</Argment>
+			<Title>Sample Dispense Arm X-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>12</Argment>
+			<Title>PPMC error on Sample Dispense Arm X-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Dispense Arm X-axis Motor . Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>12</Argment>
+			<Title>Sample Dispense Arm X-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>13</Argment>
+			<Title>Sample Dispense Arm Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>13</Argment>
+			<Title>PPMC error on Sample Dispense Arm Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Dispense Arm Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>13</Argment>
+			<Title>Sample Dispense Arm Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>14</Argment>
+			<Title>Sample Dispense Arm Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>14</Argment>
+			<Title>PPMC error on Sample Dispense Arm Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the  Sample Dispense Arm Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>14</Argment>
+			<Title>Sample Dispense Arm Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>15</Argment>
+			<Title>Sample Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>15</Argment>
+			<Title>PPMC error on Sample Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Sample Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>15</Argment>
+			<Title>Sample Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>16</Argment>
+			<Title>Diluent Dispense Arm Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>16</Argment>
+			<Title>PPMC error on Diluent Dispense Arm Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Diluent Dispense Arm Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>16</Argment>
+			<Title>Diluent Dispense Arm Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>17</Argment>
+			<Title>Diluent Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>17</Argment>
+			<Title>PPMC error on Diluent Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Diluent Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>17</Argment>
+			<Title>Diluent Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>18</Argment>
+			<Title>Immunoreaction Table Theta-axis motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>18</Argment>
+			<Title>PPMC error on Immunoreaction Table Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Immunoreaction Table Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>18</Argment>
+			<Title>Immunoreaction Table Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>19</Argment>
+			<Title>Immunoreaction Table Mixing Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>19</Argment>
+			<Title>PPMC error on Immunoreaction Table Mixing Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the  Immunoreaction Table Mixing Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>19</Argment>
+			<Title>Immunoreaction Table Mixing Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>20</Argment>
+			<Title>Immunoreaction Table Mixing Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>20</Argment>
+			<Title>PPMC error on Immunoreaction Table Mixing Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the  Immunoreaction Table Mixing Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>20</Argment>
+			<Title>Immunoreaction Table Mixing Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>21</Argment>
+			<Title>R1 Dispense Arm Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>21</Argment>
+			<Title>PPMC error on R1 Dispense Arm Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R1 Dispense Arm Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>21</Argment>
+			<Title>R1 Dispense Arm Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>22</Argment>
+			<Title>R1 Dispense Arm Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>22</Argment>
+			<Title>PPMC error on R1 Dispense Arm Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R1 Dispense Arm Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>22</Argment>
+			<Title>R1 Dispense Arm Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>23</Argment>
+			<Title>R1 Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>23</Argment>
+			<Title>PPMC error on R1 Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R1 Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>23</Argment>
+			<Title>R1 Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>24</Argment>
+			<Title>R Probe Washing Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>24</Argment>
+			<Title>PPMC error on R Probe Washing Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R Probe Washing Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>24</Argment>
+			<Title>R Probe Washing Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>25</Argment>
+			<Title>R2 Dispense Arm Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>25</Argment>
+			<Title>PPMC error on R2 Dispense Arm Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R2 Dispense Arm Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>25</Argment>
+			<Title>R2 Dispense Arm Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>26</Argment>
+			<Title>R2 Dispense Arm Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>26</Argment>
+			<Title>PPMC error on R2 Dispense Arm Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R2 Dispense Arm Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>26</Argment>
+			<Title>R2 Dispense Arm Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>27</Argment>
+			<Title>R2 Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>27</Argment>
+			<Title>PPMC error on R2 Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the R2 Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>27</Argment>
+			<Title>R2 Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>28</Argment>
+			<Title>Washing 1Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>28</Argment>
+			<Title>PPMC error on Washing 1Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Washing 1Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>28</Argment>
+			<Title>Washing 1Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>29</Argment>
+			<Title>Washing 1 Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>29</Argment>
+			<Title>PPMC error on Washing 1 Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Washing 1 Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>29</Argment>
+			<Title>Washing 1 Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>30</Argment>
+			<Title>Washing 2Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>30</Argment>
+			<Title>PPMC error on Washing 2Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Washing 2Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>30</Argment>
+			<Title>Washing 2Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>31</Argment>
+			<Title>Washing 2 Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>31</Argment>
+			<Title>PPMC error on Washing 2 Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Washing 2 Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>31</Argment>
+			<Title>Washing 2 Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>32</Argment>
+			<Title>Pretrigger Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>32</Argment>
+			<Title>PPMC error on Pretrigger Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Pretrigger Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>32</Argment>
+			<Title>Pretrigger Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>33</Argment>
+			<Title>Trigger Dispense Arm Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>33</Argment>
+			<Title>PPMC error on Trigger Dispense Arm Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Trigger Dispense Arm Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>33</Argment>
+			<Title>Trigger Dispense Arm Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>34</Argment>
+			<Title>Trigger Dispense Syringe Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>34</Argment>
+			<Title>PPMC error on Trigger Dispense Syringe was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Trigger Dispense Syringe. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>34</Argment>
+			<Title>Trigger Dispense Syringe Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>35</Argment>
+			<Title>Reaction Cell Case Transfer 1 X-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>35</Argment>
+			<Title>PPMC error on Reaction Cell Case Transfer 1 X-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reaction Cell Case Transfer 1 X-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>35</Argment>
+			<Title>Reaction Cell Case Transfer 1 X-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>36</Argment>
+			<Title>Reaction Cell Case Transfer 1 Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>36</Argment>
+			<Title>PPMC error on Reaction Cell Case Transfer 1 Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reaction Cell Case Transfer 1 Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>36</Argment>
+			<Title>Reaction Cell Case Transfer 1 Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>37</Argment>
+			<Title>Reaction Cell Case Transfer 2 X-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>37</Argment>
+			<Title>PPMC error on Reaction Cell Case Transfer 2 X-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reaction Cell Case Transfer 2 X-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>37</Argment>
+			<Title>Reaction Cell Case Transfer 2 X-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>38</Argment>
+			<Title>Reaction Cell Case Transfer 2 Theta-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>38</Argment>
+			<Title>PPMC error on Reaction Cell Case Transfer 2 Theta-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reaction Cell Case Transfer 2 Theta-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>38</Argment>
+			<Title>Reaction Cell Case Transfer 2 Theta-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>1</Code>
+			<Argment>39</Argment>
+			<Title>Reaction Cell Transfer 2 Z-axis Motor Time-out was detected by a slave PC.</Title>
+			<Message>At the time of movement, the motor’s starting point sensor could not be detected even after timeout. This may be due to sensor breakage, contact failure of cable or breakage of the I/O board. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>2</Code>
+			<Argment>39</Argment>
+			<Title>PPMC error on Reaction Cell Transfer 2 Z-axis Motor was found by a slave PC.</Title>
+			<Message>An error occurred on the stepping motor controller which controls the Reaction Cell Case Transfer 2 Z-axis Motor. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>3</Code>
+			<Argment>39</Argment>
+			<Title>Reaction Cell Transfer 2 Z-axis Motor Non-synchronization was found by a slave PC.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>10</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the M Reagent Barcode ID.</Title>
+			<Message>Please check whether the M Reagent Barcode ID label is unstuck, blurred or dirty.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>11</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the R Reagent Barcode ID.</Title>
+			<Message>Please check whether the R Reagent Barcode ID label is unstuck, blurred or dirty.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>12</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the Sample Barcode ID.</Title>
+			<Message>Please check whether the Sample Barcode ID label is unstuck, blurred or dirty.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>13</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the Rack Barcode ID.</Title>
+			<Message>Please check whether the Rack Barcode ID label is unstuck, blurred or dirty.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>14</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the Diluent Barcode ID.</Title>
+			<Message>Read ID is not for Diluents.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>15</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the Pretrigger Barcode ID.</Title>
+			<Message>Read ID is not for Pretriggers.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>16</Code>
+			<Argment>1</Argment>
+			<Title>Failed in reading the Trigger Barcode ID.</Title>
+			<Message>Read ID is not for Triggers.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>17</Code>
+			<Argment>1</Argment>
+			<Title>Sample tube detector sensors do not work.</Title>
+			<Message>If this occurs again, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>1</Argment>
+			<Title>Immunoreaction unit temperature is out of range.</Title>
+			<Message>Immunoreaction unit temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>2</Argment>
+			<Title>R1 pre-heater temperature is out of range.</Title>
+			<Message>R1 pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>3</Argment>
+			<Title>R2 pre-heater temperature is out of range.</Title>
+			<Message>R2 pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>4</Argment>
+			<Title>B/F1 pre-heater temperature is out of range.</Title>
+			<Message>B/F1 pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>5</Argment>
+			<Title>B/F2 pre-heater temperature is out of range.</Title>
+			<Message>B/F2 pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>6</Argment>
+			<Title>Pretrigger pre-heater temperature is out of range.</Title>
+			<Message>Pretrigger pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>7</Argment>
+			<Title>Trigger pre-heater temperature is out of range.</Title>
+			<Message>Trigger pre-heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>20</Code>
+			<Argment>8</Argment>
+			<Title>PMT heater temperature is out of range.</Title>
+			<Message>PMT heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>21</Code>
+			<Argment>1</Argment>
+			<Title>Reagent storage temperature is out of range.</Title>
+			<Message>Reagent storage temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>22</Code>
+			<Argment>1</Argment>
+			<Title>R1 probe air heater temperature is out of range.</Title>
+			<Message>R1 probe air heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>22</Code>
+			<Argment>2</Argment>
+			<Title>R2 probe air heater temperature is out of range.</Title>
+			<Message>R2 probe air heater temperature is not normal. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>30</Code>
+			<Argment>1</Argment>
+			<Title>Dark data error.</Title>
+			<Message>Dark count is beyond 100. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>31</Code>
+			<Argment>1</Argment>
+			<Title>Measurement data error.</Title>
+			<Message>Measurement count is 80 or less. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>32</Code>
+			<Argment>1</Argment>
+			<Title>Operation of the shutter for measurement is not correct.</Title>
+			<Message>The shutter for measurement may not have properly closed during measurement. The sample in which the error occurred during the assay will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>33</Code>
+			<Argment>1</Argment>
+			<Title>Detector error.</Title>
+			<Message>At the time of measurement, the status bit of the measurement counter is not ready. The sample in which the error occurred during the assay will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>34</Code>
+			<Argment>1</Argment>
+			<Title>Calibration data error.</Title>
+			<Message>Calibrator count is out of range or the calibration curve is vibrating.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>35</Code>
+			<Argment>1</Argment>
+			<Title>Dynamic range error.</Title>
+			<Message>The sample concentration data is out of dynamic range.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>35</Code>
+			<Argment>2</Argment>
+			<Title>Dynamic range error.</Title>
+			<Message>The sample concentration data is out of dynamic range.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>36</Code>
+			<Argment>1</Argment>
+			<Title>Difference limit error in multi-measurements.</Title>
+			<Message>At the time of multi-measurements, the data measured were irregular. The sample in which the error occured during the assay will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>36</Code>
+			<Argment>2</Argment>
+			<Title>Concentration calculation error.</Title>
+			<Message>Unable to calculate the concentration data. The sample in which the error occurred during the assay will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>37</Code>
+			<Argment>1</Argment>
+			<Title>Out of reference value range.</Title>
+			<Message>The control data is out of reference value range of inter-day variation.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>37</Code>
+			<Argment>2</Argment>
+			<Title>Quality control reference value error.</Title>
+			<Message>The reference value of inter-day variation is not set up. Please set up the reference value in the [QC] screen after pressing the [Control] and selecting the [QC] icon</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>40</Code>
+			<Argment>1</Argment>
+			<Title>Pump 1 error.</Title>
+			<Message>Decreased pressure was detected in pump1. If this occurs during the assay, the sampling will be paused. When all measurement is completed, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>40</Code>
+			<Argment>2</Argment>
+			<Title>Pump 2 error.</Title>
+			<Message>Decreased pressure was detected in pump2. If this occurs during the assay, the sampling will be paused. When all measurement is completed, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>40</Code>
+			<Argment>3</Argment>
+			<Title>Pump 3 error.</Title>
+			<Message>Decreased pressure was detected in pump3. If this occurs during the assay, the sampling will be paused. When all measurement is completed, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>40</Code>
+			<Argment>4</Argment>
+			<Title>Pump 4 error.</Title>
+			<Message>Decreased pressure was detected in pump4. If this occurs during the assay, the sampling will be paused. When all measurement is completed, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>41</Code>
+			<Argment>1</Argment>
+			<Title>The drain buffer is full.</Title>
+			<Message>If this occurs during an assay, the sampling will be paused. When the measurement is completed, please abort the assay and contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>42</Code>
+			<Argment>1</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 1 in the B/F1.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 1 int the B/F1. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>42</Code>
+			<Argment>2</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 2 in the B/F1.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 2 int the B/F1. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>42</Code>
+			<Argment>3</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 3 in the B/F1.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 3 int the B/F1. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>43</Code>
+			<Argment>1</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 1 in the B/F2.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 1 int the B/F2. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>43</Code>
+			<Argment>2</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 2 in the B/F2.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 2 int the B/F2. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>43</Code>
+			<Argment>3</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 3 in the B/F2.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 3 int the B/F2. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>43</Code>
+			<Argment>4</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 4 in the B/F2.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 4 int the B/F2. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>43</Code>
+			<Argment>5</Argment>
+			<Title>Failed to dispense wash solution by wash nozzle 5 in the B/F2.</Title>
+			<Message>Failed to detect that the liquid was properly aspirated and discharged when the wash solution was dispensed by wash nozzle 5 int the B/F2. Please check whether the wash solution bottle is set correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>44</Code>
+			<Argment>1</Argment>
+			<Title>Air Heater Pump 1 error at the R1 Dispense Unit.</Title>
+			<Message>If this occurs during an assay, the sampling will be paused. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>44</Code>
+			<Argment>2</Argment>
+			<Title>Air Heater Pump 2 error at the R2 Dispense Unit.</Title>
+			<Message>If this occurs during an assay, the sampling will be paused. If this occurs again, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>45</Code>
+			<Argment>1</Argment>
+			<Title>Can not be filled with a wash solution.</Title>
+			<Message>It was filled with wash solution for 30 minutes, but was not able to detect the full sensor. Please make sure the wash solution is being sufficiently filled to the solution tank of the facility.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>45</Code>
+			<Argment>2</Argment>
+			<Title>An error occurred in the wash solution supply pump.</Title>
+			<Message>Pressure of the wash solution supply pump is low. . Please make sure the pipe is connected correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>50</Code>
+			<Argment>1</Argment>
+			<Title>Communication error occurred between DP and host computer.</Title>
+			<Message>Failed to properly transmit the result data to a host computer. Please check whether the RS232C cable is connected correctly between DP and host computer.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>51</Code>
+			<Argment>1</Argment>
+			<Title>Communication error occurred between DP and analyzer.</Title>
+			<Message>Failed to properly transmit and receive data between DP and analyzer.Please check whether the LAN cable is connected correctly between DP and analyzer.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>1</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (Immunoreaction unit)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (Immunoreaction unit). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>2</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (R1 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (R1 pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>3</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (R2 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (R2 pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>4</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (Pretrigger pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators(Pretrigger pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>5</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (Trigger pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (Trigger pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>6</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (B/F1 nozzle1 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators(B/F1 nozzle1 pre-heater) .Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>7</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (B/F1 nozzle2 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators(B/F1 nozzle2 pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>8</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (B/F2 nozzle1 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (B/F2 nozzle1 pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>9</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (B/F2 nozzle2 pre-heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (B/F2 nozzle2 pre-heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>10</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (R1 air heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (R1 air heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>11</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (R2 air heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators (R2 air heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>52</Code>
+			<Argment>12</Argment>
+			<Title>Communication error occurred between analyzer and incubators. (PMT heater)</Title>
+			<Message>Failed to properly transmit and receive data between analyzer and incubators(PMT heater). Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>53</Code>
+			<Argment>1</Argment>
+			<Title>Communication error occurred between analyzer and monitoring CPU. </Title>
+			<Message>Failed to properly transmit and receive data between analyzer and monitoring CPU. Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>54</Code>
+			<Argment>1</Argment>
+			<Title>Timeout error occurred in the query of a worksheet. (Between DP and analyzer)</Title>
+			<Message>The sample is skipped. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>55</Code>
+			<Argment>1</Argment>
+			<Title>Timeout error occurred in the query of a worksheet. (Between DP and L.I.S)</Title>
+			<Message>The sample is skipped. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>55</Code>
+			<Argment>2</Argment>
+			<Title>The worksheet received from the L.I.S is not correct.</Title>
+			<Message>The format error was detected in the worksheet received from the host computer. Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>55</Code>
+			<Argment>3</Argment>
+			<Title>The worksheet received from the L.I.S has already been registered.</Title>
+			<Message>The worksheet received from the L.I.S is either “already registered” or “in process” in the system. The received worksheet will be ignored.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>60</Code>
+			<Title>Command error occurred.</Title>
+			<Message>The version may differ between a user program (DP) and a slave program (Analyzer). Please contact a serviceman for details.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>61</Code>
+			<Argment>1</Argment>
+			<Title>System error occurred.</Title>
+			<Message>Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>62</Code>
+			<Argment>1</Argment>
+			<Title>Cycle time over error occurred.</Title>
+			<Message>Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>70</Code>
+			<Title>{0} M Reagent is not set.</Title>
+			<Message>Please set {0} M Reagent on the [Reagent preparation] screen, and retest. The sample in which error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>71</Code>
+			<Title>{0} R Reagent is not set.</Title>
+			<Message>Please set {0} R Reagent on the [Reagent preparation] screen, and retest. The sample in which error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>72</Code>
+			<Argment>1</Argment>
+			<Title>The diluent is not set.</Title>
+			<Message>Please set a sample diluent on the [Reagent preparation] screen. If this occurs during the assay please retest. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>73</Code>
+			<Title>{0} Pretreatement Liquid is not set.</Title>
+			<Message>Please set {0} Pretreatement Liquid on the [Reagent preparation] screen, and retest. The sample in which error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>1</Argment>
+			<Title>Failed to mount a sampling tip.</Title>
+			<Message>If this occurs during the assay, please retest the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>2</Argment>
+			<Title>Sample aspiration error occurred.</Title>
+			<Message>No sample was detected. If this occurs during the assay, please retest the sample after checking the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>3</Argment>
+			<Title>Sample aspiration error occurred.</Title>
+			<Message>Clogging was detected. If this occurs during the assay, please retest the sample after checking the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>4</Argment>
+			<Title>Sample aspiration error occurred.</Title>
+			<Message>The Shortage of the sample was detected. If this occurs during the assay, please retest the sample after checking the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>5</Argment>
+			<Title>Failed to mount a sampling tip.</Title>
+			<Message>At the time of the last sampling, the sampling tip was not able to remove. If this occurs during the assay, please retest the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>6</Argment>
+			<Title>Sample dispense error occurred.</Title>
+			<Message>During dispensing the sample, A normal pressure was not able to be found out. The sampling tip may have dropped. If this occurs during the assay, please retest the sample. The sample in which the error occurred will be added to the retest list</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>7</Argment>
+			<Title>Sample aspiration error occurred.</Title>
+			<Message>Bubbles were detected during aspirating the sample. Please retest the sample after removing the bubbles. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>74</Code>
+			<Argment>8</Argment>
+			<Title>Sample is scarce.</Title>
+			<Message>Lack of sample is detected during aspirating the sample. Please put the sample sufficiently in the vessel and retest it. The sample in which the error occurred is added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>75</Code>
+			<Argment>1</Argment>
+			<Title>M Reagent aspiration error occurred.</Title>
+			<Message>A surface was not able to be found out at the time of surface detection, Please retest the sample after checking M Reagent. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>75</Code>
+			<Argment>2</Argment>
+			<Title>R1 Reagent aspiration error occurred.</Title>
+			<Message>A surface was not able to be found out at the time of surface detection, Please retest the sample after checking R1 Reagent. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>75</Code>
+			<Argment>3</Argment>
+			<Title>R2 Reagent aspiration error occurred.</Title>
+			<Message>A surface was not able to be found out at the time of surface detection, Please retest the sample after checking R2 Reagent. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>75</Code>
+			<Argment>4</Argment>
+			<Title>Pretreatement liquid aspiration error occurred.</Title>
+			<Message>A surface was not able to be found out at the time of surface detection, Please retest the sample after checking Pretreatement liquid. The sample in which the error occurred will be added to the retest list.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>80</Code>
+			<Argment>1</Argment>
+			<Title>Failed to return a Reaction Cell Case to the storage.</Title>
+			<Message>The Reaction Cell Case unit was already full, therefore the Reaction Cell Case could not be returned. Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>81</Code>
+			<Argment>1</Argment>
+			<Title>Failed to return a Sample Tip Case to the storage.</Title>
+			<Message>The Sample Tip Case unit was already full, therefore the Sample Tip Case could not be returned. Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>82</Code>
+			<Argment>1</Argment>
+			<Title>Failed to detect a Reaction Cell Case.</Title>
+			<Message>If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>83</Code>
+			<Argment>1</Argment>
+			<Title>Failed to detect a Sample Tip Case.</Title>
+			<Message>If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>84</Code>
+			<Argment>1</Argment>
+			<Title>Failed in Reaction Cell transfer at the Reaction Cell Transfer 1 unit.</Title>
+			<Message>A Reaction Cell could not be detected at the time of transfer.
+If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>84</Code>
+			<Argment>2</Argment>
+			<Title>Failed in Reaction Cell transfer at the Reaction Cell Transfer 2 unit.</Title>
+			<Message>A Reaction Cell could not be detected at the time of transfer.
+If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>85</Code>
+			<Argment>1</Argment>
+			<Title>The Peltier device of the Reagent storage failed.</Title>
+			<Message>Failure of the Peltier device was detected during assay, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>86</Code>
+			<Argment>1</Argment>
+			<Title>Failed to return a Sample Rack to the storage.</Title>
+			<Message>The Sample Rack unit was already full, therefore the Sample Rack could not be returned. Please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>87</Code>
+			<Argment>1</Argment>
+			<Title>The Rack in assay was taken out.</Title>
+			<Message>Please return a Rack to the original position, It can take out after the completion of the asasy.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>88</Code>
+			<Argment>1</Argment>
+			<Title>Failed in Sample Rack transfer.</Title>
+			<Message>A Sample Rack could not be held at the time of transfer. If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>88</Code>
+			<Argment>2</Argment>
+			<Title>Failed in Sample Rack transfer.</Title>
+			<Message>A Sample Rack could not be released at the time of transfer. If this occurs continuously, please contact a serviceman.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>88</Code>
+			<Argment>3</Argment>
+			<Title>Failed in Sample Rack transfer.</Title>
+			<Message>A Sample Rack could not be held at the time of transfer, since the Sample Rack transfer arm has already held another Sample Rack. If this occurs continuously, please contact a serviceman.
+</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>88</Code>
+			<Argment>4</Argment>
+			<Title>Failed in Sample Rack transfer.</Title>
+			<Message>A Sample Rack could not be released at the time of transfer, since the Sample Rack was not detected.  If this occurs continuously, please contact a serviceman.
+</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>100</Code>
+			<Title>Insufficient {0} M Reagent.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add {0} M Reagent bottles on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>101</Code>
+			<Title>Insufficient {0} R Reagent.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add {0} R Reagent bottles on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>102</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Diluent.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please exchange Diluent bottle on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>103</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Pretrigger</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add Pretrigger bottle on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>104</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Trigger</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add Trigger bottle on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>105</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Wash Solution.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add Wash Solution. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>106</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Sample Tips.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add Sample Tip Case on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>107</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Reaction Cells.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please add Reaction Cell Case on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>108</Code>
+			<Argment>1</Argment>
+			<Title>The Waste Liquid Tank is not set.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please set the Waste Liquid Tank. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>109</Code>
+			<Argment>1</Argment>
+			<Title>Waste Liquid Tank is full.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please exchange the Waste Liquid Tank on the [Reagent preparation] screen. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>110</Code>
+			<Argment>1</Argment>
+			<Title>The Disposal Box is not set.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please set the Disposal Box. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>111</Code>
+			<Argment>1</Argment>
+			<Title>Disposal Box is full.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please empty the Disposal Box after all the measurements have completed. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>112</Code>
+			<Argment>1</Argment>
+			<Title>Disposal Box Buffer is not set.</Title>
+			<Message>Sampling will be stopped if the system is in assay. Please empty the Disposal Box Buffer after all the measurements have completed. Assay will resume automatically.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>113</Code>
+			<Argment>1</Argment>
+			<Title>The door of the Reagent storage is left open.</Title>
+			<Message>The door of the Reagent storage is left open for more than 10 minutes. Please shut the door.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>114</Code>
+			<Argment>1</Argment>
+			<Title>The cover of the Reagent storage is left open.</Title>
+			<Message>When the Reagent exchange is completed, the cover is left open and cannot be locked.   Please shut the cover and click the exchange complete button again.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>115</Code>
+			<Argment>1</Argment>
+			<Title>The door of the Reaction Cell Case and Sample Tip Case Storage is left open.</Title>
+			<Message>The door of the Reaction Cell Case and Sample Tip Case Storage is left open for more than 10 minutes. Please shut the door.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>116</Code>
+			<Argment>1</Argment>
+			<Title>The door of the Reaction Cell Case and Sample Tip Case Storage is left open.</Title>
+			<Message>When the Consumables exchange is completed, the door is left open and cannot be locked.   Please shut the cover and click the exchange complete button again.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>117</Code>
+			<Argment>1</Argment>
+			<Title>The Diluent Bottle is not set.</Title>
+			<Message>Please set the Diluent Bottle correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>118</Code>
+			<Argment>1</Argment>
+			<Title>The Pretrigger Bottle is not set.</Title>
+			<Message>Please set the Pretrigger Bottle correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>119</Code>
+			<Argment>1</Argment>
+			<Title>The Trigger Bottle is not set.</Title>
+			<Message>Please set the Trigger Bottle correctly.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>120</Code>
+			<Argment>1</Argment>
+			<Title>The Waste Liquid Tank is not connected.</Title>
+			<Message>The analyzer is not connected with the Waste Liquid Tank. Please connect the cable and piping tubes.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>121</Code>
+			<Title>A break in the Reagent Lot has been detected. ({0})</Title>
+			<Message>The assay of calibrator is skipped. Please specify a Reagent Lot, perform Calibrator Registration and set the rack again.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>122</Code>
+			<Argment>1</Argment>
+			<Title>Insufficient Rinse.</Title>
+			<Message>Please set the Rinse Bottle.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>123</Code>
+			<Argment>1</Argment>
+			<Title>The sample rack cover is left open.</Title>
+			<Message>Please close the sample rack cover. Then, the assay continues.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>124</Code>
+			<Argment>1</Argment>
+			<Title>Bubble has been detected in the M reagent bottle.</Title>
+			<Message>Remove the bubble in M reagent bottle, please try again.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>124</Code>
+			<Argment>2</Argment>
+			<Title>Remove the bubble in R1 reagent bottle, please try again.</Title>
+			<Message>Bubble has been detected in the R1 reagent bottle.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
+			<Code>124</Code>
+			<Argment>3</Argment>
+			<Title>Remove the bubble in R2 reagent bottle, please try again.</Title>
+			<Message>Bubble has been detected in the R2 reagent bottle.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+	</CodeDataList>
+</ErrorCodeDataManager>
