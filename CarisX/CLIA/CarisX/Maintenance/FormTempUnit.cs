@@ -128,14 +128,20 @@ namespace Oelco.CarisX.Maintenance
             ItemRSIncTemp SetTemp = new ItemRSIncTemp();
             timeCount = 0;
 
+            //【IssuesNo:4】读取温度补偿校准信息
+            ParameterFilePreserve<TempOffsetParameter> TempOffset = Singleton<ParameterFilePreserve<TempOffsetParameter>>.Instance;
+            TempOffset.LoadRaw();
+
             StartComm.Ctrl = CommandControlParameter.Set;
-            SetTemp.ReactionTableTemp = (double)numReactionTableSetTemp.Value;
-            SetTemp.BFTableTemp = (double)numBFTableSetTemp.Value;
-            SetTemp.BF1PreHeatTemp = (double)numBF1SetTemp.Value;
-            SetTemp.BF2PreHeatTemp = (double)numBF2SetTemp.Value;
-            SetTemp.R1ProbeTemp = (double)numR1SetTemp.Value;
-            SetTemp.R2ProbeTemp = (double)numR2SetTemp.Value;
-            SetTemp.ChemiluminesoensePtotometryTemp = (double)numChemilumiSetTemp.Value;
+
+            //【IssuesNo:4】添加温度补偿校准值
+            SetTemp.ReactionTableTemp = (double)numReactionTableSetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].reactionTableTempOffsetParam;
+            SetTemp.BFTableTemp = (double)numBFTableSetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bFTableTempOffsetParam;
+            SetTemp.BF1PreHeatTemp = (double)numBF1SetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bF1TempOffsetParam;
+            SetTemp.BF2PreHeatTemp = (double)numBF2SetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bF2TempOffsetParam;
+            SetTemp.R1ProbeTemp = (double)numR1SetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].r1TempOffsetParam;
+            SetTemp.R2ProbeTemp = (double)numR2SetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].r2TempOffsetParam;
+            SetTemp.ChemiluminesoensePtotometryTemp = (double)numChemilumiSetTemp.Value + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].ptotometryTempOffsetParam;
             StartComm.Temp = SetTemp;
 
             while (true)
@@ -228,6 +234,10 @@ namespace Oelco.CarisX.Maintenance
             bool LineNull;
             string file_path;
 
+            //【IssuesNo:4】加载本地温度补偿信息
+            ParameterFilePreserve<TempOffsetParameter> TempOffset = Singleton<ParameterFilePreserve<TempOffsetParameter>>.Instance;
+            TempOffset.LoadRaw();
+
             switch (comm.Command.CommandId)
             {
                 case (int)CommandKind.Command1437:
@@ -236,40 +246,50 @@ namespace Oelco.CarisX.Maintenance
 
                     ds = (SlaveCommCommand_1437)comm.Command;
                     if (timeCount == 6) PlotClera();
-                    ReactionTabledata.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.ReactionTableTemp });
+
+                    //【IssuesNo:4】经过温度补偿校准后的温度值
+                    double reactionTableTemp = ds.Temp.ReactionTableTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].reactionTableTempOffsetParam;
+                    double BFTableTemp = ds.Temp.BFTableTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bFTableTempOffsetParam;
+                    double BF1Temp = ds.Temp.BF1PreHeatTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bF1TempOffsetParam;
+                    double BF2Temp = ds.Temp.BF2PreHeatTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].bF2TempOffsetParam;
+                    double r1Temp = ds.Temp.R1ProbeTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].r1TempOffsetParam;
+                    double r2Temp = ds.Temp.R2ProbeTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].r2TempOffsetParam;
+                    double ChemilumiTemp = ds.Temp.ChemiluminesoensePtotometryTemp + (double)TempOffset.Param.SlaveList[Singleton<CarisXCommManager>.Instance.SelectedSlaveIndex].ptotometryTempOffsetParam;
+
+                    ReactionTabledata.Rows.Add(new Object[] { timeCount.ToString(), reactionTableTemp });
                     ChaReactionTable.DataSource = ReactionTabledata;
                     ChaReactionTable.Axis.X.TickmarkInterval = Interval;
-                    lblReactionTableTempDsp.Text = ds.Temp.ReactionTableTemp.ToString("#0.0");
+                    lblReactionTableTempDsp.Text = reactionTableTemp.ToString("#0.0");
 
-                    BFTabledata.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.BFTableTemp });
+                    BFTabledata.Rows.Add(new Object[] { timeCount.ToString(), BFTableTemp });
                     ChaBFTable.DataSource = BFTabledata;
                     ChaBFTable.Axis.X.TickmarkInterval = Interval;
-                    lblBFTableTempDsp.Text = ds.Temp.BFTableTemp.ToString("#0.0");
+                    lblBFTableTempDsp.Text = BFTableTemp.ToString("#0.0");
 
-                    BF1Preheater.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.BF1PreHeatTemp });
+                    BF1Preheater.Rows.Add(new Object[] { timeCount.ToString(), BF1Temp });
                     ChaBF1.DataSource = BF1Preheater;
                     ChaBF1.Axis.X.TickmarkInterval = Interval;
-                    lblBF1TempDsp.Text = ds.Temp.BF1PreHeatTemp.ToString("#0.0");
+                    lblBF1TempDsp.Text = BF1Temp.ToString("#0.0");
 
-                    BF2Preheater.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.BF2PreHeatTemp });
+                    BF2Preheater.Rows.Add(new Object[] { timeCount.ToString(), BF2Temp });
                     ChaBF2.DataSource = BF2Preheater;
                     ChaBF2.Axis.X.TickmarkInterval = Interval;
-                    lblBF2TempDsp.Text = ds.Temp.BF2PreHeatTemp.ToString("#0.0");
+                    lblBF2TempDsp.Text = BF2Temp.ToString("#0.0");
 
-                    R1Probe.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.R1ProbeTemp });
+                    R1Probe.Rows.Add(new Object[] { timeCount.ToString(), r1Temp });
                     ChaR1.DataSource = R1Probe;
                     ChaR1.Axis.X.TickmarkInterval = Interval;
-                    lblR1TempDsp.Text = ds.Temp.R1ProbeTemp.ToString("#0.0");
+                    lblR1TempDsp.Text = r1Temp.ToString("#0.0");
 
-                    R2Probe.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.R2ProbeTemp });
+                    R2Probe.Rows.Add(new Object[] { timeCount.ToString(), r2Temp });
                     ChaR2.DataSource = R2Probe;
                     ChaR2.Axis.X.TickmarkInterval = Interval;
-                    lblR2TempDsp.Text = ds.Temp.R2ProbeTemp.ToString("#0.0");
+                    lblR2TempDsp.Text = r2Temp.ToString("#0.0");
 
-                    ChemiluminescenceMeasurement.Rows.Add(new Object[] { timeCount.ToString(), ds.Temp.ChemiluminesoensePtotometryTemp });
+                    ChemiluminescenceMeasurement.Rows.Add(new Object[] { timeCount.ToString(), ChemilumiTemp });
                     ChaChemilumi.DataSource = ChemiluminescenceMeasurement;
                     ChaChemilumi.Axis.X.TickmarkInterval = Interval;
-                    lblChemilumiTempDsp.Text = ds.Temp.ChemiluminesoensePtotometryTemp.ToString("#0.0");
+                    lblChemilumiTempDsp.Text = ChemilumiTemp.ToString("#0.0");
 
                     //textファイルに書き出しLOG
                     //ファイルまでのディレクトリのパスをセット
@@ -296,13 +316,13 @@ namespace Oelco.CarisX.Maintenance
                             if (LineNull)
                                 writer.WriteLine("Time," + "ReactionTabledata," + "BFTabledata," + "BF1Preheater," + "BF2Preheater," + "R1Preheater," + "R2Preheater," + "ChemiluminescenceMeasurement");
                             writer.WriteLine(System.DateTime.Now.ToString() + ","
-                                + ds.Temp.ReactionTableTemp.ToString("#0.0") + ","
-                                + ds.Temp.BFTableTemp.ToString("#0.0") + ","
-                                + ds.Temp.BF1PreHeatTemp.ToString("#0.0") + ","
-                                + ds.Temp.BF2PreHeatTemp.ToString("#0.0") + ","
-                                + ds.Temp.R1ProbeTemp.ToString("#0.0") + ","
-                                + ds.Temp.R2ProbeTemp.ToString("#0.0") + ","
-                                + ds.Temp.ChemiluminesoensePtotometryTemp.ToString("#0.0")
+                                + reactionTableTemp.ToString("#0.0") + ","
+                                + BFTableTemp.ToString("#0.0") + ","
+                                + BF1Temp.ToString("#0.0") + ","
+                                + BF2Temp.ToString("#0.0") + ","
+                                + r1Temp.ToString("#0.0") + ","
+                                + r2Temp.ToString("#0.0") + ","
+                                + ChemilumiTemp.ToString("#0.0")
                                 );
                         }
                     }
@@ -505,6 +525,20 @@ namespace Oelco.CarisX.Maintenance
             using (FormTempPID TempPIDDlg = new FormTempPID())
             {
                 TempPIDDlg.ShowDialog();
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:4】温度补偿调整按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnTempOffset_Click(object sender, EventArgs e)
+        {
+            //【IssuesNo:4】打开温度补偿校准窗体
+            using (FormTempOffset TempOffsetDlg = new FormTempOffset())
+            {
+                TempOffsetDlg.ShowDialog();
             }
         }
     }

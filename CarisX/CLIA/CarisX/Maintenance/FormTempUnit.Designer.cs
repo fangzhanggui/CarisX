@@ -174,6 +174,7 @@
             this.btnPID = new System.Windows.Forms.Button();
             this.ultraTabSharedControlsPage1 = new Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage();
             this.tabUnit = new Infragistics.Win.UltraWinTabControl.UltraTabControl();
+            this.btnTempOffset = new System.Windows.Forms.Button();
             this.ultraTabPageControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxBFTable)).BeginInit();
             this.gbxBFTable.SuspendLayout();
@@ -278,7 +279,7 @@
             // 
             // numBFTableSetTemp
             // 
-            this.numBFTableSetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBFTableSetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBFTableSetTemp.FormatString = "";
             this.numBFTableSetTemp.Location = new System.Drawing.Point(425, 24);
             this.numBFTableSetTemp.MaskInput = "nn.n";
@@ -292,8 +293,8 @@
             this.numBFTableSetTemp.TabIndex = 26;
             this.numBFTableSetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaBFTable.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -473,11 +474,11 @@
             this.ChaBFTable.Name = "ChaBFTable";
             this.ChaBFTable.Size = new System.Drawing.Size(497, 405);
             this.ChaBFTable.TabIndex = 0;
-            this.ChaBFTable.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBFTable.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBFTable.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBFTable.TitleBottom.Margins.Bottom = 0;
             this.ChaBFTable.TitleBottom.Text = "Sec";
-            this.ChaBFTable.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBFTable.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBFTable.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBFTable.TitleLeft.Text = "Temperature";
             this.ChaBFTable.TitleLeft.Visible = true;
@@ -537,7 +538,7 @@
             // 
             // numBF2SetTemp
             // 
-            this.numBF2SetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF2SetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF2SetTemp.FormatString = "";
             this.numBF2SetTemp.Location = new System.Drawing.Point(425, 24);
             this.numBF2SetTemp.MaskInput = "nn.n";
@@ -551,8 +552,8 @@
             this.numBF2SetTemp.TabIndex = 26;
             this.numBF2SetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaBF2.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -731,11 +732,11 @@
             this.ChaBF2.Name = "ChaBF2";
             this.ChaBF2.Size = new System.Drawing.Size(497, 405);
             this.ChaBF2.TabIndex = 0;
-            this.ChaBF2.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBF2.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBF2.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBF2.TitleBottom.Margins.Bottom = 0;
             this.ChaBF2.TitleBottom.Text = "Sec";
-            this.ChaBF2.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBF2.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBF2.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBF2.TitleLeft.Text = "Temperature";
             this.ChaBF2.TitleLeft.Visible = true;
@@ -795,7 +796,7 @@
             // 
             // numBF1SetTemp
             // 
-            this.numBF1SetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF1SetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF1SetTemp.FormatString = "";
             this.numBF1SetTemp.Location = new System.Drawing.Point(425, 24);
             this.numBF1SetTemp.MaskInput = "nn.n";
@@ -809,8 +810,8 @@
             this.numBF1SetTemp.TabIndex = 26;
             this.numBF1SetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaBF1.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -989,11 +990,11 @@
             this.ChaBF1.Name = "ChaBF1";
             this.ChaBF1.Size = new System.Drawing.Size(497, 405);
             this.ChaBF1.TabIndex = 0;
-            this.ChaBF1.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBF1.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBF1.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBF1.TitleBottom.Margins.Bottom = 0;
             this.ChaBF1.TitleBottom.Text = "Sec";
-            this.ChaBF1.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaBF1.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaBF1.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaBF1.TitleLeft.Text = "Temperature";
             this.ChaBF1.TitleLeft.Visible = true;
@@ -1053,7 +1054,7 @@
             // 
             // numReactionTableSetTemp
             // 
-            this.numReactionTableSetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numReactionTableSetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numReactionTableSetTemp.FormatString = "";
             this.numReactionTableSetTemp.Location = new System.Drawing.Point(425, 24);
             this.numReactionTableSetTemp.MaskInput = "nn.n";
@@ -1067,8 +1068,8 @@
             this.numReactionTableSetTemp.TabIndex = 26;
             this.numReactionTableSetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaReactionTable.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -1248,11 +1249,11 @@
             this.ChaReactionTable.Name = "ChaReactionTable";
             this.ChaReactionTable.Size = new System.Drawing.Size(497, 405);
             this.ChaReactionTable.TabIndex = 0;
-            this.ChaReactionTable.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaReactionTable.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaReactionTable.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaReactionTable.TitleBottom.Margins.Bottom = 0;
             this.ChaReactionTable.TitleBottom.Text = "Sec";
-            this.ChaReactionTable.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaReactionTable.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaReactionTable.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaReactionTable.TitleLeft.Text = "Temperature";
             this.ChaReactionTable.TitleLeft.Visible = true;
@@ -1262,7 +1263,6 @@
             this.ChaReactionTable.TitleTop.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ChaReactionTable.TitleTop.Visible = false;
             this.ChaReactionTable.Tooltips.FontColor = System.Drawing.Color.Navy;
-            this.ChaReactionTable.Tooltips.TooltipControl = null;
             // 
             // ultraTabPageControl2
             // 
@@ -1310,8 +1310,8 @@
             this.lblReagentStorageTemp.TabIndex = 27;
             this.lblReagentStorageTemp.Text = "The Pressent Temperature (°C)";
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaReagentStorage.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -1490,11 +1490,11 @@
             this.ChaReagentStorage.Name = "ChaReagentStorage";
             this.ChaReagentStorage.Size = new System.Drawing.Size(497, 405);
             this.ChaReagentStorage.TabIndex = 0;
-            this.ChaReagentStorage.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaReagentStorage.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaReagentStorage.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaReagentStorage.TitleBottom.Margins.Bottom = 0;
             this.ChaReagentStorage.TitleBottom.Text = "Sec";
-            this.ChaReagentStorage.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaReagentStorage.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaReagentStorage.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaReagentStorage.TitleLeft.Text = "Temperature";
             this.ChaReagentStorage.TitleLeft.Visible = true;
@@ -1554,7 +1554,7 @@
             // 
             // numChemilumiSetTemp
             // 
-            this.numChemilumiSetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numChemilumiSetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numChemilumiSetTemp.FormatString = "";
             this.numChemilumiSetTemp.Location = new System.Drawing.Point(425, 24);
             this.numChemilumiSetTemp.MaskInput = "nn.n";
@@ -1568,8 +1568,8 @@
             this.numChemilumiSetTemp.TabIndex = 26;
             this.numChemilumiSetTemp.Value = 37D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaChemilumi.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -1748,11 +1748,11 @@
             this.ChaChemilumi.Name = "ChaChemilumi";
             this.ChaChemilumi.Size = new System.Drawing.Size(497, 405);
             this.ChaChemilumi.TabIndex = 0;
-            this.ChaChemilumi.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaChemilumi.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaChemilumi.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaChemilumi.TitleBottom.Margins.Bottom = 0;
             this.ChaChemilumi.TitleBottom.Text = "Sec";
-            this.ChaChemilumi.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaChemilumi.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaChemilumi.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaChemilumi.TitleLeft.Text = "Temperature";
             this.ChaChemilumi.TitleLeft.Visible = true;
@@ -1812,7 +1812,7 @@
             // 
             // numR2SetTemp
             // 
-            this.numR2SetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR2SetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR2SetTemp.FormatString = "";
             this.numR2SetTemp.Location = new System.Drawing.Point(425, 24);
             this.numR2SetTemp.MaskInput = "nn.n";
@@ -1826,8 +1826,8 @@
             this.numR2SetTemp.TabIndex = 26;
             this.numR2SetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaR2.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -2006,11 +2006,11 @@
             this.ChaR2.Name = "ChaR2";
             this.ChaR2.Size = new System.Drawing.Size(497, 405);
             this.ChaR2.TabIndex = 0;
-            this.ChaR2.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaR2.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaR2.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaR2.TitleBottom.Margins.Bottom = 0;
             this.ChaR2.TitleBottom.Text = "Sec";
-            this.ChaR2.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaR2.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaR2.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaR2.TitleLeft.Text = "Temperature";
             this.ChaR2.TitleLeft.Visible = true;
@@ -2070,7 +2070,7 @@
             // 
             // numR1SetTemp
             // 
-            this.numR1SetTemp.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR1SetTemp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR1SetTemp.FormatString = "";
             this.numR1SetTemp.Location = new System.Drawing.Point(425, 24);
             this.numR1SetTemp.MaskInput = "nn.n";
@@ -2084,8 +2084,8 @@
             this.numR1SetTemp.TabIndex = 26;
             this.numR1SetTemp.Value = 38D;
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaR1.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -2264,11 +2264,11 @@
             this.ChaR1.Name = "ChaR1";
             this.ChaR1.Size = new System.Drawing.Size(497, 405);
             this.ChaR1.TabIndex = 0;
-            this.ChaR1.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaR1.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaR1.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaR1.TitleBottom.Margins.Bottom = 0;
             this.ChaR1.TitleBottom.Text = "Sec";
-            this.ChaR1.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaR1.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaR1.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaR1.TitleLeft.Text = "Temperature";
             this.ChaR1.TitleLeft.Visible = true;
@@ -2281,6 +2281,7 @@
             // 
             // ultraTabPageControl3
             // 
+            this.ultraTabPageControl3.Controls.Add(this.btnTempOffset);
             this.ultraTabPageControl3.Controls.Add(this.gbxAnalyzer);
             this.ultraTabPageControl3.Controls.Add(this.gbxRoom);
             this.ultraTabPageControl3.Controls.Add(this.btnPID);
@@ -2324,8 +2325,8 @@
             this.lblAnalyzerTemp.TabIndex = 27;
             this.lblAnalyzerTemp.Text = "The Pressent Temperature (°C)";
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaAnalyzer.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -2504,11 +2505,11 @@
             this.ChaAnalyzer.Name = "ChaAnalyzer";
             this.ChaAnalyzer.Size = new System.Drawing.Size(497, 405);
             this.ChaAnalyzer.TabIndex = 0;
-            this.ChaAnalyzer.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaAnalyzer.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaAnalyzer.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaAnalyzer.TitleBottom.Margins.Bottom = 0;
             this.ChaAnalyzer.TitleBottom.Text = "Sec";
-            this.ChaAnalyzer.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaAnalyzer.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaAnalyzer.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaAnalyzer.TitleLeft.Text = "Temperature";
             this.ChaAnalyzer.TitleLeft.Visible = true;
@@ -2555,8 +2556,8 @@
             this.lblRoomTemp.TabIndex = 27;
             this.lblRoomTemp.Text = "The Pressent Temperature (°C)";
             // 
-//			'UltraChart' プロパティのシリアル化: 'ChartType' は軸の外観を変更するので、
-//			デザインタイムに軸の変更を行った前に'ChartType'は持続しなければなりません。
+//			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
+//			'ChartType' must be persisted ahead of any Axes change made in design time.
 //		
             this.ChaRoom.ChartType = Infragistics.UltraChart.Shared.Styles.ChartType.LineChart;
             // 
@@ -2735,11 +2736,11 @@
             this.ChaRoom.Name = "ChaRoom";
             this.ChaRoom.Size = new System.Drawing.Size(497, 405);
             this.ChaRoom.TabIndex = 0;
-            this.ChaRoom.TitleBottom.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaRoom.TitleBottom.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaRoom.TitleBottom.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaRoom.TitleBottom.Margins.Bottom = 0;
             this.ChaRoom.TitleBottom.Text = "Sec";
-            this.ChaRoom.TitleLeft.Font = new System.Drawing.Font("Meiryo UI", 8.25F);
+            this.ChaRoom.TitleLeft.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ChaRoom.TitleLeft.HorizontalAlign = System.Drawing.StringAlignment.Center;
             this.ChaRoom.TitleLeft.Text = "Temperature";
             this.ChaRoom.TitleLeft.Visible = true;
@@ -2806,6 +2807,16 @@
             ultraTab1});
             this.tabUnit.TabSize = new System.Drawing.Size(180, 30);
             this.tabUnit.ViewStyle = Infragistics.Win.UltraWinTabControl.ViewStyle.VisualStudio2005;
+            // 
+            // btnTempOffset
+            // 
+            this.btnTempOffset.Location = new System.Drawing.Point(16, 580);
+            this.btnTempOffset.Name = "btnTempOffset";
+            this.btnTempOffset.Size = new System.Drawing.Size(156, 37);
+            this.btnTempOffset.TabIndex = 161;
+            this.btnTempOffset.Text = "TempOffset";
+            this.btnTempOffset.UseVisualStyleBackColor = true;
+            this.btnTempOffset.Click += new System.EventHandler(this.btnTempOffset_Click);
             // 
             // FormTempUnit
             // 
@@ -2930,5 +2941,6 @@
         private Infragistics.Win.Misc.UltraLabel lblDeviceTempDsp;
         private Infragistics.Win.Misc.UltraLabel lblAnalyzerTemp;
         private Infragistics.Win.UltraWinChart.UltraChart ChaAnalyzer;
+        private System.Windows.Forms.Button btnTempOffset;
     }
 }

@@ -446,27 +446,33 @@ namespace ProtocolConverter.Check
                     }
                 }
 
-                // 陽性判定閾値
-                dataIndex = Singleton<ConvertXmlControl>.Instance.GetListIndex( ConvertXmlControl.NM_POSILINE );
+                //【IssuesNo:5】修改定量项目36(HBsAb)、37(HBsAg)的阴阳性阈值判定条件，允许其值大于0；
+                dataIndex = Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_PROTOCOLINDEX);
                 data = excelData[dataIndex];
-                if ( data != string.Empty && data != "0" )
+                if(!data.Equals("36") && !data.Equals("37"))
                 {
-                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddErrorList( ProtocolIndex.ToString(), 
-                        Singleton<ConvertXmlControl>.Instance.GetRowNo( ConvertXmlControl.NM_POSILINE ),
-                        Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other4"], data );
-                    rtn = false;
-                }
+                    // 陽性判定閾値
+                    dataIndex = Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_POSILINE);
+                    data = excelData[dataIndex];
+                    if (data != string.Empty && data != "0")
+                    {
+                        Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddErrorList(ProtocolIndex.ToString(),
+                            Singleton<ConvertXmlControl>.Instance.GetRowNo(ConvertXmlControl.NM_POSILINE),
+                            Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other4"], data);
+                        rtn = false;
+                    }
 
-                // 陰性判定閾値
-                dataIndex = Singleton<ConvertXmlControl>.Instance.GetListIndex( ConvertXmlControl.NM_NEGALINE );
-                data = excelData[dataIndex];
-                if ( data != string.Empty && data != "0" )
-                {
-                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddErrorList( ProtocolIndex.ToString(), 
-                        Singleton<ConvertXmlControl>.Instance.GetRowNo( ConvertXmlControl.NM_NEGALINE )
-                        , Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other4"], data );
-                    rtn = false;
-                }
+                    // 陰性判定閾値
+                    dataIndex = Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_NEGALINE);
+                    data = excelData[dataIndex];
+                    if (data != string.Empty && data != "0")
+                    {
+                        Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddErrorList(ProtocolIndex.ToString(),
+                            Singleton<ConvertXmlControl>.Instance.GetRowNo(ConvertXmlControl.NM_NEGALINE)
+                            , Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other4"], data);
+                        rtn = false;
+                    }
+                }         
             }
 
             return rtn;

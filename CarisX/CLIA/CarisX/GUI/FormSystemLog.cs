@@ -178,10 +178,10 @@ namespace Oelco.CarisX.GUI
             }
             else
             {
-                this.grdAssayLog.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                this.grdErrorLog.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                this.grdOperationLog.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                this.grdParameterChangeLog.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.grdAssayLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.grdErrorLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.grdOperationLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.grdParameterChangeLog.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
 
             this.grdErrorLog.DisplayLayout.AutoFitStyle = AutoFitStyle.None;
@@ -546,7 +546,8 @@ namespace Oelco.CarisX.GUI
                     list.RaiseListChangedEvents = true;
 
                     this.grdErrorLog.DataBind();
-                    if (m_nCurrentRowIndex != 0)
+                    //IssuesNo:5 防止账户切换或者日期变更时，m_nCurrentRowIndex超出当前grdErrorLog行数导致索引超出范围的BUG
+                    if (m_nCurrentRowIndex != 0 && m_nCurrentRowIndex <= grdErrorLog.Rows.Count)
                     {
                         this.grdErrorLog.Rows[m_nCurrentRowIndex].Selected = true;
                         this.grdErrorLog.Rows[m_nCurrentRowIndex].Activate();

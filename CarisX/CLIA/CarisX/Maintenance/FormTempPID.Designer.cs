@@ -217,7 +217,7 @@
             // 
             // numReactionTableP
             // 
-            this.numReactionTableP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numReactionTableP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numReactionTableP.FormatString = "";
             this.numReactionTableP.Location = new System.Drawing.Point(266, 72);
             this.numReactionTableP.MaskInput = "nnnn.nnn";
@@ -233,7 +233,7 @@
             // 
             // numReactionTableI
             // 
-            this.numReactionTableI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numReactionTableI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numReactionTableI.FormatString = "";
             this.numReactionTableI.Location = new System.Drawing.Point(381, 72);
             this.numReactionTableI.MaskInput = "nnnn.nnn";
@@ -249,7 +249,7 @@
             // 
             // numReactionTableD
             // 
-            this.numReactionTableD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numReactionTableD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numReactionTableD.FormatString = "";
             this.numReactionTableD.Location = new System.Drawing.Point(503, 72);
             this.numReactionTableD.MaskInput = "nnnn.nnn";
@@ -331,7 +331,7 @@
             // 
             // numR1PreHeatD
             // 
-            this.numR1PreHeatD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR1PreHeatD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR1PreHeatD.FormatString = "";
             this.numR1PreHeatD.Location = new System.Drawing.Point(1094, 71);
             this.numR1PreHeatD.MaskInput = "nnnn.nnn";
@@ -347,7 +347,7 @@
             // 
             // numR1PreHeatI
             // 
-            this.numR1PreHeatI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR1PreHeatI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR1PreHeatI.FormatString = "";
             this.numR1PreHeatI.Location = new System.Drawing.Point(972, 71);
             this.numR1PreHeatI.MaskInput = "nnnn.nnn";
@@ -363,7 +363,7 @@
             // 
             // numR1PreHeatP
             // 
-            this.numR1PreHeatP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR1PreHeatP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR1PreHeatP.FormatString = "";
             this.numR1PreHeatP.Location = new System.Drawing.Point(857, 71);
             this.numR1PreHeatP.MaskInput = "nnnn.nnn";
@@ -412,7 +412,7 @@
             // 
             // numR2PreHeatD
             // 
-            this.numR2PreHeatD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR2PreHeatD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR2PreHeatD.FormatString = "";
             this.numR2PreHeatD.Location = new System.Drawing.Point(1094, 135);
             this.numR2PreHeatD.MaskInput = "nnnn.nnn";
@@ -428,7 +428,7 @@
             // 
             // numR2PreHeatI
             // 
-            this.numR2PreHeatI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR2PreHeatI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR2PreHeatI.FormatString = "";
             this.numR2PreHeatI.Location = new System.Drawing.Point(972, 135);
             this.numR2PreHeatI.MaskInput = "nnnn.nnn";
@@ -444,7 +444,7 @@
             // 
             // numR2PreHeatP
             // 
-            this.numR2PreHeatP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numR2PreHeatP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numR2PreHeatP.FormatString = "";
             this.numR2PreHeatP.Location = new System.Drawing.Point(857, 135);
             this.numR2PreHeatP.MaskInput = "nnnn.nnn";
@@ -493,7 +493,7 @@
             // 
             // numBF1PreHeatD
             // 
-            this.numBF1PreHeatD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF1PreHeatD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF1PreHeatD.FormatString = "";
             this.numBF1PreHeatD.Location = new System.Drawing.Point(503, 200);
             this.numBF1PreHeatD.MaskInput = "nnnn.nnn";
@@ -509,7 +509,7 @@
             // 
             // numBF1PreHeatI
             // 
-            this.numBF1PreHeatI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF1PreHeatI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF1PreHeatI.FormatString = "";
             this.numBF1PreHeatI.Location = new System.Drawing.Point(381, 200);
             this.numBF1PreHeatI.MaskInput = "nnnn.nnn";
@@ -525,7 +525,7 @@
             // 
             // numBF1PreHeatP
             // 
-            this.numBF1PreHeatP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF1PreHeatP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF1PreHeatP.FormatString = "";
             this.numBF1PreHeatP.Location = new System.Drawing.Point(266, 200);
             this.numBF1PreHeatP.MaskInput = "nnnn.nnn";
@@ -574,7 +574,7 @@
             // 
             // numBF2PreHeatD
             // 
-            this.numBF2PreHeatD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF2PreHeatD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF2PreHeatD.FormatString = "";
             this.numBF2PreHeatD.Location = new System.Drawing.Point(503, 264);
             this.numBF2PreHeatD.MaskInput = "nnnn.nnn";
@@ -590,7 +590,7 @@
             // 
             // numBF2PreHeatI
             // 
-            this.numBF2PreHeatI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF2PreHeatI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF2PreHeatI.FormatString = "";
             this.numBF2PreHeatI.Location = new System.Drawing.Point(381, 264);
             this.numBF2PreHeatI.MaskInput = "nnnn.nnn";
@@ -606,7 +606,7 @@
             // 
             // numBF2PreHeatP
             // 
-            this.numBF2PreHeatP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBF2PreHeatP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBF2PreHeatP.FormatString = "";
             this.numBF2PreHeatP.Location = new System.Drawing.Point(266, 264);
             this.numBF2PreHeatP.MaskInput = "nnnn.nnn";
@@ -655,7 +655,7 @@
             // 
             // numPtotometryD
             // 
-            this.numPtotometryD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPtotometryD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPtotometryD.FormatString = "";
             this.numPtotometryD.Location = new System.Drawing.Point(1094, 200);
             this.numPtotometryD.MaskInput = "nnnn.nnn";
@@ -671,7 +671,7 @@
             // 
             // numPtotometryI
             // 
-            this.numPtotometryI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPtotometryI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPtotometryI.FormatString = "";
             this.numPtotometryI.Location = new System.Drawing.Point(972, 200);
             this.numPtotometryI.MaskInput = "nnnn.nnn";
@@ -687,7 +687,7 @@
             // 
             // numPtotometryP
             // 
-            this.numPtotometryP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPtotometryP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPtotometryP.FormatString = "";
             this.numPtotometryP.Location = new System.Drawing.Point(857, 200);
             this.numPtotometryP.MaskInput = "nnnn.nnn";
@@ -906,7 +906,7 @@
             // 
             // numBFTableD
             // 
-            this.numBFTableD.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBFTableD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBFTableD.FormatString = "";
             this.numBFTableD.Location = new System.Drawing.Point(503, 135);
             this.numBFTableD.MaskInput = "nnnn.nnn";
@@ -922,7 +922,7 @@
             // 
             // numBFTableI
             // 
-            this.numBFTableI.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBFTableI.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBFTableI.FormatString = "";
             this.numBFTableI.Location = new System.Drawing.Point(381, 135);
             this.numBFTableI.MaskInput = "nnnn.nnn";
@@ -938,7 +938,7 @@
             // 
             // numBFTableP
             // 
-            this.numBFTableP.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBFTableP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBFTableP.FormatString = "";
             this.numBFTableP.Location = new System.Drawing.Point(266, 135);
             this.numBFTableP.MaskInput = "nnnn.nnn";

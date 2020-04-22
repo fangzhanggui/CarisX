@@ -187,7 +187,7 @@
             // 
             this.tbpErrorLog.Controls.Add(this.searchLogInfoPanelErrorLog);
             this.tbpErrorLog.Controls.Add(this.grdErrorLog);
-            this.tbpErrorLog.Location = new System.Drawing.Point(2, 40);
+            this.tbpErrorLog.Location = new System.Drawing.Point(-10000, -10000);
             this.tbpErrorLog.Name = "tbpErrorLog";
             this.tbpErrorLog.Size = new System.Drawing.Size(1411, 855);
             // 
@@ -272,6 +272,7 @@
             appearance5.ForeColor = System.Drawing.Color.White;
             appearance5.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
             this.grdErrorLog.DisplayLayout.Override.HeaderAppearance = appearance5;
+            this.grdErrorLog.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             appearance6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(162)))), ((int)(((byte)(173)))));
             appearance6.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(132)))), ((int)(((byte)(142)))));
             appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
@@ -344,6 +345,7 @@
             appearance12.ForeColor = System.Drawing.Color.White;
             appearance12.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
             this.grdOperationLog.DisplayLayout.Override.HeaderAppearance = appearance12;
+            this.grdOperationLog.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             appearance13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(162)))), ((int)(((byte)(173)))));
             appearance13.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(132)))), ((int)(((byte)(142)))));
             appearance13.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
@@ -420,6 +422,7 @@
             appearance19.ForeColor = System.Drawing.Color.White;
             appearance19.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
             this.grdParameterChangeLog.DisplayLayout.Override.HeaderAppearance = appearance19;
+            this.grdParameterChangeLog.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             appearance20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(162)))), ((int)(((byte)(173)))));
             appearance20.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(132)))), ((int)(((byte)(142)))));
             appearance20.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
@@ -497,7 +500,7 @@
             // tbpAssayLog
             // 
             this.tbpAssayLog.Controls.Add(this.grdAssayLog);
-            this.tbpAssayLog.Location = new System.Drawing.Point(-10000, -10000);
+            this.tbpAssayLog.Location = new System.Drawing.Point(2, 40);
             this.tbpAssayLog.Name = "tbpAssayLog";
             this.tbpAssayLog.Size = new System.Drawing.Size(1411, 855);
             // 
@@ -595,6 +598,7 @@
             appearance43.ForeColor = System.Drawing.Color.White;
             appearance43.ThemedElementAlpha = Infragistics.Win.Alpha.Transparent;
             this.grdAssayLog.DisplayLayout.Override.HeaderAppearance = appearance43;
+            this.grdAssayLog.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             appearance44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(162)))), ((int)(((byte)(173)))));
             appearance44.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(132)))), ((int)(((byte)(142)))));
             appearance44.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;

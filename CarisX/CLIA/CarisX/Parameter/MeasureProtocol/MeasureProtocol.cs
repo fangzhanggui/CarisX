@@ -148,6 +148,17 @@ namespace Oelco.CarisX.Parameter
         /// 相関係数B
         /// </summary>
         public Double OffsetOfCorrelation;
+
+        /// <summary>
+        /// 【IssuesNo:7】质控品相关系数A
+        /// </summary>
+        public Double ControlGainOfCorrelation = 1;
+
+        /// <summary>
+        /// 【IssuesNo:7】质控品相关系数B
+        /// </summary>
+        public Double ControlOffsetOfCorrelation;
+
         /// <summary>
         /// キャリブレーション方法
         /// </summary>

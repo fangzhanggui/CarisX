@@ -2,43 +2,66 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Shared;
+using Oelco.CarisX.Const;
+using Oelco.CarisX.Utility;
 using Oelco.Common.Log;
 using Oelco.Common.Utility;
 
 namespace Oelco.CarisX.Comm
 {
+    //【IssuesNo:16】类方法优化调整
     public class CarisXCommIoTManager
     {
-        IoTHub iotHub;
+        private IoTHub iotHub;
 
-        public CarisXCommIoTManager()
+        /// <summary>
+        /// 【IssuesNo:16】默认Iot状态为未连接
+        /// </summary>
+        private IoTStatusKind ioTStatus = IoTStatusKind.NoLink;
+
+        /// <summary>
+        /// 【IssuesNo:16】IoT连接状态取得
+        /// </summary>
+        public IoTStatusKind IoTStatus
         {
-
+            get
+            {
+                return this.ioTStatus;
+            }
+            set
+            {
+                this.ioTStatus = value;
+            }
         }
 
         /// <summary>
         /// Connnect
         /// </summary>
-        /// <param name="iotHubConnectStr"></param>
+        /// <param name="iotHubConnectKey"></param>
         /// <param name="deviceID"></param>
         /// <returns></returns>
-        public async void ConnectIoT(string iotHubConnectStr, string deviceID)
+        public async void ConnectIoT(string iotHubConnectKey, string deviceID)
         {
-            iotHub = new IoTHub(iotHubConnectStr, deviceID);
+            iotHub = new IoTHub(iotHubConnectKey, deviceID);
+            var result = await iotHub.ConnectIotHub();
+            if(result.Status == ResponseStatus.Success)
+            {
+                this.ioTStatus = IoTStatusKind.OnLine;
+            }
+            else
+            {
+                this.ioTStatus = IoTStatusKind.NoLink;
+            }
 
-            try
-            {
-                await iotHub.ConnectIotHub();
-            }
-            catch (Exception ex)
-            {
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("!!!Failed !!! CarisXCommIoTManager.ConnectIoT() Message = {0} StackTrace = {1}", ex.Message, ex.StackTrace));
-            }
+            Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, result.Message);
+            Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.IoTStatus, this.ioTStatus);
+
         }
 
         /// <summary>
@@ -47,18 +70,17 @@ namespace Oelco.CarisX.Comm
         /// <returns></returns>
         public async void DisConnectIoT()
         {
-            try
+            if (iotHub != null)
             {
-                if (iotHub != null)
+                var result =  await iotHub.DisconnectIotHub();
+                if(result.Status == ResponseStatus.Success)
                 {
-                    await iotHub.DisconnectIotHub();
-
                     iotHub = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("!!!Failed !!! CarisXCommIoTManager.DisConnectIoT() Message = {0} StackTrace = {1}", ex.Message, ex.StackTrace));
+                    this.ioTStatus = IoTStatusKind.NoLink;
+                    Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.IoTStatus, this.ioTStatus);
+                }               
+
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, result.Message);            
             }
         }
 
@@ -67,18 +89,10 @@ namespace Oelco.CarisX.Comm
         /// </summary>
         public async void SendMessage(string message)
         {
-            if (iotHub == null)
+            if (iotHub != null)
             {
-                return;
-            }
-
-            try
-            {
-                await iotHub.SendMessagetoDevice(message);
-            }
-            catch (Exception ex)
-            {
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("!!!Failed !!! CarisXCommIoTManager.SendMessage() Message = {0} StackTrace = {1}", ex.Message, ex.StackTrace));
+                var result = await iotHub.SendMessagetoDevice(message);
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, result.Message);
             }
         }
 
@@ -88,22 +102,15 @@ namespace Oelco.CarisX.Comm
         /// <param name="path">本地文件路径</param>
         public async void SendFiles(string path)
         {
-            if (iotHub == null)
+            if (iotHub != null)
             {
-                return;
-            }
-
-            try
-            {
-                var sendResult = await iotHub.SendToBlobAsync(path);
-                if(sendResult != null && sendResult.Status == ResponseStatus.Success && File.Exists(path))
+                var result = await iotHub.SendToBlobAsync(path);
+                if (result.Status == ResponseStatus.Success && CarisXSubFunction.CheckFileStatus(path))
                 {
                     File.Delete(path);
                 }
-            }
-            catch (Exception ex)
-            {
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("!!!Failed !!! CarisXCommIoTManager.SendFiles() Detail = {0} Message = {1} StackTrace = {2}", path , ex.Message, ex.StackTrace));
+
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, result.Message);              
             }
         }
     }
@@ -122,21 +129,10 @@ namespace Oelco.CarisX.Comm
         /// </summary>
         private string deviceID;
 
-        private RegistryManager registryManager;
-
-        private Device selectedDevice = null;
-
+        /// <summary>
+        /// 用于发送信息的客户端
+        /// </summary>
         private DeviceClient deviceClient;
-
-        /// <summary>
-        /// 连接密钥
-        /// </summary>
-        public string IotConnectionKey { get => iotConnectionKey; set => iotConnectionKey = value; }
-
-        /// <summary>
-        /// 设备ID
-        /// </summary>
-        public string DeviceID { get => deviceID; set => deviceID = value; }
 
         /// <summary>
         /// 初始化
@@ -153,63 +149,95 @@ namespace Oelco.CarisX.Comm
         /// 连接IoT中心
         /// </summary>
         /// <returns></returns>
-        public async Task ConnectIotHub()
+        public async Task<ResponseResult> ConnectIotHub()
         {
-            registryManager = RegistryManager.CreateFromConnectionString(iotConnectionKey);
-            IQuery query = registryManager.CreateQuery("select * from devices", null); ;
-            while (query.HasMoreResults)
+            //【IssuesNo:15】去除查询和遍历设备，用设备号直连可以提升连接速度
+            RegistryManager registryManager = null;
+            String dbgMsgHead = String.Format("[[Investigation log]]IoTManager::{0} ", MethodBase.GetCurrentMethod().DeclaringType.Name);
+            String dbgMsg = string.Empty;
+            try
             {
-                IEnumerable<Twin> page = await query.GetNextAsTwinAsync();
-                foreach (Twin twin in page)
+                registryManager = RegistryManager.CreateFromConnectionString(iotConnectionKey);
+                var device = await registryManager.GetDeviceAsync(deviceID);
+
+                if (device != null && device.Id.Equals(deviceID))
                 {
-                    var device = await registryManager.GetDeviceAsync(twin.DeviceId);
-                    if (device.Id == deviceID)
-                    {
-                        selectedDevice = device;
-                        break;
-                    }
+                    deviceClient = DeviceClient.CreateFromConnectionString(CreateDeviceConnectionString(device));
+                }
+                else
+                {
+                    dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Detail = {1}", DateTime.Now, "Device not exit!");
+                    return new ResponseResult(dbgMsg, ResponseStatus.Failure);
+                }            
+            }
+            catch(Exception ex)
+            {
+                dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Detail = {1}", DateTime.Now, ex.Message + "\n" + ex.StackTrace);
+                return new ResponseResult(dbgMsg, ResponseStatus.Failure);
+            }
+            finally
+            {
+                if (registryManager != null)
+                {
+                    await registryManager.CloseAsync();
                 }
             }
-            if (selectedDevice == null)
-            {
-                throw new Exception("Device not exit!");
-            }
-            deviceClient = DeviceClient.CreateFromConnectionString(CreateDeviceConnectionString(selectedDevice));
 
-            if (registryManager != null)
-            {
-                await registryManager.CloseAsync();
-            }
+            dbgMsg = dbgMsgHead + String.Format(" Success = True ; Date = {0}", DateTime.Now);
+            return new ResponseResult(dbgMsg, ResponseStatus.Success);
         }
 
         /// <summary>
         /// 断开连接
         /// </summary>
         /// <returns></returns>
-        public async Task DisconnectIotHub()
+        public async Task<ResponseResult> DisconnectIotHub()
         {
-            if (deviceClient != null)
+            String dbgMsgHead = String.Format("[[Investigation log]]IoTManager::{0} ", MethodBase.GetCurrentMethod().DeclaringType.Name);
+            String dbgMsg = string.Empty;
+            try
             {
-                await deviceClient.CloseAsync();
+                if (deviceClient != null)
+                {
+                    await deviceClient.CloseAsync();
+                }
             }
+            catch(Exception ex)
+            {
+                dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Detail = {1}", DateTime.Now, ex.Message + "\n" + ex.StackTrace);
+                return new ResponseResult(dbgMsg, ResponseStatus.Failure);
+            }
+
+            dbgMsg = dbgMsgHead + String.Format(" Success = True ; Date = {0}", DateTime.Now);
+            return new ResponseResult(dbgMsg, ResponseStatus.Success);
         }
 
         /// <summary>
         /// 发送信息
         /// </summary>
         /// <param name="msg"></param>
-        public async Task SendMessagetoDevice(string msg)
+        public async Task<ResponseResult> SendMessagetoDevice(string msg)
         {
-            if (deviceClient != null)
+            String dbgMsgHead = String.Format("[[Investigation log]]IoTManager::{0} ", MethodBase.GetCurrentMethod().DeclaringType.Name);
+            String dbgMsg = string.Empty;
+
+            try
             {
-                var message = new Microsoft.Azure.Devices.Client.Message(Encoding.UTF8.GetBytes(msg));
-                await deviceClient.SendEventAsync(message);
-                await Task.Delay(1000);
+                if (deviceClient != null)
+                {
+                    var message = new Microsoft.Azure.Devices.Client.Message(Encoding.UTF8.GetBytes(msg));
+                    await deviceClient.SendEventAsync(message);
+                    await Task.Delay(1000);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("Device was failed to connect to the IOT when the pragram start to run!");
+                dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Msg = {1} ; Detail = {2} ; ", DateTime.Now, msg, ex.Message + "\n" + ex.StackTrace);
+                return new ResponseResult(dbgMsg, ResponseStatus.Failure);
             }
+
+            dbgMsg = dbgMsgHead + String.Format(" Success = True ; Date = {0} ; Msg = {1}", DateTime.Now,msg);
+            return new ResponseResult(dbgMsg, ResponseStatus.Success);
 
         }
 
@@ -220,9 +248,12 @@ namespace Oelco.CarisX.Comm
         /// <returns></returns>
         public async Task<ResponseResult> SendToBlobAsync(string path)
         {
-            if (deviceClient != null)
+            String dbgMsgHead = String.Format("[[Investigation log]]IoTManager::{0} ", MethodBase.GetCurrentMethod().DeclaringType.Name);
+            String dbgMsg = string.Empty;
+
+            try
             {
-                try
+                if (deviceClient != null)
                 {
                     if (File.Exists(path))
                     {
@@ -234,18 +265,19 @@ namespace Oelco.CarisX.Comm
                     }
                     else
                     {
-                        throw new FileNotFoundException(string.Format("{0} not exist!", path));
+                        dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Detail = {1} not exist ", DateTime.Now, Path.GetFileNameWithoutExtension(path));
+                        return new ResponseResult(dbgMsg, ResponseStatus.Failure);
                     }
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                return new ResponseResult(path, ResponseStatus.Success);
+            }
+            catch (Exception ex)
+            {
+                dbgMsg = dbgMsgHead + string.Format(" Success = False ; Date = {0} ; Path = {1} ; Detail = {2}", DateTime.Now, Path.GetFileNameWithoutExtension(path), ex.Message + "\n" + ex.StackTrace);
+                return new ResponseResult(dbgMsg, ResponseStatus.Failure);
             }
 
-            throw new Exception("Device was failed to connect to the IOT when the pragram start to run!");
-
+            dbgMsg = dbgMsgHead + String.Format(" Success = True ; Date = {0} ; Path = {1}", DateTime.Now,path);
+            return new ResponseResult(dbgMsg, ResponseStatus.Success);
         }
 
         /// <summary>
@@ -308,5 +340,20 @@ namespace Oelco.CarisX.Comm
             this.Message = message;
             this.Status = status;
         }
+    }
+
+    /// <summary>
+    /// 【IssuesNo:16】新增IoT连接状态，在全局中管理连接状态
+    /// </summary>
+    public enum IoTStatusKind
+    {
+        /// <summary>
+        /// 未连接
+        /// </summary>
+        NoLink,
+        /// <summary>
+        /// 在线
+        /// </summary>
+        OnLine
     }
 }

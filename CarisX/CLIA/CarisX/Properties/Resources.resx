@@ -8756,7 +8756,7 @@ Please exchange {0}.</value>
     <comment>検体種別表示</comment>
   </data>
   <data name="STRING_REMARK_042" xml:space="preserve">
-    <value>Dynamic Range Error (Beyond Upper Value)</value>
+    <value>Dynamic Range(Beyond Upper Value)</value>
   </data>
   <data name="STRING_PROTOCOL_PRINT_033" xml:space="preserve">
     <value>Dynamic Range (Upper)</value>
@@ -17798,7 +17798,7 @@ The number of analytes:{0}</value>
     <comment>この試薬ロットのキャリブレーションが必要です。今すぐキャリブレーションする場合は\"はい\"測定を継続する場合は\"いいえ\"を選択してください。\"いいえ\"を選択した場合、濃度は算出されません。キャリブレーション測定後、データ再計算を行ってください。サンプリング中のラックがキャリブレータラックの場合は、\"はい\"を選択し、ラックを強制排出してください。その後、再度キャリブレータラックを投入してください。</comment>
   </data>
   <data name="STRING_REMARK_043" xml:space="preserve">
-    <value>Dynamic Range Error (Below Lower Value)</value>
+    <value>Dynamic Range(Below Lower Value)</value>
   </data>
   <data name="STRING_PROTOCOLSETTING_062" xml:space="preserve">
     <value>4:00</value>
@@ -47365,7 +47365,7 @@ Please perform "Initialization of a system" in the option menu.</value>
     <comment>初期シーケンス中にモーターエラーが発生した時のメッセージ</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_000" xml:space="preserve">
-    <value>IoT</value>
+    <value>IOT</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_CMB_000" xml:space="preserve">
@@ -47377,7 +47377,7 @@ Please perform "Initialization of a system" in the option menu.</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_001" xml:space="preserve">
-    <value>The use of the IoT</value>
+    <value>The use of the IOT</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_002" xml:space="preserve">
@@ -47385,7 +47385,7 @@ Please perform "Initialization of a system" in the option menu.</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_003" xml:space="preserve">
-    <value>IoT Connection Key</value>
+    <value>Connection Setting</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_004" xml:space="preserve">
@@ -47409,7 +47409,7 @@ Please perform "Initialization of a system" in the option menu.</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_009" xml:space="preserve">
-    <value>Connection Setting</value>
+    <value>Connection Log</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_010" xml:space="preserve">
@@ -47478,5 +47478,75 @@ If there is no registration information, analysis will be performed on the selec
   <data name="STRING_DLG_MSG_270" xml:space="preserve">
     <value>Since the change to the Master Calibration failed, change to Full-calibration.</value>
     <comment>マスターキャリブへの変更に失敗したため、フルキャリブレーションに変更します。</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Image_ErrButton_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image_ErrButton_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_LBL_004" xml:space="preserve">
+    <value>Tone (Hint):</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_GBX_002" xml:space="preserve">
+    <value>Turn on/off of the warning sound</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_OPT_001" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_OPT_002" xml:space="preserve">
+    <value>OFF</value>
+  </data>
+  <data name="STRING_DLG_MSG_271" xml:space="preserve">
+    <value>The barcode has been registered and cannot be used again</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_GBX_011" xml:space="preserve">
+    <value>Connection Status</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_001" xml:space="preserve">
+    <value>Connection Key</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_002" xml:space="preserve">
+    <value>Device ID</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_GBX_012" xml:space="preserve">
+    <value>Send Test</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_003" xml:space="preserve">
+    <value>Slave1</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_004" xml:space="preserve">
+    <value>Slave2</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_005" xml:space="preserve">
+    <value>Slave3</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_006" xml:space="preserve">
+    <value>Slave4</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_007" xml:space="preserve">
+    <value>Measurement Data</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_008" xml:space="preserve">
+    <value>Error Data</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_009" xml:space="preserve">
+    <value>Due Date Data</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_010" xml:space="preserve">
+    <value>System Files</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_011" xml:space="preserve">
+    <value>OFF-LINE</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_012" xml:space="preserve">
+    <value>ON-LINE</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_001" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_002" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_003" xml:space="preserve">
+    <value>Maintenance</value>
   </data>
 </root>

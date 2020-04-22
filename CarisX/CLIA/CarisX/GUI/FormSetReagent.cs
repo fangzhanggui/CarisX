@@ -239,6 +239,11 @@ namespace Oelco.CarisX.GUI
         private Boolean isReagentChangeRefused = false;
 
         /// <summary>
+        /// 【IssuesNo:12】当前条码信息
+        /// </summary>
+        private string barCodeResult;  
+
+        /// <summary>
         /// 試薬準備画面におけるボタン状態クラス
         /// </summary>
         private class SetReagentStateInfo
@@ -434,6 +439,8 @@ namespace Oelco.CarisX.GUI
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.RealtimeData, this.onRealTimeDataChanged);
             // システム状態変化通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SystemStatusChanged, this.onSystemStatusChanged);
+            //【IssuesNo:2】使用外部供给液变化通知
+            Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.WashSolutionExteriorUsable, OnWashSolutionFromExteriorChange);
 
             // 交換開始、編集コマンドバーEnable
             this.tlbCommandBar.Tools[EXCHANGE_START].SharedProps.Enabled = true;
@@ -1302,6 +1309,16 @@ namespace Oelco.CarisX.GUI
 
             // 各ボタンは操作可にする
             this.setButtonEnable(true);
+        }
+
+        /// <summary>
+        /// 【IssuesNo:2】修复系统设置在使用外部供给液时，试剂界面按钮没有联动刷新问题 
+        /// </summary>
+        /// <param name="obj"></param>
+        protected void OnWashSolutionFromExteriorChange(object obj)
+        {
+            // 洗浄液供給ボタン表示設定
+            this.tlbCommandBar.Tools[REPLACE_TANK].SharedProps.Visible = (Boolean)obj;
         }
 
         /// <summary>
@@ -2261,6 +2278,8 @@ namespace Oelco.CarisX.GUI
                     // バーコード読取完了
                     if (dlg.DialogResult == DialogResult.OK)
                     {
+                        //【IssuesNo:12】记录预激发液更换后的条码信息
+                        this.barCodeResult = dlg.BarcodeResult;
                         // ボトル番号取得
                         Int32 portNo = target.HasFlag(ReagentChangeTargetKind.Port1) ? 1 : 2; //Port1のフラグが含まれている場合は1、含まれていない場合は2
 
@@ -2332,6 +2351,8 @@ namespace Oelco.CarisX.GUI
                     // バーコード読取完了
                     if (dlg.DialogResult == DialogResult.OK)
                     {
+                        //【IssuesNo:12】记录激发液更换后的条码信息
+                        this.barCodeResult = dlg.BarcodeResult;
                         // ボトル番号を取得
                         Int32 portNo = target.HasFlag(ReagentChangeTargetKind.Port1) ? 1 : 2; //Port1のフラグが含まれている場合は1、含まれていない場合は2
 
@@ -2434,6 +2455,8 @@ namespace Oelco.CarisX.GUI
                     // バーコード読取完了
                     if (dlg.DialogResult == DialogResult.OK)
                     {
+                        //【IssuesNo:12】记录稀释液更换后的条码信息
+                        this.barCodeResult = dlg.BarcodeResult;
                         // 希釈液準備完了コマンド用のデータを準備
                         // 希釈液コードフォーマット参照
                         this.inpDilVal.portNo = 1;
@@ -2628,6 +2651,14 @@ namespace Oelco.CarisX.GUI
                     this.btnWashSolutionBuffer.CurrentState = false;
                 }
                 this.setReagentStateManager[targetModuleIndex].Blink[this.btnWashSolutionBuffer].CurrentState = false;
+            }
+
+            //【IssuesNo:12】预激发液、激发液和稀释液更换完成后，条码写入注册表中
+            if(target.HasFlag(ReagentChangeTargetKind.Pretrigger)|| target.HasFlag(ReagentChangeTargetKind.Trigger)|| target.HasFlag(ReagentChangeTargetKind.Diluent))
+            {
+                CarisXSubFunction.RegistBarCodeInfo(this.barCodeResult);
+                //重置
+                this.barCodeResult = string.Empty;
             }
 
             // プレトリガが交換対象の場合

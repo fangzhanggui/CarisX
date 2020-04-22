@@ -598,6 +598,9 @@ namespace Oelco.CarisX.Parameter
             protocol.Param.CalibType = prot.CalibType;
             protocol.Param.GainOfCorrelation = prot.GainOfCorrelation;
             protocol.Param.OffsetOfCorrelation = prot.OffsetOfCorrelation;
+            //【IssuesNo:7】新增质控品相关系数A、B赋值
+            protocol.Param.ControlGainOfCorrelation = prot.ControlGainOfCorrelation;
+            protocol.Param.ControlOffsetOfCorrelation = prot.ControlOffsetOfCorrelation;
             protocol.Param.CalibMethod = prot.CalibMethod;
             protocol.Param.NumOfMeasPointInCalib = prot.NumOfMeasPointInCalib;
             protocol.Param.ConcsOfEach = prot.ConcsOfEach;
@@ -653,6 +656,15 @@ namespace Oelco.CarisX.Parameter
             foreach ( var prot in this.importProtocol )
             {
                 info.Add( prot.ProtocolName );
+            }
+
+            //【IssuesNo:1】同步之前使用的项目信息，防止单个项目导入后，引起项目检测顺序错乱的问题 
+            foreach (var existProt in this.UseMeasureProtocolList)
+            {
+                if (!info.Contains(existProt.ProtocolName))
+                {
+                    info.Add(existProt.ProtocolName);
+                }
             }
 
             Singleton<ParameterFilePreserve<MeasureProtocolInfo>>.Instance.Param.SetTurnOrder( info );

@@ -458,7 +458,7 @@
     <value>读数</value>
   </data>
   <data name="STRING_ASSAY_046" xml:space="preserve">
-    <value>浓度</value>
+    <value>结果</value>
   </data>
   <data name="STRING_ASSAY_047" xml:space="preserve">
     <value>判定</value>
@@ -529,7 +529,7 @@
     <comment>【使用画面】FormAssay</comment>
   </data>
   <data name="STRING_ASSAY_069" xml:space="preserve">
-    <value>无单位集中</value>
+    <value>无单位浓度</value>
     <comment>【使用画面】FormAssay</comment>
   </data>
   <data name="STRING_ASSAY_070" xml:space="preserve">
@@ -1270,10 +1270,10 @@
     <value>断开</value>
   </data>
   <data name="STRING_COMMON_025" xml:space="preserve">
-    <value>清空</value>
+    <value>清空日志</value>
   </data>
   <data name="STRING_COMMON_026" xml:space="preserve">
-    <value>诊断中</value>
+    <value>连接中...</value>
   </data>
   <data name="STRING_COMMON_027" xml:space="preserve">
     <value>筛选</value>
@@ -3075,6 +3075,9 @@
     <value>由于更改为主校准失败，因此请更改为完全校准。</value>
     <comment>マスターキャリブへの変更に失敗したため、フルキャリブレーションに変更します。</comment>
   </data>
+  <data name="STRING_DLG_MSG_271" xml:space="preserve">
+    <value>已被注册，无法重复使用</value>
+  </data>
   <data name="STRING_DLG_OPTIOINSYRINGEAGING_000" xml:space="preserve">
     <value>注射器老化</value>
     <comment>「分注器エージング画面」タイトル</comment>
@@ -4641,7 +4644,7 @@
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_001" xml:space="preserve">
-    <value>使用IoT</value>
+    <value>使用IOT</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_002" xml:space="preserve">
@@ -4649,7 +4652,7 @@
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_003" xml:space="preserve">
-    <value>IoT连接密钥</value>
+    <value>连接设置</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_004" xml:space="preserve">
@@ -4673,12 +4676,54 @@
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_009" xml:space="preserve">
-    <value>手动连接</value>
+    <value>测试日志</value>
     <comment>【使用画面】DlgSysIoT</comment>
   </data>
   <data name="STRING_DLG_SYS_IOT_GBX_010" xml:space="preserve">
     <value>打包日志（按日期）</value>
     <comment>【使用画面】DlgSysIoT</comment>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_GBX_011" xml:space="preserve">
+    <value>连接状态</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_GBX_012" xml:space="preserve">
+    <value>发送测试</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_001" xml:space="preserve">
+    <value>连接密钥</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_002" xml:space="preserve">
+    <value>设备ID</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_003" xml:space="preserve">
+    <value>单元1</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_004" xml:space="preserve">
+    <value>单元2</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_005" xml:space="preserve">
+    <value>单元3</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_006" xml:space="preserve">
+    <value>单元4</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_007" xml:space="preserve">
+    <value>测试数据</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_008" xml:space="preserve">
+    <value>故障数据</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_009" xml:space="preserve">
+    <value>交期数据</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_010" xml:space="preserve">
+    <value>系统日志</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_011" xml:space="preserve">
+    <value>离线</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_LABEL_012" xml:space="preserve">
+    <value>在线</value>
   </data>
   <data name="STRING_DLG_SYS_IOT_OPT_001" xml:space="preserve">
     <value>使用</value>
@@ -4687,6 +4732,15 @@
   <data name="STRING_DLG_SYS_IOT_OPT_002" xml:space="preserve">
     <value>未使用</value>
     <comment>【使用画面】DlgSysIoT</comment>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_001" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_002" xml:space="preserve">
+    <value>详细</value>
+  </data>
+  <data name="STRING_DLG_SYS_IOT_TAB_003" xml:space="preserve">
+    <value>调试</value>
   </data>
   <data name="STRING_DLG_SYS_KEYBOARD_000" xml:space="preserve">
     <value>软键盘</value>
@@ -5144,6 +5198,9 @@
     <value>提示音设置</value>
     <comment>グループボックス(エラー音、警告音)</comment>
   </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_GBX_002" xml:space="preserve">
+    <value>开启/关闭提示音</value>
+  </data>
   <data name="STRING_DLG_SYS_WARNING_SOUND_LBL_001" xml:space="preserve">
     <value>警告音</value>
     <comment>ラベル(エラー音、警告音)</comment>
@@ -5155,6 +5212,15 @@
   <data name="STRING_DLG_SYS_WARNING_SOUND_LBL_003" xml:space="preserve">
     <value>音量：</value>
     <comment>ラベル(エラー音、警告音)</comment>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_LBL_004" xml:space="preserve">
+    <value>消息音</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_OPT_001" xml:space="preserve">
+    <value>开启</value>
+  </data>
+  <data name="STRING_DLG_SYS_WARNING_SOUND_OPT_002" xml:space="preserve">
+    <value>关闭</value>
   </data>
   <data name="STRING_DLG_SYS_WASH_DISPENSE_000" xml:space="preserve">
     <value>洗涤/分注量</value>
@@ -6225,7 +6291,7 @@
     <value>下限</value>
   </data>
   <data name="STRING_PROTOCOLSETTING_131" xml:space="preserve">
-    <value>中間</value>
+    <value>中间</value>
   </data>
   <data name="STRING_PROTOCOLSETTING_132" xml:space="preserve">
     <value>上限</value>
@@ -6985,10 +7051,10 @@
     <value>校准错误（溢出）</value>
   </data>
   <data name="STRING_REMARK_042" xml:space="preserve">
-    <value>浓度动态范围错误（高于上限）</value>
+    <value>浓度动态范围（高于上限）</value>
   </data>
   <data name="STRING_REMARK_043" xml:space="preserve">
-    <value>浓度动态范围错误（低于下限）</value>
+    <value>浓度动态范围（低于下限）</value>
   </data>
   <data name="STRING_REMARK_044" xml:space="preserve">
     <value>质控品数据错误（范围溢出）</value>

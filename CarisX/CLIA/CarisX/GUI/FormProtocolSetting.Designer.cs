@@ -30,35 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProtocolSetting));
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.ValueListItem valueListItem1 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.ValueListItem valueListItem2 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.ValueListItem valueListItem5 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem6 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
-            Infragistics.Win.ValueListItem valueListItem9 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem10 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.ValueListItem valueListItem3 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
-            Infragistics.Win.ValueListItem valueListItem7 = new Infragistics.Win.ValueListItem();
-            Infragistics.Win.ValueListItem valueListItem8 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
@@ -69,8 +46,12 @@
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
+            Infragistics.Win.ValueListItem valueListItem5 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem6 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
+            Infragistics.Win.ValueListItem valueListItem9 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem10 = new Infragistics.Win.ValueListItem();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
@@ -115,6 +96,25 @@
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance59 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.ValueListItem valueListItem7 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem8 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProtocolSetting));
+            Infragistics.Win.ValueListItem valueListItem3 = new Infragistics.Win.ValueListItem();
+            Infragistics.Win.ValueListItem valueListItem4 = new Infragistics.Win.ValueListItem();
             this.tbpProtocolRegular = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
             this.gbxAssayCondition = new Infragistics.Win.Misc.UltraGroupBox();
             this.numDynamicRangeUpper = new Infragistics.Win.UltraWinEditors.UltraNumericEditor();
@@ -258,23 +258,7 @@
             this.lblTitleAnalysisMode = new Infragistics.Win.Misc.UltraLabel();
             this.cmbDilutionRatio = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.lblTitleDilutionRatio = new Infragistics.Win.Misc.UltraLabel();
-            this.gbxAutoRetestCondition = new Infragistics.Win.Misc.UltraGroupBox();
-            this.lblAutoRetestCondition = new Infragistics.Win.Misc.UltraLabel();
-            this.numAutoRetestConditionUpperLimit = new Infragistics.Win.UltraWinEditors.UltraNumericEditor();
-            this.lblTitleAutoRetestConditionLowerLimit = new Infragistics.Win.Misc.UltraLabel();
-            this.numAutoRetestConditionLowerLimit = new Infragistics.Win.UltraWinEditors.UltraNumericEditor();
-            this.lblTitleAutoRetestConditionUpperLimit = new Infragistics.Win.Misc.UltraLabel();
-            this.gbxManualDilutionUse = new Infragistics.Win.Misc.UltraGroupBox();
-            this.optManualDilutionUse = new Oelco.Common.GUI.CustomUOptionSet();
-            this.gbxAutoRetestUse = new Infragistics.Win.Misc.UltraGroupBox();
-            this.optAutoRetestUse = new Oelco.Common.GUI.CustomUOptionSet();
             this.lblAssayCondition1 = new Infragistics.Win.Misc.UltraLabel();
-            this.chkRetestUpperLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.chkRetestMiddleLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.chkRetestLowLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.lblTitleRetestRange = new Infragistics.Win.Misc.UltraLabel();
-            this.lblTitleManualDilutionUse = new Infragistics.Win.Misc.UltraLabel();
-            this.lblTitleAutoRetestUse = new Infragistics.Win.Misc.UltraLabel();
             this.cmbPreProcessSequence = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.cmbAssaySequence = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.lblTitleSpecimenType = new Infragistics.Win.Misc.UltraLabel();
@@ -302,6 +286,22 @@
             this.pnlProtocolSettingShadowOutside = new Infragistics.Win.Misc.UltraPanel();
             this.pnlProtocolSettingShadowInside = new Infragistics.Win.Misc.UltraPanel();
             this.pnlProtocolSetting = new Infragistics.Win.Misc.UltraPanel();
+            this.chkRetestUpperLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
+            this.chkRetestMiddleLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
+            this.chkRetestLowLimit = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
+            this.lblTitleRetestRange = new Infragistics.Win.Misc.UltraLabel();
+            this.gbxAutoRetestUse = new Infragistics.Win.Misc.UltraGroupBox();
+            this.optAutoRetestUse = new Oelco.Common.GUI.CustomUOptionSet();
+            this.lblTitleAutoRetestUse = new Infragistics.Win.Misc.UltraLabel();
+            this.gbxAutoRetestCondition = new Infragistics.Win.Misc.UltraGroupBox();
+            this.lblAutoRetestCondition = new Infragistics.Win.Misc.UltraLabel();
+            this.numAutoRetestConditionUpperLimit = new Infragistics.Win.UltraWinEditors.UltraNumericEditor();
+            this.lblTitleAutoRetestConditionLowerLimit = new Infragistics.Win.Misc.UltraLabel();
+            this.numAutoRetestConditionLowerLimit = new Infragistics.Win.UltraWinEditors.UltraNumericEditor();
+            this.lblTitleAutoRetestConditionUpperLimit = new Infragistics.Win.Misc.UltraLabel();
+            this.gbxManualDilutionUse = new Infragistics.Win.Misc.UltraGroupBox();
+            this.optManualDilutionUse = new Oelco.Common.GUI.CustomUOptionSet();
+            this.lblTitleManualDilutionUse = new Infragistics.Win.Misc.UltraLabel();
             this.tbpProtocolRegular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxAssayCondition)).BeginInit();
             this.gbxAssayCondition.SuspendLayout();
@@ -385,19 +385,6 @@
             this.gbxEmergencyModeUse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.optEmergencyModeUse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDilutionRatio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestCondition)).BeginInit();
-            this.gbxAutoRetestCondition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionUpperLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionLowerLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxManualDilutionUse)).BeginInit();
-            this.gbxManualDilutionUse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.optManualDilutionUse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestUse)).BeginInit();
-            this.gbxAutoRetestUse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.optAutoRetestUse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestUpperLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestMiddleLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestLowLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPreProcessSequence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAssaySequence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSpecimenTypeUrine)).BeginInit();
@@ -412,6 +399,19 @@
             this.pnlProtocolSettingShadowInside.SuspendLayout();
             this.pnlProtocolSetting.ClientArea.SuspendLayout();
             this.pnlProtocolSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestUpperLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestMiddleLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestLowLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestUse)).BeginInit();
+            this.gbxAutoRetestUse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optAutoRetestUse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestCondition)).BeginInit();
+            this.gbxAutoRetestCondition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionUpperLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionLowerLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxManualDilutionUse)).BeginInit();
+            this.gbxManualDilutionUse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optManualDilutionUse)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpProtocolRegular
@@ -428,6 +428,15 @@
             // 
             appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             this.gbxAssayCondition.Appearance = appearance1;
+            this.gbxAssayCondition.Controls.Add(this.gbxManualDilutionUse);
+            this.gbxAssayCondition.Controls.Add(this.lblTitleManualDilutionUse);
+            this.gbxAssayCondition.Controls.Add(this.gbxAutoRetestCondition);
+            this.gbxAssayCondition.Controls.Add(this.gbxAutoRetestUse);
+            this.gbxAssayCondition.Controls.Add(this.lblTitleAutoRetestUse);
+            this.gbxAssayCondition.Controls.Add(this.chkRetestUpperLimit);
+            this.gbxAssayCondition.Controls.Add(this.chkRetestMiddleLimit);
+            this.gbxAssayCondition.Controls.Add(this.chkRetestLowLimit);
+            this.gbxAssayCondition.Controls.Add(this.lblTitleRetestRange);
             this.gbxAssayCondition.Controls.Add(this.numDynamicRangeUpper);
             this.gbxAssayCondition.Controls.Add(this.lblHyphen1);
             this.gbxAssayCondition.Controls.Add(this.numDynamicRangeLower);
@@ -550,12 +559,12 @@
             // 
             // optAutoDilutionRetestUse
             // 
-            appearance2.BackColor = System.Drawing.Color.Transparent;
-            appearance2.BackColorDisabled = System.Drawing.Color.Transparent;
-            appearance2.FontData.Name = resources.GetString("resource.Name");
-            appearance2.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints")));
-            resources.ApplyResources(appearance2, "appearance2");
-            this.optAutoDilutionRetestUse.Appearance = appearance2;
+            appearance16.BackColor = System.Drawing.Color.Transparent;
+            appearance16.BackColorDisabled = System.Drawing.Color.Transparent;
+            appearance16.FontData.Name = resources.GetString("resource.Name5");
+            appearance16.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints5")));
+            resources.ApplyResources(appearance16, "appearance16");
+            this.optAutoDilutionRetestUse.Appearance = appearance16;
             this.optAutoDilutionRetestUse.BackColor = System.Drawing.Color.Transparent;
             this.optAutoDilutionRetestUse.BackColorInternal = System.Drawing.Color.Transparent;
             this.optAutoDilutionRetestUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
@@ -589,8 +598,8 @@
             // 
             // gbxAssayConditionReagent
             // 
-            appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxAssayConditionReagent.Appearance = appearance3;
+            appearance17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxAssayConditionReagent.Appearance = appearance17;
             this.gbxAssayConditionReagent.Controls.Add(this.lblAssayConditionReagent);
             this.gbxAssayConditionReagent.Controls.Add(this.numDayOfReagentValid);
             this.gbxAssayConditionReagent.Controls.Add(this.lblUnitDayOfReagentValid);
@@ -628,8 +637,8 @@
             // 
             // gbxCalibAssayCondition
             // 
-            appearance4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxCalibAssayCondition.Appearance = appearance4;
+            appearance18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxCalibAssayCondition.Appearance = appearance18;
             this.gbxCalibAssayCondition.Controls.Add(this.lblCalibAssayCondition);
             this.gbxCalibAssayCondition.Controls.Add(this.numExpirationDateOfTheCalibCurve);
             this.gbxCalibAssayCondition.Controls.Add(this.lblUnitExpirationDateOfTheCalibCurve);
@@ -668,8 +677,8 @@
             // 
             // gbxNegativePositiveValue
             // 
-            appearance5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxNegativePositiveValue.Appearance = appearance5;
+            appearance19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxNegativePositiveValue.Appearance = appearance19;
             this.gbxNegativePositiveValue.Controls.Add(this.lblNegativePositiveValue);
             this.gbxNegativePositiveValue.Controls.Add(this.numNegativeValue);
             this.gbxNegativePositiveValue.Controls.Add(this.numPositiveValue);
@@ -721,8 +730,8 @@
             // 
             // gbxMeasurementTimes
             // 
-            appearance6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxMeasurementTimes.Appearance = appearance6;
+            appearance20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxMeasurementTimes.Appearance = appearance20;
             this.gbxMeasurementTimes.Controls.Add(this.lblMeasurementTimes);
             this.gbxMeasurementTimes.Controls.Add(this.lblLimitCalibratorMeasureTimes);
             this.gbxMeasurementTimes.Controls.Add(this.numCalibratorMeasureTimes);
@@ -839,8 +848,8 @@
             // 
             // gbxAssayCondition2
             // 
-            appearance7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxAssayCondition2.Appearance = appearance7;
+            appearance21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxAssayCondition2.Appearance = appearance21;
             this.gbxAssayCondition2.Controls.Add(this.lblAssayCondition2);
             this.gbxAssayCondition2.Controls.Add(this.cmbCalibrationControlDilu);
             this.gbxAssayCondition2.Controls.Add(this.lblTitleCalibrationDilu);
@@ -896,8 +905,8 @@
             // 
             // lblTitleConcentrationDecimalPlaces
             // 
-            resources.ApplyResources(appearance8, "appearance8");
-            this.lblTitleConcentrationDecimalPlaces.Appearance = appearance8;
+            resources.ApplyResources(appearance22, "appearance22");
+            this.lblTitleConcentrationDecimalPlaces.Appearance = appearance22;
             resources.ApplyResources(this.lblTitleConcentrationDecimalPlaces, "lblTitleConcentrationDecimalPlaces");
             this.lblTitleConcentrationDecimalPlaces.Name = "lblTitleConcentrationDecimalPlaces";
             // 
@@ -920,8 +929,8 @@
             // 
             // lblTilteMultiReplicationLimitCV
             // 
-            resources.ApplyResources(appearance9, "appearance9");
-            this.lblTilteMultiReplicationLimitCV.Appearance = appearance9;
+            resources.ApplyResources(appearance23, "appearance23");
+            this.lblTilteMultiReplicationLimitCV.Appearance = appearance23;
             resources.ApplyResources(this.lblTilteMultiReplicationLimitCV, "lblTilteMultiReplicationLimitCV");
             this.lblTilteMultiReplicationLimitCV.Name = "lblTilteMultiReplicationLimitCV";
             // 
@@ -968,8 +977,8 @@
             // 
             // gbxCalibAssayConditionDetailed
             // 
-            appearance10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxCalibAssayConditionDetailed.Appearance = appearance10;
+            appearance24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxCalibAssayConditionDetailed.Appearance = appearance24;
             this.gbxCalibAssayConditionDetailed.Controls.Add(this.lblCalibAssayConditionDetailed);
             this.gbxCalibAssayConditionDetailed.Controls.Add(this.cmbCalibrationMethod);
             this.gbxCalibAssayConditionDetailed.Controls.Add(this.lblTitleCalibrationMethod);
@@ -1400,8 +1409,8 @@
             // 
             // lblTitlteCountrangeColumn
             // 
-            resources.ApplyResources(appearance11, "appearance11");
-            this.lblTitlteCountrangeColumn.Appearance = appearance11;
+            resources.ApplyResources(appearance25, "appearance25");
+            this.lblTitlteCountrangeColumn.Appearance = appearance25;
             resources.ApplyResources(this.lblTitlteCountrangeColumn, "lblTitlteCountrangeColumn");
             this.lblTitlteCountrangeColumn.Name = "lblTitlteCountrangeColumn";
             // 
@@ -1454,8 +1463,8 @@
             // 
             // gbxDispensingCondtion
             // 
-            appearance12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxDispensingCondtion.Appearance = appearance12;
+            appearance26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxDispensingCondtion.Appearance = appearance26;
             this.gbxDispensingCondtion.Controls.Add(this.lblDispensingCondtion);
             this.gbxDispensingCondtion.Controls.Add(this.lblUnitPreProcessLiquid2DispenseVolume);
             this.gbxDispensingCondtion.Controls.Add(this.numPreProcessLiquid2DispenseVolume);
@@ -1573,8 +1582,8 @@
             // 
             // lblUnitMReagentDispenseVolume
             // 
-            appearance13.BackColor = System.Drawing.Color.Transparent;
-            this.lblUnitMReagentDispenseVolume.Appearance = appearance13;
+            appearance27.BackColor = System.Drawing.Color.Transparent;
+            this.lblUnitMReagentDispenseVolume.Appearance = appearance27;
             resources.ApplyResources(this.lblUnitMReagentDispenseVolume, "lblUnitMReagentDispenseVolume");
             this.lblUnitMReagentDispenseVolume.Name = "lblUnitMReagentDispenseVolume";
             // 
@@ -1619,24 +1628,15 @@
             // 
             // gbxAssayCondition1
             // 
-            appearance14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            this.gbxAssayCondition1.Appearance = appearance14;
+            appearance28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            this.gbxAssayCondition1.Appearance = appearance28;
             this.gbxAssayCondition1.Controls.Add(this.grpReverseDispensingOrderR1);
             this.gbxAssayCondition1.Controls.Add(this.lblTitleReverseDispensingOrderR1);
             this.gbxAssayCondition1.Controls.Add(this.gbxEmergencyModeUse);
             this.gbxAssayCondition1.Controls.Add(this.lblTitleAnalysisMode);
             this.gbxAssayCondition1.Controls.Add(this.cmbDilutionRatio);
             this.gbxAssayCondition1.Controls.Add(this.lblTitleDilutionRatio);
-            this.gbxAssayCondition1.Controls.Add(this.gbxAutoRetestCondition);
-            this.gbxAssayCondition1.Controls.Add(this.gbxManualDilutionUse);
-            this.gbxAssayCondition1.Controls.Add(this.gbxAutoRetestUse);
             this.gbxAssayCondition1.Controls.Add(this.lblAssayCondition1);
-            this.gbxAssayCondition1.Controls.Add(this.chkRetestUpperLimit);
-            this.gbxAssayCondition1.Controls.Add(this.chkRetestMiddleLimit);
-            this.gbxAssayCondition1.Controls.Add(this.chkRetestLowLimit);
-            this.gbxAssayCondition1.Controls.Add(this.lblTitleRetestRange);
-            this.gbxAssayCondition1.Controls.Add(this.lblTitleManualDilutionUse);
-            this.gbxAssayCondition1.Controls.Add(this.lblTitleAutoRetestUse);
             this.gbxAssayCondition1.Controls.Add(this.cmbPreProcessSequence);
             this.gbxAssayCondition1.Controls.Add(this.cmbAssaySequence);
             this.gbxAssayCondition1.Controls.Add(this.lblTitleSpecimenType);
@@ -1655,10 +1655,10 @@
             // 
             // optReverseDispensingOrderR1
             // 
-            appearance15.FontData.Name = resources.GetString("resource.Name1");
-            appearance15.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints1")));
-            resources.ApplyResources(appearance15, "appearance15");
-            this.optReverseDispensingOrderR1.Appearance = appearance15;
+            appearance29.FontData.Name = resources.GetString("resource.Name6");
+            appearance29.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints6")));
+            resources.ApplyResources(appearance29, "appearance29");
+            this.optReverseDispensingOrderR1.Appearance = appearance29;
             this.optReverseDispensingOrderR1.BackColor = System.Drawing.Color.Transparent;
             this.optReverseDispensingOrderR1.BackColorInternal = System.Drawing.Color.Transparent;
             this.optReverseDispensingOrderR1.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
@@ -1680,8 +1680,8 @@
             // 
             // lblTitleReverseDispensingOrderR1
             // 
-            resources.ApplyResources(appearance16, "appearance16");
-            this.lblTitleReverseDispensingOrderR1.Appearance = appearance16;
+            resources.ApplyResources(appearance30, "appearance30");
+            this.lblTitleReverseDispensingOrderR1.Appearance = appearance30;
             resources.ApplyResources(this.lblTitleReverseDispensingOrderR1, "lblTitleReverseDispensingOrderR1");
             this.lblTitleReverseDispensingOrderR1.Name = "lblTitleReverseDispensingOrderR1";
             // 
@@ -1693,10 +1693,10 @@
             // 
             // optEmergencyModeUse
             // 
-            appearance17.FontData.Name = resources.GetString("resource.Name2");
-            appearance17.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints2")));
-            resources.ApplyResources(appearance17, "appearance17");
-            this.optEmergencyModeUse.Appearance = appearance17;
+            appearance31.FontData.Name = resources.GetString("resource.Name7");
+            appearance31.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints7")));
+            resources.ApplyResources(appearance31, "appearance31");
+            this.optEmergencyModeUse.Appearance = appearance31;
             this.optEmergencyModeUse.BackColor = System.Drawing.Color.Transparent;
             this.optEmergencyModeUse.BackColorInternal = System.Drawing.Color.Transparent;
             this.optEmergencyModeUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
@@ -1734,202 +1734,10 @@
             resources.ApplyResources(this.lblTitleDilutionRatio, "lblTitleDilutionRatio");
             this.lblTitleDilutionRatio.Name = "lblTitleDilutionRatio";
             // 
-            // gbxAutoRetestCondition
-            // 
-            this.gbxAutoRetestCondition.Controls.Add(this.lblAutoRetestCondition);
-            this.gbxAutoRetestCondition.Controls.Add(this.numAutoRetestConditionUpperLimit);
-            this.gbxAutoRetestCondition.Controls.Add(this.lblTitleAutoRetestConditionLowerLimit);
-            this.gbxAutoRetestCondition.Controls.Add(this.numAutoRetestConditionLowerLimit);
-            this.gbxAutoRetestCondition.Controls.Add(this.lblTitleAutoRetestConditionUpperLimit);
-            resources.ApplyResources(this.gbxAutoRetestCondition, "gbxAutoRetestCondition");
-            this.gbxAutoRetestCondition.Name = "gbxAutoRetestCondition";
-            // 
-            // lblAutoRetestCondition
-            // 
-            resources.ApplyResources(this.lblAutoRetestCondition, "lblAutoRetestCondition");
-            this.lblAutoRetestCondition.Name = "lblAutoRetestCondition";
-            // 
-            // numAutoRetestConditionUpperLimit
-            // 
-            resources.ApplyResources(this.numAutoRetestConditionUpperLimit, "numAutoRetestConditionUpperLimit");
-            this.numAutoRetestConditionUpperLimit.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.Raw;
-            this.numAutoRetestConditionUpperLimit.MaskInput = "nnnnnnnnn.nnn";
-            this.numAutoRetestConditionUpperLimit.MaxValue = 99999999;
-            this.numAutoRetestConditionUpperLimit.MinValue = 1;
-            this.numAutoRetestConditionUpperLimit.Name = "numAutoRetestConditionUpperLimit";
-            this.numAutoRetestConditionUpperLimit.Nullable = true;
-            this.numAutoRetestConditionUpperLimit.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Double;
-            this.numAutoRetestConditionUpperLimit.PromptChar = ' ';
-            this.numAutoRetestConditionUpperLimit.Value = 1D;
-            this.numAutoRetestConditionUpperLimit.ValueChanged += new System.EventHandler(this.tbpProtocolDetailed_ValueChanged);
-            // 
-            // lblTitleAutoRetestConditionLowerLimit
-            // 
-            resources.ApplyResources(this.lblTitleAutoRetestConditionLowerLimit, "lblTitleAutoRetestConditionLowerLimit");
-            this.lblTitleAutoRetestConditionLowerLimit.Name = "lblTitleAutoRetestConditionLowerLimit";
-            // 
-            // numAutoRetestConditionLowerLimit
-            // 
-            resources.ApplyResources(this.numAutoRetestConditionLowerLimit, "numAutoRetestConditionLowerLimit");
-            this.numAutoRetestConditionLowerLimit.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.Raw;
-            this.numAutoRetestConditionLowerLimit.MaskInput = "nnnnnnnnn.nnn";
-            this.numAutoRetestConditionLowerLimit.MaxValue = 99999999;
-            this.numAutoRetestConditionLowerLimit.MinValue = 0;
-            this.numAutoRetestConditionLowerLimit.Name = "numAutoRetestConditionLowerLimit";
-            this.numAutoRetestConditionLowerLimit.Nullable = true;
-            this.numAutoRetestConditionLowerLimit.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Double;
-            this.numAutoRetestConditionLowerLimit.PromptChar = ' ';
-            this.numAutoRetestConditionLowerLimit.ValueChanged += new System.EventHandler(this.tbpProtocolDetailed_ValueChanged);
-            // 
-            // lblTitleAutoRetestConditionUpperLimit
-            // 
-            resources.ApplyResources(this.lblTitleAutoRetestConditionUpperLimit, "lblTitleAutoRetestConditionUpperLimit");
-            this.lblTitleAutoRetestConditionUpperLimit.Name = "lblTitleAutoRetestConditionUpperLimit";
-            // 
-            // gbxManualDilutionUse
-            // 
-            this.gbxManualDilutionUse.Controls.Add(this.optManualDilutionUse);
-            resources.ApplyResources(this.gbxManualDilutionUse, "gbxManualDilutionUse");
-            this.gbxManualDilutionUse.Name = "gbxManualDilutionUse";
-            // 
-            // optManualDilutionUse
-            // 
-            appearance18.FontData.Name = resources.GetString("resource.Name3");
-            appearance18.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints3")));
-            resources.ApplyResources(appearance18, "appearance18");
-            this.optManualDilutionUse.Appearance = appearance18;
-            this.optManualDilutionUse.BackColor = System.Drawing.Color.Transparent;
-            this.optManualDilutionUse.BackColorInternal = System.Drawing.Color.Transparent;
-            this.optManualDilutionUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            valueListItem3.CheckState = System.Windows.Forms.CheckState.Checked;
-            valueListItem3.DataValue = "0";
-            resources.ApplyResources(valueListItem3, "valueListItem3");
-            valueListItem3.ForceApplyResources = "";
-            valueListItem4.DataValue = "1";
-            resources.ApplyResources(valueListItem4, "valueListItem4");
-            valueListItem4.ForceApplyResources = "";
-            this.optManualDilutionUse.Items.AddRange(new Infragistics.Win.ValueListItem[] {
-            valueListItem3,
-            valueListItem4});
-            this.optManualDilutionUse.ItemSpacingHorizontal = 10;
-            this.optManualDilutionUse.ItemSpacingVertical = 10;
-            resources.ApplyResources(this.optManualDilutionUse, "optManualDilutionUse");
-            this.optManualDilutionUse.Name = "optManualDilutionUse";
-            this.optManualDilutionUse.ValueChanged += new System.EventHandler(this.tbpProtocolDetailed_ValueChanged);
-            // 
-            // gbxAutoRetestUse
-            // 
-            this.gbxAutoRetestUse.Controls.Add(this.optAutoRetestUse);
-            resources.ApplyResources(this.gbxAutoRetestUse, "gbxAutoRetestUse");
-            this.gbxAutoRetestUse.Name = "gbxAutoRetestUse";
-            // 
-            // optAutoRetestUse
-            // 
-            appearance19.FontData.Name = resources.GetString("resource.Name4");
-            appearance19.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints4")));
-            resources.ApplyResources(appearance19, "appearance19");
-            this.optAutoRetestUse.Appearance = appearance19;
-            this.optAutoRetestUse.BackColor = System.Drawing.Color.Transparent;
-            this.optAutoRetestUse.BackColorInternal = System.Drawing.Color.Transparent;
-            this.optAutoRetestUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
-            valueListItem7.CheckState = System.Windows.Forms.CheckState.Checked;
-            valueListItem7.DataValue = "0";
-            resources.ApplyResources(valueListItem7, "valueListItem7");
-            valueListItem7.ForceApplyResources = "";
-            valueListItem8.DataValue = "1";
-            resources.ApplyResources(valueListItem8, "valueListItem8");
-            valueListItem8.ForceApplyResources = "";
-            this.optAutoRetestUse.Items.AddRange(new Infragistics.Win.ValueListItem[] {
-            valueListItem7,
-            valueListItem8});
-            this.optAutoRetestUse.ItemSpacingHorizontal = 10;
-            this.optAutoRetestUse.ItemSpacingVertical = 10;
-            resources.ApplyResources(this.optAutoRetestUse, "optAutoRetestUse");
-            this.optAutoRetestUse.Name = "optAutoRetestUse";
-            this.optAutoRetestUse.ValueChanged += new System.EventHandler(this.tbpProtocolDetailed_ValueChanged);
-            // 
             // lblAssayCondition1
             // 
             resources.ApplyResources(this.lblAssayCondition1, "lblAssayCondition1");
             this.lblAssayCondition1.Name = "lblAssayCondition1";
-            // 
-            // chkRetestUpperLimit
-            // 
-            appearance20.BackColor = System.Drawing.Color.Transparent;
-            appearance20.FontData.Name = resources.GetString("resource.Name5");
-            appearance20.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints5")));
-            appearance20.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
-            this.chkRetestUpperLimit.Appearance = appearance20;
-            this.chkRetestUpperLimit.BackColor = System.Drawing.Color.Transparent;
-            this.chkRetestUpperLimit.BackColorInternal = System.Drawing.Color.Transparent;
-            this.chkRetestUpperLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
-            appearance21.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
-            this.chkRetestUpperLimit.CheckedAppearance = appearance21;
-            appearance22.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            this.chkRetestUpperLimit.HotTrackingAppearance = appearance22;
-            appearance23.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            this.chkRetestUpperLimit.IndeterminateAppearance = appearance23;
-            resources.ApplyResources(this.chkRetestUpperLimit, "chkRetestUpperLimit");
-            this.chkRetestUpperLimit.Name = "chkRetestUpperLimit";
-            this.chkRetestUpperLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
-            this.chkRetestUpperLimit.CheckedValueChanged += new System.EventHandler(this.tbpProtocolDetailed_CheckedValueChanged);
-            // 
-            // chkRetestMiddleLimit
-            // 
-            appearance24.BackColor = System.Drawing.Color.Transparent;
-            appearance24.FontData.Name = resources.GetString("resource.Name6");
-            appearance24.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints6")));
-            appearance24.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
-            this.chkRetestMiddleLimit.Appearance = appearance24;
-            this.chkRetestMiddleLimit.BackColor = System.Drawing.Color.Transparent;
-            this.chkRetestMiddleLimit.BackColorInternal = System.Drawing.Color.Transparent;
-            this.chkRetestMiddleLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
-            appearance25.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
-            this.chkRetestMiddleLimit.CheckedAppearance = appearance25;
-            appearance26.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            this.chkRetestMiddleLimit.HotTrackingAppearance = appearance26;
-            appearance27.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            this.chkRetestMiddleLimit.IndeterminateAppearance = appearance27;
-            resources.ApplyResources(this.chkRetestMiddleLimit, "chkRetestMiddleLimit");
-            this.chkRetestMiddleLimit.Name = "chkRetestMiddleLimit";
-            this.chkRetestMiddleLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
-            this.chkRetestMiddleLimit.CheckedValueChanged += new System.EventHandler(this.tbpProtocolDetailed_CheckedValueChanged);
-            // 
-            // chkRetestLowLimit
-            // 
-            appearance28.BackColor = System.Drawing.Color.Transparent;
-            appearance28.FontData.Name = resources.GetString("resource.Name7");
-            appearance28.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints7")));
-            appearance28.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
-            this.chkRetestLowLimit.Appearance = appearance28;
-            this.chkRetestLowLimit.BackColor = System.Drawing.Color.Transparent;
-            this.chkRetestLowLimit.BackColorInternal = System.Drawing.Color.Transparent;
-            this.chkRetestLowLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
-            appearance29.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
-            this.chkRetestLowLimit.CheckedAppearance = appearance29;
-            appearance30.BorderAlpha = Infragistics.Win.Alpha.Opaque;
-            this.chkRetestLowLimit.HotTrackingAppearance = appearance30;
-            appearance31.BorderAlpha = Infragistics.Win.Alpha.Transparent;
-            this.chkRetestLowLimit.IndeterminateAppearance = appearance31;
-            resources.ApplyResources(this.chkRetestLowLimit, "chkRetestLowLimit");
-            this.chkRetestLowLimit.Name = "chkRetestLowLimit";
-            this.chkRetestLowLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
-            this.chkRetestLowLimit.CheckedValueChanged += new System.EventHandler(this.tbpProtocolDetailed_CheckedValueChanged);
-            // 
-            // lblTitleRetestRange
-            // 
-            resources.ApplyResources(this.lblTitleRetestRange, "lblTitleRetestRange");
-            this.lblTitleRetestRange.Name = "lblTitleRetestRange";
-            // 
-            // lblTitleManualDilutionUse
-            // 
-            resources.ApplyResources(this.lblTitleManualDilutionUse, "lblTitleManualDilutionUse");
-            this.lblTitleManualDilutionUse.Name = "lblTitleManualDilutionUse";
-            // 
-            // lblTitleAutoRetestUse
-            // 
-            resources.ApplyResources(this.lblTitleAutoRetestUse, "lblTitleAutoRetestUse");
-            this.lblTitleAutoRetestUse.Name = "lblTitleAutoRetestUse";
             // 
             // cmbPreProcessSequence
             // 
@@ -2257,6 +2065,191 @@
             resources.ApplyResources(this.pnlProtocolSetting, "pnlProtocolSetting");
             this.pnlProtocolSetting.Name = "pnlProtocolSetting";
             // 
+            // chkRetestUpperLimit
+            // 
+            appearance4.BackColor = System.Drawing.Color.Transparent;
+            appearance4.FontData.Name = resources.GetString("resource.Name2");
+            appearance4.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints2")));
+            appearance4.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
+            this.chkRetestUpperLimit.Appearance = appearance4;
+            this.chkRetestUpperLimit.BackColor = System.Drawing.Color.Transparent;
+            this.chkRetestUpperLimit.BackColorInternal = System.Drawing.Color.Transparent;
+            this.chkRetestUpperLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
+            appearance5.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
+            this.chkRetestUpperLimit.CheckedAppearance = appearance5;
+            appearance6.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            this.chkRetestUpperLimit.HotTrackingAppearance = appearance6;
+            appearance7.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            this.chkRetestUpperLimit.IndeterminateAppearance = appearance7;
+            resources.ApplyResources(this.chkRetestUpperLimit, "chkRetestUpperLimit");
+            this.chkRetestUpperLimit.Name = "chkRetestUpperLimit";
+            this.chkRetestUpperLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
+            // 
+            // chkRetestMiddleLimit
+            // 
+            appearance8.BackColor = System.Drawing.Color.Transparent;
+            appearance8.FontData.Name = resources.GetString("resource.Name3");
+            appearance8.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints3")));
+            appearance8.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
+            this.chkRetestMiddleLimit.Appearance = appearance8;
+            this.chkRetestMiddleLimit.BackColor = System.Drawing.Color.Transparent;
+            this.chkRetestMiddleLimit.BackColorInternal = System.Drawing.Color.Transparent;
+            this.chkRetestMiddleLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
+            appearance9.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
+            this.chkRetestMiddleLimit.CheckedAppearance = appearance9;
+            appearance10.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            this.chkRetestMiddleLimit.HotTrackingAppearance = appearance10;
+            appearance11.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            this.chkRetestMiddleLimit.IndeterminateAppearance = appearance11;
+            resources.ApplyResources(this.chkRetestMiddleLimit, "chkRetestMiddleLimit");
+            this.chkRetestMiddleLimit.Name = "chkRetestMiddleLimit";
+            this.chkRetestMiddleLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
+            // 
+            // chkRetestLowLimit
+            // 
+            appearance12.BackColor = System.Drawing.Color.Transparent;
+            appearance12.FontData.Name = resources.GetString("resource.Name4");
+            appearance12.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints4")));
+            appearance12.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckOFF;
+            this.chkRetestLowLimit.Appearance = appearance12;
+            this.chkRetestLowLimit.BackColor = System.Drawing.Color.Transparent;
+            this.chkRetestLowLimit.BackColorInternal = System.Drawing.Color.Transparent;
+            this.chkRetestLowLimit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
+            appearance13.Image = global::Oelco.CarisX.Properties.Resources.Image_CheckON;
+            this.chkRetestLowLimit.CheckedAppearance = appearance13;
+            appearance14.BorderAlpha = Infragistics.Win.Alpha.Opaque;
+            this.chkRetestLowLimit.HotTrackingAppearance = appearance14;
+            appearance15.BorderAlpha = Infragistics.Win.Alpha.Transparent;
+            this.chkRetestLowLimit.IndeterminateAppearance = appearance15;
+            resources.ApplyResources(this.chkRetestLowLimit, "chkRetestLowLimit");
+            this.chkRetestLowLimit.Name = "chkRetestLowLimit";
+            this.chkRetestLowLimit.Style = Infragistics.Win.EditCheckStyle.Custom;
+            // 
+            // lblTitleRetestRange
+            // 
+            resources.ApplyResources(this.lblTitleRetestRange, "lblTitleRetestRange");
+            this.lblTitleRetestRange.Name = "lblTitleRetestRange";
+            // 
+            // gbxAutoRetestUse
+            // 
+            this.gbxAutoRetestUse.Controls.Add(this.optAutoRetestUse);
+            resources.ApplyResources(this.gbxAutoRetestUse, "gbxAutoRetestUse");
+            this.gbxAutoRetestUse.Name = "gbxAutoRetestUse";
+            // 
+            // optAutoRetestUse
+            // 
+            appearance3.FontData.Name = resources.GetString("resource.Name1");
+            appearance3.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints1")));
+            resources.ApplyResources(appearance3, "appearance3");
+            this.optAutoRetestUse.Appearance = appearance3;
+            this.optAutoRetestUse.BackColor = System.Drawing.Color.Transparent;
+            this.optAutoRetestUse.BackColorInternal = System.Drawing.Color.Transparent;
+            this.optAutoRetestUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
+            valueListItem7.CheckState = System.Windows.Forms.CheckState.Checked;
+            valueListItem7.DataValue = "0";
+            resources.ApplyResources(valueListItem7, "valueListItem7");
+            valueListItem7.ForceApplyResources = "";
+            valueListItem8.DataValue = "1";
+            resources.ApplyResources(valueListItem8, "valueListItem8");
+            valueListItem8.ForceApplyResources = "";
+            this.optAutoRetestUse.Items.AddRange(new Infragistics.Win.ValueListItem[] {
+            valueListItem7,
+            valueListItem8});
+            this.optAutoRetestUse.ItemSpacingHorizontal = 10;
+            this.optAutoRetestUse.ItemSpacingVertical = 10;
+            resources.ApplyResources(this.optAutoRetestUse, "optAutoRetestUse");
+            this.optAutoRetestUse.Name = "optAutoRetestUse";
+            // 
+            // lblTitleAutoRetestUse
+            // 
+            resources.ApplyResources(this.lblTitleAutoRetestUse, "lblTitleAutoRetestUse");
+            this.lblTitleAutoRetestUse.Name = "lblTitleAutoRetestUse";
+            // 
+            // gbxAutoRetestCondition
+            // 
+            this.gbxAutoRetestCondition.Controls.Add(this.lblAutoRetestCondition);
+            this.gbxAutoRetestCondition.Controls.Add(this.numAutoRetestConditionUpperLimit);
+            this.gbxAutoRetestCondition.Controls.Add(this.lblTitleAutoRetestConditionLowerLimit);
+            this.gbxAutoRetestCondition.Controls.Add(this.numAutoRetestConditionLowerLimit);
+            this.gbxAutoRetestCondition.Controls.Add(this.lblTitleAutoRetestConditionUpperLimit);
+            resources.ApplyResources(this.gbxAutoRetestCondition, "gbxAutoRetestCondition");
+            this.gbxAutoRetestCondition.Name = "gbxAutoRetestCondition";
+            // 
+            // lblAutoRetestCondition
+            // 
+            resources.ApplyResources(this.lblAutoRetestCondition, "lblAutoRetestCondition");
+            this.lblAutoRetestCondition.Name = "lblAutoRetestCondition";
+            // 
+            // numAutoRetestConditionUpperLimit
+            // 
+            resources.ApplyResources(this.numAutoRetestConditionUpperLimit, "numAutoRetestConditionUpperLimit");
+            this.numAutoRetestConditionUpperLimit.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.Raw;
+            this.numAutoRetestConditionUpperLimit.MaskInput = "nnnnnnnnn.nnn";
+            this.numAutoRetestConditionUpperLimit.MaxValue = 99999999;
+            this.numAutoRetestConditionUpperLimit.MinValue = 1;
+            this.numAutoRetestConditionUpperLimit.Name = "numAutoRetestConditionUpperLimit";
+            this.numAutoRetestConditionUpperLimit.Nullable = true;
+            this.numAutoRetestConditionUpperLimit.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Double;
+            this.numAutoRetestConditionUpperLimit.PromptChar = ' ';
+            this.numAutoRetestConditionUpperLimit.Value = 1D;
+            // 
+            // lblTitleAutoRetestConditionLowerLimit
+            // 
+            resources.ApplyResources(this.lblTitleAutoRetestConditionLowerLimit, "lblTitleAutoRetestConditionLowerLimit");
+            this.lblTitleAutoRetestConditionLowerLimit.Name = "lblTitleAutoRetestConditionLowerLimit";
+            // 
+            // numAutoRetestConditionLowerLimit
+            // 
+            resources.ApplyResources(this.numAutoRetestConditionLowerLimit, "numAutoRetestConditionLowerLimit");
+            this.numAutoRetestConditionLowerLimit.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.Raw;
+            this.numAutoRetestConditionLowerLimit.MaskInput = "nnnnnnnnn.nnn";
+            this.numAutoRetestConditionLowerLimit.MaxValue = 99999999;
+            this.numAutoRetestConditionLowerLimit.MinValue = 0;
+            this.numAutoRetestConditionLowerLimit.Name = "numAutoRetestConditionLowerLimit";
+            this.numAutoRetestConditionLowerLimit.Nullable = true;
+            this.numAutoRetestConditionLowerLimit.NumericType = Infragistics.Win.UltraWinEditors.NumericType.Double;
+            this.numAutoRetestConditionLowerLimit.PromptChar = ' ';
+            // 
+            // lblTitleAutoRetestConditionUpperLimit
+            // 
+            resources.ApplyResources(this.lblTitleAutoRetestConditionUpperLimit, "lblTitleAutoRetestConditionUpperLimit");
+            this.lblTitleAutoRetestConditionUpperLimit.Name = "lblTitleAutoRetestConditionUpperLimit";
+            // 
+            // gbxManualDilutionUse
+            // 
+            this.gbxManualDilutionUse.Controls.Add(this.optManualDilutionUse);
+            resources.ApplyResources(this.gbxManualDilutionUse, "gbxManualDilutionUse");
+            this.gbxManualDilutionUse.Name = "gbxManualDilutionUse";
+            // 
+            // optManualDilutionUse
+            // 
+            appearance2.FontData.Name = resources.GetString("resource.Name");
+            appearance2.FontData.SizeInPoints = ((float)(resources.GetObject("resource.SizeInPoints")));
+            resources.ApplyResources(appearance2, "appearance2");
+            this.optManualDilutionUse.Appearance = appearance2;
+            this.optManualDilutionUse.BackColor = System.Drawing.Color.Transparent;
+            this.optManualDilutionUse.BackColorInternal = System.Drawing.Color.Transparent;
+            this.optManualDilutionUse.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
+            valueListItem3.CheckState = System.Windows.Forms.CheckState.Checked;
+            valueListItem3.DataValue = "0";
+            resources.ApplyResources(valueListItem3, "valueListItem3");
+            valueListItem3.ForceApplyResources = "";
+            valueListItem4.DataValue = "1";
+            resources.ApplyResources(valueListItem4, "valueListItem4");
+            valueListItem4.ForceApplyResources = "";
+            this.optManualDilutionUse.Items.AddRange(new Infragistics.Win.ValueListItem[] {
+            valueListItem3,
+            valueListItem4});
+            this.optManualDilutionUse.ItemSpacingHorizontal = 10;
+            this.optManualDilutionUse.ItemSpacingVertical = 10;
+            resources.ApplyResources(this.optManualDilutionUse, "optManualDilutionUse");
+            this.optManualDilutionUse.Name = "optManualDilutionUse";
+            // 
+            // lblTitleManualDilutionUse
+            // 
+            resources.ApplyResources(this.lblTitleManualDilutionUse, "lblTitleManualDilutionUse");
+            this.lblTitleManualDilutionUse.Name = "lblTitleManualDilutionUse";
+            // 
             // FormProtocolSetting
             // 
             resources.ApplyResources(this, "$this");
@@ -2359,19 +2352,6 @@
             this.gbxEmergencyModeUse.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.optEmergencyModeUse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDilutionRatio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestCondition)).EndInit();
-            this.gbxAutoRetestCondition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionUpperLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionLowerLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxManualDilutionUse)).EndInit();
-            this.gbxManualDilutionUse.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.optManualDilutionUse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestUse)).EndInit();
-            this.gbxAutoRetestUse.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.optAutoRetestUse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestUpperLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestMiddleLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkRetestLowLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPreProcessSequence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAssaySequence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSpecimenTypeUrine)).EndInit();
@@ -2386,6 +2366,19 @@
             this.pnlProtocolSettingShadowInside.ResumeLayout(false);
             this.pnlProtocolSetting.ClientArea.ResumeLayout(false);
             this.pnlProtocolSetting.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestUpperLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestMiddleLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRetestLowLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestUse)).EndInit();
+            this.gbxAutoRetestUse.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.optAutoRetestUse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxAutoRetestCondition)).EndInit();
+            this.gbxAutoRetestCondition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionUpperLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAutoRetestConditionLowerLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbxManualDilutionUse)).EndInit();
+            this.gbxManualDilutionUse.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.optManualDilutionUse)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2430,12 +2423,8 @@
         private Infragistics.Win.UltraWinDataSource.UltraDataSource ultraDataSource1;
         private Infragistics.Win.Misc.UltraLabel lblTitleSpecimenType;
         private Infragistics.Win.Misc.UltraLabel lblTitlePreProcessSequence;
-        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestUse;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cmbPreProcessSequence;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cmbAssaySequence;
-        private Infragistics.Win.Misc.UltraLabel lblTitleManualDilutionUse;
-        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestConditionLowerLimit;
-        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestConditionUpperLimit;
         private Infragistics.Win.Misc.UltraGroupBox gbxDispensingCondtion;
         private Infragistics.Win.Misc.UltraLabel lblTitleSampleDispenseVolume;
         private Infragistics.Win.Misc.UltraLabel lblUnitPreProcessLiquid2DispenseVolume;
@@ -2515,8 +2504,6 @@
         private Infragistics.Win.UltraWinEditors.UltraNumericEditor numMultiReplicationLimitCV;
         private Infragistics.Win.UltraWinEditors.UltraNumericEditor numConcentrationDecimalPlaces;
         private Infragistics.Win.Misc.UltraLabel lblTitleConcentrationDecimalPlaces;
-        private Infragistics.Win.UltraWinEditors.UltraNumericEditor numAutoRetestConditionUpperLimit;
-        private Infragistics.Win.UltraWinEditors.UltraNumericEditor numAutoRetestConditionLowerLimit;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor txtUnit;
         private Infragistics.Win.Misc.UltraLabel lblAnalytesName;
         private Infragistics.Win.Misc.UltraLabel lblTitleAnalytesName;
@@ -2524,10 +2511,6 @@
 		private Infragistics.Win.UltraWinEditors.UltraNumericEditor numDayOfReagentValid;
 		private Infragistics.Win.Misc.UltraLabel lblUnitDayOfReagentValid;
 		private Infragistics.Win.Misc.UltraLabel lblTitleDayOfReagentValid;
-        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestUpperLimit;
-        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestMiddleLimit;
-        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestLowLimit;
-        private Infragistics.Win.Misc.UltraLabel lblTitleRetestRange;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cmbCalibrationControlDilu;
         private Infragistics.Win.Misc.UltraLabel lblTitleCalibrationDilu;
         private Infragistics.Win.Misc.UltraPanel pnlCommandBar;
@@ -2544,14 +2527,8 @@
         private Infragistics.Win.Misc.UltraLabel lblAssayCondition2;
         private Infragistics.Win.Misc.UltraLabel lblCalibAssayConditionDetailed;
         private Infragistics.Win.Misc.UltraLabel lblDispensingCondtion;
-        private Oelco.Common.GUI.CustomUOptionSet optManualDilutionUse;
         protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkSpecimenTypeUrine;
         protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkSpecimenTypeSerumOrPlasma;
-        private Oelco.Common.GUI.CustomUOptionSet optAutoRetestUse;
-        private Infragistics.Win.Misc.UltraGroupBox gbxAutoRetestCondition;
-        private Infragistics.Win.Misc.UltraGroupBox gbxManualDilutionUse;
-        private Infragistics.Win.Misc.UltraGroupBox gbxAutoRetestUse;
-        private Infragistics.Win.Misc.UltraLabel lblAutoRetestCondition;
         private Infragistics.Win.Misc.UltraPanel pnlProtocolSettingShadowInside;
         private Infragistics.Win.Misc.UltraPanel pnlProtocolSetting;
         private Infragistics.Win.Misc.UltraGroupBox gbxAssayCondition;
@@ -2579,5 +2556,21 @@
         private Infragistics.Win.Misc.UltraGroupBox grpReverseDispensingOrderR1;
         private Oelco.Common.GUI.CustomUOptionSet optReverseDispensingOrderR1;
         private Infragistics.Win.Misc.UltraLabel lblTitleReverseDispensingOrderR1;
+        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestUpperLimit;
+        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestMiddleLimit;
+        protected Infragistics.Win.UltraWinEditors.UltraCheckEditor chkRetestLowLimit;
+        private Infragistics.Win.Misc.UltraLabel lblTitleRetestRange;
+        private Infragistics.Win.Misc.UltraGroupBox gbxAutoRetestUse;
+        private Oelco.Common.GUI.CustomUOptionSet optAutoRetestUse;
+        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestUse;
+        private Infragistics.Win.Misc.UltraGroupBox gbxManualDilutionUse;
+        private Oelco.Common.GUI.CustomUOptionSet optManualDilutionUse;
+        private Infragistics.Win.Misc.UltraLabel lblTitleManualDilutionUse;
+        private Infragistics.Win.Misc.UltraGroupBox gbxAutoRetestCondition;
+        private Infragistics.Win.Misc.UltraLabel lblAutoRetestCondition;
+        private Infragistics.Win.UltraWinEditors.UltraNumericEditor numAutoRetestConditionUpperLimit;
+        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestConditionLowerLimit;
+        private Infragistics.Win.UltraWinEditors.UltraNumericEditor numAutoRetestConditionLowerLimit;
+        private Infragistics.Win.Misc.UltraLabel lblTitleAutoRetestConditionUpperLimit;
     }
 }

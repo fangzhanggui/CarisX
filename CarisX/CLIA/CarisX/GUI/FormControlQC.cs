@@ -208,14 +208,16 @@ namespace Oelco.CarisX.GUI
         {
             base.setUser(value);
 
-            Boolean enable = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction( CarisXUserLevelManagedAction.CalibratorEditRecalc );
+            //【IssuesNo:18】质控精度管理相关的编辑功能移至（检测结果删除功能）权限下进行管理
+            Boolean enable = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction( CarisXUserLevelManagedAction.SampleDataEditDelete);
             gbxEditMode.Visible = enable;
             optEditMode.Enabled = enable;
             this.tlbCommandBar.Tools[SAVE].SharedProps.Enabled = enable;
             this.tlbCommandBar.Tools[DELETE].SharedProps.Enabled = enable;
 
             // EditModeが非表示の場合はReadを選択状態にする
-            if ( !Singleton<CarisXUserLevelManager>.Instance.AskEnableAction( CarisXUserLevelManagedAction.CalibratorEditRecalc ) )
+            //【IssuesNo:18】质控精度管理相关的编辑功能移至移至（检测结果删除功能）权限下进行管理
+            if ( !Singleton<CarisXUserLevelManager>.Instance.AskEnableAction( CarisXUserLevelManagedAction.SampleDataEditDelete) )
             {
                 this.optEditMode.CheckedIndex = 0;
             }

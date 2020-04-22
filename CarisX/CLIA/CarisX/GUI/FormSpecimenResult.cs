@@ -529,7 +529,8 @@ namespace Oelco.CarisX.GUI
             base.setUser(value);
 
             //　Re-Calcボタンの表示/非表示の設定
-            btnRecalc.Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.CalibratorEditRecalc);
+            //【IssuesNo:18】样本重新计算功能移至移至（检测结果删除功能）权限下进行管理
+            btnRecalc.Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.SampleDataEditDelete);
             if (!btnRecalc.Visible)
             {
                 this.DispRecalcInfoPanel = false;
@@ -1018,6 +1019,7 @@ namespace Oelco.CarisX.GUI
             {
                 IRecalcInfoSpecimenResult recalcInfo = this.recalcInfoPanelSpecimenResult;
 
+                //【IssuesNo:9】在样本结果中增加ReceiptNo,用于IGRA项目再计算
                 var recalcData = (from data in Singleton<SpecimenResultDB>.Instance.GetReCalcData(recalcInfo)
                                   let calcData = new CalcData( data.GetModuleNo()
                                                              , data.GetMeasureProtocolIndex()
@@ -1028,6 +1030,7 @@ namespace Oelco.CarisX.GUI
                                                              , data.ManualDilution
                                                              , data.AutoDilution
                                                              , data.MeasureDateTime
+                                                             , data.GetReceiptNo()
                                                              , data.RackId
                                                              , data.RackPosition
                                                              , data.PatientId )

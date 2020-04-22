@@ -44,8 +44,8 @@ namespace ProtocolConverter
                 Boolean open = Singleton<ExcelControl>.Instance.SetExcelBuff( args["Excel"], Singleton<ConvertXmlControl>.Instance.SettingStartColumn );
                 if ( open == false )
                 {
-                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( Singleton<ConvertXmlControl>.Instance.ErrorNoList["Internal1"], 
-                        "Excelファイルのデータ取得に失敗しました。" );
+                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( Singleton<ConvertXmlControl>.Instance.ErrorNoList["Internal1"],
+                        "Excel file data acquisition failed.");
                     return false;
                 }
 
@@ -194,8 +194,14 @@ namespace ProtocolConverter
             // 相関係数B        
             protocol.Param.OffsetOfCorrelation = Convert.ToDouble(data[Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_COEFBOFLOG)]);
 
+            //【IssuesNo:1】质控品相关系数A赋值
+            protocol.Param.ControlGainOfCorrelation = Convert.ToDouble(data[Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_CONTROL_COEFAOFLOG)]);
+
+            //【IssuesNo:1】质控品相关系数B赋值
+            protocol.Param.ControlOffsetOfCorrelation = Convert.ToDouble(data[Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_CONTROL_COEFBOFLOG)]);
+
             // キャリブレーション方法   
-			protocol.Param.CalibMethod = (MeasureProtocol.CalibrationMethod)Convert.ToInt32(data[Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_CALIBMETHOD)]);
+            protocol.Param.CalibMethod = (MeasureProtocol.CalibrationMethod)Convert.ToInt32(data[Singleton<ConvertXmlControl>.Instance.GetListIndex(ConvertXmlControl.NM_CALIBMETHOD)]);
 			
             // キャリブレーションポイント数        
             protocol.Param.NumOfMeasPointInCalib = Convert.ToInt32( data[Singleton<ConvertXmlControl>.Instance.GetListIndex( ConvertXmlControl.NM_NUMOFMEASPOINTINCALIB )] );
@@ -1149,7 +1155,7 @@ namespace ProtocolConverter
 
             Singleton<ConvertXmlControl>.Instance.ConvertList.Add( conv );
 
-			// 55.係数A  (0.00000001 - 99)
+			// 55.係数A  (-99 - 99)
             conv = new ConvertList();
             conv.Name = ConvertXmlControl.NM_COEFAOFLOG;
             conv.RowNo = ++iRowNoCnt;
@@ -1163,7 +1169,8 @@ namespace ProtocolConverter
             conv.Validation.Add( numChkInfo );
 
             rangeChkInfo = new TypeRangeChecker();
-            rangeChkInfo.MinValue = 0.00000001;
+            //【IssuesNo:2】将系数A、B的范围改为（-99~99）
+            rangeChkInfo.MinValue = -99;
             rangeChkInfo.MaxValue = 99;
             rangeChkInfo.ErrString = rngErrString;
             conv.Validation.Add(rangeChkInfo);
@@ -1175,7 +1182,7 @@ namespace ProtocolConverter
 
             Singleton<ConvertXmlControl>.Instance.ConvertList.Add( conv );
 
-			// 56.係数B  (0.00000001 - 99)
+			// 56.係数B  (-99 - 99)
             conv = new ConvertList();
             conv.Name = ConvertXmlControl.NM_COEFBOFLOG;
             conv.RowNo = ++iRowNoCnt;
@@ -1189,7 +1196,8 @@ namespace ProtocolConverter
             conv.Validation.Add( numChkInfo );
 
             rangeChkInfo = new TypeRangeChecker();
-            rangeChkInfo.MinValue = 0.00000001;
+            //【IssuesNo:2】将系数A、B的范围改为（-99~99）
+            rangeChkInfo.MinValue = -99;
             rangeChkInfo.MaxValue = 99;
             rangeChkInfo.ErrString = rngErrString;
             conv.Validation.Add(rangeChkInfo);
@@ -1714,6 +1722,72 @@ namespace ProtocolConverter
 
             Singleton<ConvertXmlControl>.Instance.ConvertList.Add(conv);
 
+            //87 TurnOrder 【IssuesNo:4】补充TurnOrder解析
+            conv = new ConvertList();
+            conv.Name = ConvertXmlControl.NM_TURNORDER;
+            conv.RowNo = ++iRowNoCnt;
+
+            reqChkInfo = new TypeRequiredChecker();
+            reqChkInfo.ErrString = reqErrString;
+            conv.Validation.Add(reqChkInfo);
+
+            numChkInfo = new TypeNumberChecker();
+            numChkInfo.ErrString = numErrString;
+            conv.Validation.Add(numChkInfo);
+
+            Singleton<ConvertXmlControl>.Instance.ConvertList.Add(conv);
+
+            //88 质控相关系数A（-99~99）【IssuesNo:1】
+            conv = new ConvertList();
+            conv.Name = ConvertXmlControl.NM_CONTROL_COEFAOFLOG;
+            conv.RowNo = ++iRowNoCnt;
+
+            reqChkInfo = new TypeRequiredChecker();
+            reqChkInfo.ErrString = reqErrString;
+            conv.Validation.Add(reqChkInfo);
+
+            numChkInfo = new TypeNumberChecker();
+            numChkInfo.ErrString = numErrString;
+            conv.Validation.Add(numChkInfo);
+
+            rangeChkInfo = new TypeRangeChecker();
+            rangeChkInfo.MinValue = -99;
+            rangeChkInfo.MaxValue = 99;
+            rangeChkInfo.ErrString = rngErrString;
+            conv.Validation.Add(rangeChkInfo);
+
+            dgtChkInfo = new TypeSmalldigitsChecker();
+            dgtChkInfo.Digit = 0;
+            dgtChkInfo.ErrString = dgtErrString;
+            conv.Validation.Add(dgtChkInfo);
+
+            Singleton<ConvertXmlControl>.Instance.ConvertList.Add(conv);
+
+            //89 质控相关系数B（-99~99）【IssuesNo:1】
+            conv = new ConvertList();
+            conv.Name = ConvertXmlControl.NM_CONTROL_COEFBOFLOG;
+            conv.RowNo = ++iRowNoCnt;
+
+            reqChkInfo = new TypeRequiredChecker();
+            reqChkInfo.ErrString = reqErrString;
+            conv.Validation.Add(reqChkInfo);
+
+            numChkInfo = new TypeNumberChecker();
+            numChkInfo.ErrString = numErrString;
+            conv.Validation.Add(numChkInfo);
+
+            rangeChkInfo = new TypeRangeChecker();
+            rangeChkInfo.MinValue = -99;
+            rangeChkInfo.MaxValue = 99;
+            rangeChkInfo.ErrString = rngErrString;
+            conv.Validation.Add(rangeChkInfo);
+
+            dgtChkInfo = new TypeSmalldigitsChecker();
+            dgtChkInfo.Digit = 0;
+            dgtChkInfo.ErrString = dgtErrString;
+            conv.Validation.Add(dgtChkInfo);
+
+            Singleton<ConvertXmlControl>.Instance.ConvertList.Add(conv);
         }
   
         #endregion

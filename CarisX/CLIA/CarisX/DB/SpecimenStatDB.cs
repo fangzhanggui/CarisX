@@ -833,6 +833,47 @@ namespace Oelco.CarisX.DB
         }
 
         /// <summary>
+        /// 【IssuesNo:14】更新固定注册信息中的接收码
+        /// </summary>
+        /// <param name="updateKeyList"></param>
+        /// <returns></returns>
+        public Boolean UpdateReceiptNo(List<Tuple<String, Int32, String>> updateKeyList)
+        {
+            Boolean result = true;
+            if(this.DataTable != null)
+            {
+                foreach (var deleteInfo in updateKeyList)
+                {
+                    IEnumerable<Tuple<string, int, string>> keyFinder = null;
+                    if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.AssayModeParameter.AssayMode == AssayModeParameter.AssayModeKind.RackID)
+                    {
+                        // ラックID・Posのみで削除する。
+                        keyFinder = from v in this.dataLinkDic
+                                    where v.Key.Item1 == deleteInfo.Item1 && v.Key.Item2 == deleteInfo.Item2
+                                    select v.Key;
+
+                    }
+                    else if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.AssayModeParameter.AssayMode == AssayModeParameter.AssayModeKind.SampleID)
+                    {
+                        // ラックID・Posがある場合と無い場合を考慮する
+                        keyFinder = from v in this.dataLinkDic
+                                    where (v.Key.Item3 == deleteInfo.Item3) || (v.Key.Item1 == deleteInfo.Item1 && v.Key.Item2 == deleteInfo.Item2)
+                                    select v.Key;
+                    }
+                    if (keyFinder.Count() != 0)
+                    {
+                        int receiptNo = 0;
+                        receiptNo = Singleton<ReceiptNo>.Instance.CreateNumber();
+                        this.dataLinkDic[keyFinder.First()].BeginEdit();
+                        this.dataLinkDic[keyFinder.First()][STRING_RECEIPTNO] = receiptNo;
+                        this.dataLinkDic[keyFinder.First()].EndEdit();
+                    }
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
         /// データ全削除
         /// </summary>
         /// <remarks>

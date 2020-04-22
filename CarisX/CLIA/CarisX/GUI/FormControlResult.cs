@@ -454,7 +454,8 @@ namespace Oelco.CarisX.GUI
             // Deleteボタンの活性/非活性の設定
             this.tlbCommandBar.Tools[DELETE].SharedProps.Enabled = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.SampleDataEditDelete);
             //　Re-Calcボタンの表示/非表示の設定
-            btnRecalc.Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.CalibratorEditRecalc);
+            //【IssuesNo:18】质控重新计算功能移至移至（检测结果删除功能）权限下进行管理
+            btnRecalc.Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.SampleDataEditDelete);
             if (!btnRecalc.Visible)
             {
                 this.DispRecalcInfoPanel = false;

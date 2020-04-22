@@ -497,6 +497,8 @@ namespace Oelco.CarisX.GUI
             base.setUser(value);
             tabSystemAnalytes.Tabs[1].Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.MeasureProtocolAdd);
             btnImportAnalyteParamteters.Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.AnalyserParameterSetting);
+            //【IssuesNo:17】如果用户不具备调整项目测定顺序的权限，隐藏此界面
+            tabSystemAnalytes.Tabs[2].Visible = Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.MeasurePriority);
             ControlLocationAdjust();
         }
 

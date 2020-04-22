@@ -184,11 +184,6 @@ namespace Oelco.CarisX.GUI
             // 2020-02-27 CarisX IoT Add [START]
             // IoT使用有無
             exbCurrentConfiguration.Groups[groupIdx].Items[itemIdx].Key = typeof(DlgSysIoT).FullName;
-#if !NOT_USE_IOT
-            exbCurrentConfiguration.Groups[groupIdx].Items[itemIdx].Visible = true;
-#else
-            exbCurrentConfiguration.Groups[groupIdx].Items[itemIdx].Visible = false;
-#endif
             itemIdx++;
             // 2020-02-27 CarisX IoT Add [END]
 
@@ -293,11 +288,6 @@ namespace Oelco.CarisX.GUI
             // 2020-02-27 CarisX IoT Add [START]
             // IoT使用有無
             exbOptionList.Groups[groupIdxOpList].Items[itemIdxOpList].Key = typeof(DlgSysIoT).FullName;
-#if !NOT_USE_IOT
-            exbOptionList.Groups[groupIdxOpList].Items[itemIdxOpList].Visible = true;
-#else
-            exbOptionList.Groups[groupIdxOpList].Items[itemIdxOpList].Visible = false;
-#endif
             itemIdxOpList++;
             // 2020-02-27 CarisX IoT Add [END]
 
@@ -492,6 +482,25 @@ namespace Oelco.CarisX.GUI
                 refreshConfigDisplay();
                 if (dlg.DialogResult == DialogResult.OK)
                 {
+                    //【IssuesNo:10】在分析过程中可以修改故障警报音参数，但不发送给Slave\Rack
+                    Boolean sendSysParamEnabled = true;
+                    switch (Singleton<Oelco.CarisX.Status.SystemStatus>.Instance.Status)
+                    {
+                        // 分析中・サンプリング停止中・試薬交換開始状態はOK不可
+                        case Status.SystemStatusKind.WaitSlaveResponce:
+                        case Status.SystemStatusKind.Assay:
+                        case Status.SystemStatusKind.SamplingPause:
+                        case Status.SystemStatusKind.ReagentExchange:
+                            sendSysParamEnabled = false;
+                            break;
+                        default:            
+                            break;
+                    }
+                    if(!sendSysParamEnabled)
+                    {
+                        return;
+                    }
+
                     string configItemKey = exbCurrentConfiguration.ActiveItem.Key;
 
                     //スレーブへのシステムパラメータコマンド送信

@@ -153,6 +153,14 @@ namespace ProtocolConverter.File
         /// </summary>
         public const String NM_COEFBOFLOG = "CoefBOfLog";
         /// <summary>
+        /// 【IssuesNo:1】质控相关系数A
+        /// </summary>
+        public const String NM_CONTROL_COEFAOFLOG = "ControlCoefAOfLog";
+        /// <summary>
+        /// 【IssuesNo:1】质控相关系数B
+        /// </summary>
+        public const String NM_CONTROL_COEFBOFLOG = "ControlCoefBOfLog";
+        /// <summary>
         ///  濃度単位 
         /// </summary>
         public const String NM_CONCUNIT = "ConcUnit";

@@ -37,29 +37,16 @@ namespace Oelco.CarisX.Utility
         /// <returns>次発番番号</returns>
         public Int32 AskNextNumber()
         {
-            Int32 number = this.Number;
-
-            // 次発番で一周する場合は初期値を返す
-            // スキップを行う値を飛ばして次の発番を探す
-            Boolean isFirst = this.judgeFirstNumber();
-            do
+            //【IssuesNo:13】查询时使用LIS接收码，与手动注册生成的接收码不在一个号段之内
+            Int32 number = 1;
+            if(this.skipNumberList.Count != 0)
             {
-                if ( isFirst )
-                {
-                    isFirst = false;
-                }
-                else
-                {
-                    number += this.IncrementCount;
-                }
-
-                if ( number > this.EndCount )
-                {
-                    number = this.StartCount;
-                    break;
-                }
-            } while ( this.skipNumberList.Contains( number ) );
-
+                number = this.skipNumberList.Last() + 1;
+            }
+            else
+            {
+                //当外部编号管理表为空时，采用默认值1的下一个编号
+            }
 
             return number;
         }
@@ -81,9 +68,17 @@ namespace Oelco.CarisX.Utility
                 this.skipNumberList.Add( extNumber );
 
                 // ローカル保持の番号より小さい場合、発番済扱いとする。
-                exist = extNumber <= this.Number;
+                //【IssuesNo:13】判断LIS接收码是否存在于仪器接收码号段内
+                exist = this.StartCount <= extNumber && extNumber <= this.Number;
             }
             
+            //【IssuesNo:13】若当前号码是符合要求的，记录到文件中
+            if(!exist)
+            {
+                Singleton<ParameterFilePreserve<ExternalCreatedReceiptNo>>.Instance.Param.Number = skipNumberList;
+                Singleton<ParameterFilePreserve<ExternalCreatedReceiptNo>>.Instance.Save();
+            }
+
             // 0の場合無視する
             if ( extNumber == 0 )
             {
@@ -119,8 +114,9 @@ namespace Oelco.CarisX.Utility
             //this.EndCount = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.CountMax;
             //this.StartCount = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.CountMin;
            
+            //【IssuesNo:13】仪器手动注册时生成的接收号段设置为7001~9999，LIS的接收号段为1~7000
             this.EndCount = CarisXConst.RECEIPT_NUMBER_MAX;
-            this.StartCount = 1;
+            this.StartCount = 7001;
 
             this.Number = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.CountNow;
             this.LatestNumberingDate = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.LatestNumberDate;
@@ -141,6 +137,8 @@ namespace Oelco.CarisX.Utility
         public override void ResetNumber()
         {
             base.ResetNumber();
+            //【IssuesNo:13】LIS接收码管理表也需要重置
+            this.skipNumberList.Clear();
             Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.CountNow = this.Number;
             Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.ReceiptNoInfo.LatestNumberDate = this.LatestNumberingDate;
 

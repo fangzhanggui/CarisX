@@ -64,6 +64,9 @@ namespace Oelco.CarisX.GUI
                 if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.WashSolutionFromExterior.Enable
                       != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.WashSolutionFromExterior.Enable)
                 {
+                    //【IssuesNo:2】发送有无使用外部洗液状态的通知
+                    Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.WashSolutionExteriorUsable, value);
+
                     // パラメータ変更履歴登録
                     String[] contents = new String[4];
                     contents[0] = CarisX.Properties.Resources.STRING_LOG_MSG_052;
@@ -164,6 +167,9 @@ namespace Oelco.CarisX.GUI
             if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.WashSolutionFromExterior.Enable
                       != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.WashSolutionFromExterior.Enable)
             {
+                //【IssuesNo:2】修复使用外部洗液时，试剂界面按钮没有联动刷新问题
+                Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.WashSolutionExteriorUsable, usableWashSolutionFromExterior);
+
                 // パラメータ変更履歴登録
                 String[] contents = new String[4];
                 contents[0] = CarisX.Properties.Resources.STRING_LOG_MSG_052;

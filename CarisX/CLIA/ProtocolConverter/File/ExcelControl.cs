@@ -73,13 +73,13 @@ namespace ProtocolConverter.File
                     if ( this.excelDataBuff == null )
                     {
                         Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog(
-                           Singleton<ConvertXmlControl>.Instance.ErrorNoList["Exception"], "this.excelDataBuff == null。");
+                           Singleton<ConvertXmlControl>.Instance.ErrorNoList["Exception"], "this.excelDataBuff == null.");
                         return false;
                     }
                     else if ( excelDataBuff.Count == 0 )
                     {
                         Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog(
-                            Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other9"], "分析項目が見つかりません。" );
+                            Singleton<ConvertXmlControl>.Instance.ErrorNoList["Other9"], "Analysis item not found.");
                     }
                 }
             }

@@ -11,6 +11,7 @@ using Oelco.CarisX.Const;
 using Oelco.Common.Utility;
 using Oelco.CarisX.Log;
 using Oelco.Common.Log;
+using Oelco.CarisX.Utility;
 
 namespace Oelco.CarisX.GUI
 {
@@ -250,8 +251,15 @@ namespace Oelco.CarisX.GUI
 
             try
             {
-				// 長さチェック
-				if ( bc.Length != CarisXConst.BC_INPUT_LENGTH || bc == String.Empty )
+                //【IssuesNo:12】当用户权限是不能编辑试剂剩余量时，检查当前的条码信息是否已经被注册，若被注册则提示无效
+                if(CarisXSubFunction.IsExistBarCode(bc) && !Singleton<CarisXUserLevelManager>.Instance.AskEnableAction(CarisXUserLevelManagedAction.ReagentRemainModify))
+                {
+                    DlgMessage.Show(CarisX.Properties.Resources.STRING_DLG_MSG_271, String.Empty, CarisX.Properties.Resources.STRING_DLG_TITLE_002, MessageDialogButtons.OK);
+                    return false;
+                }
+
+                // 長さチェック
+                if ( bc.Length != CarisXConst.BC_INPUT_LENGTH || bc == String.Empty )
                 {
                     //"入力されたバーコードの長さが不正です。"
                     DlgMessage.Show(CarisX.Properties.Resources.STRING_DLG_MSG_165, String.Empty, CarisX.Properties.Resources.STRING_DLG_TITLE_002, MessageDialogButtons.OK);
@@ -369,7 +377,6 @@ namespace Oelco.CarisX.GUI
 			}
 			return result;
 		}
-
         #endregion
     }
 }

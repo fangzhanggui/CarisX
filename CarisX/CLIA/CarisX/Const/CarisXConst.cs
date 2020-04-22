@@ -244,6 +244,61 @@ namespace Oelco.CarisX.Const
         }
 
         /// <summary>
+        /// 【IssuesNo:16】进样单元日志路径
+        /// </summary>
+        public static string PathLogRackTransfer
+        {
+            get
+            {
+                return String.Format(PATH_LOG_RACKTRANSFER, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元1日志路径
+        /// </summary>
+        public static string PathLogModule1
+        {
+            get
+            {
+                return String.Format(PATH_LOG_MODULE1, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元2日志路径
+        /// </summary>
+        public static string PathLogModule2
+        {
+            get
+            {
+                return String.Format(PATH_LOG_MODULE2, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元3日志路径
+        /// </summary>
+        public static string PathLogModule3
+        {
+            get
+            {
+                return String.Format(PATH_LOG_MODULE4,SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元4日志路径
+        /// </summary>
+        public static string PathLogModule4
+        {
+            get
+            {
+                return String.Format(PATH_LOG_MODULE4, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
         /// 用于保存在线日志
         /// </summary>
         public static String PathOnline//Figu:
@@ -296,6 +351,61 @@ namespace Oelco.CarisX.Const
             get
             {
                 return String.Format(PATH_TEMP, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】进样单元日志路径
+        /// </summary>
+        public static string PathTempRackTransfer
+        {
+            get
+            {
+                return String.Format(PATH_TEMP_RACKTRANSFER, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元1日志路径
+        /// </summary>
+        public static string PathTempModule1
+        {
+            get
+            {
+                return String.Format(PATH_TEMP_MODULE1, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元2日志路径
+        /// </summary>
+        public static string PathTempModule2
+        {
+            get
+            {
+                return String.Format(PATH_TEMP_MODULE2, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元3日志路径
+        /// </summary>
+        public static string PathTempModule3
+        {
+            get
+            {
+                return String.Format(PATH_TEMP_MODULE3, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
+            }
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】单元4日志路径
+        /// </summary>
+        public static string PathTempModule4
+        {
+            get
+            {
+                return String.Format(PATH_TEMP_MODULE4, SubFunction.GetApplicationDirectory(), SubFunction.GetRegionName(SupportRegion));
             }
         }
         // 2020-02-27 CarisX IoT Add [END]
@@ -411,6 +521,17 @@ namespace Oelco.CarisX.Const
         }
 
         /// <summary>
+        /// 【IssuesNo:12】条码注册表路径
+        /// </summary>
+        public static String PathBarCodeDB
+        {
+            get
+            {
+                return String.Format(@"{0}\BarCodeDB.xml", PathSystem);
+            }
+        }
+
+        /// <summary>
         /// スレーブプログラム保存パス
         /// </summary>
         private const String PATH_SLAVE_PROGRAM = @"{0}Data-{1}";
@@ -487,6 +608,31 @@ namespace Oelco.CarisX.Const
         /// </summary>
         private const String PATH_LOG = @"{0}Data-{1}\Log";
         /// <summary>
+        /// 【IssuesNo:16】进样单元Log保存路径
+        /// </summary>
+        private const string PATH_LOG_RACKTRANSFER = @"{0}\Data-{1}\Log\RackTransfer";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元1Log保存路径
+        /// </summary>
+        private const string PATH_LOG_MODULE1 = @"{0}\Data-{1}\Log\Module1";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元2Log保存路径
+        /// </summary>
+        private const string PATH_LOG_MODULE2 = @"{0}\Data-{1}\Log\Module2";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元3Log保存路径
+        /// </summary>
+        private const string PATH_LOG_MODULE3 = @"{0}\Data-{1}\Log\Module3";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元4Log保存路径
+        /// </summary>
+        private const string PATH_LOG_MODULE4 = @"{0}\Data-{1}\Log\Module4";
+
+        /// <summary>
         /// 保存在线日志
         /// </summary>
         private const String ONLINE_LOG = @"{0}Data-{1}\Online";//Figu:
@@ -507,6 +653,31 @@ namespace Oelco.CarisX.Const
         /// IoT一時ファイルディレクトリパス
         /// </summary>
         private const String PATH_TEMP = @"{0}Data-{1}\Temp";
+
+        /// <summary>
+        /// 【IssuesNo:16】进样单元日志导出路径
+        /// </summary>
+        private const string PATH_TEMP_RACKTRANSFER = @"{0}Data-{1}\Temp\RackTransfer";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元1日志导出路径
+        /// </summary>
+        private const string PATH_TEMP_MODULE1 = @"{0}Data-{1}\Temp\Module1";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元2日志导出路径
+        /// </summary>
+        private const string PATH_TEMP_MODULE2 = @"{0}Data-{1}\Temp\Module2";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元3日志导出路径
+        /// </summary>
+        private const string PATH_TEMP_MODULE3 = @"{0}Data-{1}\Temp\Module13";
+
+        /// <summary>
+        /// 【IssuesNo:16】单元4日志导出路径
+        /// </summary>
+        private const string PATH_TEMP_MODULE4 = @"{0}Data-{1}\Temp\Module14";
         // 2020-02-27 CarisX IoT Add [END]
         /// <summary>
         /// デフォルトDataパス
@@ -937,7 +1108,6 @@ namespace Oelco.CarisX.Const
         ///     ・サンプリング停止、分析終了時、分析再開時にポーズコマンドが複数台に送られない不具合を修正
         ///     ・コマンド送信処理に排他制御を追加
         /// 
-        #endregion // [--- old version ---]
         ///
         /// Ver1.01.57.00: 
         ///     ①障害対策画面の改修
@@ -957,6 +1127,45 @@ namespace Oelco.CarisX.Const
         ///     ・未接続状態のモジュールに画面切り替え可能となるよう変更
         ///     ・キャリブ登録にて手動補正ポイントの内容をラック図にリアルタイムに反映するよう変更
         ///     
+ #endregion // [--- old version ---]
+        /// Ver1.01.57.01
+        ///     ①调整界面温度单元，新增温度补偿校准功能；【IssuesNo:4】
+        ///     ②Wan200+版本的IOT功能调整；【IssuesNo:16】
+        /// 
+        ///     <移植Caris200>
+        ///     ·单个项目导入后，引起项目检测顺序错乱【IssuesNo:1】
+        ///     ·增加错误55-4，发生在从LIS接收到的样本ID跟仪器扫描的样本ID不一致时;【IssuesNo:3】
+        ///     ·将分析界面中样本状态列表的【无单位集中】翻译成【无单位浓度】；
+        ///     ·将分析界面中样本、校准品和质控品列表中的【浓度】翻译成【结果】；
+        ///     ·将项目设置界面中的稀释重测上、下限的条件和自动重测设置移到三级权限下；
+        ///     ·系统日志界面增加排序功能；
+        ///     ·根据错误等级闪烁按钮、发出提示音；【IssuesNo:6】
+        ///     ·将质控品和样本的系数A、B分开；【IssuesNo:7】
+        ///     ·去除“浓度动态范围错误（超过上限/低于下限）”中的“错误”字符；
+        ///     ·增加IGRA项目重新计算的判定；【IssuesNo:9】
+        ///     ·在分析过程中可以设置错误/警报音、独立提示音开关控制；【IssuesNo:10】
+        ///     ·修复LIS双通时，仪器在不关机的情况下，第二天会发生55-2（样本编号重复）的BUG；【IssuesNo:11】
+        ///     ·将激发液、预激发液和稀释液的条码进行管理，防止多次使用条码；【IssuesNo:12】
+        ///     ·区分LIS接受码（ReceiptNo）以改进号码冲突问题；【IssuesNo:13】
+        ///     ·IoT连接速度提升；【IssuesNO:15】
+        ///     ·将Meriyo UI字体全部替换成Tahoma字体；
+        ///     ·新增项目测试顺序调整功能，并只对4级及以上权限开放；【IssuesNo:17】
+        ///     ·调整各级权限；【IssuesNo:18】
+        ///         （1）校准修改功能只对五级权限开放
+        ///         （2）试剂剩余量功能只对五级权限开放
+        ///         （3）高级别权限包含所有低级别权限功能
+        ///         （4）将（样本、质控品检测结果的重新计算功能、质控QC编辑功能）移至（SampleDataEditDelete）权限下进行管理
+        ///     ·取消校准分析界面的主曲线显示；【IssuesNo:19】
+        ///     ·增加定量项目HBsAb、HBsAg的阴阳性判定；【IssuesNo:20】
+        ///     
+        ///     <调整>
+        ///     ·修复使用外部洗液时，试剂界面按钮没有联动刷新问题；【IssuesNo:2】
+        ///     ·修复系统日志超出索引范围导致程序死机的问题；【IssuesNo:5】
+        ///     ·修复无法重新计算的BUG；【IssuesNo:8】
+        ///     ·修复STAT固定注册信息中的ReceiptNo在使用过后没有自动更新的问题；【IssuesNo:14】
+        ///     ·调整部分汉化内容
+        ///     ·补充部分异常日志的内容
+		///     ·取消IOT模块的限制
         /// </summary>
         /// <remarks>
         /// 変数に定義するバージョン番号はオプション画面に表示するため、「メジャー.マイナー.リビジョン」までとする。
@@ -967,7 +1176,7 @@ namespace Oelco.CarisX.Const
         /// 　・リビジョン：仕様変更・機能追加をする場合に変更されます。
         /// 　・ビルド    ：修正パッチごとに変更されます。
         /// </remarks>
-        public const String USER_PROGRAM_VERSION = "V1.01.57.00";
+        public const String USER_PROGRAM_VERSION = "V1.01.57.01";
 
         /// <summary>
         /// グリッド行背景色の基本色
@@ -1548,15 +1757,6 @@ namespace Oelco.CarisX.Const
         /// 年月日長
         /// </summary>
         public const Int32 BC_TIME_LENGTH = 6;
-
-        /// <summary>
-        /// 故障等级
-        /// </summary>
-        public const String ERROR_LEVEL_1 = "1";
-
-        public const String ERROR_LEVEL_2 = "2";
-
-        public const String ERROR_LEVEL_3 = "3";
 #endregion
 
 #region メイン画面のスモールメニュー関連
@@ -1795,6 +1995,10 @@ namespace Oelco.CarisX.Const
         /// エラー表示する。
         /// </remarks>
         public static DPRErrorCode FromHostWorkSheetAlreadyExists = new DPRErrorCode(55, 3);
+        /// <summary>
+        ///【IssuesNo:3】LIS传过来的样本ID跟仪器扫描到的ID不一致 
+        /// </summary>
+        public static DPRErrorCode FromHostWorkSheetSampleIDIsDifferent = new DPRErrorCode(55, 4);
         /// <summary>
         /// ラック移動終了位置決定エラー
         /// </summary>
@@ -2457,6 +2661,11 @@ namespace Oelco.CarisX.Const
         /// ラック分析開始コマンド送信通知
         /// </summary>
         RackTransferStartAssay,
+
+        /// <summary>
+        /// 【IssuesNo:16】IoT连接状态通知
+        /// </summary>
+        IoTStatus,
     }
 
     /// <summary>
@@ -3665,6 +3874,11 @@ namespace Oelco.CarisX.Const
         /// 問い合わせ強制終了
         /// </summary>
         public Boolean AskAborted = false;
+
+        /// <summary>
+        /// 【IssuesNo:3】LIS传过来的样本ID跟仪器扫描到的ID不一致
+        /// </summary>
+        public Boolean AskSampleIDIsDifferent = false;
     }
 
     public class OutsideTransfer

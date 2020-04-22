@@ -111,11 +111,15 @@ namespace Oelco.CarisX.GUI
         /// </summary>
         public CarisXReceiveCommandThread onRecieveCommandThread = new CarisXReceiveCommandThread();
 
-
         /// <summary>
         /// 装置操作の現在の日付記録
         /// </summary>
         private DateTime deviceCurrentDate = DateTime.Now;
+
+        /// <summary>
+        /// 【IssuesNo:6】 记录当前最新的故障等级，用于判别Error按钮闪烁的颜色是否需要变更
+        /// </summary>
+        private ErrorLevelKind lstErrorLevelFlg = ErrorLevelKind.Hint;
 
         /// <summary>
         /// モジュール毎の試薬交換待ちラベル情報
@@ -260,7 +264,7 @@ namespace Oelco.CarisX.GUI
         protected void initializeProgressNotify(Object value)
         {
             String dbgMsg = String.Format("[[Investigation log]]FormMainFrame::{0} ", MethodBase.GetCurrentMethod().Name);
-            
+
             ProgressInfo info = value as ProgressInfo;
 
             progressInfos[(Int32)info.TargetModuleNo] = info;
@@ -339,7 +343,7 @@ namespace Oelco.CarisX.GUI
 
                 dbgMsg = dbgMsg + String.Format("Progress noLink");
 
-                if(this.dlgStartup == null)
+                if (this.dlgStartup == null)
                 {
                     if (this.dlgStartup != null)
                     {
@@ -606,7 +610,7 @@ namespace Oelco.CarisX.GUI
         {
             // DBのアクセスファイルパスをデバッグログへ出力
             String accessPath = Singleton<DBAccessControl>.Instance.GetDBAccessFilePath();
-            Singleton<CarisXLogManager>.Instance.Write( LogKind.DebugLog
+            Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog
                                                       , Singleton<CarisXUserLevelManager>.Instance.NowUserID
                                                       , CarisXLogInfoBaseExtention.Empty
                                                       , String.Format("CarisX DB access path = [{0}]", accessPath));
@@ -685,8 +689,29 @@ namespace Oelco.CarisX.GUI
         /// <param name="value"></param>
         private void blinkErrorButton(Object value)
         {
-            // エラー釦点滅
-            this.btnError.BlinkStart(Oelco.CarisX.Properties.Resources.Image_ErrButton_Yellow, Oelco.CarisX.Properties.Resources.Image_ErrButton_Red, 250, 1);
+            //【IssuesNo:6】 根据不同的故障等级闪烁不同的灯，Hint=>绿色 Warnning=>黄色 Error=>红色
+            CarisXLogInfoErrorLogExtention errorInfo = value as CarisXLogInfoErrorLogExtention;
+            ErrorLevelKind errorLevel = CarisXSubFunction.GetErrorLevel(errorInfo.ErrorCode, errorInfo.ErrorArg);
+
+            //若最新的故障等级高于之前的，则覆盖
+            if (errorLevel < this.lstErrorLevelFlg)
+            {
+                this.btnError.BlinkEnd();
+                this.lstErrorLevelFlg = errorLevel;
+            }
+
+            switch (errorLevel)
+            {
+                case ErrorLevelKind.Hint:
+                    this.btnError.BlinkStart(Oelco.CarisX.Properties.Resources.Image_ErrButton_Green, Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue, 250, 1);
+                    break;
+                case ErrorLevelKind.Warning:
+                    this.btnError.BlinkStart(Oelco.CarisX.Properties.Resources.Image_ErrButton_Yellow, Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue, 250, 1);
+                    break;
+                default:
+                    this.btnError.BlinkStart(Oelco.CarisX.Properties.Resources.Image_ErrButton_Red, Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue, 250, 1);
+                    break;
+            }
         }
 
         /// <summary>
@@ -868,7 +893,7 @@ namespace Oelco.CarisX.GUI
                                                                                   , serialNumber
                                                                                   , (ModuleIndex)notifyObjectSetReagent.ModuleIndex);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     // 例外ログ出力
                     System.Diagnostics.Debug.WriteLine(String.Format("{0} {1}", ex.Message, ex.StackTrace));
@@ -946,7 +971,7 @@ namespace Oelco.CarisX.GUI
                 NotifyObjectSetReagent notifyObjectSetReagent = (NotifyObjectSetReagent)value;
 
                 // 全モジュールが対象か確認
-                if(notifyObjectSetReagent.ModuleIndex == CarisXConst.ALL_MODULEID)
+                if (notifyObjectSetReagent.ModuleIndex == CarisXConst.ALL_MODULEID)
                 {
                     // 全モジュール対象
                     foreach (ModuleIndex targetModuleIndex in Enum.GetValues(typeof(ModuleIndex)))
@@ -1204,10 +1229,10 @@ namespace Oelco.CarisX.GUI
             Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.UseOfHost, Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.HostParameter.Enable);
 
             // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
+
             // IoT使用有無切替通知
             Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.UseOfIoT, Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Enable);
-#endif
+
             // 2020-02-27 CarisX IoT Add [END]
 
             this.Enabled = false; // 表示完了まで操作不能とする。
@@ -1387,10 +1412,10 @@ namespace Oelco.CarisX.GUI
             Singleton<CarisXCommManager>.Instance.DisConnectHost();
 
             // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
+
             // IoT切断
             Singleton<CarisXCommIoTManager>.Instance.DisConnectIoT();
-#endif
+
             // 2020-02-27 CarisX IoT Add [END]
 
             // DB接続クローズ
@@ -2011,7 +2036,7 @@ namespace Oelco.CarisX.GUI
             else
             {
                 // 画面を遷移しない時、ボタンが選択状態のままになってしまう場合があるためボタン状態を非選択にする
-                if(this.btnMenuLargeAssay.CurrentState)
+                if (this.btnMenuLargeAssay.CurrentState)
                 {
                     // Assay画面からボタン押下した場合は、選択状態のままにする
                     if ((this.btnMenuLargeSpecimen.CurrentState == false)
@@ -2171,14 +2196,14 @@ namespace Oelco.CarisX.GUI
                 if (this.btnMenuLargeControl.CurrentState)
                 {
                     // Control画面からボタン押下した場合は、選択状態のままにする
-                    if((this.btnMenuLargeSpecimen.CurrentState == false)
+                    if ((this.btnMenuLargeSpecimen.CurrentState == false)
                         && (this.btnMenuLargeAssay.CurrentState == false)
                         && (this.btnMenuLargeReagent.CurrentState == false)
                         && (this.btnMenuLargeCalibrator.CurrentState == false)
                         && (this.btnMenuLargeOption.CurrentState == false)
                         && (this.btnMenuLargeSystem.CurrentState == false))
                     {
-                        
+
                     }
                     else
                     {
@@ -2325,10 +2350,10 @@ namespace Oelco.CarisX.GUI
             List<Tuple<String, String, String>> curveInvalidProtoLot = new List<Tuple<String, String, String>>();
 
             // 検量線なし項目リスト作成
-            for(int moduleId = (int)RackModuleIndex.Module1; moduleId < Singleton<SystemStatus>.Instance.ModuleStatus.Count(); moduleId++)
+            for (int moduleId = (int)RackModuleIndex.Module1; moduleId < Singleton<SystemStatus>.Instance.ModuleStatus.Count(); moduleId++)
             {
                 // 未接続状態のモジュールは対象外
-                if (Singleton<SystemStatus>.Instance.ModuleStatus[moduleId] != SystemStatusKind.NoLink )
+                if (Singleton<SystemStatus>.Instance.ModuleStatus[moduleId] != SystemStatusKind.NoLink)
                 {
                     // モーターエラーのスレーブは処理を行わない
                     if (Singleton<Status.SystemStatus>.Instance.ModuleStatus[moduleId] == Status.SystemStatusKind.MotorError)
@@ -2430,7 +2455,7 @@ namespace Oelco.CarisX.GUI
         {
             Debug.WriteLine(String.Format("FormMainFrame::{0}", MethodBase.GetCurrentMethod().Name));
             Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<CarisXUserLevelManager>.Instance.NowUserID
-                , CarisXLogInfoBaseExtention.Empty, String.Format("FormMainFrame::{0} commNo = {1} moduleIndex = {2}", 
+                , CarisXLogInfoBaseExtention.Empty, String.Format("FormMainFrame::{0} commNo = {1} moduleIndex = {2}",
                 MethodBase.GetCurrentMethod().Name, command.CommNo, CarisXSubFunction.MachineCodeToModuleIndex((MachineCode)command.CommNo)));
 
             //自動立ち上げ待機画面が表示されていたら、閉じる。
@@ -2529,7 +2554,7 @@ namespace Oelco.CarisX.GUI
                 case CommandKind.RackTransferCommand0117:   // ラック情報通知コマンド
                 case CommandKind.RackTransferCommand0119:   // ラック移動位置問合せ（装置待機位置）コマンド
                 case CommandKind.RackTransferCommand0120:   // ラック移動位置問合せ（BCR）コマンド
-                
+
                 ////////////////////////////////////
                 // スレーブ関連コマンド
                 ////////////////////////////////////
@@ -2598,65 +2623,82 @@ namespace Oelco.CarisX.GUI
         /// <param name="value">不使用</param>
         private void onDateChange(Object value)
         {
+            // 【IssuesNo:16】增加程序在运行做出中，日期发生变更时的处理动作
+            Boolean changeWhenRunning = false;
+            changeWhenRunning = (Boolean)value;
 
-            // 前回の日替わり処理発生日と異なる場合処理を行う。
-            // 日替わり処理確認日時は設定ファイルに保存される。
-            DateTime lastCheckedTime = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.DateChange;
-            Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.DateChange = DateTime.Now;
-
-            //// HACK:デバッグ用、一時的に日替わり処理に入らないようにする
-            //{
-            //    lastCheckedTime = DateTime.Now;
-            //}
-
-            if (lastCheckedTime.Date != DateTime.Now.Date)
+            if (changeWhenRunning)
             {
-                // 分析開始時・起動時・システム初期化時に動作
-                System.Diagnostics.Debug.WriteLine("Daily processing occurred:清除AssayDB,検体登録DB,Sequence number initialization,Numbering history initialization.");
-                Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
-                                                                                                CarisXLogInfoBaseExtention.Empty, "Daily processing occurred:清除AssayDB,検体登録DB,Sequence number initialization,Numbering history initialization.");
-                //
-                // DB内容初期化
-                //
+                // 前回の日替わり処理発生日と異なる場合処理を行う。
+                // 日替わり処理確認日時は設定ファイルに保存される。
+                DateTime lastCheckedTime = Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.DateChange;
+                Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.DateChange = DateTime.Now;
 
-                // 分析DB全消去,template
-                Singleton<SpecimenAssayDB>.Instance.ClearAssayData();
-                Singleton<SpecimenAssayDB>.Instance.CommitData();
+                //// HACK:デバッグ用、一時的に日替わり処理に入らないようにする
+                //{
+                //    lastCheckedTime = DateTime.Now;
+                //}
 
-                Singleton<CalibratorAssayDB>.Instance.ClearAssayData();
-                Singleton<CalibratorAssayDB>.Instance.CommitData();
+                if (lastCheckedTime.Date != DateTime.Now.Date)
+                {
+                    // 分析開始時・起動時・システム初期化時に動作
+                    System.Diagnostics.Debug.WriteLine("Daily processing occurred:清除AssayDB,検体登録DB,Sequence number initialization,Numbering history initialization.");
+                    Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                                                                                    CarisXLogInfoBaseExtention.Empty, "Daily processing occurred:清除AssayDB,検体登録DB,Sequence number initialization,Numbering history initialization.");
+                    //
+                    // DB内容初期化
+                    //
 
-                Singleton<ControlAssayDB>.Instance.ClearAssayData();
-                Singleton<ControlAssayDB>.Instance.CommitData();
+                    // 分析DB全消去,template
+                    Singleton<SpecimenAssayDB>.Instance.ClearAssayData();
+                    Singleton<SpecimenAssayDB>.Instance.CommitData();
 
-                // 検体登録DB全消去
-                Singleton<SpecimenGeneralDB>.Instance.DeleteAll();
-                Singleton<SpecimenGeneralDB>.Instance.CommitSampleInfo();
+                    Singleton<CalibratorAssayDB>.Instance.ClearAssayData();
+                    Singleton<CalibratorAssayDB>.Instance.CommitData();
 
-                // STAT登録DB一時登録データ消去
-                Singleton<SpecimenStatDB>.Instance.Delete(RegistType.Temporary);
-                Singleton<SpecimenStatDB>.Instance.CommitSampleInfo();
+                    Singleton<ControlAssayDB>.Instance.ClearAssayData();
+                    Singleton<ControlAssayDB>.Instance.CommitData();
 
-                // シーケンス番号初期化
-                Singleton<SequencialSampleNo>.Instance.ResetNumber();
-                Singleton<SequencialPrioritySampleNo>.Instance.ResetNumber();
-                Singleton<SequencialCalibNo>.Instance.ResetNumber();
-                Singleton<SequencialControlNo>.Instance.ResetNumber();
+                    // 検体登録DB全消去
+                    Singleton<SpecimenGeneralDB>.Instance.DeleteAll();
+                    Singleton<SpecimenGeneralDB>.Instance.CommitSampleInfo();
+
+                    // STAT登録DB一時登録データ消去
+                    Singleton<SpecimenStatDB>.Instance.Delete(RegistType.Temporary);
+                    Singleton<SpecimenStatDB>.Instance.CommitSampleInfo();
+
+                    // シーケンス番号初期化
+                    Singleton<SequencialSampleNo>.Instance.ResetNumber();
+                    Singleton<SequencialPrioritySampleNo>.Instance.ResetNumber();
+                    Singleton<SequencialCalibNo>.Instance.ResetNumber();
+                    Singleton<SequencialControlNo>.Instance.ResetNumber();
+                    Singleton<ReceiptNo>.Instance.ResetNumber();
+                    //int nNumber = Singleton<ReceiptNo>.Instance.Number;
+
+                    //保存相关的配置设置。
+                    // Singleton<ParameterFilePreserve<AppSettings>>.Instance.Save();
+
+                    // 発番履歴初期化
+                    Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.SampleSequenceNumberHistory.ClearHistory();
+                    Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Save();
+                    // 各画面の検索関連UIの初期表示日付を更新
+
+                    // 表示更新
+                    RealtimeDataAgent.LoadAssayData();
+                    RealtimeDataAgent.LoadSampleData();
+                    RealtimeDataAgent.LoadStatData();
+                }
+            }
+            else
+            {
+                // 履歴ファイルのバックアップ
+                // ネットワーク障害などによるIoT送信失敗時、バッチ再送信
+                CarisXSubFunction.SendIoTSystemFilesBatch();
+
+                // 【IssuesNo:11】レシピ番号をリセット
                 Singleton<ReceiptNo>.Instance.ResetNumber();
-                //int nNumber = Singleton<ReceiptNo>.Instance.Number;
-
-                //保存相关的配置设置。
-                // Singleton<ParameterFilePreserve<AppSettings>>.Instance.Save();
-
-                // 発番履歴初期化
-                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.SampleSequenceNumberHistory.ClearHistory();
-                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Save();
-                // 各画面の検索関連UIの初期表示日付を更新
-
-                // 表示更新
-                RealtimeDataAgent.LoadAssayData();
-                RealtimeDataAgent.LoadSampleData();
-                RealtimeDataAgent.LoadStatData();
+                // 日付更新
+                this.deviceCurrentDate = DateTime.Now;
             }
         }
 
@@ -2694,7 +2736,7 @@ namespace Oelco.CarisX.GUI
                     Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.RealtimePrintData, true);
 
                     // 分析中のみスレーブからの分析終了コマンドを受付
-                    
+
                     // 分析中検体情報削除
                     Singleton<InProcessSampleInfoManager>.Instance.Clear();
 
@@ -2702,7 +2744,7 @@ namespace Oelco.CarisX.GUI
                     Singleton<CalibratorInfoManager>.Instance.Clear();
 
                     // 登録・再検DBからエラー状態以外の検体情報を削除する。
-                    
+
                     // 登録DBから非エラー検体削除
                     Singleton<FormSpecimenRegistration>.Instance.ClearAssayNoErrorData();
 
@@ -2909,26 +2951,25 @@ namespace Oelco.CarisX.GUI
 
             // ブザー制御コマンド生成
             SlaveCommCommand_0465 cmd0465 = new SlaveCommCommand_0465();
-            {
-                // ブザーON/OFF
-                if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.BeepVolume != ErrWarningBeepParameter.BeepVolumeKind.None)
-                {   // ON
-                    cmd0465.Ctrl = SlaveCommCommand_0465.ControlKind.ON;
-                }
-                else
-                {   // OFF
-                    cmd0465.Ctrl = SlaveCommCommand_0465.ControlKind.OFF;
-                }
 
-                // ブザー音（音色の設定はシステムパラメータコマンドで行っている）
-                if (errorCode.ErrorCode < CarisXConst.ERROR_CODE_THRESHOLD)
-                {   // エラー
-                    cmd0465.Sound = (SlaveCommCommand_0465.SoundKind)Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.BeepError;
-                }
-                else
-                {   // 警告
+            //【IssuesNo:10】独立提示音开关控制
+            cmd0465.Ctrl = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.Enable ?
+            SlaveCommCommand_0465.ControlKind.ON :
+            SlaveCommCommand_0465.ControlKind.OFF;
+
+            //【IssuesNo:6】根据故障等级设置音色
+            ErrorLevelKind errorLevel = CarisXSubFunction.GetErrorLevel(errorCode.ErrorCode, errorCode.Arg);
+            switch (errorLevel)
+            {
+                case ErrorLevelKind.Warning:
                     cmd0465.Sound = (SlaveCommCommand_0465.SoundKind)Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.BeepWarning;
-                }
+                    break;
+                case ErrorLevelKind.Hint:
+                    cmd0465.Sound = (SlaveCommCommand_0465.SoundKind)Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.BeepHint;
+                    break;
+                default:
+                    cmd0465.Sound = (SlaveCommCommand_0465.SoundKind)Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.ErrWarningBeepParameter.BeepError;
+                    break;
             }
 
             // コマンド送信先モジュールIndex取得（ラック搬送の場合、スレーブ(=0)になる）
@@ -2987,7 +3028,7 @@ namespace Oelco.CarisX.GUI
         /// <param name="indicate"></param>
         protected void workSheetFromHost(Object data)
         {
-            if( data is AskWorkSheetData)
+            if (data is AskWorkSheetData)
             {
                 // ワークシートデータ設定
                 AskWorkSheetData askData = data as AskWorkSheetData;
@@ -3246,7 +3287,7 @@ namespace Oelco.CarisX.GUI
         /// ラックに分析開始送信コマンドの送信を行います。
         /// </remarks>
         /// <param name="data"></param>
-        private void startRackAssay( Object data )
+        private void startRackAssay(Object data)
         {
             CarisXSequenceHelper.SequenceSyncObject syncData;
 
@@ -3410,7 +3451,7 @@ namespace Oelco.CarisX.GUI
                             }
 
                             // 日替わりチェック(UIPackageが記録していた前回アクセス日付を元にする)
-                            Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.DateChanged, null); // 日替わり処理
+                            Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.DateChanged, false); // 日替わり処理
 
                             // 分析中検体情報をクリアする（GのCalibInfoManager）
 #if DEBUG
@@ -3484,7 +3525,7 @@ namespace Oelco.CarisX.GUI
                             cmd0412.Stop = SlaveCommCommand_0412.StopParameter.SamplingStop;
                             Singleton<CarisXCommManager>.Instance.PushSendQueueSlave(moduleindex, cmd0412);
                         }
-                    }                    
+                    }
 
                     Singleton<SystemStatus>.Instance.setAllModuleStatus(SystemStatusKind.Assay);
                 }
@@ -3582,7 +3623,7 @@ namespace Oelco.CarisX.GUI
         {
             // リアルタイム印刷(全て実行)
             Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.RealtimePrintData, true);
-            
+
             // 試薬交換中はメッセージ表示して失敗とする。
             // 登録画面・再検査画面のエラー発生以外の情報を削除する。
             // 分析中断
@@ -3596,16 +3637,16 @@ namespace Oelco.CarisX.GUI
                 if (Singleton<CarisXCommManager>.Instance.GetSlaveCommStatus(moduleindex) == ConnectionStatus.Online)
                 {
                     // モーターエラーのスレーブは処理を行わない
-                if (Singleton<Status.SystemStatus>.Instance.ModuleStatus[CarisXSubFunction.ModuleIndexToModuleId((ModuleIndex)moduleindex)] == Status.SystemStatusKind.MotorError)
-                {
-                    continue;
-                }
+                    if (Singleton<Status.SystemStatus>.Instance.ModuleStatus[CarisXSubFunction.ModuleIndexToModuleId((ModuleIndex)moduleindex)] == Status.SystemStatusKind.MotorError)
+                    {
+                        continue;
+                    }
 
                     // ポーズコマンド(中断)を送信
                     SlaveCommCommand_0412 cmd0412 = new SlaveCommCommand_0412();
                     cmd0412.Control = CommandControlParameter.Abort;
                     cmd0412.Stop = SlaveCommCommand_0412.StopParameter.AllStop;
-                Singleton<CarisXCommManager>.Instance.PushSendQueueSlave(moduleindex, cmd0412);
+                    Singleton<CarisXCommManager>.Instance.PushSendQueueSlave(moduleindex, cmd0412);
                 }
             }
 
@@ -3637,29 +3678,13 @@ namespace Oelco.CarisX.GUI
             Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID, CarisXLogInfoBaseExtention.Empty, CarisX.Properties.Resources.STRING_LOG_MSG_064);
 
             // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
             // 配信情報をクラウドにアップロードする
             CarisXSubFunction.SendIoTDueDate();
 
             // システムファイルをIoTクラウドへアップロードする
-            CarisXSubFunction.SendIoTSystemFiles(DateTime.Now);
-#endif
+            CarisXSubFunction.SendIoTSystemFiles(DateTime.Now,DateTime.Now);
             // 2020-02-27 CarisX IoT Add [END]
         }
-
-        // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
-        /// <summary>
-        /// IoT障害情報コマンド送信通知
-        /// </summary>
-        /// <param name="value"></param>
-        private void sendIoTErrorCommand(Object value)
-        {
-            // IoT障害情報コマンド送信
-            CarisXSubFunction.SendIoTErrorCommand(value);
-        }
-#endif
-        // 2020-02-27 CarisX IoT Add [END]
 
         #endregion
 
@@ -3724,7 +3749,8 @@ namespace Oelco.CarisX.GUI
             {
                 // 点滅していた場合、点滅を終了する。
                 this.btnError.BlinkEnd();
-
+                //【IssuesNo:6】 点击按钮后重置状态
+                this.lstErrorLevelFlg = ErrorLevelKind.Hint;
                 // スレーブにブザー消去送信
                 Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.SendBuzzerCancel, CarisXConst.ALL_MODULEID);
 
@@ -3750,11 +3776,11 @@ namespace Oelco.CarisX.GUI
         /// <param name="e">イベントデータ</param>
         private void btnHelp_Click(object sender, EventArgs e)
         {
-                // 操作履歴登録
-                Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID, CarisXLogInfoBaseExtention.Empty, new String[] { CarisX.Properties.Resources.STRING_LOG_MSG_065 });
+            // 操作履歴登録
+            Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID, CarisXLogInfoBaseExtention.Empty, new String[] { CarisX.Properties.Resources.STRING_LOG_MSG_065 });
 
             // start DataAdd
-            #if DEBUG_CARIS_OLD_SOCKET
+#if DEBUG_CARIS_OLD_SOCKET
             int iUniqueNo = 0;
 
             // 判定代わり
@@ -3884,12 +3910,12 @@ namespace Oelco.CarisX.GUI
                     Singleton<DBAccessControl>.Instance.ExecuteSql(strSql.ToString(), String.Empty);
                 }
             }
-            #endif
-                // end DataAdd
+#endif
+            // end DataAdd
 
-                // HELPファイル起動
-                // ファイルまでのディレクトリのパスをセット
-                CarisX.Const.HelpDocument.openHelpDocumentPage();
+            // HELPファイル起動
+            // ファイルまでのディレクトリのパスをセット
+            CarisX.Const.HelpDocument.openHelpDocumentPage();
         }
 
         /// <summary>
@@ -4628,24 +4654,6 @@ namespace Oelco.CarisX.GUI
         /// <param name="e"></param>
         private void notifyWatchTimer_Tick(object sender, EventArgs e)
         {
-
-#if !NOT_USE_IOT
-            // シャットダウンせずに日付変更にアクションを追加
-            if (this.deviceCurrentDate.Date != DateTime.Today.Date)
-            {
-                // 履歴ファイルのバックアップ
-                // ネットワーク障害などによるIoT送信失敗時、バッチ再送信
-                CarisXSubFunction.SendIoTSystemFiles(this.deviceCurrentDate);
-                CarisXSubFunction.SendIoTSystemFilesBatch();
-
-                // レシピ番号をリセット
-                Singleton<ReceiptNo>.Instance.ResetNumber();
-
-                // 日付更新
-                this.deviceCurrentDate = DateTime.Now;
-            }
-#endif
-
             // 通知イベント発生
             Singleton<NotifyManager>.Instance.ExecuteAllQueue();
         }
@@ -4833,10 +4841,10 @@ namespace Oelco.CarisX.GUI
 
             // 試薬残量変更確認応答イベント登録
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.ChangeReagentRemainResponse, this.changeReagentRemainResponse);
-            
+
             // 試薬交換開始イベント登録
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.StartReagentTimer, this.startReagentTimer);
-            
+
             // 試薬交換中断イベント登録
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.CancelReagentTimer, this.cancelReagentTimer);
 
@@ -4905,24 +4913,24 @@ namespace Oelco.CarisX.GUI
 
             //メインフォームのスモールメニューAssay
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuAssayStatus, this.btnAssayStatus_Click);
-            
+
             //メインフォームのスモールメニューReagent
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuReagentPreparation, this.btnReagentPreparation_Click);
-            
+
             //メインフォームのスモールメニューCalibration
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuCalibRegistration, this.btnCalibRegistration_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuCalibStatus, this.btnCalibrationStatus_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuCalibAnalysis, this.btnCalibAnalysis_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuCalibResult, this.btnCalibResult_Click);
-            
+
             //メインフォームのスモールメニューControl
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuControlRegistration, this.btnControlRegist_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuControlQC, this.btnControlQC_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuControlResult, this.btnControlResult_Click);
-            
+
             //メインフォームのスモールメニューOption
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemModuleOption, this.btnSystemModuleOption_Click);
-            
+
             //メインフォームのスモールメニューSystem
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemStatus, this.btnSystemStatus_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemAnalytes, this.btnSystemAnalytes_Click);
@@ -4930,31 +4938,24 @@ namespace Oelco.CarisX.GUI
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemOption, this.btnSystemOption_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemAdjustment, this.btnSystemAdjustment_Click);
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SmallMenuSystemUser, this.btnSystemUser_Click);
-            
+
             // 試薬設置ガイダンス表示通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.ShowReagentSetGuidance, this.showReagentSetGuidance);
-            
+
             // システムステータスアイコン設定通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SetSystemStatusIcon, this.setSystemStatusIcon);
-            
+
             // システムステータス変更通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.ChangeAbortAssay, this.changeAbortAssay);
-            
+
             // リアルタイム測定結果ファイル出力通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.RealtimeOutputFileData, this.saveMeasureResultFile);
-            
+
             // リアルタイム印刷通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.RealtimePrintData, this.realtimePrint);
 
             // ラック分析開始コマンド送信通知
             Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.RackTransferStartAssay, this.startRackAssay);
-
-            // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
-            // IoT障害情報コマンド送信通知
-            Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.SendErrorToIoT, this.sendIoTErrorCommand);
-#endif
-            // 2020-02-27 CarisX IoT Add [END]
         }
 
         /// <summary>
@@ -5325,7 +5326,7 @@ namespace Oelco.CarisX.GUI
         private void startUp()
         {
             // 日替わりチェック(UIPackageが記録していた前回アクセス日付を元にする)
-            Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.DateChanged, null); // 日替わり処理
+            Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.DateChanged, false); // 日替わり処理
 
             // 初期シーケンス起動
             foreach (Int32 moduleindex in Enum.GetValues(typeof(ModuleIndex)))
@@ -5545,20 +5546,14 @@ namespace Oelco.CarisX.GUI
                      CarisXLogInfoBaseExtention.Empty, String.Format("HOST通信用failed to COM port connection。 Port:{0}", hostCommSetting.CommPort));
             }
 
-#if !NOT_USE_IOT
             // IoT設定パラメータを取得
             IoTParameter iotParam = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter;
-
             // IoTへの接続処理確認
             if (iotParam.Enable)
             {
-                // ログ出力
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, string.Format("Connect to IoT; Date = {0}", DateTime.Now.ToString()));
-
                 // IoT接続
-                Singleton<CarisXCommIoTManager>.Instance.ConnectIoT(iotParam.IoTConnectionStr, iotParam.MachineSerialNumber.ToString());
+                Singleton<CarisXCommIoTManager>.Instance.ConnectIoT(iotParam.IoTConnectionKey, iotParam.Slave1No.ToString());
             }
-#endif
 
             // シーケンスヘルパー管理生成
             Singleton<CarisXSequenceHelperManager>.Instance.Intialize(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.AssayModuleConnectParameter.NumOfConnected);
@@ -6446,9 +6441,9 @@ namespace Oelco.CarisX.GUI
         {
             Action<SlaveCommCommand_0510> action = (data) =>
             {
-            // マスターカーブ使用可否取得
-            // プロトコルNoが有効でなければ終了
-            if (data.MasterCurve.Length != 0)
+                // マスターカーブ使用可否取得
+                // プロトコルNoが有効でなければ終了
+                if (data.MasterCurve.Length != 0)
                 {
                     var curveInfo = data.MasterCurve.First();
                     var protocol = Singleton<MeasureProtocolManager>.Instance.GetMeasureProtocolFromProtocolNo(curveInfo.ProtoNo);
@@ -6483,7 +6478,7 @@ namespace Oelco.CarisX.GUI
                             {
                                 for (int i = 0; i < masterCurve.PointCount; i++)
                                 {
-                                    Singleton<CalibrationCurveDB>.Instance.AddCalibData( 0
+                                    Singleton<CalibrationCurveDB>.Instance.AddCalibData(0
                                         , data.ReagCode
                                         , data.LotNumber
                                         , null               // ラックID固定でnull
@@ -6495,14 +6490,14 @@ namespace Oelco.CarisX.GUI
                                         , i + 1
                                         , null               // カウント平均固定でnull
                                         , CarisXConst.MASTER_CURVE_UNIQUE_NO
-                                        , CarisXConst.MASTER_CURVE_DATE );
+                                        , CarisXConst.MASTER_CURVE_DATE);
                                 }
                             }
                         }
                     }
 
-                // 結果にコミット
-                Singleton<CalibrationCurveDB>.Instance.CommitData();
+                    // 結果にコミット
+                    Singleton<CalibrationCurveDB>.Instance.CommitData();
                 }
             };
 
@@ -6581,7 +6576,7 @@ namespace Oelco.CarisX.GUI
                 foreach (ModuleIndex moduleIndex in Enum.GetValues(typeof(ModuleIndex)))
                 {
                     // 対象モジュールIndexと画面表示モジュールIndexが同じか確認
-                    if ( targetModuleIndex == moduleIndex)
+                    if (targetModuleIndex == moduleIndex)
                     {
                         // スレーブボタンをON
                         this.btnSlaveList[moduleIndex].BtnSlave.CurrentState = true;
@@ -6647,6 +6642,13 @@ namespace Oelco.CarisX.GUI
 
             lblNowDate.Text = datetime.ToString("yyyy.MM.dd");      //2019.09.03
             lblNowTime.Text = datetime.ToString("HH:mm");           //15:30
+
+            // 当程序运行过程中，在日期变更的时候需要执行部分动作，在该定时器下进行变更风险度较低？
+            if (this.deviceCurrentDate.Date != DateTime.Today.Date)
+            {
+                //レシピ番号をリセット
+                Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.DateChanged, true); // 日替わり処理
+            }
         }
 
         /// <summary>
@@ -6778,8 +6780,8 @@ namespace Oelco.CarisX.GUI
                 {
                     DPRErrorCode errCode = new DPRErrorCode(error.ErrorCode, error.ErrorArg, 1);
 
-                // エラー履歴に登録（アラート発生無し）
-                CarisXSubFunction.WriteDPRErrorHist(errCode, 0, (error.ErrorDetailInfoParam.Count > 0 ? error.ErrorDetailInfoParam[0] : String.Empty), false);
+                    // エラー履歴に登録（アラート発生無し）
+                    CarisXSubFunction.WriteDPRErrorHist(errCode, 0, (error.ErrorDetailInfoParam.Count > 0 ? error.ErrorDetailInfoParam[0] : String.Empty), false);
                 }
             });
 
@@ -6908,6 +6910,20 @@ namespace Oelco.CarisX.GUI
             Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, userid, CarisXLogInfoBaseExtention.Empty, new String[] { string.Format(CarisX.Properties.Resources.STRING_LOG_MSG_087, "txtGroupName") });
             Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, userid, CarisXLogInfoBaseExtention.Empty, new String[] { Properties.Resources.STRING_LOG_MSG_088 });
             Singleton<CarisXLogManager>.Instance.Write(LogKind.OperationHist, userid, CarisXLogInfoBaseExtention.Empty, new String[] { Properties.Resources.STRING_LOG_MSG_089 });
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //CarisXSubFunction.WriteDPRErrorHist(new DPRErrorCode(70, 1));
+
+            //CarisXSubFunction.SendIoTSystemFiles(new DateTime(2020, 2, 21),new DateTime(2020,3,1));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //CarisXSubFunction.WriteDPRErrorHist(new DPRErrorCode(200, 1));
+            CarisXSubFunction.SendIoTSystemFiles(DateTime.Now, DateTime.Now);
+
         }
     }
 }

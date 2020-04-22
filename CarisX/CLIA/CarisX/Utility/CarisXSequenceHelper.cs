@@ -2248,6 +2248,16 @@ namespace Oelco.CarisX.Utility
                 Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, "", "askData.FromHostCommand = sequenceData.RcvCommand as HostCommCommand_0002;");
                 // 正常ケース
                 askData.FromHostCommand = sequenceData.RcvCommand as HostCommCommand_0002;
+
+                //【IssuesNo:3】增加仪器扫描的样本ID与LIS传输过来的样本ID一致性的判断
+                if (!string.Equals(askData.FromHostCommand.SampleID, askData.AskData.SampleID))
+                {
+                    string extStr = "ModuleID :" + askData.AskData.ModuleID.ToString() + "RackID :" + askData.AskData.RackID + "RackPos :" + Convert.ToString(askData.AskData.SamplePosition);
+                    CarisXSubFunction.WriteDPRErrorHist(CarisXDPRErrorCode.FromHostWorkSheetSampleIDIsDifferent, 0, extStr);
+                    askData.FromHostCommand = new HostCommCommand_0002();
+                    askData.AskSampleIDIsDifferent = true;
+                    Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, "", String.Format("【Host SampleID is different from ask SampleID】 HostSampleID={0} AskSampleID={1}", askData.FromHostCommand.SampleID, askData.AskData.SampleID));
+                }
             }
 
             // 応答を通知する。

@@ -509,8 +509,18 @@ namespace Oelco.CarisX.Calculator
 			// 精度管理検体･キャリブレータは判定不要
 			if ( kind == SampleKind.Sample || kind == SampleKind.Priority )
 			{
+                //【IssuesNo:20】Innodx要求增加定量项目36（HBsAb）、37（HBsAg）的阴阳性判定,为了兼容以前的项目版本，当该项目的判定值都大于0才能进行判定
+                Double dbZero = 0.000001;
+                Boolean bQuanJudgement = false;
+                if((measureProtocol.ProtocolIndex.Equals(36) || measureProtocol.ProtocolIndex.Equals(37)) &&
+                    (measureProtocol.PosiLine - 0.0 > dbZero) &&
+                    (measureProtocol.NegaLine - 0.0 > dbZero))
+                {
+                    bQuanJudgement = true;
+                }
+
 				// 定性項目の場合
-				if ( measureProtocol.CalibType.IsQualitative() )
+				if ( measureProtocol.CalibType.IsQualitative() || bQuanJudgement)
 				{
 					if ( concentration.HasValue )
 					{
@@ -1246,9 +1256,11 @@ namespace Oelco.CarisX.Calculator
 							addingRemarkAverage = repCalcData.CalcInfoAverage.Remark.GetFilterRemark( Remark.RemarkCategory.DataEdited );
 						}
 
-						#endregion
+                        #endregion
 
-						// 再計算結果用
+                        // 再計算結果用
+                        //【IssuesNo:9】 当为常规和优先样本再计算时，由于IGRA判定需要使用ReceiptNumber,因此增加
+                        // 但质控品不需要ReceiptNumber,此值为默认值，不影响后续计算
 						CalcData calcData = new CalcData( repCalcData.ModuleNo,
 						                               	  repCalcData.ProtocolIndex,
 						                               	  repCalcData.ReagentLotNo,
@@ -1258,6 +1270,7 @@ namespace Oelco.CarisX.Calculator
 						                               	  repCalcData.ManualDilution,
 						                               	  repCalcData.AutoDilution,
 						                               	  repCalcData.MeasureDateTime,
+                                                          repCalcData.ReceiptNumber,
 						                               	  repCalcData.RackID,
 						                               	  repCalcData.RackPosition,
 						                               	  repCalcData.SampleID );
@@ -1296,29 +1309,37 @@ namespace Oelco.CarisX.Calculator
 						// 再計算(再計算可能リマークのみ)
 						if ( repCalcData.CalcInfoReplication.Remark.CanRecalculation )
 						{
-                            if ( CarisXCalculator.CalcConc( measureProtocol, kind, calibCurveInfo, calcData, false ) )
-							{
-								#region __リマーク付加__
+                            if (CarisXCalculator.CalcConc(measureProtocol, kind, calibCurveInfo, calcData, false))
+                            {
+                                #region __リマーク付加__
 
-								// 再計算後のリマークにリマークを引き継ぎ(継承可能なリマークのみ)
-								calcData.CalcInfoReplication.Remark.AddRemark( repCalcData.CalcInfoReplication.Remark.ReCalcInheritRemark );
+                                // 再計算後のリマークにリマークを引き継ぎ(継承可能なリマークのみ)
+                                calcData.CalcInfoReplication.Remark.AddRemark(repCalcData.CalcInfoReplication.Remark.ReCalcInheritRemark);
 
-								// 再計算後のリマークにリマークを引き継ぎ(再計算後付加リマークのみ)
-								calcData.CalcInfoReplication.Remark.AddRemark( addingRemarkReplication );
+                                // 再計算後のリマークにリマークを引き継ぎ(再計算後付加リマークのみ)
+                                calcData.CalcInfoReplication.Remark.AddRemark(addingRemarkReplication);
 
-								// 再計算リマーク付加
-								calcData.CalcInfoReplication.Remark.AddRemark( Remark.RemarkBit.EditOfReCalcu );
+                                // 再計算リマーク付加
+                                calcData.CalcInfoReplication.Remark.AddRemark(Remark.RemarkBit.EditOfReCalcu);
 
                                 #endregion
 
                                 // 平均算出用多重測定回数分へ結果を反映
-                                averageCalcRepCalcDataList.ToList().ForEach( ( repData ) =>
-								{
-									if ( repData.ReplicationNo == calcData.ReplicationNo )
-									{
-										averageCalcRepCalcDataList[repCalcDataList.IndexOf( repData )] = calcData;
-									}
-								} );
+                                //                        averageCalcRepCalcDataList.ToList().ForEach( ( repData ) =>
+                                //{
+                                //	if ( repData.ReplicationNo == calcData.ReplicationNo )
+                                //	{
+                                //		averageCalcRepCalcDataList[repCalcDataList.IndexOf( repData )] = calcData;
+                                //	}
+                                //} );
+                                //【IssuesNo:8】由于目前使用.net 4.6.1，直接在foreach()修改元素会抛出异常，因此这里更换写法
+                                for (int i = 0; i < averageCalcRepCalcDataList.Count(); i++)
+                                {
+                                    if (averageCalcRepCalcDataList[i].ReplicationNo == calcData.ReplicationNo)
+                                    {
+                                        averageCalcRepCalcDataList[repCalcDataList.IndexOf(averageCalcRepCalcDataList[i])] = calcData;
+                                    }
+                                }
 							}
 						}
 
@@ -1395,8 +1416,75 @@ namespace Oelco.CarisX.Calculator
 				}
 			} );
 
-			// 再計算対象となるすべての測定(多重測定毎)の完了を待機
-			endCalc.WaitOne();
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // 【IssuesNo:9】增加重新计算时对IGRA的判定
+            if(kind == SampleKind.Sample || kind == SampleKind.Priority)
+            {
+                foreach(var repIGRACalcData in reCalcCompleteDataList)
+                {
+                    //获取分析项目
+                    MeasureProtocol measureProtocol = Singleton<MeasureProtocolManager>.Instance.GetMeasureProtocolFromProtocolIndex(repIGRACalcData.ProtocolIndex);
+                    if(measureProtocol.IsIGRA)
+                    {
+                        var repCalcDataList = from relatedData in reCalcCompleteDataList
+                                              where relatedData.ProtocolIndex == repIGRACalcData.ProtocolIndex && relatedData.ReceiptNumber == repIGRACalcData.ReceiptNumber
+                                              && relatedData.MeasureDateTime.Date == repIGRACalcData.MeasureDateTime.Date
+                                              orderby relatedData.IndividuallyNo, relatedData.UniqueNo, relatedData.ReplicationNo
+                                              select relatedData;
+                        if(repIGRACalcData.UniqueNo == repCalcDataList.Last().UniqueNo)
+                        {
+                            IGRAMethod igraMethod = null;
+                            if(measureProtocol.RepNoForSample == 1 && repCalcDataList.ToList().Count == 3)
+                            {
+                                int nIndex = 2;//有可能最后一个结果由于故障结果先出
+                                for(int i = 0;i < repCalcDataList.ToList().Count; i++)
+                                {
+                                    if(repIGRACalcData.UniqueNo == repCalcDataList.ToList()[i].UniqueNo)
+                                    {
+                                        nIndex = i;
+                                    }
+                                }
+                                if(nIndex == 0)
+                                {
+                                    igraMethod = new IGRAMethod(repIGRACalcData.CalcInfoReplication.Concentration, repCalcDataList.ToList()[1].CalcInfoReplication.Concentration, repCalcDataList.ToList()[2].CalcInfoReplication.Concentration);
+                                }
+                                else if(nIndex == 1)
+                                {
+                                    igraMethod = new IGRAMethod(repCalcDataList.ToList()[0].CalcInfoReplication.Concentration, repIGRACalcData.CalcInfoReplication.Concentration, repCalcDataList.ToList()[2].CalcInfoReplication.Concentration);
+                                }
+                                else if(nIndex == 2)
+                                {
+                                    igraMethod = new IGRAMethod(repCalcDataList.ToList()[0].CalcInfoReplication.Concentration, repCalcDataList.ToList()[1].CalcInfoReplication.Concentration, repIGRACalcData.CalcInfoReplication.Concentration);
+                                }
+                            }
+                            else
+                            {
+                                if(repCalcDataList.ToList().Count == measureProtocol.RepNoForSample * 3)
+                                {
+                                    igraMethod = new IGRAMethod(repCalcDataList.ToList()[0].CalcInfoAverage.Concentration, repCalcDataList.ToList()[1].CalcInfoAverage.Concentration, repCalcDataList.ToList()[2].CalcInfoAverage.Concentration);
+                                }
+                            }
+                            if(igraMethod != null)
+                            {
+                                JudgementType judgeType = igraMethod.CaculateJudge();
+                                repIGRACalcData.Judgement = judgeType.ToTypeString();
+                            }
+                            else
+                            {
+                                repIGRACalcData.Judgement = null;
+                            }
+                        }
+                        else
+                        {
+                            repIGRACalcData.Judgement = null;
+                        }
+                    }
+                }
+            }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            // 再計算対象となるすべての測定(多重測定毎)の完了を待機
+            endCalc.WaitOne();
 
 			// 再計算完了リストを引数に設定(返却)
 			reCalcCompleteData = reCalcCompleteDataList.ToList();
@@ -1650,7 +1738,7 @@ namespace Oelco.CarisX.Calculator
 		{
             //定义一个点为灰区的情况
             if (measureProtocol.PosiLine == measureProtocol.NegaLine
-                && measureProtocol.PosiLine== concentration
+                && measureProtocol.PosiLine == concentration
                 && measureProtocol.NegaLine == concentration)
             {
                 return JudgementType.Half;
@@ -2287,10 +2375,20 @@ namespace Oelco.CarisX.Calculator
 			}
             // 相関係数AおよびBの計算が最初に実行され、それが上限および下限に等しいかそれより大きいかどうかが決定される。
             // 相関係数かける(非ダイナミックレンジエラー)́
-            concentration *= measureProtocol.GainOfCorrelation;
-            concentration += measureProtocol.OffsetOfCorrelation;
-			// ダイナミックレンジ判定
-			if ( measureProtocol.ConcDynamicRange.Max < concentration )
+
+            //【IssuesNo:7】试剂厂商需求，将相关系数A、B分成质控品和样本
+            if(sampKind == SampleKind.Control)
+            {
+                concentration *= measureProtocol.ControlGainOfCorrelation;
+                concentration += measureProtocol.ControlOffsetOfCorrelation;
+            }
+            else
+            {
+                concentration *= measureProtocol.GainOfCorrelation;
+                concentration += measureProtocol.OffsetOfCorrelation;
+            }
+            // ダイナミックレンジ判定
+            if ( measureProtocol.ConcDynamicRange.Max < concentration )
 			{
 				// 濃度をダイナミックレンジ最大値に設定
 				concentration = measureProtocol.ConcDynamicRange.Max;
@@ -2700,22 +2798,63 @@ namespace Oelco.CarisX.Calculator
 	/// </summary>
 	public class CalcData
 	{
-		#region [コンストラクタ/デストラクタ]
+        #region [コンストラクタ/デストラクタ]
 
-		/// <summary>
-		/// コンストラクタ
-		/// </summary>
-		/// <param name="protocolIndex">分析項インデックス</param>
-		/// <param name="reagentLotNo">試薬ロット番号</param>
-		/// <param name="invaduallyNo">検体識別番号</param>
-		/// <param name="uniqueNo">ユニーク番号</param>
-		/// <param name="replicationNo">多重測定回</param>
-		/// <param name="manualDilution">手希釈倍率</param>
-		/// <param name="autoDilution">自動希釈倍率</param>
-		/// <param name="measureDateTime">測定日時</param>
-		/// <param name="rackID">ラックID</param>
-		/// <param name="rackPosition">ラックポジション</param>
-		public CalcData( Int32 moduleNo,
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="protocolIndex">分析項インデックス</param>
+        /// <param name="reagentLotNo">試薬ロット番号</param>
+        /// <param name="invaduallyNo">検体識別番号</param>
+        /// <param name="uniqueNo">ユニーク番号</param>
+        /// <param name="replicationNo">多重測定回</param>
+        /// <param name="manualDilution">手希釈倍率</param>
+        /// <param name="autoDilution">自動希釈倍率</param>
+        /// <param name="measureDateTime">測定日時</param>
+        /// <param name="rackID">ラックID</param>
+        /// <param name="rackPosition">ラックポジション</param>
+        public CalcData(Int32 moduleNo,
+            Int32 protocolIndex,
+            String reagentLotNo,
+            Int32 invaduallyNo,
+            Int32 uniqueNo,
+            Int32 replicationNo,
+            Int32 manualDilution,
+            Int32 autoDilution,
+            DateTime measureDateTime,
+            CarisXIDString rackID = null,
+            Int32? rackPosition = null,
+            String sampleID = null)
+        {
+            this.ModuleNo = moduleNo;
+            this.ProtocolIndex = protocolIndex;
+            this.ReagentLotNo = reagentLotNo;
+            this.IndividuallyNo = invaduallyNo;
+            this.UniqueNo = uniqueNo;
+            this.ReplicationNo = replicationNo;
+            this.ManualDilution = manualDilution;
+            this.AutoDilution = autoDilution;
+            this.MeasureDateTime = measureDateTime;
+            this.RackID = rackID;
+            this.RackPosition = rackPosition;
+            this.SampleID = sampleID;
+        }
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="protocolIndex">分析項インデックス</param>
+        /// <param name="reagentLotNo">試薬ロット番号</param>
+        /// <param name="invaduallyNo">検体識別番号</param>
+        /// <param name="uniqueNo">ユニーク番号</param>
+        /// <param name="replicationNo">多重測定回</param>
+        /// <param name="manualDilution">手希釈倍率</param>
+        /// <param name="autoDilution">自動希釈倍率</param>
+        /// <param name="measureDateTime">測定日時</param>
+        /// <param name="receiptNumber">測定日時</param>【IssuesNo:9】IGRA项目需要
+        /// <param name="rackID">ラックID</param>
+        /// <param name="rackPosition">ラックポジション</param>
+        public CalcData( Int32 moduleNo,
             Int32 protocolIndex,
 			String reagentLotNo,
 			Int32 invaduallyNo,
@@ -2724,6 +2863,7 @@ namespace Oelco.CarisX.Calculator
 			Int32 manualDilution,
 			Int32 autoDilution,
 			DateTime measureDateTime,
+            Int32 receiptNumber,
 			CarisXIDString rackID = null,
 			Int32? rackPosition = null,
 			String sampleID = null )
@@ -2737,6 +2877,7 @@ namespace Oelco.CarisX.Calculator
 			this.ManualDilution = manualDilution;
 			this.AutoDilution = autoDilution;
 			this.MeasureDateTime = measureDateTime;
+            this.ReceiptNumber = receiptNumber;
 			this.RackID = rackID;
 			this.RackPosition = rackPosition;
 			this.SampleID = sampleID;
@@ -2899,18 +3040,27 @@ namespace Oelco.CarisX.Calculator
 			set;
 		}
 
-		#endregion
+        /// <summary>
+        /// 【IssuesNo:9】IGRA项目重新计算所需要
+        /// 受付番号 設定/取得
+        /// </summary>
+        public Int32 ReceiptNumber
+        {
+            get;
+            private set;
+        }
+        #endregion
 
-		#region [publicメソッド]
+        #region [publicメソッド]
 
-		/// <summary>
-		/// コピー
-		/// </summary>
-		/// <remarks>
-		/// 計算データをコピーします
-		/// </remarks>
-		/// <returns>コピー済計算データ</returns>
-		public CalcData Copy()
+        /// <summary>
+        /// コピー
+        /// </summary>
+        /// <remarks>
+        /// 計算データをコピーします
+        /// </remarks>
+        /// <returns>コピー済計算データ</returns>
+        public CalcData Copy()
 		{
 			return new CalcData( this.ModuleNo, this.ProtocolIndex, this.ReagentLotNo, this.IndividuallyNo, this.UniqueNo, this.ReplicationNo, this.ManualDilution, this.AutoDilution, this.MeasureDateTime )
 			{

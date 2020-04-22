@@ -23,6 +23,11 @@ using Oelco.CarisX.GUI;
 using System.Reflection;
 using System.IO;
 using ICSharpCode.SharpZipLib.Zip;
+using System.Xml;
+using System.Runtime.InteropServices;
+using Oelco.Common.DB;
+using System.Data;
+using System.Diagnostics;
 
 namespace Oelco.CarisX.Utility
 {
@@ -76,8 +81,8 @@ namespace Oelco.CarisX.Utility
             Boolean isErrFiltering = false;
 
             // 分析中またはサンプリング停止中の場合
-            if (( Singleton<SystemStatus>.Instance.Status == SystemStatusKind.Assay )
-                || ( Singleton<SystemStatus>.Instance.Status == SystemStatusKind.SamplingPause ))
+            if ((Singleton<SystemStatus>.Instance.Status == SystemStatusKind.Assay)
+                || (Singleton<SystemStatus>.Instance.Status == SystemStatusKind.SamplingPause))
             {
                 // フィルタリングが必要か否か判別する
                 isErrFiltering = CarisXSubFunction.IsErrFiltering(infoErrLog.ErrorCode);
@@ -90,7 +95,7 @@ namespace Oelco.CarisX.Utility
                 int ModuleIndex = ModuleIDToModuleIndex(code.ModuleId);
 
                 // エラー蓄積データリストに追加/上書きとマスターエラー発生回数の更新
-                infoErrLog.Counter = Singleton<ErrorDataStorageListManeger>.Instance.ErrorDataStorageList [ModuleIndex].ErrorDataStorageListUpdateOrAdd(code, extStr);
+                infoErrLog.Counter = Singleton<ErrorDataStorageListManeger>.Instance.ErrorDataStorageList[ModuleIndex].ErrorDataStorageListUpdateOrAdd(code, extStr);
             }
             // フィルタリングを行わない場合
             else
@@ -125,11 +130,15 @@ namespace Oelco.CarisX.Utility
             if (raiseAlert)
             {
                 // エラー釦点滅
-                Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.BlinkErrorButton, null);
+                //【IssuesNo:6】 传入故障代码信息，根据故障等级闪烁不同的提示灯
+                Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.BlinkErrorButton, infoErrLog);
 
                 // スレーブに警告灯・ブザー送信
                 Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.SendCaution, code);
             }
+
+            //【IssuesNo:16】IoTへ障害情報の通知処理
+            SendIoTErrorCommand(infoErrLog, code.ModuleId, extStr);
         }
 
         /// <summary>
@@ -427,7 +436,7 @@ namespace Oelco.CarisX.Utility
         /// </remarks>
         /// <param name="kind">サンプル種別文字列</param>
         /// <returns>サンプル種別値</returns>
-        static public SpecimenMaterialType GetSampleKindFromGridItemString( String kind )
+        static public SpecimenMaterialType GetSampleKindFromGridItemString(String kind)
         {
             SpecimenMaterialType kindType = SpecimenMaterialType.BloodSerumAndPlasma;
 
@@ -487,7 +496,7 @@ namespace Oelco.CarisX.Utility
         /// </remarks>
         /// <param name="kind">容器種別文字列</param>
         /// <returns>容器種別値</returns>
-        static public SpecimenCupKind GetSpecimenCupKindFromGridItemString( String kind )
+        static public SpecimenCupKind GetSpecimenCupKindFromGridItemString(String kind)
         {
             SpecimenCupKind kindType = SpecimenCupKind.Cup;
 
@@ -499,7 +508,7 @@ namespace Oelco.CarisX.Utility
             {
                 kindType = SpecimenCupKind.Tube;
             }
-            else if ( kind == Oelco.CarisX.Properties.Resources.STRING_SPECIMENSTATREGIST_020 )
+            else if (kind == Oelco.CarisX.Properties.Resources.STRING_SPECIMENSTATREGIST_020)
             {
                 kindType = SpecimenCupKind.CupOnTube;
             }
@@ -517,7 +526,7 @@ namespace Oelco.CarisX.Utility
         /// </remarks>
         /// <param name="kind">容器種別値</param>
         /// <returns>容器種別文字列</returns>
-        static public String GetSpecimenCupKindGridItemString( SpecimenCupKind kind )
+        static public String GetSpecimenCupKindGridItemString(SpecimenCupKind kind)
         {
             String kindString = String.Empty;
 
@@ -814,7 +823,7 @@ namespace Oelco.CarisX.Utility
                         if (syncDataWasteList[moduleindex].Status == CarisXSequenceHelper.SequenceSyncObject.SequenceStatus.Success)
                         {
                             //残量チェックの場合は履歴情報の残量を上書きしない
-                            SetReagentRemain(syncDataWasteList[moduleindex].SequenceResultData as IRemainAmountInfoSet, false, ModuleIndexToModuleId((ModuleIndex)moduleindex), false); 
+                            SetReagentRemain(syncDataWasteList[moduleindex].SequenceResultData as IRemainAmountInfoSet, false, ModuleIndexToModuleId((ModuleIndex)moduleindex), false);
                             askSuccess = true;
                         }
                     }
@@ -1239,6 +1248,35 @@ namespace Oelco.CarisX.Utility
         }
 
         /// <summary>
+        /// 【IssuesNo:16】ModuleID转换成IoT云端ID
+        /// </summary>
+        /// <param name="moduleId"></param>
+        /// <returns></returns>
+        static public long ModuleIdToIoTNo(Int32 moduleId = CarisXConst.ALL_MODULEID)
+        {
+            long iotNo = 0;
+            switch ((RackModuleIndex)moduleId)
+            {
+                case RackModuleIndex.Module1:
+                    iotNo = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No;
+                    break;
+                case RackModuleIndex.Module2:
+                    iotNo = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave2No;
+                    break;
+                case RackModuleIndex.Module3:
+                    iotNo = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave3No;
+                    break;
+                case RackModuleIndex.Module4:
+                    iotNo = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave4No;
+                    break;
+                default:
+                    iotNo = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No;
+                    break;
+            }
+            return iotNo;
+        }
+
+        /// <summary>
         /// MACアドレス取得
         /// </summary>
         /// <remarks>
@@ -1258,14 +1296,14 @@ namespace Oelco.CarisX.Utility
             foreach (var adapter in interfaces)
             {
                 // 有効なインターフェースのみを対象とする
-                if (( adapter.OperationalStatus != OperationalStatus.Up)
-                    && ( adapter.NetworkInterfaceType != NetworkInterfaceType.Ethernet))
+                if ((adapter.OperationalStatus != OperationalStatus.Up)
+                    && (adapter.NetworkInterfaceType != NetworkInterfaceType.Ethernet))
                 {
                     continue;
                 }
 
                 // MACアドレス
-                macaddressList.Add( adapter.GetPhysicalAddress() );
+                macaddressList.Add(adapter.GetPhysicalAddress());
             }
 
             if (macaddressList.Count > 0)
@@ -1285,21 +1323,21 @@ namespace Oelco.CarisX.Utility
         /// <param name="img">拡縮する画像</param>
         /// <param name="imageRatio">拡縮率</param>
         /// <returns>scalingBmp:拡縮されたビットマップ</returns>
-        static public Bitmap ScalingBitmap( Image img, double imageRatio )
+        static public Bitmap ScalingBitmap(Image img, double imageRatio)
         {
-            Bitmap tempBmp = new Bitmap( img );
-            int w = (int)( img.Width * imageRatio );
-            int h = (int)( img.Height * imageRatio );
+            Bitmap tempBmp = new Bitmap(img);
+            int w = (int)(img.Width * imageRatio);
+            int h = (int)(img.Height * imageRatio);
 
             // 拡縮するグラフを格納するビットマップ
-            Bitmap scalingBmp = new Bitmap( w, h );
+            Bitmap scalingBmp = new Bitmap(w, h);
 
             // 拡縮したグラフを入れるキャンバスの作成
-            Graphics g = Graphics.FromImage( scalingBmp );
+            Graphics g = Graphics.FromImage(scalingBmp);
 
             // 補間方法を指定し、拡縮したグラフをキャンバスに描く
             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            g.DrawImage( tempBmp, 0, 0, w, h );
+            g.DrawImage(tempBmp, 0, 0, w, h);
 
             tempBmp.Dispose();
             g.Dispose();
@@ -1373,10 +1411,10 @@ namespace Oelco.CarisX.Utility
                 //対象データが無くてもひとまず行は作成する
                 resultDicReagentDatas.Add(moduleIndex, new List<String>());
 
-                foreach ( var reagentData in reagentDatas )
+                foreach (var reagentData in reagentDatas)
                 {
                     // 分析項目名が取得できたデータのみ対象とする
-                    if(reagentData.Data.Analytes != String.Empty)
+                    if (reagentData.Data.Analytes != String.Empty)
                     {
                         // 必要な情報だけ詰め直し
                         resultDicReagentDatas[moduleIndex].Add(reagentData.Data.Analytes);
@@ -1569,7 +1607,7 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         /// <returns></returns>
         static public void Backup()
-        { 
+        {
             // バックアップのParamフォルダがない場合
             if (!System.IO.File.Exists(CarisXConst.PathBackupParam))
             {
@@ -1598,16 +1636,16 @@ namespace Oelco.CarisX.Utility
                 System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSensorParameter>>.Instance.Param.SavePath,
                                     Singleton<ParameterFilePreserve<CarisXSensorParameter>>.Instance.Param.BackupSavePath, true);
                 // MotorParameter.xmlのコピー
-                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.SavePath, 
+                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.SavePath,
                                     Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.BackupSavePath, true);
                 // \ConfigParameter.xmlのコピー
-                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.SavePath, 
+                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.SavePath,
                                     Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.BackupSavePath, true);
                 // SystemParameter.xmlのコピー
-                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.SavePath, 
+                System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.SavePath,
                                     Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.BackupSavePath, true);
                 // SupplieParam.xmlのコピー
-                System.IO.File.Copy(Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.SavePath, 
+                System.IO.File.Copy(Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.SavePath,
                                     Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.BackupSavePath, true);
                 // Protocolフォルダのコピー(Protocolはフォルダ内すべてのxmlファイルをコピーするためフォルダごとコピーする)
                 Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory(CarisXConst.PathProtocol, CarisXConst.PathBackupProtocol, true);
@@ -1620,7 +1658,7 @@ namespace Oelco.CarisX.Utility
                 Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID
                     , CarisXLogInfoBaseExtention.Empty, "バックアップの作成に失敗しました" + ex.StackTrace);
             }
-           
+
         }
 
         /// <summary>
@@ -1664,19 +1702,19 @@ namespace Oelco.CarisX.Utility
                     System.IO.File.Copy(Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<AppSettings>>.Instance.Param.SavePath, true);
                     // SensorParameter.xmlのコピー
-                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSensorParameter>>.Instance.Param.BackupSavePath, 
+                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSensorParameter>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<CarisXSensorParameter>>.Instance.Param.SavePath, true);
                     // MotorParameter.xmlのコピー
-                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.BackupSavePath, 
+                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<CarisXMotorParameter>>.Instance.Param.SavePath, true);
                     // \ConfigParameter.xmlのコピー
-                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.BackupSavePath, 
+                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<CarisXConfigParameter>>.Instance.Param.SavePath, true);
                     // SystemParameter.xmlのコピー
-                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.BackupSavePath, 
+                    System.IO.File.Copy(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.SavePath, true);
                     // SupplieParam.xmlのコピー
-                    System.IO.File.Copy(Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.BackupSavePath, 
+                    System.IO.File.Copy(Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.BackupSavePath,
                                         Singleton<ParameterFilePreserve<SupplieParameter>>.Instance.Param.SavePath, true);
 
                     // Protocolフォルダのコピー(Protocolはフォルダ内すべてのxmlファイルをコピーするためフォルダごとコピーする)
@@ -1684,7 +1722,7 @@ namespace Oelco.CarisX.Utility
 
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     restoreSuccess = false;
                     // バックアップの上書きに失敗しました。
@@ -1709,7 +1747,7 @@ namespace Oelco.CarisX.Utility
                             , CarisXLogInfoBaseExtention.Empty, "バックアップフォルダの削除に失敗しました" + ex.StackTrace);
                     }
                 }
-               
+
             }
         }
 
@@ -1721,7 +1759,7 @@ namespace Oelco.CarisX.Utility
         /// true:フィルタリングする
         /// false:フィルタリングしない
         /// </returns>
-        static public Boolean IsErrFiltering( Int32 ErrorCode )
+        static public Boolean IsErrFiltering(Int32 ErrorCode)
         {
             // フィルタリングするかのフラグ
             // true:する
@@ -1729,7 +1767,7 @@ namespace Oelco.CarisX.Utility
             Boolean result = false;
 
             //　フィルタリングするエラーコードの判別
-            switch(ErrorCode)
+            switch (ErrorCode)
             {
                 case 20: // 温度が正常範囲外
                 case 21: // 温度が正常範囲外
@@ -1900,9 +1938,9 @@ namespace Oelco.CarisX.Utility
         /// <param name="targetString">対象文字列</param>
         /// <param name="currentPos"></param>
         /// <returns></returns>
-        static public Boolean SpoilHex( out Int64 outData, Int32 len, String targetString, Int32 currentPos )
+        static public Boolean SpoilHex(out Int64 outData, Int32 len, String targetString, Int32 currentPos)
         {
-            if (targetString.Length < ( currentPos + len ))
+            if (targetString.Length < (currentPos + len))
             {
                 outData = 0;
                 return false;
@@ -1988,7 +2026,7 @@ namespace Oelco.CarisX.Utility
                 // モーターエラーによる分析不可ダイアログを表示
                 DlgMessage.Show(CarisX.Properties.Resources.STRING_DLG_MSG_267, rackModuleIndices, CarisX.Properties.Resources.STRING_DLG_TITLE_001, MessageDialogButtons.Confirm);
             }
-           
+
             return isShowMotorErrorDlg;
         }
 
@@ -2161,30 +2199,33 @@ namespace Oelco.CarisX.Utility
         }
 
         /// <summary>
-        /// Content:复制系统日志;Add by:Fang;Date:2019-01-03
+        /// 拷贝系统日志【IssuesNo:16】调整为根据文件修改日期来筛选需要拷贝的文件
         /// </summary>
-        /// <param name="sSrcDir"></param>
-        /// <param name="sDestDir"></param>
+        /// <param name="sourceDirectory"></param>
+        /// <param name="targetDirectory"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
         /// <param name="sSearchPattern"></param>
-        static public void CopySysLog(string sSrcDir, string sDestDir, DateTime dDate, string sSearchPattern)
+        static public void CopyLog(string sourceDirectory, string targetDirectory, DateTime startDate, DateTime endDate, string sSearchPattern)
         {
             try
             {
-                if (Directory.Exists(sSrcDir))
+                if (Directory.Exists(sourceDirectory))
                 {
-                    var logFiles = Directory.GetFiles(sSrcDir, sSearchPattern).ToList();
-                    if (logFiles != null && logFiles.Count > 0)
+                    if(!Directory.Exists(targetDirectory))
                     {
-                        List<string> lSourceFiles = logFiles.FindAll(o => Path.GetFileName(o).Substring(0, 8) == dDate.ToString("yyyyMMdd"));
-                        foreach (string sSourceFileName in lSourceFiles)
+                        Directory.CreateDirectory(targetDirectory);
+                    }
+                    string[] files = Directory.GetFiles(sourceDirectory, sSearchPattern);
+                    if (files != null && files.Length > 0)
+                    {
+                        var sourceFiles = files.ToList().FindAll(file => (new FileInfo(file).LastWriteTime.Date.CompareTo(startDate) >= 0) && (new FileInfo(file).LastWriteTime.Date.CompareTo(endDate) <= 0));
+                        foreach (string sourceFile in sourceFiles)
                         {
-                            if (File.Exists(sSourceFileName) && !string.IsNullOrEmpty(sSourceFileName))
-                            {
-                                string sDestFileName = sDestDir + "\\" + Path.GetFileName(sSourceFileName);
-                                if (File.Exists(sDestFileName))
-                                    File.Delete(sDestFileName);
-                                File.Copy(sSourceFileName, sDestFileName);
-                            }
+                            string targetFile = targetDirectory + "\\" + Path.GetFileName(sourceFile);
+                            if (CheckFileStatus(targetFile))
+                                File.Delete(targetFile);
+                            File.Copy(sourceFile, targetFile);
                         }
                     }
                 }
@@ -2195,90 +2236,26 @@ namespace Oelco.CarisX.Utility
             }
         }
 
-        /// <summary>
-        /// Content:压缩文件;Add by:Fang;Date:2019-01-03
-        /// </summary>
-        /// <param name="sSourceDir"></param>
-        /// <param name="sZipName"></param>
-        /// <param name="IsDelete"></param>
-        static public void ZipFiles(string sSourceDir, string sZipName, bool IsDelete = true)
-        {
-            try
-            {
-                var lstFiles = Directory.GetFiles(sSourceDir).Where(o => !o.ToLower().EndsWith(".rar")).ToList();
-                lstFiles = lstFiles.Where(o => !o.ToLower().EndsWith(".zip")).ToList();
-                using (ZipOutputStream zipOutputStream = new ZipOutputStream(File.Open(sZipName, FileMode.Create)))
-                {
-                    foreach (string file in lstFiles)
-                    {
-                        using (FileStream fs = File.OpenRead(file))
-                        {
-                            byte[] buffer = new byte[fs.Length];
-                            fs.Read(buffer, 0, buffer.Length);
-                            ZipEntry entry = new ZipEntry(Path.GetFileName(file));
-                            entry.Size = fs.Length;
-                            zipOutputStream.PutNextEntry(entry);
-                            zipOutputStream.Write(buffer, 0, buffer.Length);
-                        }
-                        if (IsDelete)
-                            File.Delete(file);
-                    }
-                    zipOutputStream.Finish();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(string.Format("!!!Failed !!! Caris200SubFunction.ZipFiles Message = {0} StackTrace = {1}", ex.Message, ex.StackTrace));
-            }
-        }
-
-        /// <summary>
-        /// 创建上传IoT所使用的日志名;Add by:Fang;Date:2019-3-1
-        /// </summary>
-        /// <param name="deviceID"></param>
-        /// <param name="modelID"></param>
-        /// <param name="date">"yyMMdd"</param>
-        /// <param name="logName"></param>
-        /// <returns></returns>
-        static public string CreateLogName(string deviceID, string modelID, string date, string logName)
-        {
-            string sResult = string.Empty;
-            string sModelID;
-            if (string.Equals(modelID, "2"))
-            {
-                sModelID = "W";
-            }
-            else
-            {
-                sModelID = "C";
-            }
-
-            sResult = string.Format("{0}-{1}-{2}_{3}", sModelID, deviceID, date, logName);
-            return sResult;
-
-        }
-
         ///////////////////////////////////////
         // IoT関連コマンド送信処理
         ///////////////////////////////////////
         /// <summary>
-        /// Content:Send MeasureResult to the IoT Hub;Add by:Fang;Date:2019-01-03
+        /// Send MeasureResult to the IoT Hub 【IssuesNo:16】优化调整
         /// </summary>
         /// <param name="command"></param>
         /// <param name="calcData"></param>
         static public void SendIoTMeasureResult(SlaveCommCommand_0503 command, Calculator.CalcData calcData)
         {
             if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Enable &&
-                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadMeasurementData)
+                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadMeasurementData &&
+                Singleton<CarisXCommIoTManager>.Instance.IoTStatus == IoTStatusKind.OnLine)//增加连接状态判断
             {
                 IoTCommCommand_0010 sendData = new IoTCommCommand_0010();
-                string message = string.Empty;
                 try
                 {
                     var dat = Singleton<InProcessSampleInfoManager>.Instance.SearchInProcessSampleFromIndividuallyNumber(calcData.IndividuallyNo).First();
-                    sendData.Model_id = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId;
-                    sendData.Machine_serial_number = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber;
+                    sendData.Model_id = 2; //固定Model_id，以前是Caris200:1 Wan200+:2
+                    sendData.Machine_serial_number = ModuleIdToIoTNo(command.ModuleID);//多台联机状态应对
                     sendData.Command_id = (short)CommandKind.IoTCommand0001;
                     sendData.Sample_meas_kind = (short)command.SampleKind;
                     sendData.Receipt_number = dat.ReceiptNumber;
@@ -2305,10 +2282,11 @@ namespace Oelco.CarisX.Utility
                     MeasureProtocol protocol = Singleton<MeasureProtocolManager>.Instance.GetMeasureProtocolFromProtocolIndex(calcData.ProtocolIndex);
                     sendData.Reagent_item = protocol != null ? protocol.ProtocolName : string.Empty;
                     sendData.Count_value = (int)(calcData.CalcInfoReplication.CountValue.HasValue ? calcData.CalcInfoReplication.CountValue : 0);
+                    //浓度值，后期结合IOT可能需要调整
                     sendData.Concentration = (double)(calcData.CalcInfoReplication.Concentration.HasValue ? calcData.CalcInfoReplication.Concentration : 0.0);
                     sendData.Judgment = string.IsNullOrEmpty(calcData.Judgement) ? string.Empty : calcData.Judgement;
                     sendData.Remark = calcData.CalcInfoReplication.Remark.Value;
-                    sendData.Auto_dilution_ratio = (short)CarisXSubFunction.GetHostAutoDil(command.AfterDilution);
+                    sendData.Auto_dilution_ratio = (short)GetHostAutoDil(command.AfterDilution);
                     sendData.Reagent_lot_no = string.IsNullOrEmpty(calcData.ReagentLotNo) ? string.Empty : calcData.ReagentLotNo;
                     sendData.Pretrigger_lot_no = string.IsNullOrEmpty(command.PreTriggerLotNo) ? string.Empty : command.PreTriggerLotNo;
                     sendData.Trigger_lot_no = string.IsNullOrEmpty(command.TriggerLotNo) ? string.Empty : command.TriggerLotNo;
@@ -2332,174 +2310,302 @@ namespace Oelco.CarisX.Utility
                     sendData.Temperature_5 = command.AnalysisLog.BF2PreHeatTemp;
                     sendData.Temperature_6 = command.AnalysisLog.ChemiluminesoensePtotometryTemp;
                     sendData.Temperature_7 = command.AnalysisLog.RoomTemp;
-                    message = CarisXSubFunction.CreateJSon(sendData);
+                    string message = CreateJSon(sendData);
                     Singleton<CarisXCommIoTManager>.Instance.SendMessage(message);
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = true Text = {1}", sendData.GetType().Name, message));
                 }
                 catch (Exception ex)
                 {
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = false Text= {1} Message = {2} StackTrace = {3}", sendData.GetType().Name, message, ex.Message, ex.StackTrace));
+                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
                 }
             }
         }
 
         /// <summary>
-        /// Content:Send ErrorCommand to the IoT Hub;Add by:Fang;Date:2019-01-03
+        /// Send ErrorCommand to the IoT Hub【IssuesNo:16】优化调整
         /// </summary>
         /// <param name="command"></param>
         /// <param name="calcData"></param>
-        static public void SendIoTErrorCommand(object val)
+        static public void SendIoTErrorCommand(CarisXLogInfoErrorLogExtention infoErrLog, Int32 moduleId, String extStr = "")
         {
-            CarisXLogInfo logInfo = val as CarisXLogInfo;
-
-            IoTCommConmand_0020 sendData = new IoTCommConmand_0020();
-            string message = string.Empty;
             if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Enable &&
-                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadErrorCommand)
+                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadErrorCommand &&
+                Singleton<CarisXCommIoTManager>.Instance.IoTStatus == IoTStatusKind.OnLine)
             {
                 try
                 {
-                    sendData.Model_id = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId;
-                    sendData.Machine_serial_number = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber;
+                    IoTCommConmand_0020 sendData = new IoTCommConmand_0020();
+                    sendData.Model_id = 2; 
+                    sendData.Machine_serial_number = ModuleIdToIoTNo(moduleId); 
                     sendData.Command_id = (short)CommandKind.IoTCommand0002;
-                    sendData.Acquired_datetime = logInfo.WriteDateTime;
-                    CarisXLogInfoErrorLogExtention errorInfo = logInfo.OptionalValue as CarisXLogInfoErrorLogExtention;
-                    sendData.Error_code = errorInfo.ErrorCode;
-                    sendData.Error_arg = errorInfo.ErrorArg;
-                    sendData.Error_level = (short)CarisXSubFunction.GetErrorLevel(sendData.Error_code, sendData.Error_arg);
-                    sendData.Contents = string.Join(",", logInfo.Contents.ToArray());
+                    sendData.Acquired_datetime = DateTime.Now;
+                    sendData.Error_code = infoErrLog.ErrorCode;
+                    sendData.Error_arg = infoErrLog.ErrorArg;
+                    sendData.Error_level = (short)GetErrorLevel(infoErrLog.ErrorCode, infoErrLog.ErrorArg);
+                    sendData.Contents = extStr;
                     sendData.Reagent_item = string.Empty;
-                    message = CarisXSubFunction.CreateJSon(sendData);
+                    string message = CreateJSon(sendData);
                     Singleton<CarisXCommIoTManager>.Instance.SendMessage(message);
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = true Text = {1}", sendData.GetType().Name, message));
                 }
                 catch (Exception ex)
                 {
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = false Text= {1} Message = {2} StackTrace = {3}", sendData.GetType().Name, message, ex.Message, ex.StackTrace));
+                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
                 }
-
             }
         }
 
         /// <summary>
-        /// Content:Send DueDate Data to the IoT Hub;Add by:Fang;Date:2019-01-03
+        /// Send DueDate Data to the IoT Hub【IssuesNo:16】优化调整
         /// </summary>
         static public void SendIoTDueDate()
         {
-            IoTCommConmand_0030 sendData = new IoTCommConmand_0030();
-            string message = string.Empty;
             //使用IoT&&上传交期数据&&本地交期数据为有效时间
             if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Enable &&
                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadDueDate &&
-               DateTime.Compare(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date, DateTime.MaxValue) < 0)
+               DateTime.Compare(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date, DateTime.MaxValue) < 0 &&
+                Singleton<CarisXCommIoTManager>.Instance.IoTStatus == IoTStatusKind.OnLine)
             {
                 try
                 {
-                    sendData.Model_id = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId;
-                    sendData.Machine_serial_number = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber;
+                    IoTCommConmand_0030 sendData = new IoTCommConmand_0030();
+                    sendData.Model_id = 2; 
+                    sendData.Machine_serial_number = ModuleIdToIoTNo();
                     sendData.Command_id = (short)CommandKind.IoTCommand0003;
                     sendData.Datetime = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date;
-                    message = CarisXSubFunction.CreateJSon(sendData);
+                    string message = CreateJSon(sendData);
                     Singleton<CarisXCommIoTManager>.Instance.SendMessage(message);
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = true Text = {1}", sendData.GetType().Name, message));
                 }
                 catch (Exception ex)
                 {
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = {0} Success = false Text= {1} Message = {2} StackTrace = {3}", sendData.GetType().Name, message, ex.Message, ex.StackTrace));
+                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
                 }
 
             }
         }
 
         /// <summary>
-        /// Content:Send System Files to the IoT Hub;Add by:Fang;Date:2019-01-03
-        /// <remarks>
-        /// Create "temp" Directory.
-        /// Export : errorlog、analyzelog、perationlog and parameterChangelog CSV file,Copy:Debuglog、Onlinelog、revfile and sendfile。
-        /// package files into zip file
-        /// upload zip file
-        /// </remarks>
+        /// 【IssuesNo:16】将系统日志打包为zip文件（ErrorHist、OperationLog、OnlineHist、ParamChangeHist、AnalyseHist、DebugLog、Log）
         /// </summary>
-        static public void SendIoTSystemFiles(DateTime targetDate)
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
+        static public string PackageSystemLogs(DateTime startDate, DateTime endDate)
         {
-            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Enable &&
-                Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadLogfileAftAnalys)
+            string fileName = string.Empty;
+            try
             {
-                string dateStr = targetDate.ToString("yyMMdd");
-                string filePath = string.Empty;
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, string.Format("Command Sended : Type = SendIotSystemfiles Date = {0}", targetDate.ToString()));
-                try
+                if (!Directory.Exists(CarisXConst.PathTemp))
                 {
-                    if (!Directory.Exists(CarisXConst.PathTemp))
-                    {
-                        Directory.CreateDirectory(CarisXConst.PathTemp);
-                    }
+                    Directory.CreateDirectory(CarisXConst.PathTemp);
+                }
 
-                    //ErrorLog
-                    filePath = string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_ERRORLOG, dateStr, ".csv ");
+                //导出系统日志文件
+                ExportLog(startDate, endDate, LogKind.ErrorHist);
+                ExportLog(startDate, endDate, LogKind.OperationHist);
+                ExportLog(startDate, endDate, LogKind.ParamChangeHist);
+                ExportLog(startDate, endDate, LogKind.AnalyseHist);
+                ExportLog(startDate, endDate, LogKind.DebugLog);
+                ExportLog(startDate, endDate, LogKind.OnlineHist);
+                ExportLog(startDate, endDate, LogKind.OriginLog);
+
+                // 圧縮ファイル名およびファイルパス生成
+                fileName = string.Format(@"{0}\W-{1}-{2}_{3}.zip", CarisXConst.PathTemp, Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No.ToString(),
+                    DateTime.Now.ToString(CarisXConst.EXPORT_CSV_DATETIMEFORMAT), CarisXConst.EXPORT_ZIP_LOGFILES);
+
+                // ファイル圧縮処理
+                ZipFiles(CarisXConst.PathTemp, fileName,true);
+               
+            }
+            catch (Exception ex)
+            {
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
+            }
+            return fileName;
+        }
+
+        /// <summary>
+        /// 【IssuesNo:16】导出系统日志到临时文件夹
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="logKind"></param>
+        static public void ExportLog(DateTime startDate, DateTime endDate, LogKind logKind)
+        {
+            switch (logKind)
+            {
+                case LogKind.ErrorHist:
                     Singleton<ErrorLogDB>.Instance.LoadDB();
                     Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<ErrorLogDB>.Instance.GetErrorLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
+                                Singleton<ErrorLogDB>.Instance.GetErrorLog().FindAll(data => (data.WriteTime.Date.CompareTo(startDate.Date) >= 0) && (data.WriteTime.Date.CompareTo(endDate.Date) <= 0)),
                                 Singleton<FormSystemLog>.Instance.ErrorlogGridColumns,
-                                filePath,
+                                string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_ERRORLOG, DateTime.Now.ToString(CarisXConst.EXPORT_CSV_DATETIMEFORMAT), ".csv "),
                                 null);
-                    //OperationLog               
-                    filePath = string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_OPERATIONLOG, dateStr, ".csv ");
+                    break;
+                case LogKind.OperationHist:
                     Singleton<OperationLogDB>.Instance.LoadDB();
                     Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<OperationLogDB>.Instance.GetOperationLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
+                                Singleton<OperationLogDB>.Instance.GetOperationLog().FindAll(data => (data.WriteTime.Date.CompareTo(startDate.Date) >= 0) && (data.WriteTime.Date.CompareTo(endDate.Date) <= 0)),
                                 Singleton<FormSystemLog>.Instance.OperationlogGridColumns,
-                                filePath,
+                                string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_OPERATIONLOG, DateTime.Now.ToString(CarisXConst.EXPORT_CSV_DATETIMEFORMAT), ".csv "),
                                 null);
-                    //ParameterChangeLog
-                    filePath = string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_PARAMETERCHANGELOG, dateStr, ".csv ");
+                    break;
+                case LogKind.ParamChangeHist:
                     Singleton<ParameterChangeLogDB>.Instance.LoadDB();
                     Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<ParameterChangeLogDB>.Instance.GetParameterChangeLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
+                                Singleton<ParameterChangeLogDB>.Instance.GetParameterChangeLog().FindAll(data => (data.WriteTime.Date.CompareTo(startDate.Date) >= 0) && (data.WriteTime.Date.CompareTo(endDate.Date) <= 0)),
                                 Singleton<FormSystemLog>.Instance.ParameterChangeLogGridColumns,
-                                filePath,
+                                string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_PARAMETERCHANGELOG, DateTime.Now.ToString(CarisXConst.EXPORT_CSV_DATETIMEFORMAT), ".csv "),
                                 null);
-                    //AssayLog
-                    filePath = string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_ASSAYLOG, dateStr, ".csv ");
+                    break;
+                case LogKind.AnalyseHist:
                     Singleton<AnalyzeLogDB>.Instance.LoadDB();
                     Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<AnalyzeLogDB>.Instance.GetAnalyzeLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
+                                Singleton<AnalyzeLogDB>.Instance.GetAnalyzeLog().FindAll(data => (data.WriteTime.Date.CompareTo(startDate.Date) >= 0) && (data.WriteTime.Date.CompareTo(endDate.Date) <= 0)),
                                 Singleton<FormSystemLog>.Instance.AnalyzelogGridColumns,
-                                filePath,
+                                string.Format("{0}\\{1}{2}{3}", CarisXConst.PathTemp, CarisXConst.EXPORT_CSV_ASSAYLOG, DateTime.Now.ToString(CarisXConst.EXPORT_CSV_DATETIMEFORMAT), ".csv "),
                                 null);
+                    break;
+                case LogKind.DebugLog:
+                    CopyLog(CarisXConst.PathDebug, CarisXConst.PathTemp, startDate, endDate, "*debuglog_*.log");
+                    break;
+                case LogKind.OnlineHist:
+                    CopyLog(CarisXConst.PathOnline, CarisXConst.PathTemp, startDate, endDate, "*online_*.log");
+                    break;
+                case LogKind.OriginLog://注意多台联机的处理
+                    CopyLog(CarisXConst.PathLogRackTransfer, CarisXConst.PathTempRackTransfer, startDate, endDate, "*file.txt");
+                    int numOfConnected = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.AssayModuleConnectParameter.NumOfConnected;
+                    switch (numOfConnected)
+                    {
+                        case 1:
+                            CopyLog(CarisXConst.PathLogModule1, CarisXConst.PathTempModule1, startDate, endDate, "*file.txt");
+                            break;
+                        case 2:
+                            CopyLog(CarisXConst.PathLogModule1, CarisXConst.PathTempModule1, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule2, CarisXConst.PathTempModule2, startDate, endDate, "*file.txt");
+                            break;
+                        case 3:
+                            CopyLog(CarisXConst.PathLogModule1, CarisXConst.PathTempModule1, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule2, CarisXConst.PathTempModule2, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule3, CarisXConst.PathTempModule3, startDate, endDate, "*file.txt");
+                            break;
+                        case 4:
+                            CopyLog(CarisXConst.PathLogModule1, CarisXConst.PathTempModule1, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule2, CarisXConst.PathTempModule2, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule3, CarisXConst.PathTempModule3, startDate, endDate, "*file.txt");
+                            CopyLog(CarisXConst.PathLogModule4, CarisXConst.PathTempModule4, startDate, endDate, "*file.txt");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
 
-                    // DebugLog
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathDebug, CarisXConst.PathTemp, targetDate, String.Format("{0}_{1}.log", "*" + "debuglog", "*"));
+            return;
+        }
 
-                    // OnlineLog
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathOnline, CarisXConst.PathTemp, targetDate, String.Format("{0}_{1}.log", "*" + "online", "*"));
-
-                    // TODO：CarisXではログファイルがモジュール毎に分かれているためどうするか要検討
-                    // CommLog
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathLog, CarisXConst.PathTemp, targetDate, String.Format("{0}.txt", "*" + "sendfile"));
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathLog, CarisXConst.PathTemp, targetDate, String.Format("{0}.txt", "*" + "revfile"));
-
-                    // 圧縮ファイル名およびファイルパス生成
-                    string sDeviceID = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber.ToString();
-                    string sModelID = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId.ToString();
-                    string sLogName = CarisXSubFunction.CreateLogName(sDeviceID, sModelID, dateStr, CarisXConst.EXPORT_ZIP_LOGFILES);
-                    filePath = string.Format("{0}\\{1}{2}", CarisXConst.PathTemp, sLogName, ".zip");
-
-                    // ファイル圧縮処理
-                    CarisXSubFunction.ZipFiles(CarisXConst.PathTemp, filePath);
-
-                    // IoTクラウドへ圧縮ファイル送信
-                    Singleton<CarisXCommIoTManager>.Instance.SendFiles(filePath);
-                }
-                catch (Exception ex)
+        /// <summary>
+        /// 【IssuesNo:16】Zip压缩文件夹
+        /// </summary>
+        /// <param name="srcFile"></param>
+        /// <param name="desFile"></param>
+        static public void ZipFiles(string srcFile, string desFile,bool isDeleteSrcFileFlag = false)
+        {
+            try
+            {
+                using (ZipOutputStream zipOutputStream = new ZipOutputStream(File.Open(desFile, FileMode.Create)))
                 {
-                    Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = SendIotSystemfiles Success = false Detail = {0} Message = {1} StackTrace = {2}", filePath, ex.Message, ex.StackTrace));
+                    if (Directory.Exists(srcFile))
+                    {
+                        string baseDir = srcFile.EndsWith("\\") ? srcFile.Substring(0, srcFile.Length - 1) : srcFile;
+                        DoZipFile(zipOutputStream, srcFile, baseDir, isDeleteSrcFileFlag);
+                    }
+                    else
+                    {
+                        DoZipFile(zipOutputStream, srcFile, "", isDeleteSrcFileFlag);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
         /// <summary>
-        /// Content:Send System Files to the IoT Hub(Batch);Add by:Fang;Date:2019-07-03
+        /// 【IssuesNo:16】Zip压缩文件夹(迭代)
+        /// </summary>
+        static private void DoZipFile(ZipOutputStream zipOutputStream, string file, string baseDir, bool isDeleteSrcFileFlag = false)
+        {
+            try
+            {
+                if (Directory.Exists(file))
+                {
+                    var files = Directory.GetFiles(file, "*", SearchOption.AllDirectories).Where(
+                        p => Path.GetExtension(p).Equals(".log") || Path.GetExtension(p).Equals(".csv") || Path.GetExtension(p).Equals(".txt")).ToList();
+                    for (int i = 0; i < files.Count; i++)
+                    {
+                        DoZipFile(zipOutputStream, files[i], baseDir);
+                        if(isDeleteSrcFileFlag && CheckFileStatus(files[i]))
+                        {
+                            File.Delete(files[i]);
+                        }
+                    }
+                }
+                else
+                {
+                    using (FileStream fs = File.OpenRead(file))
+                    {
+                        string fileName = string.Empty;
+                        byte[] buffer = new byte[fs.Length];
+                        fs.Read(buffer, 0, buffer.Length);
+
+                        if (!string.IsNullOrEmpty(baseDir))
+                        {
+                            DirectoryInfo directoryInfo = new DirectoryInfo(Path.GetDirectoryName(file));
+
+                            while (!directoryInfo.FullName.Equals(baseDir))
+                            {
+                                fileName = directoryInfo.Name + Path.DirectorySeparatorChar + fileName;
+                                directoryInfo = directoryInfo.Parent;
+                            }
+                        }
+
+                        fileName += Path.GetFileName(file);
+                        zipOutputStream.PutNextEntry(new ZipEntry(fileName));
+                        zipOutputStream.Write(buffer, 0, buffer.Length);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Send System Files to the IoT Hub【IssuesNo:16】优化调整
+        /// <remarks>
+        /// </remarks>
+        /// </summary>
+        static public void SendIoTSystemFiles(DateTime startDate, DateTime endDate)
+        {
+            string filePath = string.Empty;
+            try
+            {
+                //打包系统日志成zip文件
+                filePath = PackageSystemLogs(startDate, endDate);
+                // IoTクラウドへ圧縮ファイル送信
+                Singleton<CarisXCommIoTManager>.Instance.SendFiles(filePath);
+            }
+            catch (Exception ex)
+            {
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
+            }
+        }
+
+        /// <summary>
+        /// Send System Files to the IoT Hub(Batch)【IssuesNo:16】优化调整
         /// </summary>
         static public void SendIoTSystemFilesBatch()
         {
@@ -2508,14 +2614,14 @@ namespace Oelco.CarisX.Utility
                 if (!Directory.Exists(CarisXConst.PathTemp))
                     return;
 
-                foreach (string fileName in Directory.GetFiles(CarisXConst.PathTemp))
+                foreach (string fileName in Directory.GetFiles(CarisXConst.PathTemp, "*.zip"))
                 {
                     Singleton<CarisXCommIoTManager>.Instance.SendFiles(fileName);
                 }
             }
             catch (Exception ex)
             {
-                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("Command Sended : Type = SendIotSystemfilesBatch Success = false Message = {0} StackTrace = {1}", ex.Message, ex.StackTrace));
+                Singleton<LogManager>.Instance.WriteCommonLog(LogKind.DebugLog, String.Format("[[Investigation log]]CarisXSubFunction::{0} Detail = {1}", MethodBase.GetCurrentMethod().Name, ex.Message + "\n" + ex.StackTrace));
             }
         }
 
@@ -2526,7 +2632,7 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        static public String IsValidForPatientID( String text)
+        static public String IsValidForPatientID(String text)
         {
             String str = text;
 
@@ -2547,7 +2653,7 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         /// <param name="text">テキスト文字列</param>
         /// <returns></returns>
-        static public String IsValidForTransmit(String text )
+        static public String IsValidForTransmit(String text)
         {
             String str = String.Empty;
 
@@ -2563,7 +2669,7 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         /// <param name="text">テキスト文字列</param>
         /// <returns></returns>
-        static public String IsValidForSQL(String text )
+        static public String IsValidForSQL(String text)
         {
             String str = String.Empty;
 
@@ -2578,7 +2684,7 @@ namespace Oelco.CarisX.Utility
         /// テキスト文字のチェック（CSVに使用できない文字）
         /// </summary>
         /// <param name="text">テキスト文字列</param>
-        static public String IsValidForCSV(String text )
+        static public String IsValidForCSV(String text)
         {
             String str = String.Empty;
 
@@ -2624,6 +2730,163 @@ namespace Oelco.CarisX.Utility
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// 【IssuesNo:12】检查条码信息是否存在于BarCodeDB.xml注册表中
+        /// </summary>
+        /// <param name="barCode"></param>
+        /// <returns></returns>
+        static public Boolean IsExistBarCode(string barCode)
+        {
+            Boolean result = false;
+            if (File.Exists(CarisXConst.PathBarCodeDB))
+            {
+                try
+                {
+                    XmlDocument document = new XmlDocument();
+                    document.Load(CarisXConst.PathBarCodeDB);
+                    if (document != null)
+                    {
+                        XmlNode xmlNode = document.DocumentElement;
+                        XmlNodeList nodeList = xmlNode.ChildNodes;
+                        for (int i = 0; i < nodeList.Count; i++)
+                        {
+                            XmlNode node = nodeList.Item(i);
+                            if (barCode.Equals(node.InnerText))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                                                        CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+                    return result;
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 【IssuesNo:12】注册条码到BarCode.xml文件中
+        /// </summary>
+        /// <param name="barCode">条码信息</param>
+        static public void RegistBarCodeInfo(string barCode)
+        {
+            if (string.IsNullOrEmpty(barCode))
+            {
+                return;
+            }
+
+            XmlDocument xmlDocument;
+            XmlNode parentNode;
+            XmlNodeList xmlNodeList;
+            XmlElement newNode;
+
+            try
+            {
+                if (!File.Exists(CarisXConst.PathBarCodeDB))
+                {
+                    CarisXSubFunction.CreateBarCodeDB(barCode);
+                }
+                else
+                {
+                    xmlDocument = new XmlDocument();
+                    xmlDocument.Load(CarisXConst.PathBarCodeDB);
+                    if (xmlDocument == null)
+                    {
+                        CarisXSubFunction.CreateBarCodeDB(barCode);
+                        return;
+                    }
+                    else
+                    {
+                        parentNode = xmlDocument.DocumentElement;
+                        xmlNodeList = parentNode.ChildNodes;
+                        //出于XML文件的读取的效率问题，这里限定保存300条，逐步覆盖早期的条码；
+                        if (xmlNodeList.Count > 300)
+                        {
+                            parentNode.RemoveChild(xmlNodeList[0]);
+                        }
+                        newNode = xmlDocument.CreateElement("BarCode");
+                        newNode.InnerText = barCode;
+                        parentNode.AppendChild(newNode);
+                        //保存
+                        xmlDocument.Save(CarisXConst.PathBarCodeDB);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                    CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+                //注册表打开异常时，清空条码，重新创建
+                CarisXSubFunction.CreateBarCodeDB(barCode);
+            }
+
+        }
+
+        /// <summary>
+        /// 【IssuesNo:12】创建BarCodeDB.xml管理激发液、预激发液和稀释液条码信息
+        /// </summary>
+        /// <param name="barCode">条码信息</param>
+        static public void CreateBarCodeDB(string barCode)
+        {
+            XmlDocument xmlDocument;
+            XmlElement parentNode;
+            XmlElement newNode;
+            try
+            {
+                xmlDocument = new XmlDocument();
+                parentNode = xmlDocument.CreateElement("BarCodeDB");
+                xmlDocument.AppendChild(parentNode);
+                newNode = xmlDocument.CreateElement("BarCode");
+                newNode.InnerText = barCode;
+                parentNode.AppendChild(newNode);
+
+                if (File.Exists(CarisXConst.PathBarCodeDB))
+                    File.Delete(CarisXConst.PathBarCodeDB);
+
+                xmlDocument.Save(CarisXConst.PathBarCodeDB);
+            }
+            catch (Exception ex)
+            {
+                Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                        CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+            }
+        }
+
+
+        ///
+        [DllImport("kernel32.dll")]
+        public static extern IntPtr _lopen(string lpPathName, int iReadWrite);
+
+        [DllImport("kernel32.dll")]
+        public static extern bool CloseHandle(IntPtr hObject);
+        /// <summary>
+        /// 【IssuesNo:16】判断文件状态是否可以被使用
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        static public bool CheckFileStatus(string fileName)
+        {
+            if (!File.Exists(fileName))
+            {
+                return false;
+            }
+
+            IntPtr HFILE_ERROR = new IntPtr(-1);
+            IntPtr vHandle = _lopen(fileName, 2 | 0x40);
+            if (vHandle == HFILE_ERROR)
+            {
+                return false;
+            }
+
+            CloseHandle(vHandle);
+            return true;
         }
     }
 }

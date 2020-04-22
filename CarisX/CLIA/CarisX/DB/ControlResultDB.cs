@@ -2566,9 +2566,9 @@ namespace Oelco.CarisX.DB
                 }
                 catch (Exception ex)
                 {
-                    // DB内部に不正データ
+                    // DB内部に不正データ，补充异常日志的内容
                     Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
-                                                                                           CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+                                                                                           CarisXLogInfoBaseExtention.Empty, ex.Message + Environment.NewLine + ex.StackTrace);
                 }
             }
         }

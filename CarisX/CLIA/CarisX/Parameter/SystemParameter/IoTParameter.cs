@@ -11,19 +11,14 @@ namespace Oelco.CarisX.Parameter
     public class IoTParameter : AttachmentParameter
     {
         /// <summary>
-        /// 机种
-        /// </summary>
-        public static short MODEL_ID = 1;
-
-        /// <summary>
         /// 仪器编号	
         /// </summary>
         public static long MACHINE_SERIAL_NUMBER = 1;
 
         /// <summary>
-        /// IoT连接密钥
+        /// IoT连接密钥【IssuesNo:16】连接密钥变量名称调整
         /// </summary>
-        public static string IOT_CONNECTIONSTR = "Please input the connection key.";
+        public static string IOT_CONNECTIONKEY = "Please input the connection key.";
 
         /// <summary>
         /// 是否上传测试数据
@@ -50,11 +45,30 @@ namespace Oelco.CarisX.Parameter
         /// </summary>
         public static DateTime DELIVERY_DATE = DateTime.MaxValue;
 
-        private short modelId = MODEL_ID;
+		/// <summary>
+        /// 【IssuesNo:16】区分单元1所对应的云端设备ID
+        /// </summary>
+        private long slave1No = MACHINE_SERIAL_NUMBER;
 
-        private long machineSerialNumber = MACHINE_SERIAL_NUMBER;
+		/// <summary>
+        /// 【IssuesNo:16】区分单元2所对应的云端设备ID
+        /// </summary>
+        private long slave2No = MACHINE_SERIAL_NUMBER;
 
-        private string iotConnectionStr = IOT_CONNECTIONSTR;
+		/// <summary>
+        /// 【IssuesNo:16】区分单元3所对应的云端设备ID
+        /// </summary>
+        private long slave3No = MACHINE_SERIAL_NUMBER;
+
+		/// <summary>
+        /// 【IssuesNo:16】区分单元4所对应的云端设备ID
+        /// </summary>
+        private long slave4No = MACHINE_SERIAL_NUMBER;
+
+		/// <summary>
+        /// IoT连接密钥【IssuesNo:16】连接密钥变量名称调整
+        /// </summary>
+        private string iotConnectionkey = IOT_CONNECTIONKEY;
 
         private bool uploadMeasurementData = UPLOAD_MEASUREMENT_DATA;
 
@@ -66,20 +80,30 @@ namespace Oelco.CarisX.Parameter
 
         private DateTime delivery_date = DELIVERY_DATE;
 
-        /// <summary>
-        /// 机种
+		/// <summary>
+        /// 【IssuesNo:16】区分单元1所对应的云端设备ID
         /// </summary>
-        public short ModelId { get => modelId; set => modelId = value; }
+        public long Slave1No { get => slave1No; set => slave1No = value; }
 
-        /// <summary>
-        ///  仪器编号	
+		/// <summary>
+        /// 【IssuesNo:16】区分单元2所对应的云端设备ID
         /// </summary>
-        public long MachineSerialNumber { get => machineSerialNumber; set => machineSerialNumber = value; }
+        public long Slave2No { get => slave2No; set => slave2No = value; }
 
-        /// <summary>
-        /// IoT连接密钥
+		/// <summary>
+        /// 【IssuesNo:16】区分单元3所对应的云端设备ID
         /// </summary>
-        public string IoTConnectionStr { get => iotConnectionStr; set => iotConnectionStr = value; }
+        public long Slave3No { get => slave3No; set => slave3No = value; }
+
+		/// <summary>
+        /// 【IssuesNo:16】区分单元4所对应的云端设备ID
+        /// </summary>
+        public long Slave4No { get => slave4No; set => slave4No = value; }
+
+		/// <summary>
+        /// IoT连接密钥【IssuesNo:16】连接密钥变量名称调整
+        /// </summary>
+        public string IoTConnectionKey { get => iotConnectionkey; set => iotConnectionkey = value; }
 
         /// <summary>
         /// 是否上传测试数据

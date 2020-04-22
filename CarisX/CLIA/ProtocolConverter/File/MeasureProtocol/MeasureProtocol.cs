@@ -135,6 +135,15 @@ namespace ProtocolConverter.File
         /// </summary>
         public Double OffsetOfCorrelation;
         /// <summary>
+        /// 【IssuesNo:1】质控品相关系数A
+        /// </summary>
+        public Double ControlGainOfCorrelation = 1;
+
+        /// <summary>
+        /// 【IssuesNo:1】质控品相关系数B
+        /// </summary>
+        public Double ControlOffsetOfCorrelation;
+        /// <summary>
         /// キャリブレーション方法
         /// </summary>
         public CalibrationMethod CalibMethod = CalibrationMethod.FullCalibration;

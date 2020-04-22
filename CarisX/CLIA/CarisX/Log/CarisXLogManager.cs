@@ -444,17 +444,6 @@ namespace Oelco.CarisX.Log
             info.ModuleNo = moduleNo;
             info.Contents = contents;
             info.OptionalValue = optionalValue;
-
-            // 2020-02-27 CarisX IoT Add [START]
-#if !NOT_USE_IOT
-            // IoTへ障害情報の通知処理（時間同期のため、ここに追加）
-            if (logKind == LogKind.ErrorHist)
-            {
-                Singleton<NotifyManager>.Instance.PushSignalQueue((Int32)NotifyKind.SendErrorToIoT, info);
-            }
-#endif
-            // 2020-02-27 CarisX IoT Add [END]
-
             this.CarisXLogThread.Enqueue( info );
         }
 

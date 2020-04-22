@@ -1743,6 +1743,14 @@ namespace Oelco.CarisX.Utility
                                                                     new Tuple<string, int, string>(respCommand.RackID, 0, respCommand.SampleID) });
                                         Singleton<SpecimenStatDB>.Instance.CommitSampleInfo();
                                     }
+                                    else if(registType == RegistType.Fixed)
+                                    {
+                                        //【IssuesNo:14】修复STAT固定注册信息中的ReceiptNo在使用过后没有自动更新的问题
+                                        Singleton<SpecimenStatDB>.Instance.UpdateReceiptNo(new List<Tuple<string, int, string>>() {
+                                                                    new Tuple<string, int, string>(respCommand.RackID, 0, respCommand.SampleID) });
+                                        Singleton<SpecimenStatDB>.Instance.CommitSampleInfo();
+
+                                    }
 
                                     RealtimeDataAgent.LoadStatData();
 
@@ -2165,6 +2173,15 @@ namespace Oelco.CarisX.Utility
                 return;
             }
 
+            //【IssuesNo:3】如果样本ID不一致不处理
+            if(askData.AskSampleIDIsDifferent)
+            {
+                dbgMsg = dbgMsg + "AskSampleIDIsDifferernt";
+                Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<CarisXUserLevelManager>.Instance.NowUserID, CarisXLogInfoBaseExtention.Empty, dbgMsg);
+                flgAskHost = true;
+                return;
+            }
+
             // 測定項目がない場合は処理しない
             if (askData.FromHostCommand.NumOfMeasItem == 0)
             {
@@ -2275,7 +2292,8 @@ namespace Oelco.CarisX.Utility
                         dataset.RackID = indicate.RackID;//是从样本架拿到的 架子号
                                                          // dataset.RackPosition = indicate.RackPos + 1;
                         dataset.RackPosition = 2;//第二个位置为起始位置。
-                        if (command.ReceiptNumber == 0 || command.ReceiptNumber < Singleton<ReceiptNo>.Instance.Number)
+                        //【IssuesNo:13】
+                        if (command.ReceiptNumber == 0 || (Singleton<ReceiptNo>.Instance.StartCount <= command.ReceiptNumber && command.ReceiptNumber <= Singleton<ReceiptNo>.Instance.Number))
                         {
                             dataset.ReceiptNumber = Singleton<ReceiptNo>.Instance.CreateNumber();
 
@@ -2882,7 +2900,6 @@ namespace Oelco.CarisX.Utility
                         RealtimeDataAgent.LoadReagentRemainData();
                         break;
                     case SampleKind.Control:
-#if !NOT_USE_IOT
                         // QCデータを追加する最初の時間を設定
                         if (DateTime.Compare(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date, DateTime.MaxValue) == 0)
                         {
@@ -2890,7 +2907,6 @@ namespace Oelco.CarisX.Utility
                             Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Save();
                             CarisXSubFunction.SendIoTDueDate();
                         }
-#endif
                         var controlAssayData = Singleton<ControlAssayDB>.Instance.GetData(cmd0503.RackID).Find((assay) =>
                             assay.GetIndividuallyNo() == cmd0503.IndividuallyNumber && assay.GetUniqueNo() == cmd0503.UniqueNo);
                         Singleton<ControlResultDB>.Instance.AddResultData(data, cmd0503, controlAssayData.ControlName, controlAssayData.Comment);
@@ -2914,10 +2930,9 @@ namespace Oelco.CarisX.Utility
                 // ホストへ送信
                 this.sendHostResult(cmd0503, data);
 
-#if !NOT_USE_IOT
+
                 // 測定データをクラウドIoTへ送信
                 CarisXSubFunction.SendIoTMeasureResult(cmd0503, data);
-#endif
 
                 if (sampleInfo.ProtocolStatusDictionary[protocol.ProtocolIndex].All((v) => v.Value == SampleInfo.SampleMeasureStatus.End || v.Value == SampleInfo.SampleMeasureStatus.Error))
                 {

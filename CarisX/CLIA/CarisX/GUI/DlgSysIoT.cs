@@ -1,63 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Oelco.Common.GUI;
 using Oelco.Common.Utility;
 using Oelco.Common.Parameter;
 using Oelco.CarisX.Parameter;
-using Oelco.CarisX.DB;
 using Oelco.CarisX.Log;
 using Oelco.Common.Log;
 using Oelco.CarisX.Const;
-using Oelco.Common.Comm;
-using System.IO.Ports;
 using Oelco.CarisX.Comm;
 using Oelco.CarisX.Utility;
 using System.IO;
-using System.Threading.Tasks;
-using System.Threading;
+
 
 namespace Oelco.CarisX.GUI
 {
     /// <summary>
     /// Content:IoT設定ダイアログクラス;Add by:Fang;Date:2019-01-03
+    /// 【IssuesNo:16】针对联机版本的界面处理
     /// </summary>
     public partial class DlgSysIoT : DlgCarisXBaseSys
     {
 
         IoTHub ioTHub;
 
-        #region [仪器型号]
-
-        /// <summary>
-        /// 仪器種類
-        /// </summary>
-        private Dictionary<Int16, String> ModelTypeList = new Dictionary<Int16, String>()
-        {
-                {1,Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_CMB_000},
-                {2,Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_CMB_001},
-
-        };
-
-        private List<FormBase> childFormList
-        {
-            get
-            {
-                List<FormBase> childs = new List<FormBase>()
-                {
-                    Singleton<FormSystemLog>.Instance
-                };
-
-                return childs;
-            }
-        }
-
-        #endregion
+		//以前设计是Caris200 => 1;Wan200+ =>2，现在固定设备类型为Wan200+,因此这里是2,窗体上也取消机型选择的Control
+        const Int32 MODEL_ID = 2;
 
         #region [コンストラクタ/デストラクタ]
 
@@ -68,36 +37,44 @@ namespace Oelco.CarisX.GUI
         {
             InitializeComponent();
 
-            // 測定日時(開始日、終了日)の初期化
-            this.btnCreateTimeFrom.Text = DateTime.Today.ToShortDateString();
-            this.btnCreateTimeFrom.Tag = DateTime.Today;
-            this.btnCreateTimeTo.Text = DateTime.Today.ToShortDateString();
-            this.btnCreateTimeTo.Tag = DateTime.Today.Add(TimeSpan.FromDays(1) - TimeSpan.FromSeconds(1)); // 23:59:59
+            //IOT连接状态设定
+            switch (Singleton<CarisXCommIoTManager>.Instance.IoTStatus)
+            {
+                case IoTStatusKind.OnLine:
+                    this.btnConnection.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_024;
+                    this.lbConnecttionStatus.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_012;
+                    this.lbConnecttionStatus.Appearance.ForeColor = Color.Green;
+                    break;
+                default:
+                    this.btnConnection.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_023;
+                    this.lbConnecttionStatus.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_011;
+                    this.lbConnecttionStatus.Appearance.ForeColor = Color.Red;
+                    break;
+            }
 
+            //联机数量设定
+            SetVisibleModuleTab(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.AssayModuleConnectParameter.NumOfConnected);
+
+            //权限状态设定
             if (Singleton<CarisXUserLevelManager>.Instance.NowUserLevel == UserLevel.Level4 ||
                 Singleton<CarisXUserLevelManager>.Instance.NowUserLevel == UserLevel.Level5)
             {
-                this.teIoTConnStr.Enabled = true;
-                this.teMachineSerialNumber.Enabled = true;
-                this.cmbModelID.Enabled = true;
-                this.btnSendMeasureData.Visible = true;
-                this.btnSendError.Visible = true;
-                this.btnSendDueData.Visible = true;
-                this.btnSendFiles.Visible = true;
-                this.gbxCreateLogfilesByDate.Visible = true;
+                this.tabIOTSetting.Tabs[1].Enabled = true;
+                this.tabIOTSetting.Tabs[2].Enabled = true;
+                this.gbxRealTimeUploadMeasurementData.Visible = true;
+                this.gbxRealTimeUploadDueDate.Visible = true;
+
             }
             else
             {
-                this.teIoTConnStr.Enabled = false;
-                this.teMachineSerialNumber.Enabled = false;
-                this.cmbModelID.Enabled = false;
-                this.btnSendMeasureData.Visible = false;
-                this.btnSendError.Visible = false;
-                this.btnSendDueData.Visible = false;
-                this.btnSendFiles.Visible = false;
-                this.gbxCreateLogfilesByDate.Visible = false;
+                this.tabIOTSetting.Tabs[1].Enabled = false;
+                this.tabIOTSetting.Tabs[2].Enabled = false;
+                this.gbxRealTimeUploadMeasurementData.Visible = false;
+                this.gbxRealTimeUploadDueDate.Visible = false;
+
             }
 
+            //系统状态设定
             switch (Singleton<Oelco.CarisX.Status.SystemStatus>.Instance.Status)
             {
                 // 分析中・サンプリング停止中・試薬交換開始状態はOK不可
@@ -113,13 +90,8 @@ namespace Oelco.CarisX.GUI
                     break;
             }
 
-            this.btnReconnect.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_027;
+            Singleton<NotifyManager>.Instance.AddNotifyTarget((Int32)NotifyKind.IoTStatus, this.UpdateIoTStatus);
 
-            //加载日志
-            Singleton<ErrorLogDB>.Instance.LoadDB();
-            Singleton<OperationLogDB>.Instance.LoadDB();
-            Singleton<ParameterChangeLogDB>.Instance.LoadDB();
-            Singleton<AnalyzeLogDB>.Instance.LoadDB();
         }
 
         #endregion
@@ -184,15 +156,6 @@ namespace Oelco.CarisX.GUI
                 this.optUseIoT.CheckedIndex = 1;
             }
 
-            // IoT 连接字符串
-            this.teIoTConnStr.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionStr;
-
-            // 仪器设备号码
-            this.teMachineSerialNumber.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber;
-
-            // 机型 如Caris:1;wan+:2
-            this.cmbModelID.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId;
-
             // 测试数据实时上传管理
             if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.UploadMeasurementData)
             {
@@ -233,10 +196,45 @@ namespace Oelco.CarisX.GUI
                 this.optUploadLogfileAfterAnalysising.CheckedIndex = 1;
             }
 
-            this.btnReconnect.Enabled = false;
-            this.btnReconnect.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_026;
-            Connect();
 
+            // IoT 连接字符串
+            this.teConnKey.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionKey;
+            this.teTestConnKey.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionKey;
+
+            // 分析单元1设备号
+            this.teSlave1No.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No;
+            this.teTestNo.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No;
+
+            // 分析单元2设备号
+            this.teSlave2No.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave2No;
+
+            // 分析单元3设备号
+            this.teSlave3No.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave3No;
+
+            // 分析单元4设备号
+            this.teSlave4No.Value = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave4No;
+
+            // 測定日時(開始日、終了日)の初期化
+            this.btnCreateTimeFrom.Text = DateTime.Today.ToShortDateString();
+            this.btnCreateTimeFrom.Tag = DateTime.Today;
+            this.btnCreateTimeTo.Text = DateTime.Today.ToShortDateString();
+            this.btnCreateTimeTo.Tag = DateTime.Today.Add(TimeSpan.FromDays(1) - TimeSpan.FromSeconds(1)); // 23:59:59
+
+            SetButtonEnable(false);
+            this.btnTestConn.Enabled = true;
+        }
+
+        /// <summary>
+        /// 根据分析单元的连接数量设定【详细】页面中的显示内容
+        /// </summary>
+        /// <param name="ConnectCount"></param>
+        private void SetVisibleModuleTab(int ConnectCount)
+        {
+            //ConnectCount以下のModuleタブだけ表示する
+            this.lbSlave1.Visible = ((Int32)ModuleTabIndex.Slave1 <= ConnectCount);
+            this.lbSlave2.Visible = ((Int32)ModuleTabIndex.Slave2 <= ConnectCount);
+            this.lbSlave3.Visible = ((Int32)ModuleTabIndex.Slave3 <= ConnectCount);
+            this.lbSlave4.Visible = ((Int32)ModuleTabIndex.Slave4 <= ConnectCount);
         }
 
         /// <summary>
@@ -252,15 +250,16 @@ namespace Oelco.CarisX.GUI
 
             // グループボックス
             this.gbxUseIoT.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_001;
-            this.gbxMachineSerialNumber.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_002;
-            this.gbxIotHubConnectionString.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_003;
-            this.gbxModelID.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_004;
+            this.gbxConnecttionStatus.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_011;
             this.gbxRealTimeUploadMeasurementData.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_005;
             this.gbxRealTimeUploadErrorCommand.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_006;
             this.gbxRealTimeUploadDueDate.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_007;
-            this.gbxCreateLogfilesByDate.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_010;
+            this.gbxIOTConnSetting.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_003;
+            this.gbxConnectionTest.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_003;
+            this.gbxSendTest.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_012;
+            this.gbxSendTest.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_010;
             this.gbxUploadLogfileAfterAnalysising.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_008;
-            this.gbxReconnected.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_009;
+            this.gbxConnectionLog.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_GBX_009;
 
             // オプションボタン
             this.optUseIoT.Items[0].DisplayText = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_OPT_001;
@@ -274,21 +273,34 @@ namespace Oelco.CarisX.GUI
             this.optUploadLogfileAfterAnalysising.Items[0].DisplayText = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_OPT_001;
             this.optUploadLogfileAfterAnalysising.Items[1].DisplayText = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_OPT_002;
 
-            // ModelID Combox 初始化
-            this.cmbModelID.Items.Clear();
-            this.cmbModelID.DataSource = this.ModelTypeList.ToList();
-            this.cmbModelID.ValueMember = "Key";
-            this.cmbModelID.DisplayMember = "Value";
-            this.cmbModelID.SelectedIndex = 0;
-
             // ボタン
             this.btnOK.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_001;
             this.btnCancel.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_003;
             this.btnSendMeasureData.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
-            this.btnSendError.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
+            this.btnSendErrorData.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
             this.btnSendDueData.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
-            this.btnSendFiles.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
-            this.btnClear.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_026;
+            this.btnSendLogFiles.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_022;
+            this.btnClear.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_025;
+            this.btnTestConn.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_023;
+
+            // label
+            this.lbConnectionKey.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_001;
+            this.lbSlave1.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_003;
+            this.lbSlave2.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_004;
+            this.lbSlave3.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_005;
+            this.lbSlave4.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_006;
+            this.lbTestConnKey.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_001;
+            this.lbTestNo.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_002;
+            this.lbMeasureData.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_007;
+            this.lbErrorData.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_008;
+            this.lbDueDateData.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_009;
+            this.lbSystemFiles.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_010;
+
+            //Tab
+            this.tabIOTSetting.Tabs[0].Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_TAB_001;
+            this.tabIOTSetting.Tabs[1].Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_TAB_002;
+            this.tabIOTSetting.Tabs[2].Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_TAB_003;
+
         }
 
         #endregion
@@ -323,7 +335,7 @@ namespace Oelco.CarisX.GUI
             {
                 if (!usableIoT)
                 {
-                    Disconnect();
+                    Singleton<CarisXCommIoTManager>.Instance.DisConnectIoT();
                 }
                 // 値が変更された場合、通知を行う
                 Singleton<NotifyManager>.Instance.RaiseSignalQueue((Int32)NotifyKind.UseOfIoT, usableIoT);
@@ -333,33 +345,53 @@ namespace Oelco.CarisX.GUI
             }
 
             // 是否改变连接字符串
-            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionStr = this.teIoTConnStr.Text;
-            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionStr
-                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.IoTConnectionStr)
+            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionKey = this.teConnKey.Text;
+            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionKey
+                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.IoTConnectionKey)
             {
                 // パラメータ変更履歴登録
-                this.AddPramLogData(gbxIotHubConnectionString.Text
-                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionStr + CarisX.Properties.Resources.STRING_LOG_MSG_001);
+                this.AddPramLogData(gbxIOTConnSetting.Text
+                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.IoTConnectionKey + CarisX.Properties.Resources.STRING_LOG_MSG_001);
             }
 
-            // 仪器编号
-            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber = (Int32)this.teMachineSerialNumber.Value;
-            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber
-                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.MachineSerialNumber)
+            // 分析单元1编号
+            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No = (Int32)this.teSlave1No.Value;
+            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No
+                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.Slave1No)
             {
-                // パラメータ変更履歴登録
-                this.AddPramLogData(gbxMachineSerialNumber.Text
-                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.MachineSerialNumber + CarisX.Properties.Resources.STRING_LOG_MSG_001);
+                //パラメータ変更履歴登録
+                this.AddPramLogData(gbxIOTConnSetting.Text
+                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave1No + CarisX.Properties.Resources.STRING_LOG_MSG_001);
             }
 
-            // 机型
-            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId = short.Parse(this.cmbModelID.Value.ToString());
-            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId
-                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.ModelId)
+            // 分析单元2编号
+            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave2No = (Int32)this.teSlave2No.Value;
+            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave2No
+                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.Slave2No)
             {
-                // パラメータ変更履歴登録
-                this.AddPramLogData(gbxModelID.Text
-                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.ModelId + CarisX.Properties.Resources.STRING_LOG_MSG_001);
+                //パラメータ変更履歴登録
+                this.AddPramLogData(gbxIOTConnSetting.Text
+                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave2No + CarisX.Properties.Resources.STRING_LOG_MSG_001);
+            }
+
+            // 分析单元3编号
+            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave3No = (Int32)this.teSlave3No.Value;
+            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave3No
+                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.Slave3No)
+            {
+                //パラメータ変更履歴登録
+                this.AddPramLogData(gbxIOTConnSetting.Text
+                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave3No + CarisX.Properties.Resources.STRING_LOG_MSG_001);
+            }
+
+            // 分析单元4编号
+            Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave4No = (Int32)this.teSlave4No.Value;
+            if (Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave4No
+                      != Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.OriginalParam.IoTParameter.Slave4No)
+            {
+                //パラメータ変更履歴登録
+                this.AddPramLogData(gbxIOTConnSetting.Text
+                 , Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Slave4No + CarisX.Properties.Resources.STRING_LOG_MSG_001);
             }
 
             // 是否上传测试数据
@@ -478,16 +510,46 @@ namespace Oelco.CarisX.GUI
         }
         #endregion
 
-        private void btnReconnect_Click(object sender, EventArgs e)
+        private void btnConnection_Click(object sender, EventArgs e)
         {
-            if (btnReconnect.Text == Oelco.CarisX.Properties.Resources.STRING_COMMON_027)
+            if (this.btnConnection.Text == Oelco.CarisX.Properties.Resources.STRING_COMMON_023)
             {
-                Connect();
+                Singleton<CarisXCommIoTManager>.Instance.ConnectIoT(this.teConnKey.Text, this.teSlave1No.Value.ToString());
             }
             else
             {
-                Disconnect();
+                Singleton<CarisXCommIoTManager>.Instance.DisConnectIoT();
             }
+
+            this.UseWaitCursor = false;
+        }
+
+        #region 调试Tab按钮功能
+        private async void btnTestConn_Click(object sender, EventArgs e)
+        {
+            ResponseResult result = new ResponseResult("", ResponseStatus.Failure);
+            if (btnTestConn.Text == Oelco.CarisX.Properties.Resources.STRING_COMMON_023)
+            {
+                string sIotConnKey = this.teTestConnKey.Text;
+                string sConnNo = this.teTestNo.Value.ToString();
+                ioTHub = new IoTHub(sIotConnKey, sConnNo);
+                result = await ioTHub.ConnectIotHub();
+                this.btnTestConn.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_024;
+                SetButtonEnable(true);
+            }
+            else
+            {
+                if (ioTHub != null)
+                {
+                    result = await ioTHub.DisconnectIotHub();
+                }
+                btnTestConn.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_023;
+                SetButtonEnable(false);
+            }
+
+            teLog.Text = result.Message + Environment.NewLine;
+            btnTestConn.Enabled = true;
+            this.UseWaitCursor = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -495,245 +557,99 @@ namespace Oelco.CarisX.GUI
             this.teLog.Text = string.Empty;
         }
 
-        private void btnSendMeasureData_Click(object sender, EventArgs e)
+        private async void btnSendMeasureData_Click(object sender, EventArgs e)
         {
-            SendMeasureData();
+            ResponseResult result = new ResponseResult("", ResponseStatus.Failure);
+            IoTCommCommand_0010 measureData = new IoTCommCommand_0010();
+            measureData.Model_id = MODEL_ID;
+            measureData.Machine_serial_number = (Int32)this.teTestNo.Value;
+            measureData.Command_id = 10;
+            measureData.Sample_meas_kind = 0;
+            measureData.Receipt_number = 0;
+            measureData.Sequence_no = 0;
+            measureData.Rack_id = string.Empty;
+            measureData.Rack_position = 0;
+            measureData.Specimen_material_type = 0;
+            measureData.Sample_lot = string.Empty;
+            measureData.Control_name = string.Empty;
+            measureData.Manual_dilution = 0;
+            measureData.Reagent_item = "Test";
+            measureData.Count_value = 0;
+            measureData.Concentration = 0;
+            measureData.Judgment = string.Empty;
+            measureData.Remark = 0;
+            measureData.Auto_dilution_ratio = 0;
+            measureData.Reagent_lot_no = string.Empty;
+            measureData.Pretrigger_lot_no = string.Empty;
+            measureData.Trigger_lot_no = string.Empty;
+            measureData.Calibcurve_datetime = DateTime.Now;
+            measureData.Measuring_datetime = DateTime.Now;
+            measureData.S1 = 0;
+            measureData.S2 = 0;
+            measureData.S3 = 0;
+            measureData.Dispense_volume = 0;
+            measureData.Sample_aspiration = 0;
+            measureData.M_Reagent_port_no = 0;
+            measureData.M_Sample_position = 0;
+            measureData.R1_reagent_port_no = 0;
+            measureData.R1_sample_position = 0;
+            measureData.R2_reagent_port_no = 0;
+            measureData.R2_sample_position = 0;
+            measureData.Temperature_1 = 0;
+            measureData.Temperature_2 = 0;
+            measureData.Temperature_3 = 0;
+            measureData.Temperature_4 = 0;
+            measureData.Temperature_5 = 0;
+            measureData.Temperature_6 = 0;
+            measureData.Temperature_7 = 0;
+            string message = CarisXSubFunction.CreateJSon(measureData);
+            result = await ioTHub.SendMessagetoDevice(message);
+            teLog.Text += result.Message + Environment.NewLine;
         }
 
-        private void btnSendDueData_Click(object sender, EventArgs e)
+        private async void btnSendDueData_Click(object sender, EventArgs e)
         {
-            SendDueData();
+            ResponseResult result = new ResponseResult("", ResponseStatus.Failure);
+            IoTCommConmand_0030 sendData = new IoTCommConmand_0030();
+            sendData.Model_id = MODEL_ID;
+            sendData.Machine_serial_number = (Int32)this.teTestNo.Value;
+            sendData.Command_id = 30;
+            if (DateTime.Compare(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date, DateTime.MaxValue) == 0)
+            {
+                sendData.Datetime = DateTime.Now;
+            }
+            else
+            {
+                sendData.Datetime = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date;
+            }
+            string message = CarisXSubFunction.CreateJSon(sendData);
+            result = await ioTHub.SendMessagetoDevice(message);
+            teLog.Text += result.Message + Environment.NewLine;
         }
 
-        private void btnSendError_Click(object sender, EventArgs e)
+        private async void btnSendError_Click(object sender, EventArgs e)
         {
-            SendErrorData();
-        }
-
-        private void btnSendFiles_Click(object sender, EventArgs e)
-        {
-            SendFiles();
-        }
-
-        private void UnenableSendBtn()
-        {
-            btnReconnect.Enabled = false;
-            btnSendMeasureData.Enabled = false;
-            btnSendError.Enabled = false;
-            btnSendDueData.Enabled = false;
-            btnSendFiles.Enabled = false;
-            btnCreate.Enabled = false;
-        }
-
-        private void EnableSendBtn()
-        {
-            btnReconnect.Enabled = true;
-            btnSendMeasureData.Enabled = true;
-            btnSendError.Enabled = true;
-            btnSendDueData.Enabled = true;
-            btnSendFiles.Enabled = true;
-            btnCreate.Enabled = true;
-        }
-
-        /// <summary>
-        /// 连接
-        /// </summary>
-        private async void Connect()
-        {
-            try
-            {
-                string sIotConnStr = this.teIoTConnStr.Text;
-                string sMachineSerialNumber = this.teMachineSerialNumber.Value.ToString();
-                ioTHub = new IoTHub(sIotConnStr, sMachineSerialNumber);
-                await ioTHub.ConnectIotHub();
-                Singleton<CarisXCommIoTManager>.Instance.ConnectIoT(sIotConnStr, sMachineSerialNumber);
-                btnReconnect.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_024;
-                EnableSendBtn();
-                teLog.Text = ("IoT connect successfully!" + "\r\n\r\n");
-            }
-            catch (Exception ex)
-            {
-                teLog.Text = "Failed to Connect : " + ex.Message + "\r\n\r\n";
-                btnReconnect.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_027;
-            }
-            btnReconnect.Enabled = true;
-            this.UseWaitCursor = false;
-
-        }
-
-        /// <summary>
-        /// 断开连接
-        /// </summary>
-        private async void Disconnect()
-        {
-            try
-            {
-                if (ioTHub != null)
-                {
-                    await ioTHub.DisconnectIotHub();
-                }
-                Singleton<CarisXCommIoTManager>.Instance.DisConnectIoT();
-                btnReconnect.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_027;
-                teLog.Text = ("IoT disconnect successfully!" + "\r\n\r\n");
-                UnenableSendBtn();
-            }
-            catch (Exception ex)
-            {
-                teLog.Text = "Failed to disconnect : " + ex.Message + "\r\n\r\n";
-            }
-            btnReconnect.Enabled = true;
-            this.UseWaitCursor = false;
-
-        }
-
-        /// <summary>
-        /// 模拟发送系统文件结果;Add by:Fang;Date:2019-2-28
-        /// </summary>
-        public async void SendFiles()
-        {
-            try
-            {
-                teLog.Text += await PackageLogfilesByDate(DateTime.Now);
-                UnenableSendBtn();
-                btnReconnect.Enabled = false;
-                foreach (string fileName in Directory.GetFiles(CarisXConst.PathTemp))
-                {
-                    teLog.Text += string.Format("Send {0} ..." + "\r\n\r\n", Path.GetFileName(fileName));
-                    await ioTHub.SendToBlobAsync(fileName);
-                }
-                teLog.Text += "Finish to send logfiles!" + "\r\n\r\n";
-
-            }
-            catch (Exception ex)
-            {
-                teLog.Text += String.Format("Failed to send logfiles : {0}" + "\r\n\r\n", ex.Message);
-            }
-            EnableSendBtn();
-            btnReconnect.Enabled = true;
-        }
-
-        /// <summary>
-        /// 模拟发送测试结果;Add by:Fang;Date:2019-2-28
-        /// </summary>
-        public async void SendMeasureData()
-        {
-            try
-            {
-                IoTCommCommand_0010 measureData = new IoTCommCommand_0010();
-                measureData.Model_id = short.Parse(this.cmbModelID.Value.ToString());
-                measureData.Machine_serial_number = (Int32)this.teMachineSerialNumber.Value;
-                measureData.Command_id = 10;
-                measureData.Sample_meas_kind = 0;
-                measureData.Receipt_number = 0;
-                measureData.Sequence_no = 0;
-                measureData.Rack_id = string.Empty;
-                measureData.Rack_position = 0;
-                measureData.Specimen_material_type = 0;
-                measureData.Sample_lot = string.Empty;
-                measureData.Control_name = string.Empty;
-                measureData.Manual_dilution = 0;
-                measureData.Reagent_item = "Test";
-                measureData.Count_value = 0;
-                measureData.Concentration = 0;
-                measureData.Judgment = string.Empty;
-                measureData.Remark = 0;
-                measureData.Auto_dilution_ratio = 0;
-                measureData.Reagent_lot_no = string.Empty;
-                measureData.Pretrigger_lot_no = string.Empty;
-                measureData.Trigger_lot_no = string.Empty;
-                measureData.Calibcurve_datetime = DateTime.Now;
-                measureData.Measuring_datetime = DateTime.Now;
-                measureData.S1 = 0;
-                measureData.S2 = 0;
-                measureData.S3 = 0;
-                measureData.Dispense_volume = 0;
-                measureData.Sample_aspiration = 0;
-                measureData.M_Reagent_port_no = 0;
-                measureData.M_Sample_position = 0;
-                measureData.R1_reagent_port_no = 0;
-                measureData.R1_sample_position = 0;
-                measureData.R2_reagent_port_no = 0;
-                measureData.R2_sample_position = 0;
-                measureData.Temperature_1 = 0;
-                measureData.Temperature_2 = 0;
-                measureData.Temperature_3 = 0;
-                measureData.Temperature_4 = 0;
-                measureData.Temperature_5 = 0;
-                measureData.Temperature_6 = 0;
-                measureData.Temperature_7 = 0;
-                string message = CarisXSubFunction.CreateJSon(measureData);
-                await ioTHub.SendMessagetoDevice(message);
-                teLog.Text += String.Format("Success to send message : {0}" + "\r\n\r\n", message);
-
-            }
-            catch (Exception ex)
-            {
-                teLog.Text += String.Format("Failed to send message : {0}" + "\r\n\r\n", ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// 模拟发送故障信息;Add by:Fang;Date:2019-2-28
-        /// </summary>
-        public async void SendErrorData()
-        {
-            try
-            {
-                IoTCommConmand_0020 sendData = new IoTCommConmand_0020();
-                sendData.Model_id = short.Parse(this.cmbModelID.Value.ToString());
-                sendData.Machine_serial_number = (Int32)this.teMachineSerialNumber.Value;
-                sendData.Command_id = 20;
-                sendData.Acquired_datetime = DateTime.Now;
-                sendData.Error_code = 0;
-                sendData.Error_arg = 0;
-                sendData.Error_level = 1;
-                sendData.Reagent_item = string.Empty;
-                sendData.Contents = "Test"; ;
-                string message = CarisXSubFunction.CreateJSon(sendData);
-                await ioTHub.SendMessagetoDevice(message);
-                teLog.Text += String.Format("Success to send message : {0}" + "\r\n\r\n", message);
-
-            }
-            catch (Exception ex)
-            {
-                teLog.Text += String.Format("Failed to send message : {0}" + "\r\n\r\n", ex.Message);
-            }
-        }
-
-        /// <summary>
-        /// 模拟发送仪器初始日期;Add by:Fang;Date:2019-2-28
-        /// </summary>
-        public async void SendDueData()
-        {
-            try
-            {
-                IoTCommConmand_0030 sendData = new IoTCommConmand_0030();
-                sendData.Model_id = short.Parse(this.cmbModelID.Value.ToString());
-                sendData.Machine_serial_number = (Int32)this.teMachineSerialNumber.Value;
-                sendData.Command_id = 30;
-                if (DateTime.Compare(Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date, DateTime.MaxValue) == 0)
-                {
-                    sendData.Datetime = DateTime.Now;
-                }
-                else
-                {
-                    sendData.Datetime = Singleton<ParameterFilePreserve<CarisXSystemParameter>>.Instance.Param.IoTParameter.Delivery_date;
-                }
-                string message = CarisXSubFunction.CreateJSon(sendData);
-                await ioTHub.SendMessagetoDevice(message);
-                teLog.Text += String.Format("Success to send message : {0}" + "\r\n\r\n", message);
-            }
-            catch (Exception ex)
-            {
-                teLog.Text += String.Format("Failed to send message : {0}" + "\r\n\r\n", ex.Message);
-            }
+            ResponseResult result = new ResponseResult("", ResponseStatus.Failure);
+            IoTCommConmand_0020 sendData = new IoTCommConmand_0020();
+            sendData.Model_id = MODEL_ID;
+            sendData.Machine_serial_number = (Int32)this.teTestNo.Value;
+            sendData.Command_id = 20;
+            sendData.Acquired_datetime = DateTime.Now;
+            sendData.Error_code = 0;
+            sendData.Error_arg = 0;
+            sendData.Error_level = 1;
+            sendData.Reagent_item = string.Empty;
+            sendData.Contents = "Test"; ;
+            string message = CarisXSubFunction.CreateJSon(sendData);
+            result = await ioTHub.SendMessagetoDevice(message);
+            teLog.Text += result.Message + Environment.NewLine;
+           
         }
 
         private void btnCreateTimeFrom_Click(object sender, EventArgs e)
         {
             DateTime date;
-            DialogResult result = DlgDateSelect.Show(String.Empty, out date, (DateTime)this.btnCreateTimeFrom.Tag);
-            if (DialogResult.OK == result)
+            if (DialogResult.OK == DlgDateSelect.Show(String.Empty, out date, (DateTime)this.btnCreateTimeFrom.Tag))
             {
                 this.btnCreateTimeFrom.Text = date.ToShortDateString();
                 this.btnCreateTimeFrom.Tag = date;
@@ -744,93 +660,78 @@ namespace Oelco.CarisX.GUI
         private void btnCreateTimeTo_Click(object sender, EventArgs e)
         {
             DateTime date;
-            DialogResult result = DlgDateSelect.Show(String.Empty, out date, (DateTime)this.btnCreateTimeTo.Tag);
-            if (DialogResult.OK == result)
+            if (DialogResult.OK == DlgDateSelect.Show(String.Empty, out date, (DateTime)this.btnCreateTimeTo.Tag))
             {
                 this.btnCreateTimeTo.Text = date.ToShortDateString();
                 this.btnCreateTimeTo.Tag = date;
             }
-
         }
 
-        private async void btnCreate_Click(object sender, EventArgs e)
+        private async void btnSendLogFiles_Click(object sender, EventArgs e)
         {
+            ResponseResult reslut = new ResponseResult("", ResponseStatus.Failure);
             DateTime t1 = (DateTime)this.btnCreateTimeFrom.Tag;
             DateTime t2 = (DateTime)this.btnCreateTimeTo.Tag;
-            UnenableSendBtn();
+            SetButtonEnable(false);
 
-            if(DateTime.Compare(t1, t2) > 0)
+            if (DateTime.Compare(t1, t2) > 0)
             {
-                teLog.Text += "The start date must be earlier than or equal to the end date!" + "\r\n\r\n";
-                EnableSendBtn();
+                teLog.Text += "The start date must be earlier than or equal to the end date!" + Environment.NewLine;
+                SetButtonEnable(true);
                 return;
             }
-
-            while (DateTime.Compare(t1, t2) <= 0)
+            else
             {
-                teLog.Text += await PackageLogfilesByDate(t1);
-                t1 = t1.AddDays(1);
+                CarisXSubFunction.PackageSystemLogs(t1, t2); 
             }
 
-            teLog.Text += "Finish to create logfiles!" + "\r\n\r\n";
-            EnableSendBtn();
+            string msg = string.Empty;
+            msg = "********Start sending files...********" + Environment.NewLine;
+            foreach (string fileName in Directory.GetFiles(CarisXConst.PathTemp,"*.zip"))
+            {
+                reslut = await ioTHub.SendToBlobAsync(fileName);
+                msg += reslut.Message + Environment.NewLine;
+                if(CarisXSubFunction.CheckFileStatus(fileName))
+                {
+                    File.Delete(fileName);
+                }
 
+            }
+
+            teLog.Text += msg + Environment.NewLine;
+            SetButtonEnable(true);
         }
 
-        private async Task<string> PackageLogfilesByDate(DateTime targetDate)
+        /// <summary>
+        /// 设置调试界面按钮状态
+        /// </summary>
+        /// <param name="enable"></param>
+        private void SetButtonEnable(bool enable)
         {
-            string sResult = string.Empty;
-            await Task.Run(() =>
+            this.btnTestConn.Enabled = enable;
+            this.btnSendMeasureData.Enabled = enable;
+            this.btnSendErrorData.Enabled = enable;
+            this.btnSendDueData.Enabled = enable;
+            this.btnSendLogFiles.Enabled = enable;
+        }
+        #endregion
+
+        private void UpdateIoTStatus(object obj)
+        {
+            IoTStatusKind status = (IoTStatusKind)obj;
+            switch (status)
             {
-                try
-                {
-                    if (!Directory.Exists(CarisXConst.PathTemp))
-                    {
-                        Directory.CreateDirectory(CarisXConst.PathTemp);
-                    }
-
-                    string filePath = string.Empty;
-                    filePath = CarisXConst.PathTemp + "\\" + CarisXConst.EXPORT_CSV_ERRORLOG + targetDate.ToString("yyMMdd") + ".csv ";
-                    Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<ErrorLogDB>.Instance.GetErrorLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
-                                ((FormSystemLog)this.childFormList.Single((form) => form is FormSystemLog)).ErrorlogGridColumns,
-                                filePath,
-                                null);
-                    filePath = CarisXConst.PathTemp + "\\" + CarisXConst.EXPORT_CSV_OPERATIONLOG + targetDate.ToString("yyMMdd") + ".csv ";
-                    Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<OperationLogDB>.Instance.GetOperationLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
-                                ((FormSystemLog)this.childFormList.Single((form) => form is FormSystemLog)).OperationlogGridColumns,
-                                filePath,
-                                null);
-                    filePath = CarisXConst.PathTemp + "\\" + CarisXConst.EXPORT_CSV_PARAMETERCHANGELOG + targetDate.ToString("yyMMdd") + ".csv ";
-                    Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<ParameterChangeLogDB>.Instance.GetParameterChangeLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
-                                ((FormSystemLog)this.childFormList.Single((form) => form is FormSystemLog)).ParameterChangeLogGridColumns,
-                                filePath,
-                                null);
-                    filePath = CarisXConst.PathTemp + "\\" + CarisXConst.EXPORT_CSV_ASSAYLOG + targetDate.ToString("yyMMdd") + ".csv ";
-                    Singleton<DataHelper>.Instance.ExportCsv(
-                                Singleton<AnalyzeLogDB>.Instance.GetAnalyzeLog().FindAll(data => data.WriteTime.Date.Equals(targetDate.Date)),
-                                ((FormSystemLog)this.childFormList.Single((form) => form is FormSystemLog)).AnalyzelogGridColumns,
-                                filePath,
-                                null);
-
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathDebug, CarisXConst.PathTemp, targetDate, String.Format("{0}_{1}.log", "*" + "debuglog", "*"));
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathOnline, CarisXConst.PathTemp, targetDate, String.Format("{0}_{1}.log", "*" + "online", "*"));
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathLog, CarisXConst.PathTemp, targetDate, String.Format("{0}.txt", "*" + "sendfile"));
-                    CarisXSubFunction.CopySysLog(CarisXConst.PathLog, CarisXConst.PathTemp, targetDate, String.Format("{0}.txt", "*" + "revfile"));
-                    string logName = CarisXSubFunction.CreateLogName(this.teMachineSerialNumber.Value.ToString(), this.cmbModelID.Value.ToString(), targetDate.ToString("yyMMdd"), CarisXConst.EXPORT_ZIP_LOGFILES);
-                    string sZipName = CarisXConst.PathTemp + "\\" + logName + ".zip";
-                    CarisXSubFunction.ZipFiles(CarisXConst.PathTemp, sZipName);
-                    sResult = string.Format("Create {0}..." + "\r\n\r\n", Path.GetFileName(sZipName));
-
-                }
-                catch (Exception ex)
-                {
-                    sResult = String.Format("Failed to create logfiles : {0}" + "\r\n\r\n", ex.Message);
-                }
-            });
-            return sResult;
+                case IoTStatusKind.OnLine:
+                    this.btnConnection.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_024;
+                    this.lbConnecttionStatus.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_012;
+                    this.lbConnecttionStatus.Appearance.ForeColor = Color.Green;
+                    break;
+                default:
+                    this.btnConnection.Text = Oelco.CarisX.Properties.Resources.STRING_COMMON_023;
+                    this.lbConnecttionStatus.Text = Oelco.CarisX.Properties.Resources.STRING_DLG_SYS_IOT_LABEL_011;
+                    this.lbConnecttionStatus.Appearance.ForeColor = Color.Red;
+                    break;
+            }
         }
     }
 }

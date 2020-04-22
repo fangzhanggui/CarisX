@@ -50,6 +50,10 @@ namespace Oelco.Common.Log
         /// デバッグログ
         /// </summary>
         DebugLog,
+        /// <summary>
+        /// 【IssuesNo:16】Sock通信日志，用于判断拷贝系统日志的类型，不做其他用途
+        /// </summary>
+        OriginLog,
     }
 
     /// <summary>

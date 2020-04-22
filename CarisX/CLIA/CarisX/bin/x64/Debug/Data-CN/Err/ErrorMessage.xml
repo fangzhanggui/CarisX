@@ -1310,6 +1310,13 @@
       <Message>从LIS接收的工作表在系统中为“已注册”或“在处理中”。接收到的工作表将被忽略。</Message>
       <ImagePath>TestGraphic.bmp</ImagePath>
     </ErrorCodeData>
+	<ErrorCodeData>
+      <Code>55</Code>
+      <Argment>4</Argment>
+      <Title>从LIS系统接收到的样本ID不一致。</Title>
+      <Message>从LIS系统接收到的样本ID不一致。接收到的工作表将被忽略。</Message>
+      <ImagePath>TestGraphic.bmp</ImagePath>
+    </ErrorCodeData>
     <ErrorCodeData>
       <Code>60</Code>
       <Title>指令错误。</Title>
@@ -1541,7 +1548,7 @@
 	  <Code>90</Code>
 	  <Argment>1</Argment>
 		<Title>没有可以分析的模块。</Title>
-		<Message>由于没有可以分析的模块，请返回到收集通道。Message>
+		<Message>由于没有可以分析的模块，请返回到收集通道。</Message>
 	  <ImagePath>TestGraphic.bmp</ImagePath>
 	</ErrorCodeData>
 	<ErrorCodeData>

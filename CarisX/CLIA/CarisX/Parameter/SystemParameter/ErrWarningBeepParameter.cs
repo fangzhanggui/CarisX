@@ -63,6 +63,11 @@ namespace Oelco.CarisX.Parameter
         /// 壒怓乮僄儔乕乯丂僨僼僅儖僩抣愝掕
         /// </summary>
         public const Int32 BEEP_ERROR_DEFAULT = 2;
+
+        /// <summary>
+        /// 【IssuesNo:6】默认提示音
+        /// </summary>
+        public const Int32 BEEP_HINT_DEFAULT = 3;
         /// <summary>
         /// 壒検丂僨僼僅儖僩抣愝掕
         /// </summary>
@@ -96,6 +101,11 @@ namespace Oelco.CarisX.Parameter
         /// 壒怓乮僄儔乕乯
         /// </summary>
         public Int32 BeepError { get; set; } = BEEP_ERROR_DEFAULT;
+
+        /// <summary>
+        /// 【IssuesNo:6】提示音设置
+        /// </summary>
+        public Int32 BeepHint { get; set; } = BEEP_HINT_DEFAULT;
 
         /// <summary>
         /// 壒検

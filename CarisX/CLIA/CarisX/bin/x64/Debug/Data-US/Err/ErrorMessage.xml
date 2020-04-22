@@ -1311,6 +1311,13 @@
 			<ImagePath>TestGraphic.bmp</ImagePath>
 		</ErrorCodeData>
 		<ErrorCodeData>
+			<Code>55</Code>
+			<Argment>4</Argment>
+			<Title>The sampleId received from the L.I.S is diffient.</Title>
+			<Message>The sampleId received from the L.I.S is diffient. The received worksheet will be ignored.</Message>
+			<ImagePath>TestGraphic.bmp</ImagePath>
+		</ErrorCodeData>
+		<ErrorCodeData>
 			<Code>60</Code>
 			<Title>Command error occurred.</Title>
 			<Message>The version may differ between a user program (DP) and a slave program (Analyzer). Please contact a serviceman for details.</Message>

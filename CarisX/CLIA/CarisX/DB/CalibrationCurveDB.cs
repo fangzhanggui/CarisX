@@ -1018,9 +1018,11 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //【IssuesNo:19】Innodx要求不显示主曲线，因此在此过滤主曲线数据
                     var datas = from v in this.DataTable.Copy().AsEnumerable()
                                 where ((((Int32)v[STRING_MODULENO] ) == moduleNo) || (((Int32)v[STRING_UNIQUENO]) == -1))
                                    && (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
+                                   && (((Int32)v[STRING_UNIQUENO]) > -1)
                                 orderby ( (DateTime)v[STRING_APPROBAL_DATETIME] ) descending, ( (Int32)v[STRING_POINTNO] ) ascending
                                 select new CalibrationCurveAnalysisData( v );
 

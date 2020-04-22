@@ -553,7 +553,8 @@
             ultraExplorerBarItem56.Text = "Host computer";
             ultraExplorerBarItem57.Text = "Measurement result file";
             ultraExplorerBarItem58.Text = "Printer";
-            ultraExplorerBarItem9.Text = "IoT";
+            ultraExplorerBarItem9.Checked = true;
+            ultraExplorerBarItem9.Text = "IOT";
             ultraExplorerBarGroup14.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
             ultraExplorerBarItem56,
             ultraExplorerBarItem57,

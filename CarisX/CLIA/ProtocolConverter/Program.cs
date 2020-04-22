@@ -14,6 +14,12 @@ namespace ProtocolConverter
     //   
     // History
     //   2012/06/29  Ver1.00.00  作成  R.Oota
+    //   2020/04/07  Ver1.00.01  :
+    //      ①新增质控品相关系数A、B；【IssuesNo:1】
+    //      ②将质控品系数的A、B的范围改为（-99~99）【IssuesNo:2】
+    //      ③故障信息，日>>英
+    //      ④补充TurnOrder参数的解析【IssuesNo:4】
+    //      ⑤修改定量项目36(HBsAb)、37(HBsAg)的阴阳性阈值判定条件，允许其值大于0；【IssuesNo:5】
     //----------------------------------------------------------------
     static class Program
     {
@@ -54,7 +60,7 @@ namespace ProtocolConverter
                             }
                             else
                             {
-                                Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( "1", "引数" + excelName + "に、パスに使用できない文字が含まれています。" );
+                                Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( "1", "argument" + excelName + "Contains characters that cannot be used in the path.");
                             }
                         }
                     }
@@ -75,7 +81,7 @@ namespace ProtocolConverter
                             }
                             else
                             {
-                                MessageBox.Show( foldName + "にパスに使用できない文字が含まれています。", "ProtocolConverter" );
+                                MessageBox.Show( foldName + "Contains characters that cannot be used in the path.", "ProtocolConverter" );
                                 return;
                             }
                         }
@@ -92,7 +98,7 @@ namespace ProtocolConverter
                             }
                             else
                             {
-                                MessageBox.Show( logName + "にパスに使用できない文字が含まれています。", "ProtocolConverter" );
+                                MessageBox.Show( logName + "Contains characters that cannot be used in the path.", "ProtocolConverter" );
                                 return;
                             }
                         }
@@ -120,7 +126,7 @@ namespace ProtocolConverter
                 // Excelパスが取得できているか確認する。
                 if ( commandData.ContainsKey( Const.EXCEL ) == false || commandData[Const.EXCEL] == string.Empty )
                 {
-                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( "1", "引数にExcel名が指定されていません。" );
+                    Singleton<ParameterFilePreserve<ProtocolConverterLogInfo>>.Instance.Param.AddExceptionLog( "1", "Excel name is not specified");
                 }
                 else
                 {

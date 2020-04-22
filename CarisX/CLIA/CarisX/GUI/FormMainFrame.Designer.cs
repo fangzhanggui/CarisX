@@ -29,103 +29,103 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance98 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance99 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance100 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance101 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance102 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance103 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance104 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance105 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance106 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance107 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance108 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance109 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance110 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance111 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance112 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance113 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance114 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance115 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance116 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance117 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance118 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance119 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance120 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance121 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance122 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance123 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance124 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance125 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance126 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance127 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance128 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance129 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance130 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance131 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance132 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance133 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance134 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance135 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance136 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance137 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance138 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance139 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance140 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance141 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance142 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance143 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance144 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance53 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance54 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance145 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance146 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance147 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance148 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance149 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance55 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance56 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance59 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance60 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance61 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance62 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance63 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance64 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance65 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance67 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance68 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance69 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance70 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance71 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance72 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance73 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance74 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance75 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance79 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance80 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance81 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance82 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance83 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance84 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance85 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance86 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance87 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance88 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance89 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance90 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance91 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance92 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance93 = new Infragistics.Win.Appearance("true");
-            Infragistics.Win.Appearance appearance94 = new Infragistics.Win.Appearance("false");
-            Infragistics.Win.Appearance appearance95 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance96 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance97 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance150 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance151 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance152 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance153 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance154 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance155 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance156 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance157 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance158 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance159 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance160 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance161 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance162 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance163 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance164 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance165 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance166 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance167 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance168 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance169 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance170 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance171 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance172 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance173 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance174 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance175 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance176 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance177 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance178 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance179 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance180 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance181 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance182 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance183 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance184 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance185 = new Infragistics.Win.Appearance("true");
+            Infragistics.Win.Appearance appearance186 = new Infragistics.Win.Appearance("false");
+            Infragistics.Win.Appearance appearance187 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance188 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance189 = new Infragistics.Win.Appearance("true");
             this.btnMenuLargeAssay = new Oelco.Common.GUI.BlinkButton();
             this.lblMenuLargeAssay = new Infragistics.Win.Misc.UltraLabel();
             this.btnMenuLargeReagent = new Oelco.Common.GUI.BlinkButton();
@@ -180,6 +180,8 @@
             this.cachedSpecimenResultReport_US1 = new Oelco.CarisX.Print.CachedSpecimenResultReport_US();
             this.nowTimer = new System.Windows.Forms.Timer(this.components);
             this.btnDebug = new Infragistics.Win.Misc.UltraButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pnlMdiChild.SuspendLayout();
             this.pnlMenuLarge.ClientArea.SuspendLayout();
             this.pnlMenuLarge.SuspendLayout();
@@ -197,37 +199,37 @@
             // 
             // btnMenuLargeAssay
             // 
-            appearance1.BackColor = System.Drawing.Color.Transparent;
-            appearance1.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayOFF;
-            appearance1.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
-            this.btnMenuLargeAssay.Appearance = appearance1;
+            appearance98.BackColor = System.Drawing.Color.Transparent;
+            appearance98.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayOFF;
+            appearance98.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
+            this.btnMenuLargeAssay.Appearance = appearance98;
             this.btnMenuLargeAssay.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeAssay.CurrentState = false;
-            appearance2.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeAssay.HotTrackAppearance = appearance2;
+            appearance99.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeAssay.HotTrackAppearance = appearance99;
             this.btnMenuLargeAssay.Location = new System.Drawing.Point(0, 309);
             this.btnMenuLargeAssay.Name = "btnMenuLargeAssay";
-            this.btnMenuLargeAssay.NormalAppearance = appearance1;
-            appearance3.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeAssay.PressedAppearance = appearance3;
+            this.btnMenuLargeAssay.NormalAppearance = appearance98;
+            appearance100.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeAssay.PressedAppearance = appearance100;
             this.btnMenuLargeAssay.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_AssayOFF;
             this.btnMenuLargeAssay.ShowFocusRect = false;
             this.btnMenuLargeAssay.ShowOutline = false;
             this.btnMenuLargeAssay.Size = new System.Drawing.Size(259, 127);
             this.btnMenuLargeAssay.StateChangeEventEnable = true;
             this.btnMenuLargeAssay.TabIndex = 1;
-            appearance4.BackColor = System.Drawing.Color.Transparent;
-            appearance4.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayON;
-            appearance4.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
-            this.btnMenuLargeAssay.ToggleAppearance = appearance4;
+            appearance101.BackColor = System.Drawing.Color.Transparent;
+            appearance101.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayON;
+            appearance101.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Tiled;
+            this.btnMenuLargeAssay.ToggleAppearance = appearance101;
             this.btnMenuLargeAssay.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeAssay.Click += new System.EventHandler(this.btnMenuLargeAssay_Click);
             // 
             // lblMenuLargeAssay
             // 
-            appearance5.BackColor = System.Drawing.Color.Transparent;
-            appearance5.ForeColor = System.Drawing.Color.White;
-            this.lblMenuLargeAssay.Appearance = appearance5;
+            appearance102.BackColor = System.Drawing.Color.Transparent;
+            appearance102.ForeColor = System.Drawing.Color.White;
+            this.lblMenuLargeAssay.Appearance = appearance102;
             this.lblMenuLargeAssay.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeAssay.ImageTransparentColor = System.Drawing.Color.Empty;
             this.lblMenuLargeAssay.Location = new System.Drawing.Point(81, 357);
@@ -239,140 +241,140 @@
             // 
             // btnMenuLargeReagent
             // 
-            appearance6.BackColor = System.Drawing.Color.Transparent;
-            appearance6.BorderColor = System.Drawing.Color.Transparent;
-            appearance6.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ReagentOFF;
-            this.btnMenuLargeReagent.Appearance = appearance6;
+            appearance103.BackColor = System.Drawing.Color.Transparent;
+            appearance103.BorderColor = System.Drawing.Color.Transparent;
+            appearance103.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ReagentOFF;
+            this.btnMenuLargeReagent.Appearance = appearance103;
             this.btnMenuLargeReagent.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeReagent.CurrentState = false;
-            appearance7.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeReagent.HotTrackAppearance = appearance7;
+            appearance104.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeReagent.HotTrackAppearance = appearance104;
             this.btnMenuLargeReagent.Location = new System.Drawing.Point(0, 435);
             this.btnMenuLargeReagent.Name = "btnMenuLargeReagent";
-            this.btnMenuLargeReagent.NormalAppearance = appearance6;
-            appearance8.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeReagent.PressedAppearance = appearance8;
+            this.btnMenuLargeReagent.NormalAppearance = appearance103;
+            appearance105.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeReagent.PressedAppearance = appearance105;
             this.btnMenuLargeReagent.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_ReagentOFF;
             this.btnMenuLargeReagent.ShowFocusRect = false;
             this.btnMenuLargeReagent.ShowOutline = false;
             this.btnMenuLargeReagent.Size = new System.Drawing.Size(259, 127);
             this.btnMenuLargeReagent.StateChangeEventEnable = true;
             this.btnMenuLargeReagent.TabIndex = 2;
-            appearance9.BackColor = System.Drawing.Color.Transparent;
-            appearance9.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ReagentON;
-            this.btnMenuLargeReagent.ToggleAppearance = appearance9;
+            appearance106.BackColor = System.Drawing.Color.Transparent;
+            appearance106.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ReagentON;
+            this.btnMenuLargeReagent.ToggleAppearance = appearance106;
             this.btnMenuLargeReagent.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeReagent.Click += new System.EventHandler(this.btnMenuLargeReagent_Click);
             // 
             // btnMenuLargeSpecimen
             // 
-            appearance10.BackColor = System.Drawing.Color.Transparent;
-            appearance10.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SpecimenOFF;
-            this.btnMenuLargeSpecimen.Appearance = appearance10;
+            appearance107.BackColor = System.Drawing.Color.Transparent;
+            appearance107.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SpecimenOFF;
+            this.btnMenuLargeSpecimen.Appearance = appearance107;
             this.btnMenuLargeSpecimen.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeSpecimen.CurrentState = false;
-            appearance11.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeSpecimen.HotTrackAppearance = appearance11;
+            appearance108.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeSpecimen.HotTrackAppearance = appearance108;
             this.btnMenuLargeSpecimen.Location = new System.Drawing.Point(0, 160);
             this.btnMenuLargeSpecimen.Name = "btnMenuLargeSpecimen";
-            this.btnMenuLargeSpecimen.NormalAppearance = appearance10;
-            appearance12.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeSpecimen.PressedAppearance = appearance12;
+            this.btnMenuLargeSpecimen.NormalAppearance = appearance107;
+            appearance109.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeSpecimen.PressedAppearance = appearance109;
             this.btnMenuLargeSpecimen.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_SpecimenOFF;
             this.btnMenuLargeSpecimen.ShowFocusRect = false;
             this.btnMenuLargeSpecimen.ShowOutline = false;
             this.btnMenuLargeSpecimen.Size = new System.Drawing.Size(259, 122);
             this.btnMenuLargeSpecimen.StateChangeEventEnable = true;
             this.btnMenuLargeSpecimen.TabIndex = 0;
-            appearance13.BackColor = System.Drawing.Color.Transparent;
-            appearance13.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SpecimenON;
-            this.btnMenuLargeSpecimen.ToggleAppearance = appearance13;
+            appearance110.BackColor = System.Drawing.Color.Transparent;
+            appearance110.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SpecimenON;
+            this.btnMenuLargeSpecimen.ToggleAppearance = appearance110;
             this.btnMenuLargeSpecimen.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeSpecimen.Click += new System.EventHandler(this.btnMenuLargeSpecimen_Click);
             // 
             // btnMenuLargeCalibrator
             // 
-            appearance14.BackColor = System.Drawing.Color.Transparent;
-            appearance14.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_CalibOFF;
-            this.btnMenuLargeCalibrator.Appearance = appearance14;
+            appearance111.BackColor = System.Drawing.Color.Transparent;
+            appearance111.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_CalibOFF;
+            this.btnMenuLargeCalibrator.Appearance = appearance111;
             this.btnMenuLargeCalibrator.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeCalibrator.CurrentState = false;
-            appearance15.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeCalibrator.HotTrackAppearance = appearance15;
+            appearance112.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeCalibrator.HotTrackAppearance = appearance112;
             this.btnMenuLargeCalibrator.Location = new System.Drawing.Point(0, 562);
             this.btnMenuLargeCalibrator.Name = "btnMenuLargeCalibrator";
-            this.btnMenuLargeCalibrator.NormalAppearance = appearance14;
-            appearance16.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeCalibrator.PressedAppearance = appearance16;
+            this.btnMenuLargeCalibrator.NormalAppearance = appearance111;
+            appearance113.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeCalibrator.PressedAppearance = appearance113;
             this.btnMenuLargeCalibrator.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_CalibOFF;
             this.btnMenuLargeCalibrator.ShowFocusRect = false;
             this.btnMenuLargeCalibrator.ShowOutline = false;
             this.btnMenuLargeCalibrator.Size = new System.Drawing.Size(259, 127);
             this.btnMenuLargeCalibrator.StateChangeEventEnable = true;
             this.btnMenuLargeCalibrator.TabIndex = 3;
-            appearance17.BackColor = System.Drawing.Color.Transparent;
-            appearance17.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_CalibON;
-            this.btnMenuLargeCalibrator.ToggleAppearance = appearance17;
+            appearance114.BackColor = System.Drawing.Color.Transparent;
+            appearance114.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_CalibON;
+            this.btnMenuLargeCalibrator.ToggleAppearance = appearance114;
             this.btnMenuLargeCalibrator.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeCalibrator.Click += new System.EventHandler(this.btnMenuLargeCalibrator_Click);
             // 
             // btnMenuLargeControl
             // 
-            appearance18.BackColor = System.Drawing.Color.Transparent;
-            appearance18.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_QCOFF;
-            this.btnMenuLargeControl.Appearance = appearance18;
+            appearance115.BackColor = System.Drawing.Color.Transparent;
+            appearance115.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_QCOFF;
+            this.btnMenuLargeControl.Appearance = appearance115;
             this.btnMenuLargeControl.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeControl.CurrentState = false;
-            appearance19.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeControl.HotTrackAppearance = appearance19;
+            appearance116.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeControl.HotTrackAppearance = appearance116;
             this.btnMenuLargeControl.Location = new System.Drawing.Point(0, 689);
             this.btnMenuLargeControl.Name = "btnMenuLargeControl";
-            this.btnMenuLargeControl.NormalAppearance = appearance18;
-            appearance20.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeControl.PressedAppearance = appearance20;
+            this.btnMenuLargeControl.NormalAppearance = appearance115;
+            appearance117.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeControl.PressedAppearance = appearance117;
             this.btnMenuLargeControl.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_QCOFF;
             this.btnMenuLargeControl.ShowFocusRect = false;
             this.btnMenuLargeControl.ShowOutline = false;
             this.btnMenuLargeControl.Size = new System.Drawing.Size(259, 127);
             this.btnMenuLargeControl.StateChangeEventEnable = true;
             this.btnMenuLargeControl.TabIndex = 4;
-            appearance21.BackColor = System.Drawing.Color.Transparent;
-            appearance21.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_QCON;
-            this.btnMenuLargeControl.ToggleAppearance = appearance21;
+            appearance118.BackColor = System.Drawing.Color.Transparent;
+            appearance118.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_QCON;
+            this.btnMenuLargeControl.ToggleAppearance = appearance118;
             this.btnMenuLargeControl.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeControl.Click += new System.EventHandler(this.btnMenuLargeControl_Click);
             // 
             // btnMenuLargeSystem
             // 
-            appearance22.BackColor = System.Drawing.Color.Transparent;
-            appearance22.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SystemOFF;
-            this.btnMenuLargeSystem.Appearance = appearance22;
+            appearance119.BackColor = System.Drawing.Color.Transparent;
+            appearance119.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SystemOFF;
+            this.btnMenuLargeSystem.Appearance = appearance119;
             this.btnMenuLargeSystem.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeSystem.CurrentState = false;
-            appearance23.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeSystem.HotTrackAppearance = appearance23;
+            appearance120.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeSystem.HotTrackAppearance = appearance120;
             this.btnMenuLargeSystem.Location = new System.Drawing.Point(0, 971);
             this.btnMenuLargeSystem.Name = "btnMenuLargeSystem";
-            this.btnMenuLargeSystem.NormalAppearance = appearance22;
-            appearance24.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeSystem.PressedAppearance = appearance24;
+            this.btnMenuLargeSystem.NormalAppearance = appearance119;
+            appearance121.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeSystem.PressedAppearance = appearance121;
             this.btnMenuLargeSystem.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_SystemOFF;
             this.btnMenuLargeSystem.ShowFocusRect = false;
             this.btnMenuLargeSystem.ShowOutline = false;
             this.btnMenuLargeSystem.Size = new System.Drawing.Size(259, 109);
             this.btnMenuLargeSystem.StateChangeEventEnable = true;
             this.btnMenuLargeSystem.TabIndex = 6;
-            appearance25.BackColor = System.Drawing.Color.Transparent;
-            appearance25.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SystemON;
-            this.btnMenuLargeSystem.ToggleAppearance = appearance25;
+            appearance122.BackColor = System.Drawing.Color.Transparent;
+            appearance122.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_SystemON;
+            this.btnMenuLargeSystem.ToggleAppearance = appearance122;
             this.btnMenuLargeSystem.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeSystem.Click += new System.EventHandler(this.btnMenuLargeSystem_Click);
             // 
             // lblMenuLargeReagent
             // 
-            appearance26.BackColor = System.Drawing.Color.Transparent;
-            appearance26.ForeColor = System.Drawing.Color.White;
-            this.lblMenuLargeReagent.Appearance = appearance26;
+            appearance123.BackColor = System.Drawing.Color.Transparent;
+            appearance123.ForeColor = System.Drawing.Color.White;
+            this.lblMenuLargeReagent.Appearance = appearance123;
             this.lblMenuLargeReagent.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeReagent.Location = new System.Drawing.Point(81, 484);
             this.lblMenuLargeReagent.Name = "lblMenuLargeReagent";
@@ -383,9 +385,9 @@
             // 
             // lblMenuLargeSpecimen
             // 
-            appearance27.BackColor = System.Drawing.Color.Transparent;
-            appearance27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
-            this.lblMenuLargeSpecimen.Appearance = appearance27;
+            appearance124.BackColor = System.Drawing.Color.Transparent;
+            appearance124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
+            this.lblMenuLargeSpecimen.Appearance = appearance124;
             this.lblMenuLargeSpecimen.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeSpecimen.Location = new System.Drawing.Point(80, 207);
             this.lblMenuLargeSpecimen.Name = "lblMenuLargeSpecimen";
@@ -396,9 +398,9 @@
             // 
             // lblMenuLargeCalibrator
             // 
-            appearance28.BackColor = System.Drawing.Color.Transparent;
-            appearance28.ForeColor = System.Drawing.Color.White;
-            this.lblMenuLargeCalibrator.Appearance = appearance28;
+            appearance125.BackColor = System.Drawing.Color.Transparent;
+            appearance125.ForeColor = System.Drawing.Color.White;
+            this.lblMenuLargeCalibrator.Appearance = appearance125;
             this.lblMenuLargeCalibrator.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeCalibrator.Location = new System.Drawing.Point(81, 611);
             this.lblMenuLargeCalibrator.Name = "lblMenuLargeCalibrator";
@@ -409,9 +411,9 @@
             // 
             // lblMenuLargeControl
             // 
-            appearance29.BackColor = System.Drawing.Color.Transparent;
-            appearance29.ForeColor = System.Drawing.Color.White;
-            this.lblMenuLargeControl.Appearance = appearance29;
+            appearance126.BackColor = System.Drawing.Color.Transparent;
+            appearance126.ForeColor = System.Drawing.Color.White;
+            this.lblMenuLargeControl.Appearance = appearance126;
             this.lblMenuLargeControl.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeControl.Location = new System.Drawing.Point(81, 738);
             this.lblMenuLargeControl.Name = "lblMenuLargeControl";
@@ -422,9 +424,9 @@
             // 
             // lblMenuLargeSystem
             // 
-            appearance30.BackColor = System.Drawing.Color.Transparent;
-            appearance30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
-            this.lblMenuLargeSystem.Appearance = appearance30;
+            appearance127.BackColor = System.Drawing.Color.Transparent;
+            appearance127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
+            this.lblMenuLargeSystem.Appearance = appearance127;
             this.lblMenuLargeSystem.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeSystem.Location = new System.Drawing.Point(80, 1012);
             this.lblMenuLargeSystem.Name = "lblMenuLargeSystem";
@@ -435,10 +437,10 @@
             // 
             // lblAssayStart
             // 
-            appearance31.BackColor = System.Drawing.Color.Transparent;
-            appearance31.ForeColor = System.Drawing.Color.White;
-            appearance31.TextHAlignAsString = "Center";
-            this.lblAssayStart.Appearance = appearance31;
+            appearance128.BackColor = System.Drawing.Color.Transparent;
+            appearance128.ForeColor = System.Drawing.Color.White;
+            appearance128.TextHAlignAsString = "Center";
+            this.lblAssayStart.Appearance = appearance128;
             this.lblAssayStart.Font = new System.Drawing.Font("Arial", 12.71F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssayStart.Location = new System.Drawing.Point(1755, 521);
             this.lblAssayStart.Name = "lblAssayStart";
@@ -448,10 +450,10 @@
             // 
             // lblAssayPause
             // 
-            appearance32.BackColor = System.Drawing.Color.Transparent;
-            appearance32.ForeColor = System.Drawing.Color.White;
-            appearance32.TextHAlignAsString = "Center";
-            this.lblAssayPause.Appearance = appearance32;
+            appearance129.BackColor = System.Drawing.Color.Transparent;
+            appearance129.ForeColor = System.Drawing.Color.White;
+            appearance129.TextHAlignAsString = "Center";
+            this.lblAssayPause.Appearance = appearance129;
             this.lblAssayPause.Font = new System.Drawing.Font("Arial", 12.71F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssayPause.Location = new System.Drawing.Point(1755, 692);
             this.lblAssayPause.Name = "lblAssayPause";
@@ -461,10 +463,10 @@
             // 
             // lblAssayAbort
             // 
-            appearance33.BackColor = System.Drawing.Color.Transparent;
-            appearance33.ForeColor = System.Drawing.Color.White;
-            appearance33.TextHAlignAsString = "Center";
-            this.lblAssayAbort.Appearance = appearance33;
+            appearance130.BackColor = System.Drawing.Color.Transparent;
+            appearance130.ForeColor = System.Drawing.Color.White;
+            appearance130.TextHAlignAsString = "Center";
+            this.lblAssayAbort.Appearance = appearance130;
             this.lblAssayAbort.Font = new System.Drawing.Font("Arial", 12.71F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssayAbort.Location = new System.Drawing.Point(1754, 859);
             this.lblAssayAbort.Name = "lblAssayAbort";
@@ -474,11 +476,11 @@
             // 
             // lblAnalyzerStatus
             // 
-            appearance34.BackColor = System.Drawing.Color.Transparent;
-            appearance34.ForeColor = System.Drawing.Color.White;
-            appearance34.TextHAlignAsString = "Center";
-            appearance34.TextVAlignAsString = "Middle";
-            this.lblAnalyzerStatus.Appearance = appearance34;
+            appearance131.BackColor = System.Drawing.Color.Transparent;
+            appearance131.ForeColor = System.Drawing.Color.White;
+            appearance131.TextHAlignAsString = "Center";
+            appearance131.TextVAlignAsString = "Middle";
+            this.lblAnalyzerStatus.Appearance = appearance131;
             this.lblAnalyzerStatus.Font = new System.Drawing.Font("Arial", 14.82F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnalyzerStatus.Location = new System.Drawing.Point(1801, 159);
             this.lblAnalyzerStatus.Name = "lblAnalyzerStatus";
@@ -489,8 +491,8 @@
             // 
             // pnlMdiChild
             // 
-            appearance35.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMdiChild.Appearance = appearance35;
+            appearance132.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMdiChild.Appearance = appearance132;
             this.pnlMdiChild.Location = new System.Drawing.Point(257, 68);
             this.pnlMdiChild.Margin = new System.Windows.Forms.Padding(10);
             this.pnlMdiChild.Name = "pnlMdiChild";
@@ -499,10 +501,10 @@
             // 
             // lblTitleMdiChildName
             // 
-            appearance36.BackColor = System.Drawing.Color.Transparent;
-            appearance36.BorderColor = System.Drawing.Color.Black;
-            appearance36.ForeColor = System.Drawing.Color.Black;
-            this.lblTitleMdiChildName.Appearance = appearance36;
+            appearance35.BackColor = System.Drawing.Color.Transparent;
+            appearance35.BorderColor = System.Drawing.Color.Black;
+            appearance35.ForeColor = System.Drawing.Color.Black;
+            this.lblTitleMdiChildName.Appearance = appearance35;
             this.lblTitleMdiChildName.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTitleMdiChildName.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleMdiChildName.ImageTransparentColor = System.Drawing.Color.Empty;
@@ -513,8 +515,8 @@
             // 
             // pnlMenuLarge
             // 
-            appearance37.BackColor = System.Drawing.Color.Transparent;
-            this.pnlMenuLarge.Appearance = appearance37;
+            appearance133.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMenuLarge.Appearance = appearance133;
             // 
             // pnlMenuLarge.ClientArea
             // 
@@ -545,11 +547,11 @@
             // 
             // lblReagentSetupWaitMinutesForModule4
             // 
-            appearance38.BackColor = System.Drawing.Color.White;
-            appearance38.BorderColor = System.Drawing.Color.Black;
-            appearance38.ForeColor = System.Drawing.Color.OrangeRed;
-            appearance38.TextHAlignAsString = "Center";
-            this.lblReagentSetupWaitMinutesForModule4.Appearance = appearance38;
+            appearance134.BackColor = System.Drawing.Color.White;
+            appearance134.BorderColor = System.Drawing.Color.Black;
+            appearance134.ForeColor = System.Drawing.Color.OrangeRed;
+            appearance134.TextHAlignAsString = "Center";
+            this.lblReagentSetupWaitMinutesForModule4.Appearance = appearance134;
             this.lblReagentSetupWaitMinutesForModule4.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblReagentSetupWaitMinutesForModule4.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.None;
             this.lblReagentSetupWaitMinutesForModule4.Cursor = System.Windows.Forms.Cursors.Default;
@@ -567,11 +569,11 @@
             // 
             // lblReagentSetupWaitMinutesForModule2
             // 
-            appearance39.BackColor = System.Drawing.Color.White;
-            appearance39.BorderColor = System.Drawing.Color.Black;
-            appearance39.ForeColor = System.Drawing.Color.OrangeRed;
-            appearance39.TextHAlignAsString = "Center";
-            this.lblReagentSetupWaitMinutesForModule2.Appearance = appearance39;
+            appearance135.BackColor = System.Drawing.Color.White;
+            appearance135.BorderColor = System.Drawing.Color.Black;
+            appearance135.ForeColor = System.Drawing.Color.OrangeRed;
+            appearance135.TextHAlignAsString = "Center";
+            this.lblReagentSetupWaitMinutesForModule2.Appearance = appearance135;
             this.lblReagentSetupWaitMinutesForModule2.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblReagentSetupWaitMinutesForModule2.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.None;
             this.lblReagentSetupWaitMinutesForModule2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -589,11 +591,11 @@
             // 
             // lblReagentSetupWaitMinutesForModule3
             // 
-            appearance40.BackColor = System.Drawing.Color.White;
-            appearance40.BorderColor = System.Drawing.Color.Black;
-            appearance40.ForeColor = System.Drawing.Color.OrangeRed;
-            appearance40.TextHAlignAsString = "Center";
-            this.lblReagentSetupWaitMinutesForModule3.Appearance = appearance40;
+            appearance136.BackColor = System.Drawing.Color.White;
+            appearance136.BorderColor = System.Drawing.Color.Black;
+            appearance136.ForeColor = System.Drawing.Color.OrangeRed;
+            appearance136.TextHAlignAsString = "Center";
+            this.lblReagentSetupWaitMinutesForModule3.Appearance = appearance136;
             this.lblReagentSetupWaitMinutesForModule3.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblReagentSetupWaitMinutesForModule3.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.None;
             this.lblReagentSetupWaitMinutesForModule3.Cursor = System.Windows.Forms.Cursors.Default;
@@ -611,11 +613,11 @@
             // 
             // lblNowDate
             // 
-            appearance41.BackColor = System.Drawing.Color.Transparent;
-            appearance41.ForeColor = System.Drawing.Color.White;
-            appearance41.TextHAlignAsString = "Center";
-            appearance41.TextVAlignAsString = "Middle";
-            this.lblNowDate.Appearance = appearance41;
+            appearance137.BackColor = System.Drawing.Color.Transparent;
+            appearance137.ForeColor = System.Drawing.Color.White;
+            appearance137.TextHAlignAsString = "Center";
+            appearance137.TextVAlignAsString = "Middle";
+            this.lblNowDate.Appearance = appearance137;
             this.lblNowDate.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblNowDate.Location = new System.Drawing.Point(15, 50);
             this.lblNowDate.Name = "lblNowDate";
@@ -625,8 +627,8 @@
             // 
             // pnlNavi
             // 
-            appearance42.BackColor = System.Drawing.Color.Transparent;
-            this.pnlNavi.Appearance = appearance42;
+            appearance138.BackColor = System.Drawing.Color.Transparent;
+            this.pnlNavi.Appearance = appearance138;
             this.pnlNavi.BorderStyle = Infragistics.Win.UIElementBorderStyle.None;
             // 
             // pnlNavi.ClientArea
@@ -640,17 +642,17 @@
             // 
             // btnNaviForward
             // 
-            appearance43.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_Next;
-            appearance43.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            this.btnNaviForward.Appearance = appearance43;
+            appearance139.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_Next;
+            appearance139.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            this.btnNaviForward.Appearance = appearance139;
             this.btnNaviForward.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
-            appearance44.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNaviForward.HotTrackAppearance = appearance44;
+            appearance140.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNaviForward.HotTrackAppearance = appearance140;
             this.btnNaviForward.Location = new System.Drawing.Point(68, 0);
             this.btnNaviForward.Name = "btnNaviForward";
-            appearance45.BorderColor = System.Drawing.Color.Transparent;
-            appearance45.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_NextON;
-            this.btnNaviForward.PressedAppearance = appearance45;
+            appearance141.BorderColor = System.Drawing.Color.Transparent;
+            appearance141.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_NextON;
+            this.btnNaviForward.PressedAppearance = appearance141;
             this.btnNaviForward.ShowFocusRect = false;
             this.btnNaviForward.ShowOutline = false;
             this.btnNaviForward.Size = new System.Drawing.Size(68, 60);
@@ -660,17 +662,17 @@
             // 
             // btnNaviBack
             // 
-            appearance46.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_Return;
-            appearance46.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            this.btnNaviBack.Appearance = appearance46;
+            appearance142.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_Return;
+            appearance142.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            this.btnNaviBack.Appearance = appearance142;
             this.btnNaviBack.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
-            appearance47.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNaviBack.HotTrackAppearance = appearance47;
+            appearance143.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNaviBack.HotTrackAppearance = appearance143;
             this.btnNaviBack.Location = new System.Drawing.Point(3, 0);
             this.btnNaviBack.Name = "btnNaviBack";
-            appearance48.BorderColor = System.Drawing.Color.Transparent;
-            appearance48.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_ReturnON;
-            this.btnNaviBack.PressedAppearance = appearance48;
+            appearance144.BorderColor = System.Drawing.Color.Transparent;
+            appearance144.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_NavButton_ReturnON;
+            this.btnNaviBack.PressedAppearance = appearance144;
             this.btnNaviBack.ShowFocusRect = false;
             this.btnNaviBack.ShowOutline = false;
             this.btnNaviBack.Size = new System.Drawing.Size(68, 60);
@@ -680,11 +682,11 @@
             // 
             // lblNowTime
             // 
-            appearance49.BackColor = System.Drawing.Color.Transparent;
-            appearance49.ForeColor = System.Drawing.Color.White;
-            appearance49.TextHAlignAsString = "Center";
-            appearance49.TextVAlignAsString = "Middle";
-            this.lblNowTime.Appearance = appearance49;
+            appearance42.BackColor = System.Drawing.Color.Transparent;
+            appearance42.ForeColor = System.Drawing.Color.White;
+            appearance42.TextHAlignAsString = "Center";
+            appearance42.TextVAlignAsString = "Middle";
+            this.lblNowTime.Appearance = appearance42;
             this.lblNowTime.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblNowTime.Location = new System.Drawing.Point(15, 10);
             this.lblNowTime.Name = "lblNowTime";
@@ -694,9 +696,9 @@
             // 
             // lblMenuLargeOption
             // 
-            appearance50.BackColor = System.Drawing.Color.Transparent;
-            appearance50.ForeColor = System.Drawing.Color.White;
-            this.lblMenuLargeOption.Appearance = appearance50;
+            appearance145.BackColor = System.Drawing.Color.Transparent;
+            appearance145.ForeColor = System.Drawing.Color.White;
+            this.lblMenuLargeOption.Appearance = appearance145;
             this.lblMenuLargeOption.Font = new System.Drawing.Font("Arial", 14.82F);
             this.lblMenuLargeOption.Location = new System.Drawing.Point(81, 865);
             this.lblMenuLargeOption.Name = "lblMenuLargeOption";
@@ -706,36 +708,36 @@
             // 
             // btnMenuLargeOption
             // 
-            appearance51.BackColor = System.Drawing.Color.Transparent;
-            appearance51.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OptionOFF;
-            this.btnMenuLargeOption.Appearance = appearance51;
+            appearance146.BackColor = System.Drawing.Color.Transparent;
+            appearance146.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OptionOFF;
+            this.btnMenuLargeOption.Appearance = appearance146;
             this.btnMenuLargeOption.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnMenuLargeOption.CurrentState = false;
-            appearance52.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeOption.HotTrackAppearance = appearance52;
+            appearance147.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeOption.HotTrackAppearance = appearance147;
             this.btnMenuLargeOption.Location = new System.Drawing.Point(0, 816);
             this.btnMenuLargeOption.Name = "btnMenuLargeOption";
-            this.btnMenuLargeOption.NormalAppearance = appearance51;
-            appearance53.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenuLargeOption.PressedAppearance = appearance53;
+            this.btnMenuLargeOption.NormalAppearance = appearance146;
+            appearance148.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenuLargeOption.PressedAppearance = appearance148;
             this.btnMenuLargeOption.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_OptionOFF;
             this.btnMenuLargeOption.ShowFocusRect = false;
             this.btnMenuLargeOption.ShowOutline = false;
             this.btnMenuLargeOption.Size = new System.Drawing.Size(259, 128);
             this.btnMenuLargeOption.StateChangeEventEnable = true;
             this.btnMenuLargeOption.TabIndex = 5;
-            appearance54.BackColor = System.Drawing.Color.Transparent;
-            appearance54.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OptionON;
-            this.btnMenuLargeOption.ToggleAppearance = appearance54;
+            appearance149.BackColor = System.Drawing.Color.Transparent;
+            appearance149.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OptionON;
+            this.btnMenuLargeOption.ToggleAppearance = appearance149;
             this.btnMenuLargeOption.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnMenuLargeOption.Click += new System.EventHandler(this.btnMenuLargeOption_Click);
             // 
             // pnlHostOnlineStatus
             // 
             this.pnlHostOnlineStatus.AlphaBlendMode = Infragistics.Win.AlphaBlendMode.Standard;
-            appearance55.BackColor = System.Drawing.Color.Transparent;
-            appearance55.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OffLine;
-            this.pnlHostOnlineStatus.Appearance = appearance55;
+            appearance37.BackColor = System.Drawing.Color.Transparent;
+            appearance37.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_OffLine;
+            this.pnlHostOnlineStatus.Appearance = appearance37;
             this.pnlHostOnlineStatus.Location = new System.Drawing.Point(1755, 292);
             this.pnlHostOnlineStatus.Name = "pnlHostOnlineStatus";
             this.pnlHostOnlineStatus.Size = new System.Drawing.Size(47, 44);
@@ -743,10 +745,10 @@
             // 
             // lblHostOnlineStatus
             // 
-            appearance56.BackColor = System.Drawing.Color.Transparent;
-            appearance56.ForeColor = System.Drawing.Color.White;
-            appearance56.TextHAlignAsString = "Center";
-            this.lblHostOnlineStatus.Appearance = appearance56;
+            appearance55.BackColor = System.Drawing.Color.Transparent;
+            appearance55.ForeColor = System.Drawing.Color.White;
+            appearance55.TextHAlignAsString = "Center";
+            this.lblHostOnlineStatus.Appearance = appearance55;
             this.lblHostOnlineStatus.Font = new System.Drawing.Font("Arial", 14.82F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHostOnlineStatus.Location = new System.Drawing.Point(1810, 304);
             this.lblHostOnlineStatus.Name = "lblHostOnlineStatus";
@@ -756,11 +758,11 @@
             // 
             // lblReagentSetupWaitMinutesForModule1
             // 
-            appearance57.BackColor = System.Drawing.Color.White;
-            appearance57.BorderColor = System.Drawing.Color.Black;
-            appearance57.ForeColor = System.Drawing.Color.OrangeRed;
-            appearance57.TextHAlignAsString = "Center";
-            this.lblReagentSetupWaitMinutesForModule1.Appearance = appearance57;
+            appearance150.BackColor = System.Drawing.Color.White;
+            appearance150.BorderColor = System.Drawing.Color.Black;
+            appearance150.ForeColor = System.Drawing.Color.OrangeRed;
+            appearance150.TextHAlignAsString = "Center";
+            this.lblReagentSetupWaitMinutesForModule1.Appearance = appearance150;
             this.lblReagentSetupWaitMinutesForModule1.BorderStyleInner = Infragistics.Win.UIElementBorderStyle.Solid;
             this.lblReagentSetupWaitMinutesForModule1.BorderStyleOuter = Infragistics.Win.UIElementBorderStyle.None;
             this.lblReagentSetupWaitMinutesForModule1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -778,59 +780,59 @@
             // 
             // btnError
             // 
-            appearance58.BackColor = System.Drawing.Color.Transparent;
-            appearance58.ForeColor = System.Drawing.Color.White;
-            appearance58.Image = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Icon;
-            appearance58.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue;
-            this.btnError.Appearance = appearance58;
+            appearance151.BackColor = System.Drawing.Color.Transparent;
+            appearance151.ForeColor = System.Drawing.Color.White;
+            appearance151.Image = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Icon;
+            appearance151.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue;
+            this.btnError.Appearance = appearance151;
             this.btnError.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnError.CurrentState = false;
             this.btnError.Font = new System.Drawing.Font("Arial", 11.29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance59.BorderColor = System.Drawing.Color.Transparent;
-            this.btnError.HotTrackAppearance = appearance59;
+            appearance152.BorderColor = System.Drawing.Color.Transparent;
+            this.btnError.HotTrackAppearance = appearance152;
             this.btnError.ImageSize = new System.Drawing.Size(0, 0);
             this.btnError.ImageTransparentColor = System.Drawing.Color.Empty;
             this.btnError.Location = new System.Drawing.Point(1746, 39);
             this.btnError.Name = "btnError";
-            this.btnError.NormalAppearance = appearance58;
+            this.btnError.NormalAppearance = appearance151;
             this.btnError.Padding = new System.Drawing.Size(34, 2);
-            appearance60.BorderColor = System.Drawing.Color.Transparent;
-            this.btnError.PressedAppearance = appearance60;
+            appearance153.BorderColor = System.Drawing.Color.Transparent;
+            this.btnError.PressedAppearance = appearance153;
             this.btnError.ShowFocusRect = false;
             this.btnError.ShowOutline = false;
             this.btnError.Size = new System.Drawing.Size(158, 63);
             this.btnError.StateChangeEventEnable = false;
             this.btnError.TabIndex = 41;
             this.btnError.Text = "Error";
-            appearance61.BackColor = System.Drawing.Color.Transparent;
-            appearance61.ForeColor = System.Drawing.Color.White;
-            appearance61.Image = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Icon;
-            appearance61.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue;
-            this.btnError.ToggleAppearance = appearance61;
+            appearance154.BackColor = System.Drawing.Color.Transparent;
+            appearance154.ForeColor = System.Drawing.Color.White;
+            appearance154.Image = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Icon;
+            appearance154.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_ErrButton_Blue;
+            this.btnError.ToggleAppearance = appearance154;
             this.btnError.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.btnError.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnHelp
             // 
-            appearance62.BackColor = System.Drawing.Color.Transparent;
-            appearance62.ForeColor = System.Drawing.Color.White;
-            appearance62.Image = global::Oelco.CarisX.Properties.Resources.Image_HelpButton_Icon;
-            appearance62.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            appearance62.ImageVAlign = Infragistics.Win.VAlign.Top;
-            appearance62.TextHAlignAsString = "Left";
-            appearance62.TextVAlignAsString = "Middle";
-            this.btnHelp.Appearance = appearance62;
+            appearance155.BackColor = System.Drawing.Color.Transparent;
+            appearance155.ForeColor = System.Drawing.Color.White;
+            appearance155.Image = global::Oelco.CarisX.Properties.Resources.Image_HelpButton_Icon;
+            appearance155.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            appearance155.ImageVAlign = Infragistics.Win.VAlign.Top;
+            appearance155.TextHAlignAsString = "Left";
+            appearance155.TextVAlignAsString = "Middle";
+            this.btnHelp.Appearance = appearance155;
             this.btnHelp.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnHelp.Font = new System.Drawing.Font("Arial", 14.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance63.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHelp.HotTrackAppearance = appearance63;
+            appearance156.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHelp.HotTrackAppearance = appearance156;
             this.btnHelp.ImageSize = new System.Drawing.Size(0, 0);
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Violet;
             this.btnHelp.Location = new System.Drawing.Point(1754, 947);
             this.btnHelp.Name = "btnHelp";
-            appearance64.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHelp.PressedAppearance = appearance64;
+            appearance157.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHelp.PressedAppearance = appearance157;
             this.btnHelp.ShowFocusRect = false;
             this.btnHelp.ShowOutline = false;
             this.btnHelp.Size = new System.Drawing.Size(110, 42);
@@ -841,24 +843,24 @@
             // 
             // btnExit
             // 
-            appearance65.BackColor = System.Drawing.Color.Transparent;
-            appearance65.ForeColor = System.Drawing.Color.White;
-            appearance65.Image = global::Oelco.CarisX.Properties.Resources.Image_PowerButton_Icon;
-            appearance65.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            appearance65.TextHAlignAsString = "Left";
-            appearance65.TextVAlignAsString = "Middle";
-            this.btnExit.Appearance = appearance65;
+            appearance158.BackColor = System.Drawing.Color.Transparent;
+            appearance158.ForeColor = System.Drawing.Color.White;
+            appearance158.Image = global::Oelco.CarisX.Properties.Resources.Image_PowerButton_Icon;
+            appearance158.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            appearance158.TextHAlignAsString = "Left";
+            appearance158.TextVAlignAsString = "Middle";
+            this.btnExit.Appearance = appearance158;
             this.btnExit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnExit.Font = new System.Drawing.Font("Arial", 14.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance66.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.HotTrackAppearance = appearance66;
+            appearance159.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.HotTrackAppearance = appearance159;
             this.btnExit.ImageSize = new System.Drawing.Size(0, 0);
             this.btnExit.ImageTransparentColor = System.Drawing.Color.Violet;
             this.btnExit.Location = new System.Drawing.Point(1732, 1008);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Drawing.Size(22, 9);
-            appearance67.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.PressedAppearance = appearance67;
+            appearance160.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.PressedAppearance = appearance160;
             this.btnExit.ShowFocusRect = false;
             this.btnExit.ShowOutline = false;
             this.btnExit.Size = new System.Drawing.Size(183, 67);
@@ -869,23 +871,23 @@
             // 
             // btnAssayStart
             // 
-            appearance68.BackColor = System.Drawing.Color.Transparent;
-            appearance68.ForeColor = System.Drawing.Color.White;
-            appearance68.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayStartButton;
-            appearance68.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayStartEnableButton;
-            appearance68.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            appearance68.TextHAlignAsString = "Center";
-            appearance68.TextVAlignAsString = "Middle";
-            this.btnAssayStart.Appearance = appearance68;
+            appearance161.BackColor = System.Drawing.Color.Transparent;
+            appearance161.ForeColor = System.Drawing.Color.White;
+            appearance161.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayStartButton;
+            appearance161.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayStartEnableButton;
+            appearance161.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            appearance161.TextHAlignAsString = "Center";
+            appearance161.TextVAlignAsString = "Middle";
+            this.btnAssayStart.Appearance = appearance161;
             this.btnAssayStart.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnAssayStart.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance69.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayStart.HotTrackAppearance = appearance69;
+            appearance162.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayStart.HotTrackAppearance = appearance162;
             this.btnAssayStart.ImageTransparentColor = System.Drawing.Color.Violet;
             this.btnAssayStart.Location = new System.Drawing.Point(1758, 420);
             this.btnAssayStart.Name = "btnAssayStart";
-            appearance70.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayStart.PressedAppearance = appearance70;
+            appearance163.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayStart.PressedAppearance = appearance163;
             this.btnAssayStart.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_AssayStartButton;
             this.btnAssayStart.ShowFocusRect = false;
             this.btnAssayStart.ShowOutline = false;
@@ -896,23 +898,23 @@
             // 
             // btnAssayPause
             // 
-            appearance71.BackColor = System.Drawing.Color.Transparent;
-            appearance71.ForeColor = System.Drawing.Color.White;
-            appearance71.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayPauseButton;
-            appearance71.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayPauseEnableButton;
-            appearance71.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            appearance71.TextHAlignAsString = "Center";
-            appearance71.TextVAlignAsString = "Middle";
-            this.btnAssayPause.Appearance = appearance71;
+            appearance164.BackColor = System.Drawing.Color.Transparent;
+            appearance164.ForeColor = System.Drawing.Color.White;
+            appearance164.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayPauseButton;
+            appearance164.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayPauseEnableButton;
+            appearance164.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            appearance164.TextHAlignAsString = "Center";
+            appearance164.TextVAlignAsString = "Middle";
+            this.btnAssayPause.Appearance = appearance164;
             this.btnAssayPause.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnAssayPause.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance72.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayPause.HotTrackAppearance = appearance72;
+            appearance165.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayPause.HotTrackAppearance = appearance165;
             this.btnAssayPause.ImageTransparentColor = System.Drawing.Color.Violet;
             this.btnAssayPause.Location = new System.Drawing.Point(1758, 586);
             this.btnAssayPause.Name = "btnAssayPause";
-            appearance73.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayPause.PressedAppearance = appearance73;
+            appearance166.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayPause.PressedAppearance = appearance166;
             this.btnAssayPause.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_AssayPauseButton;
             this.btnAssayPause.ShowFocusRect = false;
             this.btnAssayPause.ShowOutline = false;
@@ -923,23 +925,23 @@
             // 
             // btnAssayAbort
             // 
-            appearance74.BackColor = System.Drawing.Color.Transparent;
-            appearance74.ForeColor = System.Drawing.Color.White;
-            appearance74.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayAbortButton;
-            appearance74.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayAbortEnableButton;
-            appearance74.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            appearance74.TextHAlignAsString = "Center";
-            appearance74.TextVAlignAsString = "Middle";
-            this.btnAssayAbort.Appearance = appearance74;
+            appearance167.BackColor = System.Drawing.Color.Transparent;
+            appearance167.ForeColor = System.Drawing.Color.White;
+            appearance167.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_AssayAbortButton;
+            appearance167.ImageBackgroundDisabled = global::Oelco.CarisX.Properties.Resources.Image_AssayAbortEnableButton;
+            appearance167.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            appearance167.TextHAlignAsString = "Center";
+            appearance167.TextVAlignAsString = "Middle";
+            this.btnAssayAbort.Appearance = appearance167;
             this.btnAssayAbort.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnAssayAbort.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance75.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayAbort.HotTrackAppearance = appearance75;
+            appearance168.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayAbort.HotTrackAppearance = appearance168;
             this.btnAssayAbort.ImageTransparentColor = System.Drawing.Color.Violet;
             this.btnAssayAbort.Location = new System.Drawing.Point(1758, 757);
             this.btnAssayAbort.Name = "btnAssayAbort";
-            appearance76.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssayAbort.PressedAppearance = appearance76;
+            appearance169.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssayAbort.PressedAppearance = appearance169;
             this.btnAssayAbort.ShapeImage = global::Oelco.CarisX.Properties.Resources.Image_AssayAbortButton;
             this.btnAssayAbort.ShowFocusRect = false;
             this.btnAssayAbort.ShowOutline = false;
@@ -970,7 +972,6 @@
             this.button1.TabIndex = 50;
             this.button1.Text = "SetCountValue(Debug)";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // commonTimer
@@ -981,10 +982,10 @@
             // pnlAnalyzerStatus
             // 
             this.pnlAnalyzerStatus.AlphaBlendMode = Infragistics.Win.AlphaBlendMode.Standard;
-            appearance77.BackColor = System.Drawing.Color.Transparent;
-            appearance77.ImageBackground = global::Oelco.CarisX.Properties.Resources.image_AnalyzerStatus;
-            appearance77.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
-            this.pnlAnalyzerStatus.Appearance = appearance77;
+            appearance170.BackColor = System.Drawing.Color.Transparent;
+            appearance170.ImageBackground = global::Oelco.CarisX.Properties.Resources.image_AnalyzerStatus;
+            appearance170.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Centered;
+            this.pnlAnalyzerStatus.Appearance = appearance170;
             this.pnlAnalyzerStatus.Location = new System.Drawing.Point(1755, 175);
             this.pnlAnalyzerStatus.Name = "pnlAnalyzerStatus";
             this.pnlAnalyzerStatus.Size = new System.Drawing.Size(47, 44);
@@ -993,20 +994,20 @@
             // 
             // btnSlave1
             // 
-            appearance78.BackColor = System.Drawing.Color.Transparent;
-            appearance78.ForeColor = System.Drawing.Color.White;
-            appearance78.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarLeftOFF;
-            this.btnSlave1.Appearance = appearance78;
+            appearance77.BackColor = System.Drawing.Color.Transparent;
+            appearance77.ForeColor = System.Drawing.Color.White;
+            appearance77.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarLeftOFF;
+            this.btnSlave1.Appearance = appearance77;
             this.btnSlave1.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnSlave1.CurrentState = false;
             this.btnSlave1.Font = new System.Drawing.Font("Arial", 16.24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance79.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave1.HotTrackAppearance = appearance79;
+            appearance171.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave1.HotTrackAppearance = appearance171;
             this.btnSlave1.Location = new System.Drawing.Point(693, 0);
             this.btnSlave1.Name = "btnSlave1";
-            this.btnSlave1.NormalAppearance = appearance78;
-            appearance80.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave1.PressedAppearance = appearance80;
+            this.btnSlave1.NormalAppearance = appearance77;
+            appearance172.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave1.PressedAppearance = appearance172;
             this.btnSlave1.ShowFocusRect = false;
             this.btnSlave1.ShowOutline = false;
             this.btnSlave1.Size = new System.Drawing.Size(200, 53);
@@ -1014,29 +1015,29 @@
             this.btnSlave1.TabIndex = 51;
             this.btnSlave1.Tag = "0";
             this.btnSlave1.Text = "Slave1";
-            appearance81.BackColor = System.Drawing.Color.Transparent;
-            appearance81.ForeColor = System.Drawing.Color.White;
-            appearance81.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarLeftON;
-            this.btnSlave1.ToggleAppearance = appearance81;
+            appearance173.BackColor = System.Drawing.Color.Transparent;
+            appearance173.ForeColor = System.Drawing.Color.White;
+            appearance173.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarLeftON;
+            this.btnSlave1.ToggleAppearance = appearance173;
             this.btnSlave1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnSlave1.Click += new System.EventHandler(this.btnSlave_Click);
             // 
             // btnSlave2
             // 
-            appearance82.BackColor = System.Drawing.Color.Transparent;
-            appearance82.ForeColor = System.Drawing.Color.White;
-            appearance82.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterOFF;
-            this.btnSlave2.Appearance = appearance82;
+            appearance174.BackColor = System.Drawing.Color.Transparent;
+            appearance174.ForeColor = System.Drawing.Color.White;
+            appearance174.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterOFF;
+            this.btnSlave2.Appearance = appearance174;
             this.btnSlave2.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnSlave2.CurrentState = false;
             this.btnSlave2.Font = new System.Drawing.Font("Arial", 16.24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance83.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave2.HotTrackAppearance = appearance83;
+            appearance175.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave2.HotTrackAppearance = appearance175;
             this.btnSlave2.Location = new System.Drawing.Point(893, 0);
             this.btnSlave2.Name = "btnSlave2";
-            this.btnSlave2.NormalAppearance = appearance82;
-            appearance84.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave2.PressedAppearance = appearance84;
+            this.btnSlave2.NormalAppearance = appearance174;
+            appearance176.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave2.PressedAppearance = appearance176;
             this.btnSlave2.ShowFocusRect = false;
             this.btnSlave2.ShowOutline = false;
             this.btnSlave2.Size = new System.Drawing.Size(200, 53);
@@ -1044,29 +1045,29 @@
             this.btnSlave2.TabIndex = 51;
             this.btnSlave2.Tag = "1";
             this.btnSlave2.Text = "Slave2";
-            appearance85.BackColor = System.Drawing.Color.Transparent;
-            appearance85.ForeColor = System.Drawing.Color.White;
-            appearance85.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterON;
-            this.btnSlave2.ToggleAppearance = appearance85;
+            appearance177.BackColor = System.Drawing.Color.Transparent;
+            appearance177.ForeColor = System.Drawing.Color.White;
+            appearance177.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterON;
+            this.btnSlave2.ToggleAppearance = appearance177;
             this.btnSlave2.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnSlave2.Click += new System.EventHandler(this.btnSlave_Click);
             // 
             // btnSlave3
             // 
-            appearance86.BackColor = System.Drawing.Color.Transparent;
-            appearance86.ForeColor = System.Drawing.Color.White;
-            appearance86.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterOFF;
-            this.btnSlave3.Appearance = appearance86;
+            appearance178.BackColor = System.Drawing.Color.Transparent;
+            appearance178.ForeColor = System.Drawing.Color.White;
+            appearance178.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterOFF;
+            this.btnSlave3.Appearance = appearance178;
             this.btnSlave3.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnSlave3.CurrentState = false;
             this.btnSlave3.Font = new System.Drawing.Font("Arial", 16.24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance87.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave3.HotTrackAppearance = appearance87;
+            appearance179.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave3.HotTrackAppearance = appearance179;
             this.btnSlave3.Location = new System.Drawing.Point(1093, 0);
             this.btnSlave3.Name = "btnSlave3";
-            this.btnSlave3.NormalAppearance = appearance86;
-            appearance88.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave3.PressedAppearance = appearance88;
+            this.btnSlave3.NormalAppearance = appearance178;
+            appearance180.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave3.PressedAppearance = appearance180;
             this.btnSlave3.ShowFocusRect = false;
             this.btnSlave3.ShowOutline = false;
             this.btnSlave3.Size = new System.Drawing.Size(200, 53);
@@ -1074,29 +1075,29 @@
             this.btnSlave3.TabIndex = 52;
             this.btnSlave3.Tag = "2";
             this.btnSlave3.Text = "Slave3";
-            appearance89.BackColor = System.Drawing.Color.Transparent;
-            appearance89.ForeColor = System.Drawing.Color.White;
-            appearance89.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterON;
-            this.btnSlave3.ToggleAppearance = appearance89;
+            appearance181.BackColor = System.Drawing.Color.Transparent;
+            appearance181.ForeColor = System.Drawing.Color.White;
+            appearance181.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarCenterON;
+            this.btnSlave3.ToggleAppearance = appearance181;
             this.btnSlave3.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnSlave3.Click += new System.EventHandler(this.btnSlave_Click);
             // 
             // btnSlave4
             // 
-            appearance90.BackColor = System.Drawing.Color.Transparent;
-            appearance90.ForeColor = System.Drawing.Color.White;
-            appearance90.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarRightOFF;
-            this.btnSlave4.Appearance = appearance90;
+            appearance182.BackColor = System.Drawing.Color.Transparent;
+            appearance182.ForeColor = System.Drawing.Color.White;
+            appearance182.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarRightOFF;
+            this.btnSlave4.Appearance = appearance182;
             this.btnSlave4.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnSlave4.CurrentState = false;
             this.btnSlave4.Font = new System.Drawing.Font("Arial", 16.24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance91.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave4.HotTrackAppearance = appearance91;
+            appearance183.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave4.HotTrackAppearance = appearance183;
             this.btnSlave4.Location = new System.Drawing.Point(1293, 0);
             this.btnSlave4.Name = "btnSlave4";
-            this.btnSlave4.NormalAppearance = appearance90;
-            appearance92.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlave4.PressedAppearance = appearance92;
+            this.btnSlave4.NormalAppearance = appearance182;
+            appearance184.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlave4.PressedAppearance = appearance184;
             this.btnSlave4.ShowFocusRect = false;
             this.btnSlave4.ShowOutline = false;
             this.btnSlave4.Size = new System.Drawing.Size(200, 53);
@@ -1104,39 +1105,39 @@
             this.btnSlave4.TabIndex = 53;
             this.btnSlave4.Tag = "3";
             this.btnSlave4.Text = "Slave4";
-            appearance93.BackColor = System.Drawing.Color.Transparent;
-            appearance93.ForeColor = System.Drawing.Color.White;
-            appearance93.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarRightON;
-            this.btnSlave4.ToggleAppearance = appearance93;
+            appearance185.BackColor = System.Drawing.Color.Transparent;
+            appearance185.ForeColor = System.Drawing.Color.White;
+            appearance185.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarRightON;
+            this.btnSlave4.ToggleAppearance = appearance185;
             this.btnSlave4.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnSlave4.Click += new System.EventHandler(this.btnSlave_Click);
             // 
             // btnSlaveTotal
             // 
-            appearance94.BackColor = System.Drawing.Color.Transparent;
-            appearance94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
-            appearance94.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarTotal;
-            this.btnSlaveTotal.Appearance = appearance94;
+            appearance186.BackColor = System.Drawing.Color.Transparent;
+            appearance186.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
+            appearance186.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarTotal;
+            this.btnSlaveTotal.Appearance = appearance186;
             this.btnSlaveTotal.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless;
             this.btnSlaveTotal.CurrentState = false;
             this.btnSlaveTotal.Font = new System.Drawing.Font("Arial", 14.82F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            appearance95.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlaveTotal.HotTrackAppearance = appearance95;
+            appearance187.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlaveTotal.HotTrackAppearance = appearance187;
             this.btnSlaveTotal.Location = new System.Drawing.Point(1513, 0);
             this.btnSlaveTotal.Name = "btnSlaveTotal";
-            this.btnSlaveTotal.NormalAppearance = appearance94;
-            appearance96.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSlaveTotal.PressedAppearance = appearance96;
+            this.btnSlaveTotal.NormalAppearance = appearance186;
+            appearance188.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSlaveTotal.PressedAppearance = appearance188;
             this.btnSlaveTotal.ShowFocusRect = false;
             this.btnSlaveTotal.ShowOutline = false;
             this.btnSlaveTotal.Size = new System.Drawing.Size(176, 56);
             this.btnSlaveTotal.StateChangeEventEnable = true;
             this.btnSlaveTotal.TabIndex = 53;
             this.btnSlaveTotal.Text = "      Total";
-            appearance97.BackColor = System.Drawing.Color.Transparent;
-            appearance97.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
-            appearance97.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarTotal;
-            this.btnSlaveTotal.ToggleAppearance = appearance97;
+            appearance189.BackColor = System.Drawing.Color.Transparent;
+            appearance189.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(81)))));
+            appearance189.ImageBackground = global::Oelco.CarisX.Properties.Resources.Image_MenuBarTotal;
+            this.btnSlaveTotal.ToggleAppearance = appearance189;
             this.btnSlaveTotal.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnSlaveTotal.Click += new System.EventHandler(this.btnSlaveTotal_Click);
             // 
@@ -1183,11 +1184,33 @@
             this.btnDebug.Visible = false;
             this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(265, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 30);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Hint";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(349, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(68, 30);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "Warnning";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormMainFrame
             // 
             this.BackgroundImage = global::Oelco.CarisX.Properties.Resources.Image_MainFrameBackgound;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.cmbAssayModuleNo);
             this.Controls.Add(this.chkRackNoUse);
@@ -1288,6 +1311,8 @@
         private Oelco.Common.GUI.CustomLabel lblReagentSetupWaitMinutesForModule2;
         private Oelco.Common.GUI.CustomLabel lblReagentSetupWaitMinutesForModule4;
         private Oelco.Common.GUI.CustomLabel lblReagentSetupWaitMinutesForModule3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

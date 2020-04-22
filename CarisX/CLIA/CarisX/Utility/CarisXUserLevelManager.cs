@@ -153,6 +153,11 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         DebugControlVisibled,
 
+        /// <summary>
+        /// 【IssuesNo:17】分析項目优先级设置
+        /// </summary>
+        MeasurePriority,
+
     }
 
     /// <summary>
@@ -309,7 +314,7 @@ namespace Oelco.CarisX.Utility
             return enable;
         }
         /// <summary>
-        /// 機能種別-レベル対応辞書生成
+        /// 機能種別-レベル対応辞書生成【IssuesNo:18】权限调整
         /// </summary>
         /// <remarks>
         /// 機能種別-レベル対応辞書データを生成します。
@@ -363,16 +368,6 @@ namespace Oelco.CarisX.Utility
 
             /* レベル2項目 */
 
-            // 検量線の修正と検体の再計算,modify by dongzhang 2015.4.2
-            this.funcToLevel.Add( CarisXUserLevelManagedAction.CalibratorEditRecalc, new List<UserLevel>()
-            {
-                UserLevel.Level3,UserLevel.Level5
-            } );
-            // システムパラメータのセットアップ（分析に関する詳細設定）
-            this.funcToLevel.Add( CarisXUserLevelManagedAction.SystemParameterSetupDetail, new List<UserLevel>()
-            {
-                UserLevel.Level4,UserLevel.Level5
-            } );
             // 検体データの修正、削除
             this.funcToLevel.Add( CarisXUserLevelManagedAction.SampleDataEditDelete, new List<UserLevel>()
             {
@@ -388,18 +383,55 @@ namespace Oelco.CarisX.Utility
                 UserLevel.Level3,UserLevel.Level4,UserLevel.Level5
             } );
 
+            // アナライザに関するパラメータ（モータパラメータ、コンフィグレーション）の設定
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.AnalyserParameterSetting, new List<UserLevel>()
+            {
+                UserLevel.Level3,UserLevel.Level4,UserLevel.Level5
+            });
+
+            // 分析項目の追加
+            //【IssuesNo:18】高级别权限包含低级别权限功能，这里添加Level4
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.MeasureProtocolAdd, new List<UserLevel>()
+            {
+                UserLevel.Level3,UserLevel.Level4,UserLevel.Level5
+            });
+
+            //分析条件权限设置
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.AssayCondition, new List<UserLevel>()
+            {
+               UserLevel.Level3,UserLevel.Level4,UserLevel.Level5
+            });
             /* レベル4項目 */
 
-            // アナライザに関するパラメータ（モータパラメータ、コンフィグレーション）の設定
-            this.funcToLevel.Add( CarisXUserLevelManagedAction.AnalyserParameterSetting, new List<UserLevel>()
-            {
-                UserLevel.Level4,UserLevel.Level5,UserLevel.Level3
-            } );
             // メンテナンス（ユニットの調整）
             this.funcToLevel.Add( CarisXUserLevelManagedAction.Maintenance, new List<UserLevel>()
             {
                 UserLevel.Level4,UserLevel.Level5
             } );
+
+            // システムパラメータのセットアップ（分析に関する詳細設定）
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.SystemParameterSetupDetail, new List<UserLevel>()
+            {
+                UserLevel.Level4,UserLevel.Level5
+            });
+
+            //add by marxsu 数据修改权限
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.SetRemarkDataEditedEnable, new List<UserLevel>()
+            {
+               UserLevel.Level4,UserLevel.Level5
+            });
+
+            // 検体測定結果の項目追加表示
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.AddDisplayOfSpecimenAssayResult, new List<UserLevel>()
+            {
+                UserLevel.Level4, UserLevel.Level5
+            });
+
+            //【IssuesNo:17】测定项目顺序设定Tab显示
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.MeasurePriority, new List<UserLevel>()
+            {
+                UserLevel.Level4,UserLevel.Level5
+            });
 
             /* レベル5項目 */
 
@@ -408,16 +440,18 @@ namespace Oelco.CarisX.Utility
             {
                 UserLevel.Level5
             } );
-            // 分析項目の追加
-            this.funcToLevel.Add( CarisXUserLevelManagedAction.MeasureProtocolAdd, new List<UserLevel>()
+
+            // 検量線の修正と検体の再計算,modify by dongzhang 2015.4.2
+            // 【IssuesNo:18】5级权限才可以设置校准修改功能
+            this.funcToLevel.Add(CarisXUserLevelManagedAction.CalibratorEditRecalc, new List<UserLevel>()
             {
-                UserLevel.Level3,UserLevel.Level5
-            } );
+                UserLevel.Level5
+            });
 
             // 校准曲线有效期的设置
             this.funcToLevel.Add(CarisXUserLevelManagedAction.SetExpirationDateOfTheCalibCurve, new List<UserLevel>()
             {
-                 UserLevel.Level5
+                UserLevel.Level5
             });
 			
             // 試薬有効期限の設定
@@ -427,47 +461,27 @@ namespace Oelco.CarisX.Utility
             } );
 
             //试剂剩余量管理权限
+            //【IssuesNo:18】5级权限才可以修改试剂剩余量
             this.funcToLevel.Add(CarisXUserLevelManagedAction.ReagentRemainModify, new List<UserLevel>()
             {
-               UserLevel.Level4, UserLevel.Level5
+               UserLevel.Level5
             });
             //校准品测试数修改权限
             this.funcToLevel.Add(CarisXUserLevelManagedAction.CalibratorMeasureTimesModify, new List<UserLevel>()
             {
                UserLevel.Level5
             });
-            //add by marxsu 数据修改权限
-            this.funcToLevel.Add(CarisXUserLevelManagedAction.SetRemarkDataEditedEnable, new List<UserLevel>()
-            {
-               UserLevel.Level4,UserLevel.Level5
-            });
 
-            ///<summary>
-            ///add by marxsu 阴性/阳性阀值权限设置
-            ///</summary>
-            ///
+            //add by marxsu 阴性/阳性阀值权限设置
             this.funcToLevel.Add(CarisXUserLevelManagedAction.NegativeAndPositiveVaild, new List<UserLevel>()
             {
                UserLevel.Level5
-            });
-
-            //分析条件权限设置
-
-            this.funcToLevel.Add(CarisXUserLevelManagedAction.AssayCondition, new List<UserLevel>()
-            {
-               UserLevel.Level3,UserLevel.Level4,UserLevel.Level5
             });
 
             // 全測定結果の画面表示
             this.funcToLevel.Add( CarisXUserLevelManagedAction.AddDisplayOfAllAssayResult, new List<UserLevel>()
             {
                 UserLevel.Level5
-            } );
-
-            // 検体測定結果の項目追加表示
-            this.funcToLevel.Add( CarisXUserLevelManagedAction.AddDisplayOfSpecimenAssayResult, new List<UserLevel>()
-            {
-                UserLevel.Level4, UserLevel.Level5
             } );
 
             // デバッグ用コントロールの画面表示

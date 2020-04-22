@@ -1961,7 +1961,10 @@ namespace Oelco.CarisX.GUI
             }
             else
             {
-                Int32.TryParse(dataRow[STRING_GRD_RACKPOSITION] == DBNull.Value ? "0" : (String)dataRow[STRING_GRD_RACKPOSITION], out data.RackPosition);
+                //这里使用String强制转换会有异常，
+                //Int32.TryParse(dataRow[STRING_GRD_RACKPOSITION] == DBNull.Value ? "0" : (String)dataRow[STRING_GRD_RACKPOSITION], out data.RackPosition);
+                Int32.TryParse(dataRow[STRING_GRD_RACKPOSITION] == DBNull.Value ? "0" : dataRow[STRING_GRD_RACKPOSITION].ToString(), out data.RackPosition);
+
             }
 
             // 受付番号：登録タイミングで発番する

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TempOffsetParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SlaveList>
+    <ModuleConfig>
+      <reactionTableTempOffsetParam>0</reactionTableTempOffsetParam>
+      <bFTableTempOffsetParam>0</bFTableTempOffsetParam>
+      <bF1TempOffsetParam>0</bF1TempOffsetParam>
+      <bF2TempOffsetParam>0</bF2TempOffsetParam>
+      <r1TempOffsetParam>0</r1TempOffsetParam>
+      <r2TempOffsetParam>0</r2TempOffsetParam>
+      <ptotometryTempOffsetParam>0</ptotometryTempOffsetParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempOffsetParam>0</reactionTableTempOffsetParam>
+      <bFTableTempOffsetParam>0</bFTableTempOffsetParam>
+      <bF1TempOffsetParam>0</bF1TempOffsetParam>
+      <bF2TempOffsetParam>0</bF2TempOffsetParam>
+      <r1TempOffsetParam>0</r1TempOffsetParam>
+      <r2TempOffsetParam>0</r2TempOffsetParam>
+      <ptotometryTempOffsetParam>0</ptotometryTempOffsetParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempOffsetParam>0</reactionTableTempOffsetParam>
+      <bFTableTempOffsetParam>0</bFTableTempOffsetParam>
+      <bF1TempOffsetParam>0</bF1TempOffsetParam>
+      <bF2TempOffsetParam>0</bF2TempOffsetParam>
+      <r1TempOffsetParam>0</r1TempOffsetParam>
+      <r2TempOffsetParam>0</r2TempOffsetParam>
+      <ptotometryTempOffsetParam>0</ptotometryTempOffsetParam>
+    </ModuleConfig>
+    <ModuleConfig>
+      <reactionTableTempOffsetParam>0</reactionTableTempOffsetParam>
+      <bFTableTempOffsetParam>0</bFTableTempOffsetParam>
+      <bF1TempOffsetParam>0</bF1TempOffsetParam>
+      <bF2TempOffsetParam>0</bF2TempOffsetParam>
+      <r1TempOffsetParam>0</r1TempOffsetParam>
+      <r2TempOffsetParam>0</r2TempOffsetParam>
+      <ptotometryTempOffsetParam>0</ptotometryTempOffsetParam>
+    </ModuleConfig>
+  </SlaveList>
+</TempOffsetParameter>
