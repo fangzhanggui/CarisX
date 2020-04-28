@@ -573,7 +573,9 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    return this.DataTable.Copy().AsEnumerable().Select( ( row ) => new AnalyzeLogData( row ) ).OrderByDescending( ( data ) => data.WriteTime ).ToList();
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+                    return dataTableList.Select( ( row ) => new AnalyzeLogData( row ) ).OrderByDescending( ( data ) => data.WriteTime ).ToList();
                 }
                 catch ( Exception ex )
                 {

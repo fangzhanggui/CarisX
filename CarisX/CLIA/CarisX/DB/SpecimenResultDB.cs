@@ -1445,7 +1445,10 @@ namespace Oelco.CarisX.DB
                 {
                     try
                     {
-                        var updateData = (from v in this.DataTable.Copy().AsEnumerable()
+                        //　コピーデータリストを取得
+                        var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                        var updateData = (from v in dataTableList
                                           let data = new SpecimenResultData(v)
                                           where data.GetUniqueNo() == calcData.UniqueNo && data.ReplicationNo == calcData.ReplicationNo
                                           select data).SingleOrDefault();
@@ -1506,7 +1509,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var updateData = (from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var updateData = (from v in dataTableList
                                       let data = new SpecimenResultData(v)
                                       where data.GetUniqueNo() == uniqueNo
                                       select data).SingleOrDefault();
@@ -1534,6 +1540,43 @@ namespace Oelco.CarisX.DB
         /// 検体測定結果情報テーブルの取得
         /// </summary>
         /// <returns></returns>
+        public List<SpecimenResultData> GetSearchData_Split(int pageCurrent = 0, ISearchInfoSpecimenResult searchInfo = null)
+        {
+            List<SpecimenResultData> result = new List<SpecimenResultData>();
+
+            if (this.DataTable != null)
+            {
+                try
+                {
+                    // 表示範囲を取得
+                    int displayRange = (pageCurrent - 1) / 10;
+
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    // 表示範囲分のデータを取得
+                    var tempDatas = dataTableList.Skip(displayRange * CarisXConst.MAX_SAMPLERESULT_TEST_GET_COUNT)
+                                        .Take(CarisXConst.MAX_SAMPLERESULT_TEST_GET_COUNT).Select(v => new SpecimenResultData(v));
+
+                    // 取得データを日付でソート
+                    var datas = tempDatas.Where(v => this.getSpecimenResultDataWhere(searchInfo, v)).OrderBy(d => d.MeasureDateTime).Select(v => v);
+                    result.AddRange(datas.ToList());
+                }
+                catch (Exception ex)
+                {
+                    // DB内部に不正データ
+                    Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                                                                           CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 検体測定結果情報テーブルの取得
+        /// </summary>
+        /// <returns></returns>
         public List<SpecimenResultData> GetSearchData(ISearchInfoSpecimenResult searchInfo = null)
         {
             List<SpecimenResultData> result = new List<SpecimenResultData>();
@@ -1542,9 +1585,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    // コピー手順を削除して、大量のデータによるメモリオーバーフローを防ぎます。
-                    //var datas = from v in this.DataTable.Copy().AsEnumerable()
-                    var datas = from v in this.DataTable.AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new SpecimenResultData(v)
                                 where this.getSpecimenResultDataWhere(searchInfo, data)
                                 orderby data.MeasureDateTime descending
@@ -1575,12 +1619,15 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var uniqueNoList = (from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var uniqueNoList = (from v in dataTableList
                                         let data = new SpecimenResultData(v)
                                         where this.getSpecimenResultDataWhere(recalcInfo, data)
                                         select data.GetUniqueNo()).Distinct().ToList();
 
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    var datas = from v in dataTableList
                                 let data = new SpecimenResultData(v)
                                 where uniqueNoList.Contains(data.GetUniqueNo())
                                 orderby data.MeasureDateTime descending
@@ -1670,54 +1717,130 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
-                                let data = new SpecimenResultData(v)
-                                orderby data.MeasureDateTime descending
-                                where !data.IsDeletedData()
-                                select data;
+                    // 保存上限を超過判断フラグ
+                    // true:超過 false:超過していない
+                    Boolean isLimitOver = false;
+                    int dataCount = this.DataTable.Rows.Count;
 
-                    try
+                    // データ数が保存上限以上の場合
+                    if (dataCount > CarisXConst.MAX_SAMPLERESULT_TEST_COUNT)
                     {
-                        List<SpecimenResultData> deleteData;
-                        var samples = datas.GroupBy((data) => data.GetIndividuallyNo());
+                        isLimitOver = true;
+                    }
+                    // データ数が保存上限未満の場合
+                    else
+                    {
+                        // 処理なし
+                    }
 
-                        // 保存数(検体)上限超過分の検体測定結果削除
-                        try
-                        {
-                            deleteData = samples.Skip(CarisXConst.MAX_SAMPLERESULT_COUNT).SelectMany((grp) => grp.AsEnumerable()).ToList();
-                            deleteData.DeleteAllDataList();
-                            this.SetData(deleteData);
-                        }
-                        catch (Exception)
-                        {
-                        }
+                    // 保存上限を超過している場合
+                    if (isLimitOver == true)
+                    {
+                        //　コピーデータリストを取得
+                        var dataTableList = this.DataTable.AsEnumerable().ToList();
 
-                        // 保存数(分析)上限超過分の検体測定結果削除
-                        try
+                        // 削除予定のデータ数を取得
+                        int deleteDataCount = dataTableList.Select(v => new SpecimenResultData(v))
+                                                .Where(d => d.IsDeletedData() == true).Count();
+
+                        // 削除しないデータ数が保存上限以上の場合
+                        if ((dataCount - deleteDataCount) > CarisXConst.MAX_SAMPLERESULT_TEST_COUNT)
                         {
-                            var deleteIndividuallyList = datas.Skip(CarisXConst.MAX_SAMPLERESULT_TEST_COUNT).Select((data) => data.GetIndividuallyNo()).Distinct();
-                            deleteData = (from individuallyNo in deleteIndividuallyList
-                                          let grpData = samples.FirstOrDefault((grp) => grp.Key == individuallyNo)
-                                          where grpData != null
-                                          select grpData).SelectMany((grp) => grp.AsEnumerable()).ToList();
-                            deleteData.DeleteAllDataList();
-                            this.SetData(deleteData);
+                            isLimitOver = true;
                         }
-                        catch (Exception)
+                        // 削除しないデータ数が保存上限未満の場合
+                        else
                         {
+                            isLimitOver = false;
                         }
                     }
-                    catch (Exception)
+                    else
                     {
+                        // 処理なし
+                    }
+
+                    // 保存上限を超過している場合
+                    if (isLimitOver == true)
+                    {
+                        List<SpecimenResultData> deleteData = new List<SpecimenResultData>();
+
+                        var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                        // 削除しないデータで保存上限を超過しているデータを取得
+                        var datas = dataTableList.Select(v => new SpecimenResultData(v))
+                                      .OrderBy(data => data.MeasureDateTime).Where(data => !data.IsDeletedData())
+                                      .Skip(CarisXConst.MAX_SAMPLERESULT_TEST_COUNT).ToList();
+
+                        // 保存上限を超過しているデータの検体識別番号を取得
+                        var deleteIndividuallyList = datas.Select((data) => data.GetIndividuallyNo()).Distinct();
+
+                        // 保存上限を超過しているデータを探索
+                        foreach (int individuallyNo in deleteIndividuallyList)
+                        {
+                            // データテーブルを探索
+                            foreach (var data in dataTableList)
+                            {
+                                SpecimenResultData resultData = new SpecimenResultData(data);
+
+                                // 検体識別番号が一致する場合
+                                if (resultData.GetIndividuallyNo() == individuallyNo)
+                                {
+                                    // 削除データに追加
+                                    deleteData.Add(resultData);
+                                }
+                                else
+                                {
+                                    // 処理なし
+                                }
+
+                            }
+
+                        }
+
+                        deleteData.DeleteAllDataList();
+                        this.SetData(deleteData);
+                    }
+                    else
+                    {
+                        // 処理無し
                     }
                 }
-                catch (Exception ex)
+                catch( Exception ex )
                 {
-                    // DB内部に不正データ
+                    // データ削除失敗
                     Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
                                                                                            CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
                 }
             }
+        }
+
+        /// <summary>
+        /// データ数の取得
+        /// </summary>
+        /// <param name="searchInfo"></param>
+        /// <returns></returns>
+        public int GetDataCount(ISearchInfoSpecimenResult searchInfo = null)
+        {
+            int count = 0;
+
+            try
+            {
+                // 10万件ずつ、全データを取得する
+                for (int idx = 0; idx < this.DataTable.Rows.Count; idx += CarisXConst.MAX_SAMPLERESULT_TEST_GET_COUNT)
+                {
+                    // 条件に合致する個数を加算する
+                    count += this.DataTable.AsEnumerable().Skip(idx).Take(CarisXConst.MAX_SAMPLERESULT_TEST_GET_COUNT)
+                              .Select(v => new SpecimenResultData(v)).Where(d => this.getSpecimenResultDataWhere(searchInfo, d)).Count();
+                }
+            }
+            catch (Exception ex)
+            {
+                // データ取得失敗
+                Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                                                                                       CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
+            }
+
+            return count;
         }
         #endregion
 

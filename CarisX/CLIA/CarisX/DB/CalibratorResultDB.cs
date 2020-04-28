@@ -1429,7 +1429,10 @@ namespace Oelco.CarisX.DB
                 {
                     try
                     {
-                        var updateData = ( from v in this.DataTable.Copy().Rows.OfType<DataRow>()
+                        //　コピーデータリストを取得
+                        var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                        var updateData = ( from v in dataTableList
                                            let data = new CalibratorResultData( v )
                                            where data.GetUniqueNo() == calcData.UniqueNo && data.ReplicationNo == calcData.ReplicationNo
                                            select data ).SingleOrDefault();
@@ -1493,7 +1496,10 @@ namespace Oelco.CarisX.DB
 
                 try
                 {
-                    var updataData = ( from v in this.DataTable.Copy().Rows.OfType<DataRow>()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var updataData = ( from v in dataTableList
                                        let data = new CalibratorResultData( v )
                                        where calcData.IndividuallyNo == data.GetIndividuallyNo() && calcData.UniqueNo == data.GetUniqueNo()
                                        orderby ( (DateTime)v[STRING_MEASUREDATETIME] ) descending
@@ -1541,13 +1547,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    // 修改内容：コピー手順を削除して、大量のデータによるメモリオーバーフローを防ぎます。
-                    //var datas = from v in this.DataTable.Copy().Rows.OfType<DataRow>()
-                    //            let data = new CalibratorResultData( v )
-                    //            where this.getCalibResultDataWhere( searchInfo, data )
-                    //            orderby ( (DateTime)v[STRING_MEASUREDATETIME] ) descending
-                    //            select data;
-                    var datas = from v in this.DataTable.Rows.OfType<DataRow>()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new CalibratorResultData(v)
                                 where this.getCalibResultDataWhere(searchInfo, data)
                                 orderby ((DateTime)v[STRING_MEASUREDATETIME]) descending
@@ -1803,7 +1806,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().Rows.OfType<DataRow>()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new CalibratorResultData( v )
                                 orderby data.MeasureDateTime descending
                                 where !data.IsDeletedData()

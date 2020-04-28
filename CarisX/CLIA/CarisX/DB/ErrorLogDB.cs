@@ -426,7 +426,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var logData = this.DataTable.Copy().AsEnumerable().Select(row => new ErrorLogData(row))
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var logData = dataTableList.Select(row => new ErrorLogData(row))
                         .OrderByDescending(data => data.WriteTime).ThenByDescending(data => data.LogID).ToList();
                     return logData;
                 }
@@ -453,7 +456,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var logData = this.DataTable.Copy().AsEnumerable().Select(row => new ErrorLogData(row))
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var logData = dataTableList.Select(row => new ErrorLogData(row))
                          .Where(data => this.getLogDataWhere(searchLogInfo, data))
                          .OrderByDescending(data => data.WriteTime).ThenByDescending(data => data.LogID).ToList();
 

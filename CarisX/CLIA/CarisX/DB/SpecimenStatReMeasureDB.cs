@@ -252,8 +252,11 @@ namespace Oelco.CarisX.DB
             // データ検索
             IEnumerable<DataRow> result = null;
 
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
             // 登録検索（測定指示問合せを待機しているのは１件しかいない予定）
-            var groupVal = from v in this.DataTable.Rows.OfType<DataRow>()
+            var groupVal = from v in dataTableList
                              where (rackId.DispPreCharString == v[STRING_RACKID].ToString())
                                && (Boolean)v[STRING_WAITMEASUREINDICATE] == true
                              group v by (Int32)v[STRING_MEASPROTOCOLNO];
@@ -461,7 +464,10 @@ namespace Oelco.CarisX.DB
         /// <returns>データ行識別情報</returns>
         public Boolean existsWaitMeasureIndicate()
         {
-            return this.DataTable.Rows.OfType<DataRow>().ToList().Exists(v => (Boolean)v[STRING_WAITMEASUREINDICATE] == true);
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+            return dataTableList.Exists(v => (Boolean)v[STRING_WAITMEASUREINDICATE] == true);
         }
 
         /// <summary>

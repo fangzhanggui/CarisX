@@ -63,10 +63,19 @@ namespace Oelco.CarisX.GUI
         public const String TRANSMIT = "Transmit";
 
         /// <summary>
-        /// スペシメン範囲変数
+        /// 一般検体範囲変数
         /// </summary>
         private int pageCurrent = 1, pageCount = 1, pageSize = 10000;
 
+        /// <summary>
+        /// 一般検体全選択ページ
+        /// </summary>
+        private int beforePageCurrent = 1;
+
+        /// <summary>
+        /// 一度に取得するページ数
+        /// </summary>
+        private int readPageNum = 10;
         #endregion
 
         #region [インスタンス変数定義]
@@ -206,6 +215,9 @@ namespace Oelco.CarisX.GUI
                     {SpecimenResultData.DataKeys.ResultCount, Oelco.CarisX.Properties.Resources.STRING_SPECIMENRESULT_030},
                     {SpecimenResultData.DataKeys.ModuleNo, Oelco.CarisX.Properties.Resources.STRING_SPECIMENRESULT_032},
                 };
+
+            // データ取得上限と1ページのデータ数からページ取得数を算出
+            this.readPageNum = CarisXConst.MAX_SAMPLERESULT_TEST_GET_COUNT / this.pageSize;
         }
 
         //设置ToolBar的右键功能不可用
@@ -310,7 +322,7 @@ namespace Oelco.CarisX.GUI
             if (dataForPrint != null && dataForPrint.Count != 0)
             {
                 // データを生成する
-                var searchDic = (from dbData in Singleton<SpecimenResultDB>.Instance.GetSearchData()
+                var searchDic = (from dbData in Singleton<SpecimenResultDB>.Instance.GetSearchData_Split(this.pageCurrent)
                                  select new OutPutSpecimenResultData(dbData))
                     .ToDictionary((v) => new Tuple<Int32, Int32>(v.GetUniqueNo(), v.ReplicationNo), (v) => v);
 
@@ -961,13 +973,22 @@ namespace Oelco.CarisX.GUI
         /// <param name="e">イベントデータ</param>
         private void searchInfoPanelSpecimenResult_OkClick(object sender, EventArgs e)
         {
-            var searchDatas = Singleton<SpecimenResultDB>.Instance.GetSearchData(this.searchInfoPanelSpecimenResult);
+            var searchDatas = Singleton<SpecimenResultDB>.Instance.GetSearchData_Split(this.pageCurrent, this.searchInfoPanelSpecimenResult);
+            //var searchDatas = Singleton<SpecimenResultDB>.Instance.GetSearchData(this.searchInfoPanelSpecimenResult);
+
+            // ページめくりが必要か判定
+            Boolean isAllowPageBreaks = IsAllowPageBreaks(Singleton<SpecimenResultDB>.Instance.GetDataCount(this.searchInfoPanelSpecimenResult));
 
             // 修改内容：ページめくり処理追加
-            if (IsAllowPageBreaks(this.currentSampleResultInfo.Count))
+            if (isAllowPageBreaks)
+            {
                 this.grdSpecimenResult.DataSource = new BindingList<SpecimenResultData>(searchDatas.Take(this.pageSize).ToList());
+            }
             else
+            {
                 this.grdSpecimenResult.DataSource = new BindingList<SpecimenResultData>(searchDatas);
+            }
+                
             
             //this.grdSpecimenResult.DataSource = new BindingList<SpecimenResultData>(searchDatas);
             this.btnFilter.Appearance.ImageBackground = CarisX.Properties.Resources.Image_SelectButton_selected;
@@ -1018,7 +1039,7 @@ namespace Oelco.CarisX.GUI
             lock (this)
             {
                 IRecalcInfoSpecimenResult recalcInfo = this.recalcInfoPanelSpecimenResult;
-
+               
                 //【IssuesNo:9】在样本结果中增加ReceiptNo,用于IGRA项目再计算
                 var recalcData = (from data in Singleton<SpecimenResultDB>.Instance.GetReCalcData(recalcInfo)
                                   let calcData = new CalcData( data.GetModuleNo()
@@ -1153,23 +1174,46 @@ namespace Oelco.CarisX.GUI
             var list = this.grdSpecimenResult.DataSource as BindingList<SpecimenResultData>;
             if (this.bindCurrentSampleResultInfo == null || list == null)
             {
-                this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData();
+
+                ////stopwatch
+                //System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+                //sw.Start();
+
+                this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData_Split(this.pageCurrent);
+                //this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData();
                 this.bindCurrentSampleResultInfo = new BindingList<SpecimenResultData>(this.currentSampleResultInfo);
+
+                // ページめくりが必要か判定
+                Boolean isAllowPageBreaks = IsAllowPageBreaks(Singleton<SpecimenResultDB>.Instance.GetDataCount());
 
                 // 修改内容：ページめくり処理追加
                 //this.grdSpecimenResult.DataSource = this.bindCurrentSampleResultInfo;
-
-                if (IsAllowPageBreaks(this.bindCurrentSampleResultInfo.Count))
+                if (isAllowPageBreaks)
+                {
                     this.grdSpecimenResult.DataSource = new BindingList<SpecimenResultData>(this.currentSampleResultInfo.Take(this.pageSize).ToList());
+                }
                 else
+                {
                     this.grdSpecimenResult.DataSource = this.bindCurrentSampleResultInfo;
+            }
+
+               
+                //sw.Stop();
+
+                //String message = String.Format("(Load)経過時間 captScreenRect　={0}", sw.Elapsed);
+                //Console.WriteLine(message);
+                //Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+                //                                                                               CarisXLogInfoBaseExtention.Empty, message);
+
+                //// stopwatch
             }
             else
             {
                 list.RaiseListChangedEvents = false;
                 list.Clear();
                 // 修改内容：ページめくり処理追加
-                this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData();
+                this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData_Split(this.pageCurrent);
+                //this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData();
                 //if (list == this.bindCurrentSampleResultInfo)
                 //{
                 //    Singleton<SpecimenResultDB>.Instance.GetSearchData().ForEach((data) => list.Add(data));
@@ -1179,7 +1223,11 @@ namespace Oelco.CarisX.GUI
                 //    Singleton<SpecimenResultDB>.Instance.GetSearchData(this.searchInfoPanelSpecimenResult).ForEach((data) => list.Add(data));
                 //}
                 int iPageIndex = this.pageCurrent;
-                if (IsAllowPageBreaks(this.currentSampleResultInfo.Count))
+
+                // ページめくりが必要か判定
+                Boolean isAllowPageBreaks = IsAllowPageBreaks(Singleton<SpecimenResultDB>.Instance.GetDataCount());
+
+                if (isAllowPageBreaks)
                 {
                     if (iPageIndex > this.pageCount)
                     {
@@ -1387,12 +1435,41 @@ namespace Oelco.CarisX.GUI
 
         private void teCurrent_ValueChanged(object sender, EventArgs e)
         {
+            //// stopwatch
+            //System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            //sw.Start();
+
             int iPageIndex = 1;
             if (!int.TryParse(this.teCurrent.Value.ToString(), out iPageIndex))
                 return;
 
             this.pageCurrent = iPageIndex;
+
+            // 変更前のデータ読み込み範囲を取得
+            int beforeDisplayRange = ( this.beforePageCurrent - 1 ) / this.readPageNum;
+
+            // 変更後のデータ読み込み囲を取得
+            int afterDisplayRange = ( this.pageCurrent - 1 ) / this.readPageNum;
+
+            // データ読み込み範囲が異なる場合
+            if (beforeDisplayRange != afterDisplayRange)
+            {
+                // データテーブルからデータ読み込み範囲分のデータを再取得
+                this.currentSampleResultInfo = Singleton<SpecimenResultDB>.Instance.GetSearchData_Split(this.pageCurrent);
+            }
+
             PageTurning();
+
+
+            // 前回選択ページを更新
+            this.beforePageCurrent = this.pageCurrent;
+
+            //sw.Stop();
+            //String message = String.Format("経過時間 captScreenRect　={0} page = {1}", sw.Elapsed, this.pageCurrent);
+            //Console.WriteLine(message);
+            //Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
+            //                                                                               CarisXLogInfoBaseExtention.Empty, message);
+            //// stopwatch
         }
 
         /// <summary>
@@ -1405,7 +1482,26 @@ namespace Oelco.CarisX.GUI
 
             if ((this.pageCurrent > 1 && this.pageCurrent < this.pageCount) || this.pageCurrent == this.pageCount)
             {
-                int iSkipNum = (this.pageCurrent - 1) * this.pageSize;
+                // データ読み込み位置を取得
+                int readDataCurrent = this.pageCurrent % this.readPageNum;
+
+                // スキップ位置を計算する際に使用
+                int skipNumCalc = 0;
+
+                // 0の場合
+                if (readDataCurrent == 0)
+                {
+                    skipNumCalc = this.readPageNum;
+                }
+                // それ以外の場合
+                else
+                {
+                    skipNumCalc = 0;
+                }
+
+                int iSkipNum = ( skipNumCalc + ( readDataCurrent - 1 ) ) * this.pageSize;
+                ////int iSkipNum = ( this.pageCurrent - 1 ) * this.pageSize;
+
                 this.grdSpecimenResult.DataSource = new BindingList<SpecimenResultData>(this.currentSampleResultInfo.Skip(iSkipNum).Take(this.pageSize).ToList());
                 this.btnPre.Enabled = true;
                 if (this.pageCurrent == this.pageCount)

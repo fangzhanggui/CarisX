@@ -1108,7 +1108,6 @@ namespace Oelco.CarisX.Const
         ///     ・サンプリング停止、分析終了時、分析再開時にポーズコマンドが複数台に送られない不具合を修正
         ///     ・コマンド送信処理に排他制御を追加
         /// 
-        ///
         /// Ver1.01.57.00: 
         ///     ①障害対策画面の改修
         ///     ②急診検体における希釈倍率の制限
@@ -1127,8 +1126,14 @@ namespace Oelco.CarisX.Const
         ///     ・未接続状態のモジュールに画面切り替え可能となるよう変更
         ///     ・キャリブ登録にて手動補正ポイントの内容をラック図にリアルタイムに反映するよう変更
         ///     
- #endregion // [--- old version ---]
-        /// Ver1.01.57.01
+        ///
+        /// Ver1.01.58.00: 
+        ///     ＜調整＞
+        ///     ・OutOfMemory対策実装
+        ///     ・測定データコマンドの連続受信時にDBテーブルのデッドロックによるフリーズ問題を修正
+        ///     ・メンテナンス画面にてモジュール切替時にアプリが強制終了する問題を修正
+        #endregion // [--- old version ---]
+        /// Ver1.01.58.01
         ///     ①调整界面温度单元，新增温度补偿校准功能；【IssuesNo:4】
         ///     ②Wan200+版本的IOT功能调整；【IssuesNo:16】
         /// 
@@ -1165,7 +1170,7 @@ namespace Oelco.CarisX.Const
         ///     ·修复STAT固定注册信息中的ReceiptNo在使用过后没有自动更新的问题；【IssuesNo:14】
         ///     ·调整部分汉化内容
         ///     ·补充部分异常日志的内容
-		///     ·取消IOT模块的限制
+        ///     ·取消IOT模块的限制
         /// </summary>
         /// <remarks>
         /// 変数に定義するバージョン番号はオプション画面に表示するため、「メジャー.マイナー.リビジョン」までとする。
@@ -1176,7 +1181,7 @@ namespace Oelco.CarisX.Const
         /// 　・リビジョン：仕様変更・機能追加をする場合に変更されます。
         /// 　・ビルド    ：修正パッチごとに変更されます。
         /// </remarks>
-        public const String USER_PROGRAM_VERSION = "V1.01.57.01";
+        public const String USER_PROGRAM_VERSION = "V1.01.58.01";
 
         /// <summary>
         /// グリッド行背景色の基本色
@@ -1571,6 +1576,11 @@ namespace Oelco.CarisX.Const
         /// 一般/優先検体の保存上限分析数
         /// </summary>
         public const Int32 MAX_SAMPLERESULT_TEST_COUNT = 500000;
+
+        /// <summary>
+        /// 一般/優先検体のデータテーブル取得上限分析数
+        /// </summary>
+        public const Int32 MAX_SAMPLERESULT_TEST_GET_COUNT = 100000;
         /// <summary>
         /// キャリブレータ測定結果の保存上限分析数
         /// </summary>

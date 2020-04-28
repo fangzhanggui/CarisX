@@ -53,6 +53,7 @@ namespace Oelco.CarisX.Maintenance
         public FormOther[] subFormOther;
         public int moduleIndex = -1;
         Thread threadPleaseWait = null;
+        DlgWaitModuleChange DlgWaitModule;
 
         /// <summary>
         /// コンストラクタ
@@ -127,16 +128,9 @@ namespace Oelco.CarisX.Maintenance
         /// <remarks>タブの切替時に表示したいので、別スレッドを作成してそちらで表示する</remarks>
         private void ShowDialogWaitModuleChange()
         {
-            DlgWaitModuleChange dlgWaitModuleChange = new DlgWaitModuleChange();
-            try
-            {
-                dlgWaitModuleChange.ShowDialog();
+            DlgWaitModule = new DlgWaitModuleChange();
+            DlgWaitModule.ShowDialog();
             }
-            catch (ThreadAbortException)
-            {
-                dlgWaitModuleChange.Close();
-            }
-        }
 
         /// <summary>
         /// Module1～4タブの表示制御を行う
@@ -1019,7 +1013,13 @@ namespace Oelco.CarisX.Maintenance
 
             if (e.PreviousSelectedTab != null)
             {
-                threadPleaseWait.Abort();
+                // 描画が遅れているため、ここで表示処理を行う
+                this.Refresh();
+
+                // モジュール切替時待機用ダイアログの表示処理を行っているスレッドで、このメソッドを実行する
+                DlgWaitModule.Invoke((MethodInvoker)delegate { DlgWaitModule.Close(); });
+
+                threadPleaseWait.Join();
                 threadPleaseWait = null;
             }
         }

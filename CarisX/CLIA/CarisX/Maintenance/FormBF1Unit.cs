@@ -658,6 +658,7 @@ namespace Oelco.CarisX.Maintenance
                     break;
 
                 case (int)MaintenanceTabIndex.MAdjust:
+                    this.Enabled = true;
                     ToolbarsControl((int)ToolBarEnable.Adjust);
                     break;
             }

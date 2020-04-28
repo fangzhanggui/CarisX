@@ -54,6 +54,8 @@ namespace Oelco.CarisX.Utility
         /// </summary>
         private int[] motorErrorRackModuleCode = new int[3] { 1, 2, 3 };
 
+        static LockObject<Int32> cmdLock = new LockObject<Int32>();
+
         #endregion
 
         #region [コンストラクタ]
@@ -2364,6 +2366,12 @@ namespace Oelco.CarisX.Utility
         /// <param name="param"></param>
         private void onAssayData(Object param)
         {
+            if( cmdLock == null )
+            {
+                cmdLock = new LockObject<Int32>();
+            }
+            cmdLock.Lock();
+
             try
             {
                 if (param is Object[])
@@ -2383,6 +2391,8 @@ namespace Oelco.CarisX.Utility
                 Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<CarisXUserLevelManager>.Instance.NowUserID,
                     CarisXLogInfoBaseExtention.Empty, String.Format("{0} {1} {2}", System.Reflection.MethodBase.GetCurrentMethod().Name, ex.Message, ex.StackTrace));
             }
+
+            cmdLock.UnLock();
         }
 
         /// <summary>

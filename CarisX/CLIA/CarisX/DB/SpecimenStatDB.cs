@@ -400,8 +400,11 @@ namespace Oelco.CarisX.DB
             // データ検索
             IEnumerable<DataRow> result = null;
 
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
             // 一時登録検索
-            result = from v in this.DataTable.Rows.OfType<DataRow>()
+            result = from v in dataTableList
                         where ( rackId.DispPreCharString == v[STRING_RACKID].ToString() )
                            && ( "0" == v[STRING_RACKPOSITION].ToString() )
                      select v;
@@ -412,7 +415,7 @@ namespace Oelco.CarisX.DB
             if (result.Count() == 0)
             {
                 // 固定登録検索
-                result = from v in this.DataTable.Rows.OfType<DataRow>()
+                result = from v in dataTableList
                          where ( rackId.DispPreCharString == v[STRING_RACKID].ToString() )
                             && ( rackPos.ToString() == v[STRING_RACKPOSITION].ToString() )
                          select v;

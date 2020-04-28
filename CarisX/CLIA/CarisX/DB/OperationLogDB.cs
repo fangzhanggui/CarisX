@@ -191,7 +191,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    return this.DataTable.Copy().AsEnumerable().Select(row => new OperationLogData(row))
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    return dataTableList.Select(row => new OperationLogData(row))
                         .OrderByDescending(data => data.WriteTime).ThenByDescending(data => data.LogID).ToList();
                 }
                 catch ( Exception ex )

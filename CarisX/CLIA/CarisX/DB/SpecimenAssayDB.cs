@@ -1298,7 +1298,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from data in this.DataTable.Copy().AsEnumerable().AsParallel().Select( ( row ) => new SpecimenAssayData( row ) )
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from data in dataTableList.AsParallel().Select( ( row ) => new SpecimenAssayData( row ) )
                                 where ( rackID == null || ( rackID != null && rackID.DispPreCharString == data.RackId.DispPreCharString ) )
                                 select data;
 
@@ -1329,7 +1332,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from data in this.DataTable.Copy().AsEnumerable().AsParallel().Select((row) => new SpecimenAssayData(row))
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from data in dataTableList.AsParallel().Select((row) => new SpecimenAssayData(row))
                                 where (ReceiptNo == data.ReceiptNumber && protocolNo == data.GetMeasureProtocolIndex())
                                 select data;
 
@@ -1424,7 +1430,13 @@ namespace Oelco.CarisX.DB
         public Boolean AssayStatusUpdate( Int32 uniqueNo, Int32 replicationNo, TimeSpan remain )
         {
             Boolean result = true;
-            var changeData = this.DataTable.AsEnumerable().AsParallel().Select( ( row ) => new SpecimenAssayData( row ) ).FirstOrDefault( ( targetData ) => targetData.GetUniqueNo() == uniqueNo && targetData.ReplicationNo == replicationNo );
+
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+            var changeData = dataTableList.AsParallel().Select( ( row ) => new SpecimenAssayData( row ) )
+                .FirstOrDefault( ( targetData ) => (targetData.GetUniqueNo() == uniqueNo)
+                                                && (targetData.ReplicationNo == replicationNo) );
             if ( changeData != null )
             {
                 // ステータス更新
@@ -1461,9 +1473,13 @@ namespace Oelco.CarisX.DB
         {
             if ( this.DataTable != null )
             {
-                var deleteData = this.DataTable.AsEnumerable().Select( ( row ) => new SpecimenAssayData( row ) )
-                    .Where( ( data ) => data.GetStatus() == SampleInfo.SampleMeasureStatus.Wait || data.GetStatus() == SampleInfo.SampleMeasureStatus.InProcess )
-                    .ToList();
+                //　コピーデータリストを取得
+                var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                var deleteData = dataTableList.Select( ( row ) => new SpecimenAssayData( row ) )
+                    .Where( ( data ) => (data.GetStatus() == SampleInfo.SampleMeasureStatus.Wait)
+                                     || (data.GetStatus() == SampleInfo.SampleMeasureStatus.InProcess) ).ToList();
+
                 deleteData.DeleteAllDataList();
                 deleteData.SyncDataListToDataTable( this.DataTable );
             }

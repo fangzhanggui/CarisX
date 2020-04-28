@@ -258,12 +258,15 @@ namespace Oelco.CarisX.DB
             // データ検索Data retrieval
             IEnumerable<DataRow> result = null;
 
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
             // ラックID検索・サンプルID検索
             // 既に読込まれたテーブルデータより検索を行う。
             switch (askType)
             {
                 case AskTypeKind.RackID:
-                    var groupVal = from v in this.DataTable.AsEnumerable()
+                    var groupVal = from v in dataTableList
                                    where rackId.DispPreCharString == (v[STRING_RACKID] == null ? String.Empty : v[STRING_RACKID].ToString()) &&
                                    rackPos == (v[STRING_RACKPOSITION] == null ? 0 : (Int32)v[STRING_RACKPOSITION]) &&
                                    (Boolean)v[STRING_WAITMEASUREINDICATE] == true
@@ -286,12 +289,11 @@ namespace Oelco.CarisX.DB
                     break;
 
                 case AskTypeKind.SampleID:
-                    groupVal = from v in this.DataTable.AsEnumerable()
-                               where
-                               (searchId == v[STRING_SAMPLEID].ToString()
-                               || (rackId.DispPreCharString == (v[STRING_RACKID] == null ? String.Empty : v[STRING_RACKID].ToString()) &&
-                               rackPos == (v[STRING_RACKPOSITION] == null ? 0 : (Int32)v[STRING_RACKPOSITION]))
-                               ) && (Boolean)v[STRING_WAITMEASUREINDICATE] == true
+                    groupVal = from v in dataTableList
+                               where( (searchId == v[STRING_SAMPLEID].ToString())
+                                   || (rackId.DispPreCharString == (v[STRING_RACKID] == null ? String.Empty : v[STRING_RACKID].ToString())
+                                   && (rackPos == (v[STRING_RACKPOSITION] == null ? 0 : (Int32)v[STRING_RACKPOSITION]))) )
+                                 && ((Boolean)v[STRING_WAITMEASUREINDICATE] == true)
                                group v by (Int32)v[STRING_MEASPROTOCOLNO];
 
                     // 分析項目に対して単一化する

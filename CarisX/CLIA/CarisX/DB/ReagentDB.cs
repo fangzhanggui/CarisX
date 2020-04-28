@@ -675,15 +675,18 @@ namespace Oelco.CarisX.DB
                         inModuleNo = new int[] { moduleId };
                     }
 
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     if (kind.HasValue)
                     {
-                        result = this.DataTable.Copy().AsEnumerable().Select(row =>
-                           new ReagentData(row)).Where(data =>
-                           data.ReagentKind == (int)kind && (inModuleNo.Contains(data.ModuleNo))).ToList();
+                        result = dataTableList.Select(row =>
+                           new ReagentData(row)).Where(data => ( (data.ReagentKind == (int)kind)
+                                                              && (inModuleNo.Contains(data.ModuleNo)) )).ToList();
                     }
                     else
                     {
-                        result = this.DataTable.Copy().AsEnumerable().Select(row =>
+                        result = dataTableList.Select(row =>
                             new ReagentData(row)).Where(data => (inModuleNo.Contains(data.ModuleNo))).ToList();
                     }
                 }
@@ -744,7 +747,10 @@ namespace Oelco.CarisX.DB
                         inModuleNo.Add(moduleNo);
                     }
 
-                    result = (from v in this.DataTable.AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    result = (from v in dataTableList
                               let data = new ReagentData(v)
                               where data.ReagentCode == reagentCode 
                               && data.ReagentKind == (Int32)ReagentKind.Reagent 
@@ -994,9 +1000,16 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     //試薬情報から、同一試薬、モジュールのデータがあるか確認する
-                    var reagentList = this.DataTable.AsEnumerable().Select(dt => new ReagentData(dt))
-                        .Where(data => data.ReagentCode == reagentCode && data.ModuleNo == moduleNo && data.ReagentKind == (Int32)ReagentKind.Reagent && data.Remain.HasValue && data.Remain > 0)
+                    var reagentList = dataTableList.Select(dt => new ReagentData(dt))
+                        .Where(data => (data.ReagentCode == reagentCode)
+                                    && (data.ModuleNo == moduleNo)
+                                    && (data.ReagentKind == (Int32)ReagentKind.Reagent)
+                                    && (data.Remain.HasValue)
+                                    && (data.Remain > 0))
                         .Select(data => data.ModuleNo).ToList();
                     if (reagentList.Count() == 0)
                     {
@@ -1005,13 +1018,12 @@ namespace Oelco.CarisX.DB
                         int[] enableAllModuleNo = Singleton<SystemStatus>.Instance.GetConnectedModuleId().ToArray();
 
                         //試薬情報から、同一試薬が他のモジュールにあるか確認する
-                        reagentList = this.DataTable.AsEnumerable().Select(dt => new ReagentData(dt))
-                            .Where(data => data.ReagentCode == reagentCode 
-                            && data.ReagentKind == (Int32)ReagentKind.Reagent 
-                            && data.Remain.HasValue 
-                            && data.Remain > 0
-                            && (enableAllModuleNo.Contains(data.ModuleNo))
-                            )
+                        reagentList = dataTableList.Select(dt => new ReagentData(dt))
+                            .Where(data => (data.ReagentCode == reagentCode)
+                                        && (data.ReagentKind == (Int32)ReagentKind.Reagent)
+                                        && (data.Remain.HasValue)
+                                        && (data.Remain > 0)
+                                        && (enableAllModuleNo.Contains(data.ModuleNo)))
                             .OrderBy(data => data.ModuleNo).Select(data => data.ModuleNo).ToList();
                     }
 
@@ -1068,13 +1080,16 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     //試薬情報から、同一試薬、モジュールのデータがあるか確認する
-                    var reagentList = this.DataTable.AsEnumerable().Select(dt => new ReagentData(dt))
-                        .Where(data => data.ReagentCode == reagentCode
-                            && data.ReagentTypeDetail == (Int32)reagTypeDetail
-                            && data.ModuleNo == moduleNo
-                            && data.PortNo == reagPortNo
-                            && data.ReagentKind == (Int32)ReagentKind.Reagent);
+                    var reagentList = dataTableList.Select(dt => new ReagentData(dt))
+                        .Where(data => (data.ReagentCode == reagentCode)
+                                    && (data.ReagentTypeDetail == (Int32)reagTypeDetail)
+                                    && (data.ModuleNo == moduleNo)
+                                    && (data.PortNo == reagPortNo)
+                                    && (data.ReagentKind == (Int32)ReagentKind.Reagent));
                     if (reagentList.Count() != 0)
                     {
                         //データがあった場合、取得したモジュール番号を設定する

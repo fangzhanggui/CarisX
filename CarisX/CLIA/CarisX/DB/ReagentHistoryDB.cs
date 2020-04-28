@@ -542,7 +542,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    result = this.DataTable.Copy().AsEnumerable().Select(row => new ReagentHistoryData(row)).ToList();
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    result = dataTableList.Select(row => new ReagentHistoryData(row)).ToList();
                 }
                 catch (Exception ex)
                 {
@@ -656,8 +659,11 @@ namespace Oelco.CarisX.DB
 
             if (this.DataTable != null)
             {
+                //　コピーデータリストを取得
+                var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                 //試薬、試薬種詳細、ロットでグルーピング
-                var groupdatalist = this.DataTable.AsEnumerable().Select(row => new ReagentHistoryData(row))
+                var groupdatalist = dataTableList.Select(row => new ReagentHistoryData(row))
                     .GroupBy(data => new { data.ReagentCode, data.ReagentTypeDetail });
                 foreach (var groupdata in groupdatalist)
                 {

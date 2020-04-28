@@ -536,7 +536,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new CalibratorRegistData( v )
                                 orderby data.RackID.Value ascending, data.RackPosition ascending
                                 select data;

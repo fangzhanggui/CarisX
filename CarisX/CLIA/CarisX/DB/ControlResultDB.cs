@@ -2243,9 +2243,13 @@ namespace Oelco.CarisX.DB
                 {
                     try
                     {
-                        var updateData = (from v in this.DataTable.Copy().AsEnumerable()
+                        //　コピーデータリストを取得
+                        var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                        var updateData = (from v in dataTableList
                                           let data = new ControlResultData(v)
-                                          where data.GetUniqueNo() == calcData.UniqueNo && data.ReplicationNo == calcData.ReplicationNo
+                                          where ( (data.GetUniqueNo() == calcData.UniqueNo)
+                                               && (data.ReplicationNo == calcData.ReplicationNo) )
                                           select data).SingleOrDefault();
 
                         if (updateData != null)
@@ -2304,13 +2308,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    // 修改内容：コピー手順を削除して、大量のデータによるメモリオーバーフローを防ぎます。
-                    //var datas = from v in this.DataTable.Copy().AsEnumerable()
-                    //            let data = new ControlResultData(v)
-                    //            where !measureProtocolIndex.HasValue || data.GetMeasureProtocolIndex() == measureProtocolIndex.Value
-                    //            orderby ((DateTime)v[STRING_MEASUREDATETIME]) descending
-                    //            select data;
-                    var datas = from v in this.DataTable.AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new ControlResultData(v)
                                 where !measureProtocolIndex.HasValue || data.GetMeasureProtocolIndex() == measureProtocolIndex.Value
                                 orderby ((DateTime)v[STRING_MEASUREDATETIME]) descending
@@ -2349,12 +2350,17 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var sortData = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var sortData = from v in dataTableList
                                    let data = new ControlResultDataQC(v)
-                                   where data.Concentration != CarisXConst.COUNT_CONCENTRATION_NOTHING && data.ConcentrationAve != CarisXConst.COUNT_CONCENTRATION_NOTHING
-                                   && data.GetMeasureProtocolIndex() == measureProtocolIndex
-                                   && data.ControlName == controlName
-                                   && (data.ControlLotNo == controlLotNo || String.IsNullOrEmpty(controlLotNo))
+                                   where ( (data.Concentration != CarisXConst.COUNT_CONCENTRATION_NOTHING)
+                                        && (data.ConcentrationAve != CarisXConst.COUNT_CONCENTRATION_NOTHING)
+                                        && (data.GetMeasureProtocolIndex() == measureProtocolIndex)
+                                        && (data.ControlName == controlName)
+                                        && ( (data.ControlLotNo == controlLotNo)
+                                          || (String.IsNullOrEmpty(controlLotNo)) ) )
                                    orderby data.ControlLotNo, data.MeasureDateTime
                                    select data;
 
@@ -2399,7 +2405,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new ControlResultData(v)
                                 where this.getControlResultDataWhere(searchInfo, data)
                                 orderby ((DateTime)v[STRING_MEASUREDATETIME]) descending
@@ -2433,12 +2442,15 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var uniqueNoList = (from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var uniqueNoList = (from v in dataTableList
                                         let data = new ControlResultData(v)
                                         where this.getControlResultDataWhere(recalcInfo, data)
                                         select data.GetUniqueNo()).Distinct().ToList();
 
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    var datas = from v in dataTableList
                                 let data = new ControlResultData(v)
                                 where uniqueNoList.Contains(data.GetUniqueNo())
                                 orderby ((DateTime)v[STRING_MEASUREDATETIME]) descending
@@ -2544,7 +2556,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 let data = new ControlResultData(v)
                                 orderby data.MeasureDateTime descending
                                 where !data.IsDeletedData()
@@ -2554,7 +2569,7 @@ namespace Oelco.CarisX.DB
                     List<ControlResultData> deleteData;
                     var samples = datas.GroupBy((data) => data.GetIndividuallyNo());
 
-                    // 保存数(分析)上限超過分の検体測定結果削除
+                    // 保存数(分析)上限超過分のコントロール測定結果削除
                     var deleteIndividuallyList = datas.Skip(CarisXConst.MAX_CONTROLRESULT_TEST_COUNT).Select((data) => data.GetIndividuallyNo()).Distinct();
                     deleteData = (from individuallyNo in deleteIndividuallyList
                                   let grpData = samples.FirstOrDefault((grp) => grp.Key == individuallyNo)
@@ -2566,9 +2581,9 @@ namespace Oelco.CarisX.DB
                 }
                 catch (Exception ex)
                 {
-                    // DB内部に不正データ，补充异常日志的内容
+                    // DB内部に不正データ
                     Singleton<CarisXLogManager>.Instance.Write(LogKind.DebugLog, Singleton<Oelco.CarisX.Utility.CarisXUserLevelManager>.Instance.NowUserID,
-                                                                                           CarisXLogInfoBaseExtention.Empty, ex.Message + Environment.NewLine + ex.StackTrace);
+                                                                                           CarisXLogInfoBaseExtention.Empty, ex.StackTrace);
                 }
             }
         }

@@ -953,11 +953,30 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    List<CalibrationCurveData> datas = new List<CalibrationCurveData>();
+
+                    // 全モジュール対象の場合
+                    if (moduleNo == CarisXConst.ALL_MODULEID)
+                    {
+                        // 試薬コードが一致する検量線を取得
+                        datas = ( from v in dataTableList
+                                  where ( ( (Int32)v[STRING_MEASUREPROTOCOLINDEX] ) == protocolIndex )
+                                  orderby ( (DateTime)v[STRING_APPROBAL_DATETIME] ) descending, ( (Int32)v[STRING_POINTNO] ) ascending
+                                  select new CalibrationCurveData(v) ).ToList();
+                    }
+                    else
+                    {
+                        // 試薬コードとモジュールIDが一致する検量線を取得
+                        datas = (from v in dataTableList
                                 where (((Int32)v[STRING_MODULENO]) == moduleNo)
                                    && (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
                                 orderby ((DateTime)v[STRING_APPROBAL_DATETIME]) descending, ((Int32)v[STRING_POINTNO]) ascending
-                                select new CalibrationCurveData(v);
+                                 select new CalibrationCurveData(v)).ToList();
+                    }
+
 
                     String key;
                     foreach ( var item in datas.GroupBy( ( data ) => data.GetReagentLotNo() ) )
@@ -1019,7 +1038,10 @@ namespace Oelco.CarisX.DB
                 try
                 {
                     //【IssuesNo:19】Innodx要求不显示主曲线，因此在此过滤主曲线数据
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList
                                 where ((((Int32)v[STRING_MODULENO] ) == moduleNo) || (((Int32)v[STRING_UNIQUENO]) == -1))
                                    && (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
                                    && (((Int32)v[STRING_UNIQUENO]) > -1)
@@ -1088,9 +1110,12 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     if(moduleNo == CarisXConst.ALL_MODULEID)
                     {
-                        var datas = (from v in this.DataTable.Copy().AsEnumerable()
+                        var datas = (from v in dataTableList
                                      let Data = new CalibrationCurveData(v)
                                      let notMasterCurve = Data.GetUniqueNo() > -1
                                      where (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
@@ -1112,7 +1137,7 @@ namespace Oelco.CarisX.DB
                     }
                     else
                     {
-                        var datas = (from v in this.DataTable.Copy().AsEnumerable()
+                        var datas = (from v in dataTableList
                                      let Data = new CalibrationCurveData(v)
                                      let notMasterCurve = Data.GetUniqueNo() > -1
                                      where (((Int32)v[STRING_MODULENO]) == moduleNo)
@@ -1164,10 +1189,13 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     if (moduleNo == CarisXConst.ALL_MODULEID)
                     {
 
-                        var datas = (from v in this.DataTable.Copy().AsEnumerable()
+                        var datas = (from v in dataTableList
                                      let Data = new CalibrationCurveData(v)
                                      where (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
                                         && (((String)v[STRING_REAGENT_LOTNO]) == reagentLotNo)
@@ -1189,7 +1217,7 @@ namespace Oelco.CarisX.DB
                     }
                     else
                     {
-                        var datas = (from v in this.DataTable.Copy().AsEnumerable()
+                        var datas = (from v in dataTableList
                                      let Data = new CalibrationCurveData(v)
                                      where (((Int32)v[STRING_MODULENO]) == moduleNo)
                                         && (((Int32)v[STRING_MEASUREPROTOCOLINDEX]) == protocolIndex)
@@ -1242,9 +1270,12 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
                     if( moduleNo == CarisXConst.ALL_MODULEID )
                     {
-                        result = (from v in this.DataTable.Copy().AsEnumerable()
+                        result = (from v in dataTableList
                                   let data = new CalibrationCurveData(v)
                                   where ( data.GetMeasureProtocolIndex() == protocolIndex )
                                      && ( data.GetReagentLotNo() == reagentLotNo )
@@ -1254,7 +1285,7 @@ namespace Oelco.CarisX.DB
                     }
                     else
                     {
-                        result = (from v in this.DataTable.Copy().AsEnumerable()
+                        result = (from v in dataTableList
                                   let data = new CalibrationCurveData(v)
                                   where (data.GetModuleNo() == moduleNo)
                                      && (data.GetMeasureProtocolIndex() == protocolIndex)
@@ -1294,7 +1325,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    result = (from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    result = (from v in dataTableList
                               let data = new CalibrationCurveData(v)
                               where data.GetMeasureProtocolIndex() == protocolIndex && data.GetReagentLotNo() == reagentLotNo && data.GetUniqueNo() == -1
                               orderby ((Int32)v[STRING_POINTNO]) ascending
@@ -1328,7 +1362,10 @@ namespace Oelco.CarisX.DB
             {
                 try
                 {
-                    var datas = from v in this.DataTable.Copy().AsEnumerable()
+                    //　コピーデータリストを取得
+                    var dataTableList = this.DataTable.AsEnumerable().ToList();
+
+                    var datas = from v in dataTableList.AsEnumerable()
                                 orderby ((DateTime)v[STRING_APPROBAL_DATETIME]) descending, ((Int32)v[STRING_POINTNO]) ascending
                                 let data = new CalibrationCurveData(v)
                                 where data.GetUniqueNo() > -1 // マスターカーブを含めないNot including the master curve
@@ -1524,8 +1561,11 @@ namespace Oelco.CarisX.DB
         /// </remarks>
         protected override void removeLimitOver()
         {
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
             // 検量線毎にグルーピング(未削除データ、日付昇順)
-            var curveData = from v in this.DataTable.Copy().AsEnumerable().Where( ( row ) => row.RowState != DataRowState.Deleted )
+            var curveData = from v in dataTableList.Where( ( row ) => row.RowState != DataRowState.Deleted )
                             let data = new CalibrationCurveData( v )
                             orderby data.GetApprovalDateTime()
                             where !data.IsDeletedData() && data.GetApprovalDateTime() != DateTime.MinValue

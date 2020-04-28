@@ -397,13 +397,16 @@ namespace Oelco.CarisX.DB
             // データ検索
             IEnumerable<DataRow> result = null;
 
+            //　コピーデータリストを取得
+            var dataTableList = this.DataTable.AsEnumerable().ToList();
+
             // ラックID検索・サンプルID検索
             // 既に読込まれたテーブルデータより検索を行う。
             switch (askType)
             {
 
                 case AskTypeKind.RackID:
-                    result = from v in this.DataTable.Rows.OfType<DataRow>()
+                    result = from v in dataTableList
                              where rackId.DispPreCharString == (v[STRING_RACKID] == null ? String.Empty : v[STRING_RACKID].ToString()) &&
                              rackPos == (v[STRING_RACKPOSITION] == null ? 0 : (Int32)v[STRING_RACKPOSITION])
                              select v;
@@ -411,7 +414,7 @@ namespace Oelco.CarisX.DB
                     break;
 
                 case AskTypeKind.SampleID:
-                    result = from v in this.DataTable.Rows.OfType<DataRow>()
+                    result = from v in dataTableList
                              where searchId == v[STRING_SAMPLEID].ToString() 
                                 || rackId.DispPreCharString == (v[STRING_RACKID] == null ? String.Empty : v[STRING_RACKID].ToString()) 
                                 && rackPos == (v[STRING_RACKPOSITION] == null ? 0 : (Int32)v[STRING_RACKPOSITION])
